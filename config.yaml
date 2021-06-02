@@ -1,5 +1,5 @@
 assembly: "concat_mrl20k_q15l15k_pepper"  # name of starting assembly, located in data/aassemblies/
-reads: "concat_ONT.fastq.gz"   # name of reads, located in daata/reads/
-redundans_path: "/home/mike/packages/redundans"  # path to directory containing redundans script
-picard-tools:   # path to picarad-tools
+reads: "reads_15_15000"   # name of reads, located in daata/reads/
+redundans_path: "/home/mike/redundans"  # path to directory containing redundans script
+picard-tools: "/home/"  # path to picarad-tools
 memory: "4"  # the aavailaable memory for the analysis in gigabytes
