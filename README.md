@@ -1,4 +1,4 @@
-# karyon_longread
+# Karyinon: Longread Karyon
 
 Karyon is a package that assesses the ploidy of a library, readas or contigs.
 
