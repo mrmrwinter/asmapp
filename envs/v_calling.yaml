@@ -1,0 +1,7 @@
+name: v_calling
+channels:
+  - defaults
+  - bioconda
+dependencies:
+  - bcftools
+  - gatk

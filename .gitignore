@@ -11,3 +11,4 @@ reports/*/contigs_reports/*
 reports/*/reads_stats/*
 reports/*/busco_stats/*
 reports/*/predicted_genes/*
+tmp/*
