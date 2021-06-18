@@ -17,8 +17,9 @@ dependencies:
   - freetype=2.10.4=h5ab3b9f_0
   - functools32=3.2.3.2=py27_1
   - futures=3.3.0=py27_0
+  - giflib=5.1.4=ha764e47_1
   - glib=2.68.2=h36276a3_0
-  - gnuplot
+  - gnuplot=5.0.3=4
   - gst-plugins-base=1.14.0=h8213a91_2
   - gstreamer=1.14.0=h28cd5cc_2
   - icu=58.2=he6710b0_3
@@ -26,13 +27,18 @@ dependencies:
   - jpeg=9b=h024ee3a_2
   - kiwisolver=1.1.0=py27he6710b0_0
   - libffi=3.3=he6710b0_2
+  - libgcc=7.2.0=h69d50b8_2
   - libgcc-ng=9.1.0=hdf63c60_0
+  - libgd=2.3.2=hdd3ff0f_3
   - libgfortran-ng=7.3.0=hdf63c60_0
   - libpng=1.6.37=hbc83047_0
   - libstdcxx-ng=9.1.0=hdf63c60_0
+  - libtiff=4.1.0=h2733197_1
   - libuuid=1.0.3=h1bed415_2
+  - libwebp=1.0.1=h8e7db2f_0
   - libxcb=1.14=h7b6447c_0
   - libxml2=2.9.10=hb55368b_3
+  - lz4-c=1.9.3=h2531618_0
   - matplotlib=2.2.3=py27hb69df0a_0
   - mkl=2020.2=256
   - mkl-service=2.3.0=py27he904b0f_0
@@ -64,4 +70,5 @@ dependencies:
   - wheel=0.36.2=pyhd3eb1b0_0
   - xz=5.2.5=h7b6447c_0
   - zlib=1.2.11=h7b6447c_3
+  - zstd=1.4.9=haebb681_0
 prefix: /home/mike/miniconda3/envs/redundans
