@@ -6,11 +6,12 @@ ruleorder: index_mapping > samtools_index > samtools_faidx > GATK > bcftools > s
 
 rule all:
     input:
-        # plot = config["assembly"] + "/outputs/plots/plot.png",
+        plot = config["assembly"] + "/outputs/plots/plot.png",
         flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
         nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.rplot",
-        tsv = config["assembly"] + "/reports/mapped_nonself_hits.paf",
-        out_dir = config["assembly"] + "/reports/dotplots/dotplot.png"
+        ex_tsv = config["assembly"] + "/reports/minimap2/mapped_nonself_hits.sam",
+        # out_dir = config["assembly"] + "/reports/dotplots/dotplot.png",
+        tsv = config["assembly"] + "/reports/blast/blast.out"
 
 rule redundans:
     conda:
@@ -45,7 +46,7 @@ rule dictionary_creation:
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
     output:
-        dictionary = config["assembly"] + "/outputs/mapping/scaffolds.reduced.dict"
+        dictionary = config["assembly"] + "/outputs/redundans/scaffolds.reduced.dict"
     shell:
        "picard CreateSequenceDictionary R={input[assembly]} O={output}"
 
@@ -87,8 +88,6 @@ rule sorting:
         "samtools sort {input} > {output}"
 
 rule nucmer_reduced_vs_initial:
-    conda:
-        "envs/redundans.yaml"
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         initial = "data/assemblies/" + config["assembly"] + ".fasta"
@@ -124,13 +123,13 @@ rule GATK:
     container:
         "docker://broadinstitute/gatk:4.0.2.0"
     input:
-        assembly = "/media/mike/WD_4TB/karyon_longread/" + config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
-        bam = "/media/mike/WD_4TB/karyon_longread/" + config["assembly"] + "/outputs/mapping/scaffolds.reduced.sorted.bam",
-        dict = "/media/mike/WD_4TB/karyon_longread/" + config["assembly"] + "/outputs/mapping/scaffolds.reduced.dict"
+        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
+        bam = config["assembly"] + "/outputs/mapping/scaffolds.reduced.sorted.bam",
+        dict = config["assembly"] + "/outputs/redundans/scaffolds.reduced.dict"
     output:
         vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf"
     params:
-        memory = config["memory"] + "G"
+        memory = config["memory"] + "G",
     shell:
         "gatk HaplotypeCaller -R {input[assembly]} -I {input[bam]} -O {output}"
 
@@ -173,11 +172,11 @@ rule mapping_back:
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
     output:
-        tsv = config["assembly"] + "/reports/mapped_nonself_hits.sam"
+        tsv = config["assembly"] + "/reports/minimap2/mapped_nonself_hits.sam"
     params:
         threads = config["threads"]
     shell:
-        "minimap2 --secondary=no -D {input[0]} {input[0]} > {output}"
+        "minimap2 -ax asm5 -D {input[0]} {input[0]} > {output}"
 
 # rule removing_nonself:
 #     input:
@@ -187,41 +186,97 @@ rule mapping_back:
 #     shell:
 #         "samtools view -F0x900 {input} > {output}"
 
-#     run:
-#         from Bio import SeqIO
-#         import pandas as pd
-#         import sys
-#         import subprocess
-#         import csv
-#         import Bio.Blast
-#         import Bio.Blast.Applications
+rule make_blast_database:  # Rule to make database of cds fasta
+    input:
+        config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta" # input to the rule
+    output:
+        nhr = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nhr",   # all outputs expected from the rule
+        nin = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nin",
+        nsq = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nsq"
+    params:
+        "data/database/" + config["assembly"] + "/" + config["assembly"]   # prefix for the outputs, required by the command
+    shell:  # shell command for the rule
+        "makeblastdb \
+        -in {input} \
+        -out {params} \
+        -dbtype nucl"  # the database type
+
+rule blast_nonself:
+    input:
+        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
+        db = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nin",
+
+    output:
+        tsv = config["assembly"] + "/reports/blast/blast.out"
+    params:
+        out_pfx = config["assembly"] + "/reports/blast",
+        db_pfx = "data/database/" + config["assembly"] + "/" + config["assembly"]
+    shell:
+        "blastn -query {input[0]} -db {params[1]} -outfmt '6 qseqid sseqid pident' -out {params[0]}/blast.out"
+
+
+
+
+
+
+# rule download_busco_for_quast:
+#     message:
+#         "[INFO] Downloading BUSCO databases for QUAST appraisal..."
+#     output:
+#         ""
+#     shell:
+#         "quast-download-busco"
+
+
+  # Performing QUAST assembly appraisal
+rule quast:
+    message:
+        "[INFO] Performing QUAST appraisal on assemblies..."
+    input:
+        redundans = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
+        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa",
+        reads = "data/reads/" + config["reads"] + ".fastq.gz"
+        reference = "/media/mike/WD_4TB/javanica_assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz"
+    output:
+        "reports/quast/"  + config["experiment_name"] + "/report.txt",
+    params:
+        out_pfx = "reports/quast/"  + config["experiment_name"] + "",
+        threads = config["threads"]
+    shell:
+        config["quast_path"] + "/quast.py {input[0]} {input[1]} --large --glimmer -b --threads {params[1]} -L -r {input[2]} --nanopore {input[reads]} -o {params[0]}"
+
+#     # Performing Merqury assembly appraisal
+# rule merqury:
+#     message:
+#         "[INFO] Performing Merqury assembly appraisal..."
+#     conda:
+#         "../envs/merqury.yaml"
+#     input:
+#         assembly = "data/assemblies/{assembler}/{sample}/scaffolds.fasta"
 #
-#
-#         if sys.version_info[0] < 3:
-#             from StringIO import StringIO
-#         else:
-#             from io import StringIO
-#
-# #
-#         def get_first_pd(condition, df):
-#             return df[condition(df)].iloc[0]
-#
-#         # seqs = list(SeqIO.parse(input[0], "fasta"))
-#         tsv = output[0]
-#
-#         with open(tsv, 'a+', newline='') as g:
-#             writer = csv.writer(g)
-#
-#             for seq_record in SeqIO.parse(input[0], "fasta"):
-#                 contig = '>' + seq_record.description + '\n' + str(seq_record.seq)
-#                 cmd = "minimap2 -ax nanopore -D -d " + contig + " -o
-#
-#                 a = subprocess.Popen(cmd, stdin = contig, stdout=subprocess.PIPE)
-#                 b = StringIO(a.communicate()[0].decode('utf-8'))
-#                 df = pd.read_csv(b, sep = ',')
-#
-#
-#
+#     output:
+#     params:
+#     shell:
+
+
+
+
+
+
+
+    # run:
+    #     from Bio import SeqIO
+    #     import os
+    #
+    #     if sys.version_info[0] < 3:
+    #         from StringIO import StringIO
+    #     else:
+    #         from io import StringIO
+    #
+    #     for seq_record in SeqIO.parse(input[0], "fasta"):
+    #         contig = '>' + seq_record.description + '\n' + str(seq_record.seq)
+    # -negative_seqidlist exclude_me
+# "blastn -query {input[0]} -db {params[1]} -outfmt '6 qseqid sseqid pident' -out {params[0]}/blast.out"
 #                 # q =
 #                 # h = df.[1]
 #                 # def get_first_pd(condition, df):

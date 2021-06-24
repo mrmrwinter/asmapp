@@ -16,3 +16,5 @@ tmp/*
 *.paf
 *.Rproj
 *.RData
+data/*
+*blast.out
