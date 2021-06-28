@@ -1,0 +1,1701 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f8944215ab8, pid=260737, tid=0x00007f8944891700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_131-b11) (build 1.8.0_131-8u131-b11-2ubuntu1.16.04.3-b11)
+# Java VM: OpenJDK 64-Bit Server VM (25.131-b11 mixed mode linux-amd64 )
+# Problematic frame:
+# C  [libc.so.6+0x172ab8]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f893c011800):  JavaThread "main" [_thread_in_native, id=260745, stack(0x00007f8944791000,0x00007f8944892000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 2 (SEGV_ACCERR), si_addr: 0x00007f8944791000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007f8944760b50, RCX=0x000000000000cc68, RDX=0x000000000001e888
+RSP=0x00007f894475e4f8, RBP=0x00007f89448900f0, RSI=0x00007f894479dc68, RDI=0x00007f8944791000
+R8 =0x00007f894475e500, R9 =0x000000000000003f, R10=0x00007f8944890120, R11=0x00007f893cf2f210
+R12=0x00007f894479dc70, R13=0x00007f894477f3e0, R14=0x0000000000003d10, R15=0x00000000000000a5
+RIP=0x00007f8944215ab8, EFLAGS=0x0000000000010203, CSGSFS=0x002b000000000033, ERR=0x0000000000000006
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f894475e4f8)
+0x00007f894475e4f8:   00007f7b007d0460 d7b150215d2f404f
+0x00007f894475e508:   0808800000000800 00040e5ea0c0b7a0
+0x00007f894475e518:   2042218002100010 ffffffffffffffff
+0x00007f894475e528:   d70ed167902468a1 08100080400b0004
+0x00007f894475e538:   20e02e080b909752 0001001024400008
+0x00007f894475e548:   ffffffffffffffff 56eec819e8000000
+0x00007f894475e558:   8011300000000000 0800036600000000
+0x00007f894475e568:   2100048010000000 ffffffffffffffff
+0x00007f894475e578:   0000000000000000 0000000000000000
+0x00007f894475e588:   0000000000000000 0000000000000000
+0x00007f894475e598:   ffffffffffffffff 0000000000000000
+0x00007f894475e5a8:   0000000000000000 0000000000000000
+0x00007f894475e5b8:   0000000000000000 ffffffffffffffff
+0x00007f894475e5c8:   0000000000000000 0000000000000000
+0x00007f894475e5d8:   0000000000000000 0000000000000000
+0x00007f894475e5e8:   ffffffffffffffff 0000000000000000
+0x00007f894475e5f8:   0000000000000000 0000000000000000
+0x00007f894475e608:   0000000000000000 ffffffffffffffff
+0x00007f894475e618:   0000000000000000 0000000000000000
+0x00007f894475e628:   0000000000000000 0000000000000000
+0x00007f894475e638:   ffffffffffffffff 0000000000000000
+0x00007f894475e648:   0000000000000000 0000000000000000
+0x00007f894475e658:   0000000000000000 ffffffffffffffff
+0x00007f894475e668:   0000000000000000 0000000000000000
+0x00007f894475e678:   0000000000000000 0000000000000000
+0x00007f894475e688:   ffffffffffffffff 0000000000000000
+0x00007f894475e698:   0000000000000000 0000000000000000
+0x00007f894475e6a8:   0000000000000000 ffffffffffffffff
+0x00007f894475e6b8:   0000000000000000 0000000000000000
+0x00007f894475e6c8:   0000000000000000 0000000000000000
+0x00007f894475e6d8:   ffffffffffffffff 0000000000000000
+0x00007f894475e6e8:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x00007f8944215ab8)
+0x00007f8944215a98:   fe 7f 46 a0 c5 fe 7f 46 c0 c5 fe 7f 46 e0 48 29
+0x00007f8944215aa8:   d0 c5 f8 77 c3 0f 1f 00 48 83 e9 80 c5 f9 7e c0
+0x00007f8944215ab8:   f3 aa 48 89 f0 48 29 d0 c5 f8 77 c3 00 00 00 00
+0x00007f8944215ac8:   00 00 00 00 00 00 00 00 41 55 41 54 49 89 fd 55 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00007f8944760b50 is an unknown value
+RCX=0x000000000000cc68 is an unknown value
+RDX=0x000000000001e888 is an unknown value
+RSP=0x00007f894475e4f8 is an unknown value
+RBP=0x00007f89448900f0 is pointing into the stack for thread: 0x00007f893c011800
+RSI=0x00007f894479dc68 is pointing into the stack for thread: 0x00007f893c011800
+RDI=0x00007f8944791000 is an unknown value
+R8 =0x00007f894475e500 is an unknown value
+R9 =0x000000000000003f is an unknown value
+R10=0x00007f8944890120 is pointing into the stack for thread: 0x00007f893c011800
+R11=0x00007f893cf2f210 is an unknown value
+R12=0x00007f894479dc70 is pointing into the stack for thread: 0x00007f893c011800
+R13=0x00007f894477f3e0 is an unknown value
+R14=0x0000000000003d10 is an unknown value
+R15=0x00000000000000a5 is an unknown value
+
+
+Stack: [0x00007f8944791000,0x00007f8944892000],  sp=0x00007f894475e4f8,  free space=18014398509481781k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libc.so.6+0x172ab8]
+C  [libgkl_pairhmm_omp8638724330789912971.so+0x6529a]  Java_com_intel_gkl_pairhmm_IntelPairHmm_computeLikelihoodsNative._omp_fn.0+0x9a
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 5892  com.intel.gkl.pairhmm.IntelPairHmm.computeLikelihoodsNative([Ljava/lang/Object;[Ljava/lang/Object;[D)V (0 bytes) @ 0x00007f892dc38974 [0x00007f892dc38900+0x74]
+J 7022 C2 com.intel.gkl.pairhmm.IntelPairHmm.computeLikelihoods([Lorg/broadinstitute/gatk/nativebindings/pairhmm/ReadDataHolder;[Lorg/broadinstitute/gatk/nativebindings/pairhmm/HaplotypeDataHolder;[D)V (8 bytes) @ 0x00007f892d714184 [0x00007f892d714160+0x24]
+J 5175 C2 org.broadinstitute.hellbender.utils.pairhmm.VectorLoglessPairHMM.computeLog10Likelihoods(Lorg/broadinstitute/hellbender/utils/genotyper/LikelihoodMatrix;Ljava/util/List;Ljava/util/Map;)V (381 bytes) @ 0x00007f892e3c067c [0x00007f892e3c01c0+0x4bc]
+J 6944 C2 org.broadinstitute.hellbender.tools.walkers.haplotypecaller.HaplotypeCallerEngine.callRegion(Lorg/broadinstitute/hellbender/engine/AssemblyRegion;Lorg/broadinstitute/hellbender/engine/FeatureContext;)Ljava/util/List; (733 bytes) @ 0x00007f892e51b854 [0x00007f892e518380+0x34d4]
+J 6910 C2 org.broadinstitute.hellbender.tools.walkers.haplotypecaller.HaplotypeCaller.apply(Lorg/broadinstitute/hellbender/engine/AssemblyRegion;Lorg/broadinstitute/hellbender/engine/ReferenceContext;Lorg/broadinstitute/hellbender/engine/FeatureContext;)V (29 bytes) @ 0x00007f892dfd0620 [0x00007f892dfd05e0+0x40]
+j  org.broadinstitute.hellbender.engine.AssemblyRegionWalker.processReadShard(Lorg/broadinstitute/hellbender/engine/MultiIntervalLocalReadShard;Lorg/broadinstitute/hellbender/engine/ReferenceDataSource;Lorg/broadinstitute/hellbender/engine/FeatureManager;)V+164
+j  org.broadinstitute.hellbender.engine.AssemblyRegionWalker.traverse()V+83
+j  org.broadinstitute.hellbender.engine.GATKTool.doWork()Ljava/lang/Object;+12
+j  org.broadinstitute.hellbender.cmdline.CommandLineProgram.runTool()Ljava/lang/Object;+27
+j  org.broadinstitute.hellbender.cmdline.CommandLineProgram.instanceMainPostParseArgs()Ljava/lang/Object;+243
+j  org.broadinstitute.hellbender.cmdline.CommandLineProgram.instanceMain([Ljava/lang/String;)Ljava/lang/Object;+14
+j  org.broadinstitute.hellbender.Main.runCommandLineProgram(Lorg/broadinstitute/hellbender/cmdline/CommandLineProgram;[Ljava/lang/String;)Ljava/lang/Object;+20
+j  org.broadinstitute.hellbender.Main.mainEntry([Ljava/lang/String;)V+22
+j  org.broadinstitute.hellbender.Main.main([Ljava/lang/String;)V+8
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f893c100800 JavaThread "Service Thread" daemon [_thread_blocked, id=260780, stack(0x00007f7b0b5f6000,0x00007f7b0b6f7000)]
+  0x00007f893c0f3800 JavaThread "C1 CompilerThread11" daemon [_thread_blocked, id=260779, stack(0x00007f7b0b6f7000,0x00007f7b0b7f8000)]
+  0x00007f893c0f1000 JavaThread "C1 CompilerThread10" daemon [_thread_blocked, id=260778, stack(0x00007f7b0b7f8000,0x00007f7b0b8f9000)]
+  0x00007f893c0ef000 JavaThread "C1 CompilerThread9" daemon [_thread_blocked, id=260777, stack(0x00007f7b0b8f9000,0x00007f7b0b9fa000)]
+  0x00007f893c0ed000 JavaThread "C1 CompilerThread8" daemon [_thread_blocked, id=260776, stack(0x00007f7b0b9fa000,0x00007f7b0bafb000)]
+  0x00007f893c0ea800 JavaThread "C2 CompilerThread7" daemon [_thread_blocked, id=260775, stack(0x00007f7b0bafb000,0x00007f7b0bbfc000)]
+  0x00007f893c0e8800 JavaThread "C2 CompilerThread6" daemon [_thread_blocked, id=260774, stack(0x00007f7b0bbfc000,0x00007f7b0bcfd000)]
+  0x00007f893c0e6800 JavaThread "C2 CompilerThread5" daemon [_thread_blocked, id=260773, stack(0x00007f7b0bcfd000,0x00007f7b0bdfe000)]
+  0x00007f893c0dc800 JavaThread "C2 CompilerThread4" daemon [_thread_blocked, id=260772, stack(0x00007f7b0bdfe000,0x00007f7b0beff000)]
+  0x00007f893c0da000 JavaThread "C2 CompilerThread3" daemon [_thread_blocked, id=260771, stack(0x00007f7b0beff000,0x00007f7b0c000000)]
+  0x00007f893c0d5800 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=260770, stack(0x00007f7b10015000,0x00007f7b10116000)]
+  0x00007f893c0d4000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=260769, stack(0x00007f7b10116000,0x00007f7b10217000)]
+  0x00007f893c0d1000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=260768, stack(0x00007f7b10217000,0x00007f7b10318000)]
+  0x00007f893c0cf000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=260767, stack(0x00007f7b10318000,0x00007f7b10419000)]
+  0x00007f893c0a7800 JavaThread "Finalizer" daemon [_thread_blocked, id=260766, stack(0x00007f7b10419000,0x00007f7b1051a000)]
+  0x00007f893c0a3000 JavaThread "Reference Handler" daemon [_thread_blocked, id=260765, stack(0x00007f7b1051a000,0x00007f7b1061b000)]
+=>0x00007f893c011800 JavaThread "main" [_thread_in_native, id=260745, stack(0x00007f8944791000,0x00007f8944892000)]
+
+Other Threads:
+  0x00007f893c09b800 VMThread [stack: 0x00007f7b1061b000,0x00007f7b1071c000] [id=260764]
+  0x00007f893c103000 WatcherThread [stack: 0x00007f7b0b4f5000,0x00007f7b0b5f6000] [id=260781]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 13609984K, used 6815695K [0x00007f8482580000, 0x00007f87c5500000, 0x00007f892d000000)
+  eden space 13545984K, 50% used [0x00007f8482580000,0x00007f861fbd65b0,0x00007f87bd200000)
+  from space 64000K, 66% used [0x00007f87c1680000,0x00007f87c401d6c0,0x00007f87c5500000)
+  to   space 67072K, 0% used [0x00007f87bd200000,0x00007f87bd200000,0x00007f87c1380000)
+ ParOldGen       total 885248K, used 288222K [0x00007f7b2d000000, 0x00007f7b63080000, 0x00007f8482580000)
+  object space 885248K, 32% used [0x00007f7b2d000000,0x00007f7b3e9779d0,0x00007f7b63080000)
+ Metaspace       used 35750K, capacity 37246K, committed 37376K, reserved 38912K
+
+Card table byte_map: [0x00007f7b25fff000,0x00007f7b2d000000] byte_map_base: 0x00007f3b68697000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f8943a4b2c0
+ Begin Bits: [0x00007f7a3c000000, 0x00007f7a74000000)
+ End Bits:   [0x00007f7a74000000, 0x00007f7aac000000)
+
+Polling page: 0x00007f894489e000
+
+CodeCache: size=245760Kb used=21148Kb max_used=21941Kb free=224611Kb
+ bounds [0x00007f892d000000, 0x00007f892e5e0000, 0x00007f893c000000]
+ total_blobs=5662 nmethods=5112 adapters=462
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 2260.253 Thread 0x00007f893c0d4000 7326       4       org.broadinstitute.hellbender.tools.walkers.genotyper.GenotypingEngine::composeCallAttributes (279 bytes)
+Event: 2260.272 Thread 0x00007f893c0d4000 nmethod 7326 0x00007f892d49e0d0 code [0x00007f892d49e340, 0x00007f892d49f9a0]
+Event: 2272.374 Thread 0x00007f893c0d5800 7327   !   4       org.broadinstitute.hellbender.tools.walkers.haplotypecaller.AssemblyBasedCallerUtils::assembleReads (371 bytes)
+Event: 2272.495 Thread 0x00007f893c0d5800 nmethod 7327 0x00007f892e40f5d0 code [0x00007f892e40fa80, 0x00007f892e414100]
+Event: 2295.664 Thread 0x00007f893c0ef000 7328       3       org.broadinstitute.hellbender.utils.variant.GATKVariantContextUtils$AlleleMapper::remap (31 bytes)
+Event: 2295.664 Thread 0x00007f893c0f1000 7329       3       org.broadinstitute.hellbender.utils.variant.GATKVariantContextUtils$AlleleMapper$$Lambda$311/1433302110::get$Lambda (9 bytes)
+Event: 2295.664 Thread 0x00007f893c0f1000 nmethod 7329 0x00007f892d313710 code [0x00007f892d313880, 0x00007f892d313ad0]
+Event: 2295.664 Thread 0x00007f893c0ed000 7330       3       org.broadinstitute.hellbender.utils.variant.GATKVariantContextUtils$AlleleMapper$$Lambda$311/1433302110::<init> (10 bytes)
+Event: 2295.664 Thread 0x00007f893c0ed000 nmethod 7330 0x00007f892dcd19d0 code [0x00007f892dcd1b40, 0x00007f892dcd1d10]
+Event: 2295.665 Thread 0x00007f893c0ef000 nmethod 7328 0x00007f892df59790 code [0x00007f892df59a40, 0x00007f892df5ab18]
+
+GC Heap History (10 events):
+Event: 2246.266 GC heap before
+{Heap before GC invocations=2581 (full 3):
+ PSYoungGen      total 13212160K, used 13195932K [0x00007f8482580000, 0x00007f87b6600000, 0x00007f892d000000)
+  eden space 13145088K, 100% used [0x00007f8482580000,0x00007f87a4a80000,0x00007f87a4a80000)
+  from space 67072K, 75% used [0x00007f87a4a80000,0x00007f87a7c270c8,0x00007f87a8c00000)
+  to   space 67072K, 0% used [0x00007f87b2480000,0x00007f87b2480000,0x00007f87b6600000)
+ ParOldGen       total 885248K, used 280555K [0x00007f7b2d000000, 0x00007f7b63080000, 0x00007f8482580000)
+  object space 885248K, 31% used [0x00007f7b2d000000,0x00007f7b3e1fafb0,0x00007f7b63080000)
+ Metaspace       used 35749K, capacity 37246K, committed 37376K, reserved 38912K
+Event: 2246.275 GC heap after
+Heap after GC invocations=2581 (full 3):
+ PSYoungGen      total 13343744K, used 50923K [0x00007f8482580000, 0x00007f87b5980000, 0x00007f892d000000)
+  eden space 13289472K, 0% used [0x00007f8482580000,0x00007f8482580000,0x00007f87ad780000)
+  from space 54272K, 93% used [0x00007f87b2480000,0x00007f87b563ad28,0x00007f87b5980000)
+  to   space 66560K, 0% used [0x00007f87ad780000,0x00007f87ad780000,0x00007f87b1880000)
+ ParOldGen       total 885248K, used 280571K [0x00007f7b2d000000, 0x00007f7b63080000, 0x00007f8482580000)
+  object space 885248K, 31% used [0x00007f7b2d000000,0x00007f7b3e1fefb0,0x00007f7b63080000)
+ Metaspace       used 35749K, capacity 37246K, committed 37376K, reserved 38912K
+}
+Event: 2264.530 GC heap before
+{Heap before GC invocations=2582 (full 3):
+ PSYoungGen      total 13343744K, used 13340395K [0x00007f8482580000, 0x00007f87b5980000, 0x00007f892d000000)
+  eden space 13289472K, 100% used [0x00007f8482580000,0x00007f87ad780000,0x00007f87ad780000)
+  from space 54272K, 93% used [0x00007f87b2480000,0x00007f87b563ad28,0x00007f87b5980000)
+  to   space 66560K, 0% used [0x00007f87ad780000,0x00007f87ad780000,0x00007f87b1880000)
+ ParOldGen       total 885248K, used 280571K [0x00007f7b2d000000, 0x00007f7b63080000, 0x00007f8482580000)
+  object space 885248K, 31% used [0x00007f7b2d000000,0x00007f7b3e1fefb0,0x00007f7b63080000)
+ Metaspace       used 35750K, capacity 37246K, committed 37376K, reserved 38912K
+Event: 2264.539 GC heap after
+Heap after GC invocations=2582 (full 3):
+ PSYoungGen      total 13356032K, used 51187K [0x00007f8482580000, 0x00007f87be080000, 0x00007f892d000000)
+  eden space 13289472K, 0% used [0x00007f8482580000,0x00007f8482580000,0x00007f87ad780000)
+  from space 66560K, 76% used [0x00007f87ad780000,0x00007f87b097ceb8,0x00007f87b1880000)
+  to   space 66048K, 0% used [0x00007f87ba000000,0x00007f87ba000000,0x00007f87be080000)
+ ParOldGen       total 885248K, used 280883K [0x00007f7b2d000000, 0x00007f7b63080000, 0x00007f8482580000)
+  object space 885248K, 31% used [0x00007f7b2d000000,0x00007f7b3e24cfc8,0x00007f7b63080000)
+ Metaspace       used 35750K, capacity 37246K, committed 37376K, reserved 38912K
+}
+Event: 2282.448 GC heap before
+{Heap before GC invocations=2583 (full 3):
+ PSYoungGen      total 13356032K, used 13340659K [0x00007f8482580000, 0x00007f87be080000, 0x00007f892d000000)
+  eden space 13289472K, 100% used [0x00007f8482580000,0x00007f87ad780000,0x00007f87ad780000)
+  from space 66560K, 76% used [0x00007f87ad780000,0x00007f87b097ceb8,0x00007f87b1880000)
+  to   space 66048K, 0% used [0x00007f87ba000000,0x00007f87ba000000,0x00007f87be080000)
+ ParOldGen       total 885248K, used 280883K [0x00007f7b2d000000, 0x00007f7b63080000, 0x00007f8482580000)
+  object space 885248K, 31% used [0x00007f7b2d000000,0x00007f7b3e24cfc8,0x00007f7b63080000)
+ Metaspace       used 35750K, capacity 37246K, committed 37376K, reserved 38912K
+Event: 2282.456 GC heap after
+Heap after GC invocations=2583 (full 3):
+ PSYoungGen      total 13481472K, used 43098K [0x00007f8482580000, 0x00007f87bda80000, 0x00007f892d000000)
+  eden space 13421568K, 0% used [0x00007f8482580000,0x00007f8482580000,0x00007f87b5880000)
+  from space 59904K, 71% used [0x00007f87ba000000,0x00007f87bca16818,0x00007f87bda80000)
+  to   space 66560K, 0% used [0x00007f87b5880000,0x00007f87b5880000,0x00007f87b9980000)
+ ParOldGen       total 885248K, used 288084K [0x00007f7b2d000000, 0x00007f7b63080000, 0x00007f8482580000)
+  object space 885248K, 32% used [0x00007f7b2d000000,0x00007f7b3e955240,0x00007f7b63080000)
+ Metaspace       used 35750K, capacity 37246K, committed 37376K, reserved 38912K
+}
+Event: 2300.010 GC heap before
+{Heap before GC invocations=2584 (full 3):
+ PSYoungGen      total 13481472K, used 13464666K [0x00007f8482580000, 0x00007f87bda80000, 0x00007f892d000000)
+  eden space 13421568K, 100% used [0x00007f8482580000,0x00007f87b5880000,0x00007f87b5880000)
+  from space 59904K, 71% used [0x00007f87ba000000,0x00007f87bca16818,0x00007f87bda80000)
+  to   space 66560K, 0% used [0x00007f87b5880000,0x00007f87b5880000,0x00007f87b9980000)
+ ParOldGen       total 885248K, used 288084K [0x00007f7b2d000000, 0x00007f7b63080000, 0x00007f8482580000)
+  object space 885248K, 32% used [0x00007f7b2d000000,0x00007f7b3e955240,0x00007f7b63080000)
+ Metaspace       used 35750K, capacity 37246K, committed 37376K, reserved 38912K
+Event: 2300.018 GC heap after
+Heap after GC invocations=2584 (full 3):
+ PSYoungGen      total 13488128K, used 44937K [0x00007f8482580000, 0x00007f87c5800000, 0x00007f892d000000)
+  eden space 13421568K, 0% used [0x00007f8482580000,0x00007f8482580000,0x00007f87b5880000)
+  from space 66560K, 67% used [0x00007f87b5880000,0x00007f87b8462500,0x00007f87b9980000)
+  to   space 67072K, 0% used [0x00007f87c1680000,0x00007f87c1680000,0x00007f87c5800000)
+ ParOldGen       total 885248K, used 288190K [0x00007f7b2d000000, 0x00007f7b63080000, 0x00007f8482580000)
+  object space 885248K, 32% used [0x00007f7b2d000000,0x00007f7b3e96f9d0,0x00007f7b63080000)
+ Metaspace       used 35750K, capacity 37246K, committed 37376K, reserved 38912K
+}
+Event: 2316.509 GC heap before
+{Heap before GC invocations=2585 (full 3):
+ PSYoungGen      total 13488128K, used 13466505K [0x00007f8482580000, 0x00007f87c5800000, 0x00007f892d000000)
+  eden space 13421568K, 100% used [0x00007f8482580000,0x00007f87b5880000,0x00007f87b5880000)
+  from space 66560K, 67% used [0x00007f87b5880000,0x00007f87b8462500,0x00007f87b9980000)
+  to   space 67072K, 0% used [0x00007f87c1680000,0x00007f87c1680000,0x00007f87c5800000)
+ ParOldGen       total 885248K, used 288190K [0x00007f7b2d000000, 0x00007f7b63080000, 0x00007f8482580000)
+  object space 885248K, 32% used [0x00007f7b2d000000,0x00007f7b3e96f9d0,0x00007f7b63080000)
+ Metaspace       used 35750K, capacity 37246K, committed 37376K, reserved 38912K
+Event: 2316.516 GC heap after
+Heap after GC invocations=2585 (full 3):
+ PSYoungGen      total 13609984K, used 42613K [0x00007f8482580000, 0x00007f87c5500000, 0x00007f892d000000)
+  eden space 13545984K, 0% used [0x00007f8482580000,0x00007f8482580000,0x00007f87bd200000)
+  from space 64000K, 66% used [0x00007f87c1680000,0x00007f87c401d6c0,0x00007f87c5500000)
+  to   space 67072K, 0% used [0x00007f87bd200000,0x00007f87bd200000,0x00007f87c1380000)
+ ParOldGen       total 885248K, used 288222K [0x00007f7b2d000000, 0x00007f7b63080000, 0x00007f8482580000)
+  object space 885248K, 32% used [0x00007f7b2d000000,0x00007f7b3e9779d0,0x00007f7b63080000)
+ Metaspace       used 35750K, capacity 37246K, committed 37376K, reserved 38912K
+}
+
+Deoptimization events (10 events):
+Event: 1613.470 Thread 0x00007f893c011800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f892e07cd5c method=org.broadinstitute.hellbender.engine.filters.CountingReadFilter$CountingAndReadFilter.test(Lorg/broadinstitute/hellbender/utils/read/GATKRead;)Z @ 19
+Event: 1618.156 Thread 0x00007f893c011800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f892deb2ca4 method=java.util.stream.SpinedBuffer$OfPrimitive.preAccept()V @ 12
+Event: 1618.156 Thread 0x00007f893c011800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f892e263684 method=java.util.stream.AbstractSpinedBuffer.count()J @ 4
+Event: 1628.355 Thread 0x00007f893c011800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f892dc952dc method=java.util.stream.Streams$RangeIntSpliterator.forEachRemaining(Ljava/util/function/IntConsumer;)V @ 44
+Event: 1648.309 Thread 0x00007f893c011800 Uncommon trap: reason=intrinsic action=make_not_entrant pc=0x00007f892dfb36b8 method=org.broadinstitute.hellbender.tools.walkers.genotyper.GenotypingEngine.calculateSingleSampleRefVsAnyActiveStateProfileValue([D)D @ 182
+Event: 1685.972 Thread 0x00007f893c011800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f892dd975c8 method=org.apache.commons.math3.distribution.SaddlePointExpansion.logBinomialProbability(IIDD)D @ 9
+Event: 1699.501 Thread 0x00007f893c011800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f892d57f0c8 method=org.broadinstitute.hellbender.tools.walkers.haplotypecaller.graphs.SeqGraph.simplifyGraph(I)V @ 92
+Event: 1699.502 Thread 0x00007f893c011800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f892e1bf3e8 method=org.jgrapht.graph.AbstractBaseGraph.addVertex(Ljava/lang/Object;)Z @ 17
+Event: 1700.496 Thread 0x00007f893c011800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f892e0c5de8 method=org.broadinstitute.hellbender.tools.walkers.haplotypecaller.graphs.SeqGraph.simplifyGraph(I)V @ 92
+Event: 1969.235 Thread 0x00007f893c011800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f892dc08230 method=java.util.HashMap.putVal(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object; @ 162
+
+Internal exceptions (10 events):
+Event: 1.984 Thread 0x00007f893c011800 Exception <a 'java/lang/ClassNotFoundException': org/apache/log4j/WriterAppenderCustomizer> (0x00007f84887532a0) thrown at [/build/openjdk-8-pZyJp3/openjdk-8-8u131-b11/src/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 1.985 Thread 0x00007f893c011800 Exception <a 'java/lang/ClassNotFoundException': org/apache/log4j/ConsoleAppenderCustomizer> (0x00007f848879a4a0) thrown at [/build/openjdk-8-pZyJp3/openjdk-8-8u131-b11/src/hotspot/src/share/vm/classfile/systemDictionary.cpp, line 210]
+Event: 2.077 Thread 0x00007f893c011800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$identity$d67512bf$1(Lorg/broadinstitute/hellbender/utils/read/GATKRead;)Lorg/broadinstitute/hellbender/utils/read/GATKRead;> (0x00007f84893efb58) thrown at [/build/openjdk-8-pZyJp3/openjd
+Event: 2.317 Thread 0x00007f893c011800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$newInstance$0(Lorg/broadinstitute/hellbender/utils/genotyper/LikelihoodMatrix;)Lorg/broadinstitute/hellbender/utils/genotyper/LikelihoodMatrix;> (0x00007f848c23d2c8) thrown at [/build/ope
+Event: 2.322 Thread 0x00007f893c011800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$comparingDouble$8dcf42ea$1(Ljava/util/function/ToDoubleFunction;Ljava/lang/Object;Ljava/lang/Object;)I> (0x00007f848c28c960) thrown at [/build/openjdk-8-pZyJp3/openjdk-8-8u131-b11/src/hot
+Event: 2.443 Thread 0x00007f893c0a7800 Implicit null exception at 0x00007f892d5a4d85 to 0x00007f892d5a4fd1
+Event: 2.602 Thread 0x00007f893c0a7800 Implicit null exception at 0x00007f892d5a8043 to 0x00007f892d5a8115
+Event: 276.812 Thread 0x00007f893c011800 Implicit null exception at 0x00007f892e093f6b to 0x00007f892e094259
+Event: 1022.589 Thread 0x00007f893c011800 Implicit null exception at 0x00007f892e342e9e to 0x00007f892e344651
+Event: 1022.589 Thread 0x00007f893c011800 Implicit null exception at 0x00007f892dfd02c3 to 0x00007f892dfd0365
+
+Events (10 events):
+Event: 2272.496 Thread 0x00007f893c0d5800 flushing nmethod 0x00007f892e142610
+Event: 2282.448 Executing VM operation: ParallelGCFailedAllocation
+Event: 2282.456 Executing VM operation: ParallelGCFailedAllocation done
+Event: 2295.664 Thread 0x00007f893c0f1000 flushing nmethod 0x00007f892e22db90
+Event: 2295.664 Thread 0x00007f893c0f1000 flushing nmethod 0x00007f892e301ad0
+Event: 2295.665 Thread 0x00007f893c0f1000 flushing nmethod 0x00007f892e4d8290
+Event: 2300.010 Executing VM operation: ParallelGCFailedAllocation
+Event: 2300.018 Executing VM operation: ParallelGCFailedAllocation done
+Event: 2316.509 Executing VM operation: ParallelGCFailedAllocation
+Event: 2316.516 Executing VM operation: ParallelGCFailedAllocation done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 00:59 1160594                            /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+00600000-00601000 r--p 00000000 00:59 1160594                            /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+00601000-00602000 rw-p 00001000 00:59 1160594                            /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+0244e000-0246f000 rw-p 00000000 00:00 0                                  [heap]
+7f79f0000000-7f79f0021000 rw-p 00000000 00:00 0 
+7f79f0021000-7f79f4000000 ---p 00000000 00:00 0 
+7f79f4000000-7f79f4021000 rw-p 00000000 00:00 0 
+7f79f4021000-7f79f8000000 ---p 00000000 00:00 0 
+7f79f8000000-7f79f820c000 rw-p 00000000 00:00 0 
+7f79f820c000-7f79fc000000 ---p 00000000 00:00 0 
+7f79fc000000-7f79fc50c000 rw-p 00000000 00:00 0 
+7f79fc50c000-7f7a00000000 ---p 00000000 00:00 0 
+7f7a00000000-7f7a0023b000 rw-p 00000000 00:00 0 
+7f7a0023b000-7f7a04000000 ---p 00000000 00:00 0 
+7f7a04000000-7f7a043b6000 rw-p 00000000 00:00 0 
+7f7a043b6000-7f7a08000000 ---p 00000000 00:00 0 
+7f7a08000000-7f7a0902f000 rw-p 00000000 00:00 0 
+7f7a0902f000-7f7a0c000000 ---p 00000000 00:00 0 
+7f7a0c000000-7f7a0d89b000 rw-p 00000000 00:00 0 
+7f7a0d89b000-7f7a10000000 ---p 00000000 00:00 0 
+7f7a10000000-7f7a112ff000 rw-p 00000000 00:00 0 
+7f7a112ff000-7f7a14000000 ---p 00000000 00:00 0 
+7f7a14000000-7f7a1526c000 rw-p 00000000 00:00 0 
+7f7a1526c000-7f7a18000000 ---p 00000000 00:00 0 
+7f7a18000000-7f7a19651000 rw-p 00000000 00:00 0 
+7f7a19651000-7f7a1c000000 ---p 00000000 00:00 0 
+7f7a1c000000-7f7a1d5ce000 rw-p 00000000 00:00 0 
+7f7a1d5ce000-7f7a20000000 ---p 00000000 00:00 0 
+7f7a20000000-7f7a21b68000 rw-p 00000000 00:00 0 
+7f7a21b68000-7f7a24000000 ---p 00000000 00:00 0 
+7f7a24000000-7f7a2544a000 rw-p 00000000 00:00 0 
+7f7a2544a000-7f7a28000000 ---p 00000000 00:00 0 
+7f7a28000000-7f7a28021000 rw-p 00000000 00:00 0 
+7f7a28021000-7f7a2c000000 ---p 00000000 00:00 0 
+7f7a2c000000-7f7a2c021000 rw-p 00000000 00:00 0 
+7f7a2c021000-7f7a30000000 ---p 00000000 00:00 0 
+7f7a30000000-7f7a30021000 rw-p 00000000 00:00 0 
+7f7a30021000-7f7a34000000 ---p 00000000 00:00 0 
+7f7a35000000-7f7aac000000 rw-p 00000000 00:00 0 
+7f7aac000000-7f7aac021000 rw-p 00000000 00:00 0 
+7f7aac021000-7f7ab0000000 ---p 00000000 00:00 0 
+7f7ab0000000-7f7ab0021000 rw-p 00000000 00:00 0 
+7f7ab0021000-7f7ab4000000 ---p 00000000 00:00 0 
+7f7ab4000000-7f7ab4021000 rw-p 00000000 00:00 0 
+7f7ab4021000-7f7ab8000000 ---p 00000000 00:00 0 
+7f7abc000000-7f7abc021000 rw-p 00000000 00:00 0 
+7f7abc021000-7f7ac0000000 ---p 00000000 00:00 0 
+7f7ac0000000-7f7ac0021000 rw-p 00000000 00:00 0 
+7f7ac0021000-7f7ac4000000 ---p 00000000 00:00 0 
+7f7ac4000000-7f7ac4021000 rw-p 00000000 00:00 0 
+7f7ac4021000-7f7ac8000000 ---p 00000000 00:00 0 
+7f7acc000000-7f7acc021000 rw-p 00000000 00:00 0 
+7f7acc021000-7f7ad0000000 ---p 00000000 00:00 0 
+7f7ad4000000-7f7ad4021000 rw-p 00000000 00:00 0 
+7f7ad4021000-7f7ad8000000 ---p 00000000 00:00 0 
+7f7adc000000-7f7adc021000 rw-p 00000000 00:00 0 
+7f7adc021000-7f7ae0000000 ---p 00000000 00:00 0 
+7f7ae0000000-7f7ae0021000 rw-p 00000000 00:00 0 
+7f7ae0021000-7f7ae4000000 ---p 00000000 00:00 0 
+7f7ae4000000-7f7ae4021000 rw-p 00000000 00:00 0 
+7f7ae4021000-7f7ae8000000 ---p 00000000 00:00 0 
+7f7aec000000-7f7aec021000 rw-p 00000000 00:00 0 
+7f7aec021000-7f7af0000000 ---p 00000000 00:00 0 
+7f7af4000000-7f7af4021000 rw-p 00000000 00:00 0 
+7f7af4021000-7f7af8000000 ---p 00000000 00:00 0 
+7f7afc000000-7f7afc021000 rw-p 00000000 00:00 0 
+7f7afc021000-7f7b00000000 ---p 00000000 00:00 0 
+7f7b00069000-7f7b000e9000 rw-p 00000000 00:00 0 
+7f7b000e9000-7f7b00269000 ---p 00000000 00:00 0 
+7f7b00269000-7f7b00469000 rw-p 00000000 00:00 0 
+7f7b00469000-7f7b00669000 rw-p 00000000 00:00 0 
+7f7b00669000-7f7b00767000 r--s 00000000 08:00 177748419                  /media/mike/WD_4TB/karyon_longread/concat_mrl20k_q15l15k_pepper/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai
+7f7b00767000-7f7b00888000 r-xp 00000000 103:02 37094283                  /tmp/mike/libgkl_pairhmm_omp8638724330789912971.so
+7f7b00888000-7f7b00a87000 ---p 00121000 103:02 37094283                  /tmp/mike/libgkl_pairhmm_omp8638724330789912971.so
+7f7b00a87000-7f7b00a90000 rw-p 00120000 103:02 37094283                  /tmp/mike/libgkl_pairhmm_omp8638724330789912971.so
+7f7b00a90000-7f7b00bdc000 rw-p 00000000 00:00 0 
+7f7b00bdc000-7f7b00bfd000 r-xp 00000000 00:59 1174761                    /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+7f7b00bfd000-7f7b00dfc000 ---p 00021000 00:59 1174761                    /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+7f7b00dfc000-7f7b00dfd000 r--p 00020000 00:59 1174761                    /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+7f7b00dfd000-7f7b00dfe000 rw-p 00021000 00:59 1174761                    /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+7f7b00dfe000-7f7b00dff000 r-xp 00000000 103:02 37094282                  /tmp/mike/libgkl_utils2605179577790011575.so
+7f7b00dff000-7f7b00ffe000 ---p 00001000 103:02 37094282                  /tmp/mike/libgkl_utils2605179577790011575.so
+7f7b00ffe000-7f7b00fff000 rw-p 00000000 103:02 37094282                  /tmp/mike/libgkl_utils2605179577790011575.so
+7f7b00fff000-7f7b04000000 rw-p 00000000 00:00 0 
+7f7b04000000-7f7b04021000 rw-p 00000000 00:00 0 
+7f7b04021000-7f7b08000000 ---p 00000000 00:00 0 
+7f7b0806c000-7f7b0826c000 rw-p 00000000 00:00 0 
+7f7b0826c000-7f7b0846c000 rw-p 00000000 00:00 0 
+7f7b0846c000-7f7b08483000 r-xp 00000000 00:59 1156741                    /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f7b08483000-7f7b08683000 ---p 00017000 00:59 1156741                    /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f7b08683000-7f7b08684000 r--p 00017000 00:59 1156741                    /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f7b08684000-7f7b08685000 rw-p 00018000 00:59 1156741                    /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f7b08685000-7f7b08687000 rw-p 00000000 00:00 0 
+7f7b08687000-7f7b0868c000 r-xp 00000000 00:59 1156739                    /lib/x86_64-linux-gnu/libnss_dns-2.23.so
+7f7b0868c000-7f7b0888c000 ---p 00005000 00:59 1156739                    /lib/x86_64-linux-gnu/libnss_dns-2.23.so
+7f7b0888c000-7f7b0888d000 r--p 00005000 00:59 1156739                    /lib/x86_64-linux-gnu/libnss_dns-2.23.so
+7f7b0888d000-7f7b0888e000 rw-p 00006000 00:59 1156739                    /lib/x86_64-linux-gnu/libnss_dns-2.23.so
+7f7b08896000-7f7b088c0000 r-xp 00000000 103:02 37094281                  /tmp/mike/libgkl_compression5387469254716726462.so
+7f7b088c0000-7f7b08ac0000 ---p 0002a000 103:02 37094281                  /tmp/mike/libgkl_compression5387469254716726462.so
+7f7b08ac0000-7f7b08ac3000 rw-p 0002a000 103:02 37094281                  /tmp/mike/libgkl_compression5387469254716726462.so
+7f7b08ac3000-7f7b08ac8000 r--s 0009a000 00:59 1173608                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar
+7f7b08ac8000-7f7b08cc8000 rw-p 00000000 00:00 0 
+7f7b08cc8000-7f7b08cdb000 r--s 00346000 00:59 1173606                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar
+7f7b08cdb000-7f7b08edb000 rw-p 00000000 00:00 0 
+7f7b08edb000-7f7b090db000 rw-p 00000000 00:00 0 
+7f7b090db000-7f7b092db000 rw-p 00000000 00:00 0 
+7f7b092db000-7f7b094db000 rw-p 00000000 00:00 0 
+7f7b094db000-7f7b096db000 rw-p 00000000 00:00 0 
+7f7b096db000-7f7b098db000 rw-p 00000000 00:00 0 
+7f7b098db000-7f7b098ec000 r-xp 00000000 00:59 1162590                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f7b098ec000-7f7b09aec000 ---p 00011000 00:59 1162590                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f7b09aec000-7f7b09aed000 r--p 00011000 00:59 1162590                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f7b09aed000-7f7b09aee000 rw-p 00012000 00:59 1162590                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f7b09aee000-7f7b09cee000 rw-p 00000000 00:00 0 
+7f7b09cee000-7f7b09eee000 rw-p 00000000 00:00 0 
+7f7b09eee000-7f7b09f05000 r-xp 00000000 00:59 1164975                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f7b09f05000-7f7b0a104000 ---p 00017000 00:59 1164975                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f7b0a104000-7f7b0a105000 r--p 00016000 00:59 1164975                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f7b0a105000-7f7b0a106000 rw-p 00017000 00:59 1164975                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f7b0a106000-7f7b0a306000 rw-p 00000000 00:00 0 
+7f7b0a306000-7f7b0a30f000 r-xp 00000000 00:59 1153802                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f7b0a30f000-7f7b0a50e000 ---p 00009000 00:59 1153802                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f7b0a50e000-7f7b0a50f000 r--p 00008000 00:59 1153802                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f7b0a50f000-7f7b0a510000 rw-p 00009000 00:59 1153802                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f7b0a510000-7f7b0a519000 r--s 0004f000 00:59 1153801                    /gatk/build/install/gatk/lib/google-http-client-1.22.0.jar
+7f7b0a519000-7f7b0a51b000 r--s 0000d000 00:59 1153800                    /gatk/build/install/gatk/lib/google-oauth-client-1.22.0.jar
+7f7b0a51b000-7f7b0a522000 r--s 00053000 00:59 1153799                    /gatk/build/install/gatk/lib/commons-compress-1.8.1.jar
+7f7b0a522000-7f7b0a524000 r--s 00007000 00:59 1153798                    /gatk/build/install/gatk/lib/paranamer-2.7.jar
+7f7b0a524000-7f7b0a53c000 r--s 000f7000 00:59 1153797                    /gatk/build/install/gatk/lib/log4j-core-2.5.jar
+7f7b0a53c000-7f7b0a53f000 r--s 00021000 00:59 1153796                    /gatk/build/install/gatk/lib/log4j-api-2.5.jar
+7f7b0a53f000-7f7b0a540000 r--s 00001000 00:59 1153795                    /gatk/build/install/gatk/lib/google-http-client-jackson2-1.22.0.jar
+7f7b0a540000-7f7b0a541000 r--s 00006000 00:59 1153794                    /gatk/build/install/gatk/lib/jackson-xc-1.9.13.jar
+7f7b0a541000-7f7b0a542000 r--s 00004000 00:59 1153793                    /gatk/build/install/gatk/lib/jackson-jaxrs-1.9.13.jar
+7f7b0a542000-7f7b0a549000 r--s 0003f000 00:59 1153792                    /gatk/build/install/gatk/lib/commons-codec-1.10.jar
+7f7b0a549000-7f7b0a595000 r--s 00411000 00:59 1153791                    /gatk/build/install/gatk/lib/scala-reflect-2.11.8.jar
+7f7b0a595000-7f7b0a59a000 r--s 0002c000 00:59 1153790                    /gatk/build/install/gatk/lib/google-api-client-1.22.0.jar
+7f7b0a59a000-7f7b0a5a2000 r--s 0003b000 00:59 1153789                    /gatk/build/install/gatk/lib/curator-recipes-2.7.1.jar
+7f7b0a5a2000-7f7b0a5a7000 r--s 00034000 00:59 1153788                    /gatk/build/install/gatk/lib/gson-2.7.jar
+7f7b0a5a7000-7f7b0a5a8000 r--s 00004000 00:59 1153787                    /gatk/build/install/gatk/lib/java-xmlbuilder-0.4.jar
+7f7b0a5a8000-7f7b0a5b1000 r--s 0007b000 00:59 1153786                    /gatk/build/install/gatk/lib/jets3t-0.9.0.jar
+7f7b0a5b1000-7f7b0a5b3000 r--s 0000e000 00:59 1153785                    /gatk/build/install/gatk/lib/commons-logging-1.2.jar
+7f7b0a5b3000-7f7b0a5b8000 r--s 0003e000 00:59 1153784                    /gatk/build/install/gatk/lib/commons-net-3.1.jar
+7f7b0a5b8000-7f7b0a5cc000 r--s 000ec000 00:59 1153783                    /gatk/build/install/gatk/lib/parquet-jackson-1.8.1.jar
+7f7b0a5cc000-7f7b0a5d1000 r--s 00031000 00:59 1153782                    /gatk/build/install/gatk/lib/parquet-hadoop-1.8.1.jar
+7f7b0a5d1000-7f7b0a5d7000 r--s 00040000 00:59 1153781                    /gatk/build/install/gatk/lib/parquet-encoding-1.8.1.jar
+7f7b0a5d7000-7f7b0a5d9000 r--s 00008000 00:59 1153780                    /gatk/build/install/gatk/lib/parquet-common-1.8.1.jar
+7f7b0a5d9000-7f7b0a5ef000 r--s 000d1000 00:59 1153779                    /gatk/build/install/gatk/lib/parquet-column-1.8.1.jar
+7f7b0a5ef000-7f7b0a5f6000 r--s 00049000 00:59 1153778                    /gatk/build/install/gatk/lib/httpcore-4.4.4.jar
+7f7b0a5f6000-7f7b0a5fa000 r--s 00027000 00:59 1153777                    /gatk/build/install/gatk/lib/servo-internal-0.10.0.jar
+7f7b0a5fa000-7f7b0a5fd000 r--s 0001d000 00:59 1153776                    /gatk/build/install/gatk/lib/google-api-services-storage-v1-rev108-1.22.0.jar
+7f7b0a5fd000-7f7b0a5ff000 r--s 00009000 00:59 1153775                    /gatk/build/install/gatk/lib/objenesis-2.1.jar
+7f7b0a5ff000-7f7b0a61b000 r--s 0012c000 00:59 1153774                    /gatk/build/install/gatk/lib/avro-1.8.0.jar
+7f7b0a61b000-7f7b0a61e000 r--s 00024000 00:59 1153773                    /gatk/build/install/gatk/lib/bdg-formats-0.9.0.jar
+7f7b0a61e000-7f7b0a629000 r--s 0005c000 00:59 1153772                    /gatk/build/install/gatk/lib/scala-parser-combinators_2.11-1.0.1.jar
+7f7b0a629000-7f7b0a64a000 rw-p 00000000 00:00 0 
+7f7b0a64a000-7f7b0a73a000 r--s 00c16000 00:59 1153771                    /gatk/build/install/gatk/lib/scala-compiler-2.11.0.jar
+7f7b0a73a000-7f7b0a741000 r--s 0003e000 00:59 1153770                    /gatk/build/install/gatk/lib/cglib-2.2.1-v20090111.jar
+7f7b0a741000-7f7b0a743000 r--s 00000000 00:59 1153769                    /gatk/build/install/gatk/lib/aopalliance-1.0.jar
+7f7b0a743000-7f7b0a745000 r--s 0000e000 00:59 1153768                    /gatk/build/install/gatk/lib/activation-1.1.jar
+7f7b0a745000-7f7b0a747000 r--s 00004000 00:59 1153767                    /gatk/build/install/gatk/lib/stax-api-1.0-2.jar
+7f7b0a747000-7f7b0a749000 r--s 00012000 00:59 1153766                    /gatk/build/install/gatk/lib/api-util-1.0.0-M20.jar
+7f7b0a749000-7f7b0a74b000 r--s 00003000 00:59 1153765                    /gatk/build/install/gatk/lib/api-asn1-api-1.0.0-M20.jar
+7f7b0a74b000-7f7b0a74c000 r--s 0000a000 00:59 1153764                    /gatk/build/install/gatk/lib/apacheds-i18n-2.0.0-M15.jar
+7f7b0a74c000-7f7b0a751000 r--s 0002a000 00:59 1153763                    /gatk/build/install/gatk/lib/commons-beanutils-1.7.0.jar
+7f7b0a751000-7f7b0a753000 r--s 00006000 00:59 1153762                    /gatk/build/install/gatk/lib/commons-compiler-2.7.8.jar
+7f7b0a753000-7f7b0a759000 r--s 00077000 00:59 1153761                    /gatk/build/install/gatk/lib/threetenbp-1.3.3.jar
+7f7b0a759000-7f7b0a775000 r--s 00138000 00:59 1153760                    /gatk/build/install/gatk/lib/auto-value-1.2.jar
+7f7b0a775000-7f7b0a777000 r--s 00002000 00:59 1153759                    /gatk/build/install/gatk/lib/aopalliance-repackaged-2.4.0-b34.jar
+7f7b0a777000-7f7b0a77b000 r--s 0001a000 00:59 1153758                    /gatk/build/install/gatk/lib/hk2-utils-2.4.0-b34.jar
+7f7b0a77b000-7f7b0a78d000 r--s 000ab000 00:59 1153757                    /gatk/build/install/gatk/lib/scalap-2.11.0.jar
+7f7b0a78d000-7f7b0a790000 r--s 00012000 00:59 1153756                    /gatk/build/install/gatk/lib/json4s-ast_2.11-3.2.11.jar
+7f7b0a790000-7f7b0a793000 r--s 00020000 00:59 1153755                    /gatk/build/install/gatk/lib/hadoop-yarn-client-2.7.2.jar
+7f7b0a793000-7f7b0a798000 r--s 0002c000 00:59 1153754                    /gatk/build/install/gatk/lib/hadoop-yarn-server-applicationhistoryservice-2.7.2.jar
+7f7b0a798000-7f7b0a799000 r--s 00003000 00:59 1153753                    /gatk/build/install/gatk/lib/jersey-guice-1.9.jar
+7f7b0a799000-7f7b0a7a8000 r--s 0009f000 00:59 1153752                    /gatk/build/install/gatk/lib/guice-3.0.jar
+7f7b0a7a8000-7f7b0a7ab000 r--s 0001d000 00:59 1153751                    /gatk/build/install/gatk/lib/jersey-client-1.9.jar
+7f7b0a7ab000-7f7b0a7ae000 r--s 00017000 00:59 1153750                    /gatk/build/install/gatk/lib/jaxb-api-2.2.2.jar
+7f7b0a7ae000-7f7b0a7b6000 r--s 00028000 00:59 1153749                    /gatk/build/install/gatk/lib/xml-apis-1.3.04.jar
+7f7b0a7b6000-7f7b0a7b8000 r--s 00014000 00:59 1153748                    /gatk/build/install/gatk/lib/jline-0.9.94.jar
+7f7b0a7b8000-7f7b0a7be000 r--s 00028000 00:59 1153747                    /gatk/build/install/gatk/lib/curator-framework-2.7.1.jar
+7f7b0a7be000-7f7b0a7d0000 r--s 00097000 00:59 1153746                    /gatk/build/install/gatk/lib/apacheds-kerberos-codec-2.0.0-M15.jar
+7f7b0a7d0000-7f7b0a7d4000 r--s 0002f000 00:59 1153745                    /gatk/build/install/gatk/lib/commons-beanutils-core-1.8.0.jar
+7f7b0a7d4000-7f7b0a7d8000 r--s 00020000 00:59 1153744                    /gatk/build/install/gatk/lib/commons-digester-1.8.jar
+7f7b0a7d8000-7f7b0a7d9000 r--s 0000a000 00:59 1153743                    /gatk/build/install/gatk/lib/asm-3.1.jar
+7f7b0a7d9000-7f7b0a7ec000 r--s 000c7000 00:59 1153742                    /gatk/build/install/gatk/lib/jaxb-impl-2.2.3-1.jar
+7f7b0a7ec000-7f7b0a7ee000 r--s 0000f000 00:59 1153741                    /gatk/build/install/gatk/lib/jettison-1.1.jar
+7f7b0a7ee000-7f7b0a7f8000 r--s 00095000 00:59 1153740                    /gatk/build/install/gatk/lib/scala-xml_2.11-1.0.2.jar
+7f7b0a7f8000-7f7b0a7fa000 r--s 00014000 00:59 1153739                    /gatk/build/install/gatk/lib/spire-macros_2.11-0.7.4.jar
+7f7b0a7fa000-7f7b0a800000 r--s 00044000 00:59 1153738                    /gatk/build/install/gatk/lib/antlr4-runtime-4.5.3.jar
+7f7b0a800000-7f7b0a809000 r--s 0008d000 00:59 1153737                    /gatk/build/install/gatk/lib/janino-2.7.8.jar
+7f7b0a809000-7f7b0a80a000 r--s 00001000 00:59 1153736                    /gatk/build/install/gatk/lib/google-http-client-jackson-1.21.0.jar
+7f7b0a80a000-7f7b0a80b000 r--s 00003000 00:59 1153735                    /gatk/build/install/gatk/lib/google-http-client-appengine-1.21.0.jar
+7f7b0a80b000-7f7b0a80d000 r--s 0000c000 00:59 1153734                    /gatk/build/install/gatk/lib/google-auth-library-oauth2-http-0.7.0.jar
+7f7b0a80d000-7f7b0a80e000 r--s 00001000 00:59 1153733                    /gatk/build/install/gatk/lib/google-auth-library-credentials-0.7.0.jar
+7f7b0a80e000-7f7b0a810000 r--s 00015000 00:59 1153732                    /gatk/build/install/gatk/lib/proto-google-iam-v1-0.1.13.jar
+7f7b0a810000-7f7b0a81a000 r--s 000fb000 00:59 1153731                    /gatk/build/install/gatk/lib/proto-google-common-protos-0.1.13.jar
+7f7b0a81a000-7f7b0a81c000 r--s 0000f000 00:59 1153730                    /gatk/build/install/gatk/lib/protobuf-java-util-3.3.0.jar
+7f7b0a81c000-7f7b0a81f000 r--s 0000f000 00:59 1153729                    /gatk/build/install/gatk/lib/gax-1.4.2.jar
+7f7b0a81f000-7f7b0a821000 r--s 00009000 00:59 1153728                    /gatk/build/install/gatk/lib/api-common-1.1.0.jar
+7f7b0a821000-7f7b0a823000 r--s 0000c000 00:59 1153727                    /gatk/build/install/gatk/lib/json-20160810.jar
+7f7b0a823000-7f7b0a833000 r--s 00089000 00:59 1153726                    /gatk/build/install/gatk/lib/joda-time-2.9.2.jar
+7f7b0a833000-7f7b0a835000 r--s 00011000 00:59 1153725                    /gatk/build/install/gatk/lib/hamcrest-core-1.1.jar
+7f7b0a835000-7f7b0a837000 r--s 00009000 00:59 1153724                    /gatk/build/install/gatk/lib/jackson-module-paranamer-2.6.5.jar
+7f7b0a837000-7f7b0a83b000 r--s 0003c000 00:59 1153723                    /gatk/build/install/gatk/lib/jackson-core-2.6.5.jar
+7f7b0a83b000-7f7b0a83f000 r--s 0000c000 00:59 1153722                    /gatk/build/install/gatk/lib/validation-api-1.1.0.Final.jar
+7f7b0a83f000-7f7b0a841000 r--s 00010000 00:59 1153721                    /gatk/build/install/gatk/lib/jersey-media-jaxb-2.22.2.jar
+7f7b0a841000-7f7b0a842000 r--s 00004000 00:59 1153720                    /gatk/build/install/gatk/lib/osgi-resource-locator-1.0.1.jar
+7f7b0a842000-7f7b0a85a000 r--s 000d6000 00:59 1153719                    /gatk/build/install/gatk/lib/jersey-guava-2.22.2.jar
+7f7b0a85a000-7f7b0a85c000 r--s 00005000 00:59 1153718                    /gatk/build/install/gatk/lib/javax.annotation-api-1.2.jar
+7f7b0a85c000-7f7b0a860000 r--s 00029000 00:59 1153717                    /gatk/build/install/gatk/lib/hk2-locator-2.4.0-b34.jar
+7f7b0a860000-7f7b0a861000 r--s 00001000 00:59 1153716                    /gatk/build/install/gatk/lib/javax.inject-2.4.0-b34.jar
+7f7b0a861000-7f7b0a866000 r--s 00027000 00:59 1153715                    /gatk/build/install/gatk/lib/hk2-api-2.4.0-b34.jar
+7f7b0a866000-7f7b0a86a000 r--s 00019000 00:59 1153714                    /gatk/build/install/gatk/lib/javax.ws.rs-api-2.0.1.jar
+7f7b0a86a000-7f7b0a874000 r--s 00086000 00:59 1153713                    /gatk/build/install/gatk/lib/json4s-core_2.11-3.2.11.jar
+7f7b0a874000-7f7b0a877000 r--s 00009000 00:59 1153712                    /gatk/build/install/gatk/lib/jackson-annotations-2.6.5.jar
+7f7b0a877000-7f7b0a87e000 r--s 00051000 00:59 1153711                    /gatk/build/install/gatk/lib/kryo-shaded-3.0.3.jar
+7f7b0a87e000-7f7b0a885000 r--s 0004e000 00:59 1153710                    /gatk/build/install/gatk/lib/avro-ipc-1.7.7-tests.jar
+7f7b0a885000-7f7b0a889000 r--s 0002c000 00:59 1153709                    /gatk/build/install/gatk/lib/avro-ipc-1.7.7.jar
+7f7b0a889000-7f7b0a88b000 r--s 00001000 00:59 1153708                    /gatk/build/install/gatk/lib/jniloader-1.1.jar
+7f7b0a88b000-7f7b0a88d000 r--s 00007000 00:59 1153707                    /gatk/build/install/gatk/lib/hadoop-yarn-server-web-proxy-2.7.2.jar
+7f7b0a88d000-7f7b0a88f000 r--s 0000e000 00:59 1153706                    /gatk/build/install/gatk/lib/guice-servlet-3.0.jar
+7f7b0a88f000-7f7b0a890000 r--s 0000b000 00:59 1153705                    /gatk/build/install/gatk/lib/hadoop-mapreduce-client-shuffle-2.7.2.jar
+7f7b0a890000-7f7b0a89d000 r--s 000ab000 00:59 1153704                    /gatk/build/install/gatk/lib/hadoop-mapreduce-client-common-2.7.2.jar
+7f7b0a89d000-7f7b0a8b4000 r--s 0017d000 00:59 1153703                    /gatk/build/install/gatk/lib/hadoop-yarn-common-2.7.2.jar
+7f7b0a8b4000-7f7b0a8ca000 r--s 0011d000 00:59 1153702                    /gatk/build/install/gatk/lib/hadoop-yarn-server-resourcemanager-2.7.2.jar
+7f7b0a8ca000-7f7b0a8d8000 r--s 0009c000 00:59 1153701                    /gatk/build/install/gatk/lib/hadoop-yarn-server-nodemanager-2.7.2.jar
+7f7b0a8d8000-7f7b0a8df000 r--s 00052000 00:59 1153700                    /gatk/build/install/gatk/lib/hadoop-yarn-server-common-2.7.2.jar
+7f7b0a8df000-7f7b0a8e2000 r--s 000fd000 00:59 1153699                    /gatk/build/install/gatk/lib/leveldbjni-all-1.8.jar
+7f7b0a8e2000-7f7b0a8fa000 r--s 00115000 00:59 1153698                    /gatk/build/install/gatk/lib/xercesImpl-2.9.1.jar
+7f7b0a8fa000-7f7b0a8fb000 r--s 00005000 00:59 1153697                    /gatk/build/install/gatk/lib/commons-daemon-1.0.13.jar
+7f7b0a8fb000-7f7b0a904000 r--s 0007b000 00:59 1153696                    /gatk/build/install/gatk/lib/zookeeper-3.4.6-tests.jar
+7f7b0a904000-7f7b0a910000 r--s 000b6000 00:59 1153695                    /gatk/build/install/gatk/lib/zookeeper-3.4.6.jar
+7f7b0a910000-7f7b0a929000 r--s 00150000 00:59 1153694                    /gatk/build/install/gatk/lib/htrace-core-3.1.0-incubating.jar
+7f7b0a929000-7f7b0a92b000 r--s 0000f000 00:59 1153693                    /gatk/build/install/gatk/lib/curator-client-2.7.1.jar
+7f7b0a92b000-7f7b0a92e000 r--s 0002b000 00:59 1153692                    /gatk/build/install/gatk/lib/jsch-0.1.42.jar
+7f7b0a92e000-7f7b0a931000 r--s 0000f000 00:59 1153691                    /gatk/build/install/gatk/lib/hadoop-auth-2.7.2.jar
+7f7b0a931000-7f7b0a93e000 r--s 000ec000 00:59 1153690                    /gatk/build/install/gatk/lib/protobuf-java-3.0.0-beta-1.jar
+7f7b0a93e000-7f7b0a94c000 r--s 000b1000 00:59 1153689                    /gatk/build/install/gatk/lib/jackson-mapper-asl-1.9.13.jar
+7f7b0a94c000-7f7b0a950000 r--s 00035000 00:59 1153688                    /gatk/build/install/gatk/lib/jackson-core-asl-1.9.13.jar
+7f7b0a950000-7f7b0a956000 r--s 00043000 00:59 1153687                    /gatk/build/install/gatk/lib/commons-configuration-1.6.jar
+7f7b0a956000-7f7b0a95b000 r--s 00041000 00:59 1153686                    /gatk/build/install/gatk/lib/commons-lang-2.6.jar
+7f7b0a95b000-7f7b0a96d000 r--s 0009d000 00:59 1153685                    /gatk/build/install/gatk/lib/jersey-server-1.9.jar
+7f7b0a96d000-7f7b0a971000 r--s 00021000 00:59 1153684                    /gatk/build/install/gatk/lib/jersey-json-1.9.jar
+7f7b0a971000-7f7b0a97b000 r--s 00066000 00:59 1153683                    /gatk/build/install/gatk/lib/jersey-core-1.9.jar
+7f7b0a97b000-7f7b0a97e000 r--s 00016000 00:59 1153682                    /gatk/build/install/gatk/lib/jsp-api-2.1.jar
+7f7b0a97e000-7f7b0a982000 r--s 00028000 00:59 1153681                    /gatk/build/install/gatk/lib/jetty-util-6.1.26.jar
+7f7b0a982000-7f7b0a989000 r--s 0007d000 00:59 1153680                    /gatk/build/install/gatk/lib/jetty-6.1.26.jar
+7f7b0a989000-7f7b0a996000 r--s 00083000 00:59 1153679                    /gatk/build/install/gatk/lib/commons-collections-3.2.2.jar
+7f7b0a996000-7f7b0a99c000 r--s 00045000 00:59 1153678                    /gatk/build/install/gatk/lib/commons-httpclient-3.1.jar
+7f7b0a99c000-7f7b0a99d000 r--s 00003000 00:59 1153677                    /gatk/build/install/gatk/lib/xmlenc-0.52.jar
+7f7b0a99d000-7f7b0a99f000 r--s 00009000 00:59 1153676                    /gatk/build/install/gatk/lib/commons-cli-1.2.jar
+7f7b0a99f000-7f7b0a9a6000 r--s 00058000 00:59 1153675                    /gatk/build/install/gatk/lib/parquet-format-2.3.0-incubating.jar
+7f7b0a9a6000-7f7b0a9a9000 r--s 0000e000 00:59 1153674                    /gatk/build/install/gatk/lib/args4j-2.0.23.jar
+7f7b0a9a9000-7f7b0a9ab000 r--s 00003000 00:59 1153673                    /gatk/build/install/gatk/lib/utils-misc-spark2_2.11-0.2.8.jar
+7f7b0a9ab000-7f7b0aa12000 r--s 006b2000 00:59 1153672                    /gatk/build/install/gatk/lib/scalatest_2.11-2.2.6.jar
+7f7b0aa12000-7f7b0aa13000 r--s 00001000 00:59 1153671                    /gatk/build/install/gatk/lib/pmml-schema-1.2.15.jar
+7f7b0aa13000-7f7b0aa68000 r--s 0069c000 00:59 1153670                    /gatk/build/install/gatk/lib/spire_2.11-0.7.4.jar
+7f7b0aa68000-7f7b0aa73000 r--s 000b0000 00:59 1153669                    /gatk/build/install/gatk/lib/jtransforms-2.4.0.jar
+7f7b0aa73000-7f7b0aa74000 r--s 00004000 00:59 1153668                    /gatk/build/install/gatk/lib/opencsv-2.3.jar
+7f7b0aa74000-7f7b0aa78000 r--s 0001e000 00:59 1153667                    /gatk/build/install/gatk/lib/breeze-macros_2.11-0.11.2.jar
+7f7b0aa78000-7f7b0aa7a000 r--s 00027000 00:59 1153666                    /gatk/build/install/gatk/lib/core-1.1.2.jar
+7f7b0aa7a000-7f7b0aafa000 r--s 00616000 00:59 1153665                    /gatk/build/install/gatk/lib/spark-catalyst_2.11-2.0.2.jar
+7f7b0aafa000-7f7b0aafc000 r--s 00006000 00:59 1153664                    /gatk/build/install/gatk/lib/spark-sketch_2.11-2.0.2.jar
+7f7b0aafc000-7f7b0ab02000 r--s 00041000 00:59 1153663                    /gatk/build/install/gatk/lib/univocity-parsers-2.1.1.jar
+7f7b0ab02000-7f7b0ab04000 r--s 00005000 00:59 1153662                    /gatk/build/install/gatk/lib/regexp-1.3.jar
+7f7b0ab04000-7f7b0ab06000 r--s 00008000 00:59 1153661                    /gatk/build/install/gatk/lib/maven-scm-provider-svn-commons-1.4.jar
+7f7b0ab06000-7f7b0ab0b000 r--s 00039000 00:59 1153660                    /gatk/build/install/gatk/lib/plexus-utils-1.5.6.jar
+7f7b0ab0b000-7f7b0ab0c000 r--s 00002000 00:59 1153659                    /gatk/build/install/gatk/lib/google-cloud-core-http-1.2.3.jar
+7f7b0ab0c000-7f7b0ab0f000 r--s 0001b000 00:59 1153658                    /gatk/build/install/gatk/lib/google-cloud-core-1.2.3.jar
+7f7b0ab0f000-7f7b0ab16000 r--s 00037000 00:59 1173762                    /gatk/build/install/gatk/lib/junit-4.10.jar
+7f7b0ab16000-7f7b0ab19000 r--s 0001a000 00:59 1173761                    /gatk/build/install/gatk/lib/py4j-0.10.3.jar
+7f7b0ab19000-7f7b0ab1c000 r--s 00015000 00:59 1173760                    /gatk/build/install/gatk/lib/pyrolite-4.13.jar
+7f7b0ab1c000-7f7b0ab1e000 r--s 0000e000 00:59 1173759                    /gatk/build/install/gatk/lib/oro-2.0.8.jar
+7f7b0ab1e000-7f7b0ab34000 r--s 00124000 00:59 1173758                    /gatk/build/install/gatk/lib/ivy-2.4.0.jar
+7f7b0ab34000-7f7b0ab41000 r--s 00071000 00:59 1173757                    /gatk/build/install/gatk/lib/jackson-module-scala_2.11-2.6.5.jar
+7f7b0ab41000-7f7b0ab52000 r--s 0010d000 00:59 1173756                    /gatk/build/install/gatk/lib/jackson-databind-2.6.5.jar
+7f7b0ab52000-7f7b0ab54000 r--s 00004000 00:59 1173755                    /gatk/build/install/gatk/lib/metrics-graphite-3.1.2.jar
+7f7b0ab54000-7f7b0ab55000 r--s 00003000 00:59 1173754                    /gatk/build/install/gatk/lib/metrics-json-3.1.2.jar
+7f7b0ab55000-7f7b0ab57000 r--s 00008000 00:59 1173753                    /gatk/build/install/gatk/lib/metrics-jvm-3.1.2.jar
+7f7b0ab57000-7f7b0ab5b000 r--s 00018000 00:59 1173752                    /gatk/build/install/gatk/lib/metrics-core-3.1.2.jar
+7f7b0ab5b000-7f7b0ab5e000 r--s 00028000 00:59 1173751                    /gatk/build/install/gatk/lib/stream-2.7.0.jar
+7f7b0ab5e000-7f7b0ab76000 r--s 00115000 00:59 1173750                    /gatk/build/install/gatk/lib/netty-3.8.0.Final.jar
+7f7b0ab76000-7f7b0ab98000 r--s 001d4000 00:59 1173749                    /gatk/build/install/gatk/lib/netty-all-4.0.29.Final.jar
+7f7b0ab98000-7f7b0aba6000 r--s 0012a000 00:59 1173748                    /gatk/build/install/gatk/lib/mesos-0.21.1-shaded-protobuf.jar
+7f7b0aba6000-7f7b0aba9000 r--s 0000e000 00:59 1173747                    /gatk/build/install/gatk/lib/jersey-container-servlet-core-2.22.2.jar
+7f7b0aba9000-7f7b0abab000 r--s 00003000 00:59 1173746                    /gatk/build/install/gatk/lib/jersey-container-servlet-2.22.2.jar
+7f7b0abab000-7f7b0abc1000 r--s 000d3000 00:59 1173745                    /gatk/build/install/gatk/lib/jersey-server-2.22.2.jar
+7f7b0abc1000-7f7b0abcf000 r--s 0009d000 00:59 1173744                    /gatk/build/install/gatk/lib/jersey-common-2.22.2.jar
+7f7b0abcf000-7f7b0abd3000 r--s 00025000 00:59 1173743                    /gatk/build/install/gatk/lib/jersey-client-2.22.2.jar
+7f7b0abd3000-7f7b0abd4000 r--s 00009000 00:59 1173742                    /gatk/build/install/gatk/lib/json4s-jackson_2.11-3.2.11.jar
+7f7b0abd4000-7f7b0ac2d000 r--s 00522000 00:59 1173741                    /gatk/build/install/gatk/lib/scala-library-2.11.8.jar
+7f7b0ac2d000-7f7b0ac30000 r--s 0002f000 00:59 1173740                    /gatk/build/install/gatk/lib/RoaringBitmap-0.5.11.jar
+7f7b0ac30000-7f7b0ac32000 r--s 00038000 00:59 1173739                    /gatk/build/install/gatk/lib/lz4-1.3.0.jar
+7f7b0ac32000-7f7b0ac34000 r--s 00012000 00:59 1173738                    /gatk/build/install/gatk/lib/compress-lzf-1.0.3.jar
+7f7b0ac34000-7f7b0ac3d000 r--s 0006f000 00:59 1173737                    /gatk/build/install/gatk/lib/log4j-1.2.17.jar
+7f7b0ac3d000-7f7b0ac3f000 r--s 00003000 00:59 1173736                    /gatk/build/install/gatk/lib/jcl-over-slf4j-1.7.16.jar
+7f7b0ac3f000-7f7b0ac42000 r--s 00015000 00:59 1173735                    /gatk/build/install/gatk/lib/javax.servlet-api-3.1.0.jar
+7f7b0ac42000-7f7b0ac44000 r--s 00009000 00:59 1173734                    /gatk/build/install/gatk/lib/spark-unsafe_2.11-2.0.2.jar
+7f7b0ac44000-7f7b0ac46000 r--s 0000c000 00:59 1173733                    /gatk/build/install/gatk/lib/spark-network-shuffle_2.11-2.0.2.jar
+7f7b0ac46000-7f7b0ac74000 r--s 00212000 00:59 1173732                    /gatk/build/install/gatk/lib/spark-network-common_2.11-2.0.2.jar
+7f7b0ac74000-7f7b0ac77000 r--s 0000e000 00:59 1173731                    /gatk/build/install/gatk/lib/spark-launcher_2.11-2.0.2.jar
+7f7b0ac77000-7f7b0ac7a000 r--s 00021000 00:59 1173730                    /gatk/build/install/gatk/lib/xbean-asm5-shaded-4.4.jar
+7f7b0ac7a000-7f7b0ac7c000 r--s 0000b000 00:59 1173729                    /gatk/build/install/gatk/lib/chill-java-0.8.0.jar
+7f7b0ac7c000-7f7b0ac81000 r--s 00032000 00:59 1173728                    /gatk/build/install/gatk/lib/chill_2.11-0.8.0.jar
+7f7b0ac81000-7f7b0ac86000 r--s 00028000 00:59 1173727                    /gatk/build/install/gatk/lib/avro-mapred-1.7.7-hadoop2.jar
+7f7b0ac86000-7f7b0ac87000 r--s 0000b000 00:59 1173726                    /gatk/build/install/gatk/lib/asm-4.2.jar
+7f7b0ac87000-7f7b0ac88000 r--s 00001000 00:59 1173725                    /gatk/build/install/gatk/lib/minlog-1.3.0.jar
+7f7b0ac88000-7f7b0ac89000 r--s 0000d000 00:59 1173724                    /gatk/build/install/gatk/lib/native_system-java-1.1.jar
+7f7b0ac89000-7f7b0ac9b000 r--s 00112000 00:59 1173723                    /gatk/build/install/gatk/lib/arpack_combined_all-0.1.jar
+7f7b0ac9b000-7f7b0ac9c000 r--s 0000d000 00:59 1173722                    /gatk/build/install/gatk/lib/native_ref-java-1.1.jar
+7f7b0ac9c000-7f7b0ac9e000 r--s 00003000 00:59 1173721                    /gatk/build/install/gatk/lib/hadoop-annotations-2.7.2.jar
+7f7b0ac9e000-7f7b0aca0000 r--s 00009000 00:59 1173720                    /gatk/build/install/gatk/lib/slf4j-api-1.7.25.jar
+7f7b0aca0000-7f7b0aca3000 r--s 00026000 00:59 1173719                    /gatk/build/install/gatk/lib/hadoop-mapreduce-client-hs-2.7.2.jar
+7f7b0aca3000-7f7b0acbb000 r--s 0015e000 00:59 1173718                    /gatk/build/install/gatk/lib/hadoop-mapreduce-client-core-2.7.2.jar
+7f7b0acbb000-7f7b0acd8000 r--s 001d0000 00:59 1173717                    /gatk/build/install/gatk/lib/hadoop-yarn-api-2.7.2.jar
+7f7b0acd8000-7f7b0ace2000 r--s 00075000 00:59 1173716                    /gatk/build/install/gatk/lib/hadoop-mapreduce-client-app-2.7.2.jar
+7f7b0ace2000-7f7b0ace4000 r--s 00008000 00:59 1173715                    /gatk/build/install/gatk/lib/hadoop-mapreduce-client-jobclient-2.7.2.jar
+7f7b0ace4000-7f7b0acfb000 r--s 00160000 00:59 1173714                    /gatk/build/install/gatk/lib/hadoop-mapreduce-client-jobclient-2.7.2-tests.jar
+7f7b0acfb000-7f7b0acfd000 r--s 0000c000 00:59 1173713                    /gatk/build/install/gatk/lib/hadoop-yarn-server-tests-2.7.2-tests.jar
+7f7b0acfd000-7f7b0ad67000 r--s 00779000 00:59 1173712                    /gatk/build/install/gatk/lib/hadoop-hdfs-2.7.2.jar
+7f7b0ad67000-7f7b0ad8a000 r--s 00300000 00:59 1173711                    /gatk/build/install/gatk/lib/hadoop-hdfs-2.7.2-tests.jar
+7f7b0ad8a000-7f7b0adc0000 r--s 00313000 00:59 1173710                    /gatk/build/install/gatk/lib/hadoop-common-2.7.2.jar
+7f7b0adc0000-7f7b0addd000 r--s 001af000 00:59 1173709                    /gatk/build/install/gatk/lib/hadoop-common-2.7.2-tests.jar
+7f7b0addd000-7f7b0ade3000 r--s 0003d000 00:59 1173708                    /gatk/build/install/gatk/lib/snakeyaml-1.17.jar
+7f7b0ade3000-7f7b0ade6000 r--s 0000e000 00:59 1173707                    /gatk/build/install/gatk/lib/jcommander-1.64.jar
+7f7b0ade6000-7f7b0adeb000 r--s 00032000 00:59 1173706                    /gatk/build/install/gatk/lib/servo-core-0.10.0.jar
+7f7b0adeb000-7f7b0adf8000 r--s 000a7000 00:59 1173705                    /gatk/build/install/gatk/lib/httpclient-4.5.2.jar
+7f7b0adf8000-7f7b0adfa000 r--s 00007000 00:59 1173704                    /gatk/build/install/gatk/lib/parquet-scala_2.10-1.8.1.jar
+7f7b0adfa000-7f7b0adfd000 r--s 00018000 00:59 1173703                    /gatk/build/install/gatk/lib/parquet-avro-1.8.1.jar
+7f7b0adfd000-7f7b0adff000 r--s 0000d000 00:59 1173702                    /gatk/build/install/gatk/lib/utils-intervalrdd-spark2_2.11-0.2.8.jar
+7f7b0adff000-7f7b0ae01000 r--s 00005000 00:59 1173701                    /gatk/build/install/gatk/lib/utils-cli-spark2_2.11-0.2.8.jar
+7f7b0ae01000-7f7b0ae03000 r--s 00006000 00:59 1173700                    /gatk/build/install/gatk/lib/utils-io-spark2_2.11-0.2.8.jar
+7f7b0ae03000-7f7b0ae11000 r--s 00072000 00:59 1173699                    /gatk/build/install/gatk/lib/utils-metrics-spark2_2.11-0.2.8.jar
+7f7b0ae11000-7f7b0ae12000 r--s 00000000 00:59 1173698                    /gatk/build/install/gatk/lib/unused-1.0.0.jar
+7f7b0ae12000-7f7b0ae13000 r--s 00003000 00:59 1173697                    /gatk/build/install/gatk/lib/spark-tags_2.11-2.0.2.jar
+7f7b0ae13000-7f7b0ae1c000 r--s 00097000 00:59 1173696                    /gatk/build/install/gatk/lib/pmml-model-1.2.15.jar
+7f7b0ae1c000-7f7b0ae3e000 rw-p 00000000 00:00 0 
+7f7b0ae3e000-7f7b0af13000 r--s 00bff000 00:59 1173695                    /gatk/build/install/gatk/lib/breeze_2.11-0.11.2.jar
+7f7b0af13000-7f7b0af17000 r--s 00028000 00:59 1173694                    /gatk/build/install/gatk/lib/spark-mllib-local_2.11-2.0.2.jar
+7f7b0af17000-7f7b0af24000 r--s 00099000 00:59 1173693                    /gatk/build/install/gatk/lib/spark-graphx_2.11-2.0.2.jar
+7f7b0af24000-7f7b0af9f000 r--s 005a2000 00:59 1173692                    /gatk/build/install/gatk/lib/spark-sql_2.11-2.0.2.jar
+7f7b0af9f000-7f7b0afcd000 r--s 001d1000 00:59 1173691                    /gatk/build/install/gatk/lib/spark-streaming_2.11-2.0.2.jar
+7f7b0afcd000-7f7b0afce000 r--s 00002000 00:59 1173690                    /gatk/build/install/gatk/lib/slf4j-log4j12-1.7.21.jar
+7f7b0afce000-7f7b0afd2000 r--s 00035000 00:59 1173689                    /gatk/build/install/gatk/lib/JLargeArrays-1.5.jar
+7f7b0afd2000-7f7b0afd6000 r--s 0000f000 00:59 1173688                    /gatk/build/install/gatk/lib/annotations-2.0.1.jar
+7f7b0afd6000-7f7b0afe0000 r--s 000a5000 00:59 1173687                    /gatk/build/install/gatk/lib/javassist-3.18.2-GA.jar
+7f7b0afe0000-7f7b0afe3000 r--s 0000f000 00:59 1173686                    /gatk/build/install/gatk/lib/maven-scm-provider-svnexe-1.4.jar
+7f7b0afe3000-7f7b0afe7000 r--s 00014000 00:59 1173685                    /gatk/build/install/gatk/lib/maven-scm-api-1.4.jar
+7f7b0afe7000-7f7b0afeb000 r--s 0002a000 00:59 1173684                    /gatk/build/install/gatk/lib/gcsio-1.6.1.jar
+7f7b0afeb000-7f7b0afed000 r--s 0000d000 00:59 1173683                    /gatk/build/install/gatk/lib/util-1.6.1.jar
+7f7b0afed000-7f7b0afee000 r--s 00002000 00:59 1173682                    /gatk/build/install/gatk/lib/google-oauth-client-java6-1.20.0.jar
+7f7b0afee000-7f7b0afef000 r--s 00000000 00:59 1173681                    /gatk/build/install/gatk/lib/google-api-client-jackson2-1.20.0.jar
+7f7b0afef000-7f7b0aff0000 r--s 00000000 00:59 1173680                    /gatk/build/install/gatk/lib/google-api-client-java6-1.20.0.jar
+7f7b0aff0000-7f7b0aff2000 r--s 00002000 00:59 1173679                    /gatk/build/install/gatk/lib/util-hadoop-1.6.1-hadoop2.jar
+7f7b0aff2000-7f7b0aff3000 r--s 00000000 00:59 1173678                    /gatk/build/install/gatk/lib/javax.inject-1.jar
+7f7b0aff3000-7f7b0aff6000 r--s 00006000 00:59 1173677                    /gatk/build/install/gatk/lib/jsr305-3.0.0.jar
+7f7b0aff6000-7f7b0affc000 r--s 00034000 00:59 1173676                    /gatk/build/install/gatk/lib/google-cloud-storage-1.2.3.jar
+7f7b0affc000-7f7b0afff000 r--s 00010000 00:59 1173675                    /gatk/build/install/gatk/lib/ngs-java-1.2.4.jar
+7f7b0afff000-7f7b0b003000 r--s 00015000 00:59 1173674                    /gatk/build/install/gatk/lib/xz-1.5.jar
+7f7b0b003000-7f7b0b006000 r--s 0016d000 00:59 1173673                    /gatk/build/install/gatk/lib/snappy-java-1.1.4.jar
+7f7b0b006000-7f7b0b00c000 r--s 0003c000 00:59 1173672                    /gatk/build/install/gatk/lib/commons-jexl-2.1.1.jar
+7f7b0b00c000-7f7b0b00d000 r--s 0000e000 00:59 1173671                    /gatk/build/install/gatk/lib/java-getopt-1.0.13.jar
+7f7b0b00d000-7f7b0b00e000 r--s 00012000 00:59 1173670                    /gatk/build/install/gatk/lib/protobuf-java-format-1.2.jar
+7f7b0b00e000-7f7b0b00f000 r--s 00005000 00:59 1173669                    /gatk/build/install/gatk/lib/json-simple-1.1.1.jar
+7f7b0b00f000-7f7b0b0e4000 r--s 00a5c000 00:59 1173668                    /gatk/build/install/gatk/lib/spark-core_2.11-2.0.2.jar
+7f7b0b0e4000-7f7b0b0fc000 r--s 00132000 00:59 1173667                    /gatk/build/install/gatk/lib/freemarker-2.3.23.jar
+7f7b0b0fc000-7f7b0b0ff000 r--s 00011000 00:59 1173666                    /gatk/build/install/gatk/lib/jopt-simple-5.0.3.jar
+7f7b0b0ff000-7f7b0b103000 r--s 00651000 00:59 1173665                    /gatk/build/install/gatk/lib/sqlite-jdbc-3.20.1.jar
+7f7b0b103000-7f7b0b104000 r--s 0002a000 00:59 1173664                    /gatk/build/install/gatk/lib/gatk-fermilite-jni-1.1.0.jar
+7f7b0b104000-7f7b0b106000 r--s 00060000 00:59 1173663                    /gatk/build/install/gatk/lib/gatk-bwamem-jni-1.0.4.jar
+7f7b0b106000-7f7b0b108000 r--s 00214000 00:59 1173662                    /gatk/build/install/gatk/lib/gkl-0.8.5.jar
+7f7b0b108000-7f7b0b10a000 r--s 00010000 00:59 1173661                    /gatk/build/install/gatk/lib/reflectasm-1.10.0-shaded.jar
+7f7b0b10a000-7f7b0b110000 r--s 00040000 00:59 1173660                    /gatk/build/install/gatk/lib/kryo-3.0.3.jar
+7f7b0b110000-7f7b0b111000 r--s 00087000 00:59 1173659                    /gatk/build/install/gatk/lib/netlib-native_system-osx-x86_64-1.1-natives.jar
+7f7b0b111000-7f7b0b112000 r--s 0006f000 00:59 1173658                    /gatk/build/install/gatk/lib/netlib-native_system-linux-x86_64-1.1-natives.jar
+7f7b0b112000-7f7b0b114000 r--s 001aa000 00:59 1173657                    /gatk/build/install/gatk/lib/netlib-native_ref-linux-x86_64-1.1-natives.jar
+7f7b0b114000-7f7b0b116000 r--s 001c0000 00:59 1173656                    /gatk/build/install/gatk/lib/netlib-native_ref-osx-x86_64-1.1-natives.jar
+7f7b0b116000-7f7b0b119000 r--s 00017000 00:59 1173655                    /gatk/build/install/gatk/lib/kryo-serializers-0.41.jar
+7f7b0b119000-7f7b0b11b000 r--s 0000b000 00:59 1173654                    /gatk/build/install/gatk/lib/jsr203hadoop-1.0.3.jar
+7f7b0b11b000-7f7b0b11c000 r--s 00000000 00:59 1173653                    /gatk/build/install/gatk/lib/hadoop-client-2.7.2.jar
+7f7b0b11c000-7f7b0b120000 r--s 00032000 00:59 1173652                    /gatk/build/install/gatk/lib/hadoop-bam-7.9.1.jar
+7f7b0b120000-7f7b0b121000 r--s 00000000 00:59 1173651                    /gatk/build/install/gatk/lib/hadoop-minicluster-2.7.2.jar
+7f7b0b121000-7f7b0b12e000 r--s 000ae000 00:59 1173650                    /gatk/build/install/gatk/lib/testng-6.11.jar
+7f7b0b12e000-7f7b0b136000 r--s 0004e000 00:59 1173649                    /gatk/build/install/gatk/lib/jgrapht-core-0.9.1.jar
+7f7b0b136000-7f7b0b15f000 r--s 001d0000 00:59 1173648                    /gatk/build/install/gatk/lib/adam-core-spark2_2.11-0.20.0.jar
+7f7b0b15f000-7f7b0b1cd000 r--s 00526000 00:59 1173647                    /gatk/build/install/gatk/lib/spark-mllib_2.11-2.0.2.jar
+7f7b0b1cd000-7f7b0b1ec000 r--s 00171000 00:59 1173645                    /gatk/build/install/gatk/lib/ojalgo-44.0.0.jar
+7f7b0b1ec000-7f7b0b1ee000 r--s 00277000 00:59 1173643                    /gatk/build/install/gatk/lib/hdf5-java-bindings-1.1.0-hdf5_2.11.0.jar
+7f7b0b1ee000-7f7b0b1fd000 r--s 00111000 00:59 1173642                    /gatk/build/install/gatk/lib/JTransforms-3.1.jar
+7f7b0b1fd000-7f7b0b228000 rw-p 00000000 00:00 0 
+7f7b0b228000-7f7b0b350000 r--s 00f63000 00:59 1173641                    /gatk/build/install/gatk/lib/fastutil-7.0.6.jar
+7f7b0b350000-7f7b0b353000 r--s 0001d000 00:59 1173640                    /gatk/build/install/gatk/lib/reflections-0.9.10.jar
+7f7b0b353000-7f7b0b357000 r--s 0002f000 00:59 1173639                    /gatk/build/install/gatk/lib/commons-io-2.5.jar
+7f7b0b357000-7f7b0b360000 r--s 0005d000 00:59 1173638                    /gatk/build/install/gatk/lib/commons-vfs2-2.0.jar
+7f7b0b360000-7f7b0b370000 r--s 000a8000 00:59 1173637                    /gatk/build/install/gatk/lib/commons-collections4-4.1.jar
+7f7b0b370000-7f7b0b394000 r--s 001ce000 00:59 1173636                    /gatk/build/install/gatk/lib/commons-math3-3.5.jar
+7f7b0b394000-7f7b0b39b000 r--s 00064000 00:59 1173635                    /gatk/build/install/gatk/lib/commons-lang3-3.4.jar
+7f7b0b39b000-7f7b0b39d000 r--s 0000d000 00:59 1173634                    /gatk/build/install/gatk/lib/gcs-connector-1.6.1-hadoop2.jar
+7f7b0b39d000-7f7b0b441000 r--s 00810000 00:59 1173632                    /gatk/build/install/gatk/lib/google-cloud-nio-GATK4-custom-patch-0.20.4-alpha-GCS-RETRY-FIX-shaded.jar
+7f7b0b441000-7f7b0b459000 r--s 00170000 00:59 1173631                    /gatk/build/install/gatk/lib/htsjdk-2.14.3.jar
+7f7b0b459000-7f7b0b484000 r--s 001fc000 00:59 1173630                    /gatk/build/install/gatk/lib/guava-18.0.jar
+7f7b0b484000-7f7b0b4bf000 r--s 0169a000 00:59 1173624                    /gatk/build/install/gatk/lib/gatk-4.0.2.0.jar
+7f7b0b4bf000-7f7b0b4da000 r--s 001d6000 00:59 1173618                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
+7f7b0b4da000-7f7b0b4f5000 r--s 00394000 00:59 1173613                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
+7f7b0b4f5000-7f7b0b4f6000 ---p 00000000 00:00 0 
+7f7b0b4f6000-7f7b0b5f6000 rw-p 00000000 00:00 0 
+7f7b0b5f6000-7f7b0b5f9000 ---p 00000000 00:00 0 
+7f7b0b5f9000-7f7b0b6f7000 rw-p 00000000 00:00 0 
+7f7b0b6f7000-7f7b0b6fa000 ---p 00000000 00:00 0 
+7f7b0b6fa000-7f7b0b7f8000 rw-p 00000000 00:00 0 
+7f7b0b7f8000-7f7b0b7fb000 ---p 00000000 00:00 0 
+7f7b0b7fb000-7f7b0b8f9000 rw-p 00000000 00:00 0 
+7f7b0b8f9000-7f7b0b8fc000 ---p 00000000 00:00 0 
+7f7b0b8fc000-7f7b0b9fa000 rw-p 00000000 00:00 0 
+7f7b0b9fa000-7f7b0b9fd000 ---p 00000000 00:00 0 
+7f7b0b9fd000-7f7b0bafb000 rw-p 00000000 00:00 0 
+7f7b0bafb000-7f7b0bafe000 ---p 00000000 00:00 0 
+7f7b0bafe000-7f7b0bbfc000 rw-p 00000000 00:00 0 
+7f7b0bbfc000-7f7b0bbff000 ---p 00000000 00:00 0 
+7f7b0bbff000-7f7b0bcfd000 rw-p 00000000 00:00 0 
+7f7b0bcfd000-7f7b0bd00000 ---p 00000000 00:00 0 
+7f7b0bd00000-7f7b0bdfe000 rw-p 00000000 00:00 0 
+7f7b0bdfe000-7f7b0be01000 ---p 00000000 00:00 0 
+7f7b0be01000-7f7b0beff000 rw-p 00000000 00:00 0 
+7f7b0beff000-7f7b0bf02000 ---p 00000000 00:00 0 
+7f7b0bf02000-7f7b0c000000 rw-p 00000000 00:00 0 
+7f7b0c000000-7f7b0c021000 rw-p 00000000 00:00 0 
+7f7b0c021000-7f7b10000000 ---p 00000000 00:00 0 
+7f7b10000000-7f7b10001000 r--s 00002000 00:59 1173646                    /gatk/build/install/gatk/lib/ojalgo-commons-math3-1.0.0.jar
+7f7b10001000-7f7b10003000 r--s 00009000 00:59 1173633                    /gatk/build/install/gatk/lib/gov.nist.math.jama-1.1.1.jar
+7f7b10003000-7f7b10015000 r--s 00144000 00:59 1173627                    /gatk/build/install/gatk/lib/picard-2.17.2.jar
+7f7b10015000-7f7b10018000 ---p 00000000 00:00 0 
+7f7b10018000-7f7b10116000 rw-p 00000000 00:00 0 
+7f7b10116000-7f7b10119000 ---p 00000000 00:00 0 
+7f7b10119000-7f7b10217000 rw-p 00000000 00:00 0 
+7f7b10217000-7f7b1021a000 ---p 00000000 00:00 0 
+7f7b1021a000-7f7b10318000 rw-p 00000000 00:00 0 
+7f7b10318000-7f7b1031b000 ---p 00000000 00:00 0 
+7f7b1031b000-7f7b10419000 rw-p 00000000 00:00 0 
+7f7b10419000-7f7b1041c000 ---p 00000000 00:00 0 
+7f7b1041c000-7f7b1051a000 rw-p 00000000 00:00 0 
+7f7b1051a000-7f7b1051d000 ---p 00000000 00:00 0 
+7f7b1051d000-7f7b1061b000 rw-p 00000000 00:00 0 
+7f7b1061b000-7f7b1061c000 ---p 00000000 00:00 0 
+7f7b1061c000-7f7b14000000 rw-p 00000000 00:00 0 
+7f7b14000000-7f7b14021000 rw-p 00000000 00:00 0 
+7f7b14021000-7f7b18000000 ---p 00000000 00:00 0 
+7f7b18000000-7f7b18021000 rw-p 00000000 00:00 0 
+7f7b18021000-7f7b1c000000 ---p 00000000 00:00 0 
+7f7b1c000000-7f7b1c021000 rw-p 00000000 00:00 0 
+7f7b1c021000-7f7b20000000 ---p 00000000 00:00 0 
+7f7b20000000-7f7b20001000 r--s 00001000 00:59 1173644                    /gatk/build/install/gatk/lib/gatk-native-bindings-1.0.0.jar
+7f7b20001000-7f7b20005000 r--s 006c8000 00:59 1173628                    /gatk/build/install/gatk/lib/genomicsdb-0.9.2-proto-3.0.0-beta-1+uuid-static.jar
+7f7b20005000-7f7b202ac000 rw-p 00000000 00:00 0 
+7f7b202ac000-7f7b2047a000 r--s 03c13000 00:59 1173607                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+7f7b2047a000-7f7b21150000 rw-p 00000000 00:00 0 
+7f7b21150000-7f7b21151000 ---p 00000000 00:00 0 
+7f7b21151000-7f7b21251000 rw-p 00000000 00:00 0 
+7f7b21251000-7f7b21252000 ---p 00000000 00:00 0 
+7f7b21252000-7f7b21352000 rw-p 00000000 00:00 0 
+7f7b21352000-7f7b21353000 ---p 00000000 00:00 0 
+7f7b21353000-7f7b21453000 rw-p 00000000 00:00 0 
+7f7b21453000-7f7b21454000 ---p 00000000 00:00 0 
+7f7b21454000-7f7b21705000 rw-p 00000000 00:00 0 
+7f7b21705000-7f7b25fff000 ---p 00000000 00:00 0 
+7f7b25fff000-7f7b261b0000 rw-p 00000000 00:00 0 
+7f7b261b0000-7f7b2aaa9000 ---p 00000000 00:00 0 
+7f7b2aaa9000-7f7b2c4c2000 rw-p 00000000 00:00 0 
+7f7b2c4c2000-7f7b2cfff000 ---p 00000000 00:00 0 
+7f7b2cfff000-7f7b63080000 rw-p 00000000 00:00 0 
+7f7b63080000-7f8482580000 ---p 00000000 00:00 0 
+7f8482580000-7f87c5500000 rw-p 00000000 00:00 0 
+7f87c5500000-7f892d000000 ---p 00000000 00:00 0 
+7f892d000000-7f892e5e0000 rwxp 00000000 00:00 0 
+7f892e5e0000-7f893c000000 ---p 00000000 00:00 0 
+7f893c000000-7f893e2de000 rw-p 00000000 00:00 0 
+7f893e2de000-7f8940000000 ---p 00000000 00:00 0 
+7f8940000000-7f8940002000 r--s 00007000 00:59 1173629                    /gatk/build/install/gatk/lib/opencsv-3.4.jar
+7f8940002000-7f8940005000 r--s 00012000 00:59 1173626                    /gatk/build/install/gatk/lib/owner-1.0.9.jar
+7f8940005000-7f8940007000 r--s 0001c000 00:59 1173625                    /gatk/build/install/gatk/lib/barclay-2.1.0.jar
+7f8940007000-7f8940028000 rw-p 00000000 00:00 0 
+7f8940028000-7f8940029000 ---p 00000000 00:00 0 
+7f8940029000-7f8940129000 rw-p 00000000 00:00 0 
+7f8940129000-7f894012a000 ---p 00000000 00:00 0 
+7f894012a000-7f894022a000 rw-p 00000000 00:00 0 
+7f894022a000-7f894022b000 ---p 00000000 00:00 0 
+7f894022b000-7f894032b000 rw-p 00000000 00:00 0 
+7f894032b000-7f894032c000 ---p 00000000 00:00 0 
+7f894032c000-7f894042c000 rw-p 00000000 00:00 0 
+7f894042c000-7f894042d000 ---p 00000000 00:00 0 
+7f894042d000-7f894052d000 rw-p 00000000 00:00 0 
+7f894052d000-7f894052e000 ---p 00000000 00:00 0 
+7f894052e000-7f894062e000 rw-p 00000000 00:00 0 
+7f894062e000-7f894062f000 ---p 00000000 00:00 0 
+7f894062f000-7f894072f000 rw-p 00000000 00:00 0 
+7f894072f000-7f8940730000 ---p 00000000 00:00 0 
+7f8940730000-7f8940830000 rw-p 00000000 00:00 0 
+7f8940830000-7f8940831000 ---p 00000000 00:00 0 
+7f8940831000-7f8940931000 rw-p 00000000 00:00 0 
+7f8940931000-7f8940932000 ---p 00000000 00:00 0 
+7f8940932000-7f8940a32000 rw-p 00000000 00:00 0 
+7f8940a32000-7f8940a33000 ---p 00000000 00:00 0 
+7f8940a33000-7f8940b33000 rw-p 00000000 00:00 0 
+7f8940b33000-7f8940b34000 ---p 00000000 00:00 0 
+7f8940b34000-7f8940c34000 rw-p 00000000 00:00 0 
+7f8940c34000-7f8940c35000 ---p 00000000 00:00 0 
+7f8940c35000-7f8940d35000 rw-p 00000000 00:00 0 
+7f8940d35000-7f8940d36000 ---p 00000000 00:00 0 
+7f8940d36000-7f8940e8e000 rw-p 00000000 00:00 0 
+7f8940e8e000-7f89411f6000 ---p 00000000 00:00 0 
+7f89411f6000-7f89411fe000 r-xp 00000000 00:59 1173605                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f89411fe000-7f89413fd000 ---p 00008000 00:59 1173605                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f89413fd000-7f89413fe000 r--p 00007000 00:59 1173605                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f89413fe000-7f89413ff000 rw-p 00008000 00:59 1173605                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f89413ff000-7f894140a000 r-xp 00000000 00:59 1164968                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f894140a000-7f8941609000 ---p 0000b000 00:59 1164968                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f8941609000-7f894160a000 r--p 0000a000 00:59 1164968                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f894160a000-7f894160b000 rw-p 0000b000 00:59 1164968                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f894160b000-7f8941611000 rw-p 00000000 00:00 0 
+7f8941611000-7f894161c000 r-xp 00000000 00:59 1164966                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f894161c000-7f894181b000 ---p 0000b000 00:59 1164966                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f894181b000-7f894181c000 r--p 0000a000 00:59 1164966                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f894181c000-7f894181d000 rw-p 0000b000 00:59 1164966                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f894181d000-7f8941833000 r-xp 00000000 00:59 1164964                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f8941833000-7f8941a32000 ---p 00016000 00:59 1164964                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f8941a32000-7f8941a33000 r--p 00015000 00:59 1164964                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f8941a33000-7f8941a34000 rw-p 00016000 00:59 1164964                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f8941a34000-7f8941a36000 rw-p 00000000 00:00 0 
+7f8941a36000-7f8941a3e000 r-xp 00000000 00:59 1164962                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f8941a3e000-7f8941c3d000 ---p 00008000 00:59 1164962                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f8941c3d000-7f8941c3e000 r--p 00007000 00:59 1164962                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f8941c3e000-7f8941c3f000 rw-p 00008000 00:59 1164962                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f8941c3f000-7f8941c6c000 r-xp 00000000 00:59 1172655                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f8941c6c000-7f8941e6b000 ---p 0002d000 00:59 1172655                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f8941e6b000-7f8941e6c000 r--p 0002c000 00:59 1172655                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f8941e6c000-7f8941e6e000 rw-p 0002d000 00:59 1172655                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f8941e6e000-7f8941e7d000 r-xp 00000000 00:59 1168472                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f8941e7d000-7f894207c000 ---p 0000f000 00:59 1168472                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f894207c000-7f894207e000 r--p 0000e000 00:59 1168472                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f894207e000-7f894207f000 rw-p 00010000 00:59 1168472                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f894207f000-7f8942086000 r-xp 00000000 00:59 1153655                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f8942086000-7f8942285000 ---p 00007000 00:59 1153655                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f8942285000-7f8942286000 r--p 00006000 00:59 1153655                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f8942286000-7f8942287000 rw-p 00007000 00:59 1153655                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f8942287000-7f894229d000 r-xp 00000000 00:59 1172664                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f894229d000-7f894249c000 ---p 00016000 00:59 1172664                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f894249c000-7f894249d000 rw-p 00015000 00:59 1172664                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f894249d000-7f89425a5000 r-xp 00000000 00:59 1173601                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f89425a5000-7f89427a4000 ---p 00108000 00:59 1173601                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f89427a4000-7f89427a5000 r--p 00107000 00:59 1173601                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f89427a5000-7f89427a6000 rw-p 00108000 00:59 1173601                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f89427a6000-7f8942918000 r-xp 00000000 00:59 1172663                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f8942918000-7f8942b18000 ---p 00172000 00:59 1172663                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f8942b18000-7f8942b22000 r--p 00172000 00:59 1172663                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f8942b22000-7f8942b24000 rw-p 0017c000 00:59 1172663                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f8942b24000-7f8942b28000 rw-p 00000000 00:00 0 
+7f8942b28000-7f894377c000 r-xp 00000000 00:59 1172660                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f894377c000-7f894397c000 ---p 00c54000 00:59 1172660                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f894397c000-7f8943a0f000 r--p 00c54000 00:59 1172660                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f8943a0f000-7f8943a38000 rw-p 00ce7000 00:59 1172660                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f8943a38000-7f8943a68000 rw-p 00000000 00:00 0 
+7f8943a68000-7f8943a80000 r-xp 00000000 00:59 1173597                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f8943a80000-7f8943c7f000 ---p 00018000 00:59 1173597                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f8943c7f000-7f8943c80000 r--p 00017000 00:59 1173597                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f8943c80000-7f8943c81000 rw-p 00018000 00:59 1173597                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f8943c81000-7f8943c85000 rw-p 00000000 00:00 0 
+7f8943c85000-7f8943c88000 r-xp 00000000 00:59 1150797                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f8943c88000-7f8943e87000 ---p 00003000 00:59 1150797                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f8943e87000-7f8943e88000 r--p 00002000 00:59 1150797                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f8943e88000-7f8943e89000 rw-p 00003000 00:59 1150797                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f8943e89000-7f8943ea2000 r-xp 00000000 00:59 1159694                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f8943ea2000-7f89440a1000 ---p 00019000 00:59 1159694                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f89440a1000-7f89440a2000 r--p 00018000 00:59 1159694                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f89440a2000-7f89440a3000 rw-p 00019000 00:59 1159694                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f89440a3000-7f8944263000 r-xp 00000000 00:59 1150799                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f8944263000-7f8944463000 ---p 001c0000 00:59 1150799                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f8944463000-7f8944467000 r--p 001c0000 00:59 1150799                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f8944467000-7f8944469000 rw-p 001c4000 00:59 1150799                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f8944469000-7f894446d000 rw-p 00000000 00:00 0 
+7f894446d000-7f894447a000 r-xp 00000000 00:59 1159692                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f894447a000-7f894467a000 ---p 0000d000 00:59 1159692                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f894467a000-7f894467b000 r--p 0000d000 00:59 1159692                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f894467b000-7f894467c000 rw-p 0000e000 00:59 1159692                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f894467c000-7f89446a2000 r-xp 00000000 00:59 1150791                    /lib/x86_64-linux-gnu/ld-2.23.so
+7f89446a2000-7f89446a3000 r--s 00010000 00:59 1173622                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
+7f89446a3000-7f89446a7000 r--s 00037000 00:59 1173621                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+7f89446a7000-7f89446ac000 r--s 0003b000 00:59 1173620                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+7f89446ac000-7f89446ae000 r--s 00008000 00:59 1173619                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
+7f89446ae000-7f89446b8000 r--s 00116000 00:59 1173617                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
+7f89446b8000-7f8944789000 rw-p 00000000 00:00 0 
+7f8944789000-7f8944791000 rw-s 00000000 103:02 37094220                  /tmp/hsperfdata_mike/260737
+7f8944791000-7f8944792000 rw-p 00000000 00:00 0 
+7f8944792000-7f8944794000 ---p 00000000 00:00 0 
+7f8944794000-7f8944897000 rw-p 00000000 00:00 0 
+7f8944897000-7f8944898000 r--s 0000a000 00:59 1173616                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
+7f8944898000-7f894489b000 r--s 0000f000 00:59 1173615                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+7f894489b000-7f894489d000 r--s 00001000 00:59 1173614                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
+7f894489d000-7f894489e000 rw-p 00000000 00:00 0 
+7f894489e000-7f894489f000 r--p 00000000 00:00 0 
+7f894489f000-7f89448a1000 rw-p 00000000 00:00 0 
+7f89448a1000-7f89448a2000 r--p 00025000 00:59 1150791                    /lib/x86_64-linux-gnu/ld-2.23.so
+7f89448a2000-7f89448a3000 rw-p 00026000 00:59 1150791                    /lib/x86_64-linux-gnu/ld-2.23.so
+7f89448a3000-7f89448a4000 rw-p 00000000 00:00 0 
+7ffd37e38000-7ffd37e5f000 rw-p 00000000 00:00 0                          [stack]
+7ffd37fbe000-7ffd37fc1000 r--p 00000000 00:00 0                          [vvar]
+7ffd37fc1000-7ffd37fc2000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=1 -Xmx56G 
+java_command: org.broadinstitute.hellbender.Main HaplotypeCaller --native-pair-hmm-threads 28 -R concat_mrl20k_q15l15k_pepper/outputs/redundans/scaffolds.reduced.fasta -I concat_mrl20k_q15l15k_pepper/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O concat_mrl20k_q15l15k_pepper/outputs/variant_calling/scaffolds.reduced.vcf
+java_class_path (initial): /gatk/build/install/gatk/lib/gatk-4.0.2.0.jar:/gatk/build/install/gatk/lib/barclay-2.1.0.jar:/gatk/build/install/gatk/lib/owner-1.0.9.jar:/gatk/build/install/gatk/lib/picard-2.17.2.jar:/gatk/build/install/gatk/lib/genomicsdb-0.9.2-proto-3.0.0-beta-1+uuid-static.jar:/gatk/build/install/gatk/lib/opencsv-3.4.jar:/gatk/build/install/gatk/lib/guava-18.0.jar:/gatk/build/install/gatk/lib/htsjdk-2.14.3.jar:/gatk/build/install/gatk/lib/google-cloud-nio-GATK4-custom-patch-0.20.4-alpha-GCS-RETRY-FIX-shaded.jar:/gatk/build/install/gatk/lib/gov.nist.math.jama-1.1.1.jar:/gatk/build/install/gatk/lib/gcs-connector-1.6.1-hadoop2.jar:/gatk/build/install/gatk/lib/commons-lang3-3.4.jar:/gatk/build/install/gatk/lib/commons-math3-3.5.jar:/gatk/build/install/gatk/lib/commons-collections4-4.1.jar:/gatk/build/install/gatk/lib/commons-vfs2-2.0.jar:/gatk/build/install/gatk/lib/commons-io-2.5.jar:/gatk/build/install/gatk/lib/reflections-0.9.10.jar:/gatk/build/install/gatk/lib/fastutil-7.0.6.jar:/gatk/build/install/gatk/lib/JTransforms-3.1.jar:/gatk/build/install/gatk/lib/hdf5-java-bindings-1.1.0-hdf5_2.11.0.jar:/gatk/build/install/gatk/lib/gatk-native-bindings-1.0.0.jar:/gatk/build/install/gatk/lib/ojalgo-44.0.0.jar:/gatk/build/install/gatk/lib/ojalgo-commons-math3-1.0.0.jar:/gatk/build/install/gatk/lib/spark-mllib_2.11-2.0.2.jar:/gatk/build/install/gatk/lib/adam-core-spark2_2.11-0.20.0.jar:/gatk/build/install/gatk/lib/jgrapht-core-0.9.1.jar:/gatk/build/install/gatk/lib/testng-6.11.jar:/gatk/build/install/gatk/lib/hadoop-minicluster-2.7.2.jar:/gatk/build/install/gatk/lib/hadoop-bam-7.9.1.jar:/gatk/build/install/gatk/lib/hadoop-client-2.7.2.jar:/gatk/build/install/gatk/lib/jsr203hadoop-1.0.3.jar:/gatk/build/install/gatk/lib/kryo-serializers-0.41.jar:/gatk/build/install/gatk/lib/netlib-native_ref-osx-x86_64-1.1-natives.jar:/gatk/build/install/gatk/lib/netlib-native_ref-linux-x86_64-1.1-natives.jar:/gatk/build/install/gatk/lib/netlib-native_system-linux-x86_64-1.1-nat
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+PATH=/gatk:/opt/miniconda/envs/gatk/bin:/opt/miniconda/bin:/google-cloud-sdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+USERNAME=mike
+LD_LIBRARY_PATH=/.singularity.d/libs
+SHELL=/bin/bash
+DISPLAY=:1
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa6ad10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa6ad10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8b3bc0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8b3bc0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8b3bc0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8b3bc0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8b3a70], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x8b3f40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x8b3f40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x8b3f40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8b3f40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=16.04
+DISTRIB_CODENAME=xenial
+DISTRIB_DESCRIPTION="Ubuntu 16.04.3 LTS"
+
+uname:Linux 5.4.0-77-generic #86-Ubuntu SMP Thu Jun 17 02:35:03 UTC 2021 x86_64
+libc:glibc 2.23 NPTL 2.23 
+rlimit: STACK 8192k, CORE 0k, NPROC 256493, NOFILE 1048576, AS infinity
+load average:1.00 1.10 1.48
+
+/proc/meminfo:
+MemTotal:       65839664 kB
+MemFree:        43035764 kB
+MemAvailable:   45178588 kB
+Buffers:          158556 kB
+Cached:          2344088 kB
+SwapCached:        97968 kB
+Active:         17036440 kB
+Inactive:        4381316 kB
+Active(anon):   16398396 kB
+Inactive(anon):  2639584 kB
+Active(file):     638044 kB
+Inactive(file):  1741732 kB
+Unevictable:          80 kB
+Mlocked:              80 kB
+SwapTotal:       2097148 kB
+SwapFree:           9880 kB
+Dirty:               204 kB
+Writeback:             0 kB
+AnonPages:      18827416 kB
+Mapped:           856716 kB
+Shmem:            123736 kB
+KReclaimable:     488408 kB
+Slab:             911072 kB
+SReclaimable:     488408 kB
+SUnreclaim:       422664 kB
+KernelStack:       25456 kB
+PageTables:        93724 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    35016980 kB
+Committed_AS:   36698224 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       81320 kB
+VmallocChunk:          0 kB
+Percpu:            33536 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:     1113716 kB
+DirectMap2M:    54372352 kB
+DirectMap1G:    11534336 kB
+
+
+CPU:total 24 (initial active 24) (24 cores per cpu, 1 threads per core) family 23 model 113 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2192.673
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 0
+cpu cores	: 12
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 1
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2191.979
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 1
+cpu cores	: 12
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 2
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2195.439
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 2
+cpu cores	: 12
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 3
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2196.037
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 4
+cpu cores	: 12
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 4
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2196.442
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 5
+cpu cores	: 12
+apicid		: 10
+initial apicid	: 10
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 5
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2197.357
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 6
+cpu cores	: 12
+apicid		: 12
+initial apicid	: 12
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 6
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2423.000
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 8
+cpu cores	: 12
+apicid		: 16
+initial apicid	: 16
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 7
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 1948.856
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 9
+cpu cores	: 12
+apicid		: 18
+initial apicid	: 18
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 8
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2265.421
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 10
+cpu cores	: 12
+apicid		: 20
+initial apicid	: 20
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 9
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2195.947
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 12
+cpu cores	: 12
+apicid		: 24
+initial apicid	: 24
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 10
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2191.062
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 13
+cpu cores	: 12
+apicid		: 26
+initial apicid	: 26
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 11
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2192.285
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 14
+cpu cores	: 12
+apicid		: 28
+initial apicid	: 28
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 12
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2193.226
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 0
+cpu cores	: 12
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 13
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2195.107
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 1
+cpu cores	: 12
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 14
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2196.029
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 2
+cpu cores	: 12
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 15
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2192.750
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 4
+cpu cores	: 12
+apicid		: 9
+initial apicid	: 9
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 16
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2183.187
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 5
+cpu cores	: 12
+apicid		: 11
+initial apicid	: 11
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 17
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2195.095
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 6
+cpu cores	: 12
+apicid		: 13
+initial apicid	: 13
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 18
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2672.433
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 8
+cpu cores	: 12
+apicid		: 17
+initial apicid	: 17
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 19
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2015.175
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 9
+cpu cores	: 12
+apicid		: 19
+initial apicid	: 19
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 20
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2208.839
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 10
+cpu cores	: 12
+apicid		: 21
+initial apicid	: 21
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 21
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2195.313
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 12
+cpu cores	: 12
+apicid		: 25
+initial apicid	: 25
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 22
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2194.018
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 13
+cpu cores	: 12
+apicid		: 27
+initial apicid	: 27
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+processor	: 23
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0x8701021
+cpu MHz		: 2188.873
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 14
+cpu cores	: 12
+apicid		: 29
+initial apicid	: 29
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 16
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate sme ssbd mba sev ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif umip rdpid overflow_recov succor smca
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7586.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]
+
+
+
+Memory: 4k page, physical 65839664k(43035564k free), swap 2097148k(9888k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.131-b11) for linux-amd64 JRE (1.8.0_131-8u131-b11-2ubuntu1.16.04.3-b11), built on Jul 28 2017 01:23:32 by "buildd" with gcc 5.4.0 20160609
+
+time: Mon Jun 28 14:32:49 2021
+elapsed time: 2322 seconds (0d 0h 38m 42s)
+

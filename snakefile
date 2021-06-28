@@ -1,8 +1,8 @@
 # KARYON LONGREAD
 
 configfile: "config.yaml"
-
-ruleorder: index_mapping > samtools_index > samtools_faidx > GATK > bcftools > samtools_flagstats
+#
+# ruleorder: index_mapping > samtools_index > samtools_faidx > GATK > bcftools > samtools_flagstats
 
 rule all:
     input:
@@ -50,20 +50,20 @@ rule dictionary_creation:
     shell:
        "picard CreateSequenceDictionary R={input[assembly]} O={output}"
 
-rule index_mapping:
-    input:
-        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
-    output:
-        fai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa.fai"
-    shell:
-       "samtools faidx {input[assembly]} > {output}"        # change this to minimap
+# rule index_mapping:
+#     input:
+#         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
+#     output:
+#         fai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa.fai"
+#     shell:
+#        "samtools faidx {input[assembly]}"        # change this to minimap
 
 rule mapping:
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         reads = "data/reads/" + config["reads"] + ".fastq.gz"
     output:
-        sam = config["assembly"] + "/outputs/mapping/scaffolds.reduced.sam"
+        sam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sam"
     params:
         threads = config["threads"],
         seq_tech = "map-ont"
@@ -73,17 +73,17 @@ rule mapping:
 
 rule conversion:
     input:
-        sam = config["assembly"] + "/outputs/mapping/scaffolds.reduced.sam"
+        sam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sam"
     output:
-        bam = config["assembly"] + "/outputs/mapping/scaffolds.reduced.bam"
+        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.bam"
     shell:
         "samtools view -b -S {input} > {output}"
 
 rule sorting:
     input:
-        config["assembly"] + "/outputs/mapping/scaffolds.reduced.bam"
+        config["assembly"] + "/outputs/redundans/scaffolds.reduced.bam"
     output:
-        bam = config["assembly"] + "/outputs/mapping/scaffolds.reduced.sorted.bam"
+        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.bam"
     shell:
         "samtools sort {input} > {output}"
 
@@ -105,11 +105,11 @@ rule nucmer_reduced_vs_initial:
 
 rule samtools_index:
     input:
-       bam = config["assembly"] + "/outputs/mapping/scaffolds.reduced.sorted.bam"
+       bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam"
     output:
-       bai = config["assembly"] + "/outputs/mapping/scaffolds.reduced.sorted.bam.bai"
+       bai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai"
     shell:
-       "samtools index {input[bam]} > {output}"
+       "samtools index {input[bam]}"
 
 rule samtools_faidx:
     input:
@@ -117,36 +117,57 @@ rule samtools_faidx:
     output:
         fai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta.fai"
     shell:
-        "samtools faidx {input[assembly]} > {output}"
+        "samtools faidx {input[assembly]}"
+
+rule fix_bam:
+    input:
+        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.bam",
+    output:
+        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam",
+    params:
+        seq_tech = config["seq_tech"]
+    shell:
+        "picard AddOrReplaceReadGroups \
+        I={input} \
+        O={output} \
+        RGLB=lib1 \
+        RGPL={params[seq_tech]} \
+        RGPU=unit1 \
+        RGSM=Random"
 
 rule GATK:
     container:
         "docker://broadinstitute/gatk:4.0.2.0"
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
-        bam = config["assembly"] + "/outputs/mapping/scaffolds.reduced.sorted.bam",
+        faidx = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta.fai",
+        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam",
+        bai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai",
         dict = config["assembly"] + "/outputs/redundans/scaffolds.reduced.dict"
     output:
         vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf"
     params:
         memory = config["memory"] + "G",
     shell:
-        "gatk HaplotypeCaller -R {input[assembly]} -I {input[bam]} -O {output}"
+        "gatk --java-options -Xmx{params} HaplotypeCaller -R {input[assembly]} -I {input[bam]} -O {output}"
 
 rule bcftools:
     conda:
         "envs/v_calling.yaml"
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
-        bam = config["assembly"] + "/outputs/mapping/scaffolds.reduced.sorted.bam"
+        faidx = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta.fai",
+        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam",
+        bai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai",
     output:
         mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup"
     shell:
-        "bcftools mpileup --fasta-ref {input[assembly]} {input[bam]} > {output}"
+        # "bcftools mpileup -Ov -f {input[assembly]} {input[bam]} -o {output}"
+        "samtools mpileup -f {input[assembly]} {input[bam]} | bcftools view -Ov - > {output}"
 
 rule samtools_flagstats:
     input:
-        bam = config["assembly"] + "/outputs/mapping/scaffolds.reduced.sorted.bam"
+        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.bam"
     output:
         flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat"
     shell:
@@ -157,7 +178,7 @@ rule karyon_plots:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
         flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
-        bam = config["assembly"] + "/outputs/mapping/scaffolds.reduced.sorted.bam",
+        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam",
         vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf"
     output:
         plot = config["assembly"] + "/outputs/plots/plot.png"
@@ -212,7 +233,7 @@ rule blast_nonself:
         out_pfx = config["assembly"] + "/reports/blast",
         db_pfx = "data/database/" + config["assembly"] + "/" + config["assembly"]
     shell:
-        "blastn -query {input[0]} -db {params[1]} -outfmt '6 qseqid sseqid pident' -out {params[0]}/blast.out"
+        "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out"
 
 
 
@@ -235,12 +256,12 @@ rule quast:
     input:
         redundans = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa",
-        reads = "data/reads/" + config["reads"] + ".fastq.gz"
+        reads = "data/reads/" + config["reads"] + ".fastq.gz",
         reference = "/media/mike/WD_4TB/javanica_assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz"
     output:
-        "reports/quast/"  + config["experiment_name"] + "/report.txt",
+        "reports/quast/"  + config["assembly"] + "/report.txt",
     params:
-        out_pfx = "reports/quast/"  + config["experiment_name"] + "",
+        out_pfx = "reports/quast/"  + config["assembly"] + "",
         threads = config["threads"]
     shell:
         config["quast_path"] + "/quast.py {input[0]} {input[1]} --large --glimmer -b --threads {params[1]} -L -r {input[2]} --nanopore {input[reads]} -o {params[0]}"
