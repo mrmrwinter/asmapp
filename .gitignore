@@ -18,3 +18,5 @@ tmp/*
 *.RData
 data/*
 *blast.out
+*/reports/quast/*
+hs*

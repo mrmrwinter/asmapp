@@ -11,7 +11,9 @@ rule all:
         nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.rplot",
         ex_tsv = config["assembly"] + "/reports/minimap2/mapped_nonself_hits.sam",
         # out_dir = config["assembly"] + "/reports/dotplots/dotplot.png",
-        tsv = config["assembly"] + "/reports/blast/blast.out"
+        tsv = config["assembly"] + "/reports/blast/blast.out",
+        quast = config["assembly"] + "/reports/quast/report.txt",
+
 
 rule redundans:
     conda:
@@ -94,12 +96,14 @@ rule nucmer_reduced_vs_initial:
     output:
         config["assembly"] + "/reports/nucmer/nucmer.initial.rplot",
     params:
-        config["assembly"] + "/reports/nucmer/nucmer.initial"
+        config["assembly"] + "/reports/nucmer/nucmer.initial",
+        config["assembly"] + "/reports/nucmer/",
     shell:
         """
         mkdir -p tmp/
         nucmer -p tmp/nucmer.contigs {input[0]} {input[1]}
-        mummerplot --png --large tmp/nucmer.contigs.delta -p {params}
+        cp tmp/nucmer.contigs.delta {params[1]}
+        mummerplot --png --large {params[1]}nucmer.contigs.delta -p {params[0]}
         rm -rf tmp/
         """
 
@@ -249,6 +253,17 @@ rule blast_nonself:
 #         "quast-download-busco"
 
 
+
+
+
+
+rule reads_to_fasta:
+    input:
+        reads = "data/reads/" + config["reads"] + ".fastq.gz",
+    output:
+        reads = "data/reads/" + config["reads"] + ".fasta",
+    shell:
+        "zcat -c {input} | seqkit fq2fa | cat > {output}"
   # Performing QUAST assembly appraisal
 rule quast:
     message:
@@ -256,12 +271,12 @@ rule quast:
     input:
         redundans = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa",
-        reads = "data/reads/" + config["reads"] + ".fastq.gz",
+        reads = "data/reads/" + config["reads"] + ".fasta",
         reference = "/media/mike/WD_4TB/javanica_assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz"
     output:
-        "reports/quast/"  + config["assembly"] + "/report.txt",
+        config["assembly"] + "/reports/quast/report.txt",
     params:
-        out_pfx = "reports/quast/"  + config["assembly"] + "",
+        out_pfx = config["assembly"] + "/reports/quast/",
         threads = config["threads"]
     shell:
         config["quast_path"] + "/quast.py {input[0]} {input[1]} --large --glimmer -b --threads {params[1]} -L -r {input[2]} --nanopore {input[reads]} -o {params[0]}"
