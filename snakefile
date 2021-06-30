@@ -10,6 +10,7 @@ rule all:
         flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
         nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.png",
         nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.png",
+        nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.int_ref.png",
 
         ex_tsv = config["assembly"] + "/reports/minimap2/mapped_nonself_hits.sam",
         # out_dir = config["assembly"] + "/reports/dotplots/dotplot.png",
@@ -105,28 +106,46 @@ rule nucmer_reduced_vs_initial:
         mkdir -p tmp/
         nucmer -p tmp/nucmer.contigs {input[0]} {input[1]}
         cp tmp/nucmer.contigs.delta {params[1]}
-        mummerplot --png --large {params[1]}nucmer.contigs.delta -p {params[0]}
-        rm -rf tmp/
+        mummerplot -l -f --png --large {params[1]}nucmer.contigs.delta -p {params[0]}
         """
 
 rule nucmer_reduced_vs_reference:
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
-        reference = "/media/mike/WD_4TB/javanica_assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz"
+        reference = config["reference"] + ".fasta.gz"
     output:
         config["assembly"] + "/reports/nucmer/nucmer.reference.png",
     params:
         config["assembly"] + "/reports/nucmer/nucmer.reference",
         config["assembly"] + "/reports/nucmer/",
+        config["reference"] + ".fasta"
     shell:
         """
         mkdir -p tmp/
-        nucmer -p tmp/nucmer.contigs {input[0]} {input[1]}
+        gunzip -c {input[reference]} > {params[2]}
+        nucmer -p tmp/nucmer.contigs {input[0]} {params[2]}
         cp tmp/nucmer.contigs.delta {params[1]}
-        mummerplot --png --large {params[1]}nucmer.contigs.delta -p {params[0]}
-        rm -rf tmp/
+        mummerplot -l -f --png --large {params[1]}nucmer.contigs.delta -p {params[0]}
         """
 
+rule nucmer_initial_vs_reference:
+    input:
+        initial = "data/assemblies/" + config["assembly"] + ".fasta"
+        reference = config["reference"] + ".fasta.gz"
+    output:
+        config["assembly"] + "/reports/nucmer/nucmer.int_ref.png",
+    params:
+        config["assembly"] + "/reports/nucmer/nucmer.int_ref",
+        config["assembly"] + "/reports/nucmer/",
+        config["reference"] + ".fasta"
+    shell:
+        """
+        mkdir -p tmp/
+        gunzip -c {input[reference]} > {params[2]}
+        nucmer -p tmp/nucmer.contigs {input[0]} {params[2]}
+        cp tmp/nucmer.contigs.delta {params[1]}
+        mummerplot -l -f --png --large {params[1]}nucmer.contigs.delta -p {params[0]}
+        """
 
 rule nucmer_circles:
     input:

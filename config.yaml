@@ -6,3 +6,4 @@ memory: "52"  # the aavailaable memory for the analysis in gigabytes
 threads: "12"
 quast_path: "/home/mike/software/quast"
 seq_tech: "nanopore"
+reference: "/media/mike/WD_4TB/javanica_assemblies/Blanc_Mathieu_2017_mJavanica"
