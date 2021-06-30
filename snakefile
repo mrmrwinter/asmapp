@@ -6,13 +6,15 @@ configfile: "config.yaml"
 
 rule all:
     input:
-        plot = config["assembly"] + "/outputs/plots/plot.png",
+        # plot = config["assembly"] + "/outputs/plots/plot.png",
         flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
-        nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.rplot",
+        nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.png",
+        nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.png",
+
         ex_tsv = config["assembly"] + "/reports/minimap2/mapped_nonself_hits.sam",
         # out_dir = config["assembly"] + "/reports/dotplots/dotplot.png",
         tsv = config["assembly"] + "/reports/blast/blast.out",
-        quast = config["assembly"] + "/reports/quast/report.txt",
+        # quast = config["assembly"] + "/reports/quast/report.txt",
 
 
 rule redundans:
@@ -94,7 +96,7 @@ rule nucmer_reduced_vs_initial:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         initial = "data/assemblies/" + config["assembly"] + ".fasta"
     output:
-        config["assembly"] + "/reports/nucmer/nucmer.initial.rplot",
+        config["assembly"] + "/reports/nucmer/nucmer.initial.png",
     params:
         config["assembly"] + "/reports/nucmer/nucmer.initial",
         config["assembly"] + "/reports/nucmer/",
@@ -106,6 +108,31 @@ rule nucmer_reduced_vs_initial:
         mummerplot --png --large {params[1]}nucmer.contigs.delta -p {params[0]}
         rm -rf tmp/
         """
+
+rule nucmer_reduced_vs_reference:
+    input:
+        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
+        reference = "/media/mike/WD_4TB/javanica_assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz"
+    output:
+        config["assembly"] + "/reports/nucmer/nucmer.reference.png",
+    params:
+        config["assembly"] + "/reports/nucmer/nucmer.reference",
+        config["assembly"] + "/reports/nucmer/",
+    shell:
+        """
+        mkdir -p tmp/
+        nucmer -p tmp/nucmer.contigs {input[0]} {input[1]}
+        cp tmp/nucmer.contigs.delta {params[1]}
+        mummerplot --png --large {params[1]}nucmer.contigs.delta -p {params[0]}
+        rm -rf tmp/
+        """
+
+
+rule nucmer_circles:
+    input:
+    output:
+    script:
+        "scripts/snmk_nucmer_circles.R"
 
 rule samtools_index:
     input:
@@ -264,6 +291,8 @@ rule reads_to_fasta:
         reads = "data/reads/" + config["reads"] + ".fasta",
     shell:
         "zcat -c {input} | seqkit fq2fa | cat > {output}"
+
+
   # Performing QUAST assembly appraisal
 rule quast:
     message:
