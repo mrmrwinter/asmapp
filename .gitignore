@@ -7,10 +7,7 @@ outputs
 *.sam
 .snakemake/
 *.gz
-reports/*/contigs_reports/*
-reports/*/reads_stats/*
-reports/*/busco_stats/*
-reports/*/predicted_genes/*
+
 tmp/*
 .Rproj.user
 *.paf
@@ -18,5 +15,8 @@ tmp/*
 *.RData
 data/*
 *blast.out
-*/reports/quast/*
+*/reports/*
 hs*
+jupyter/*
+*.rplot
+*.gp

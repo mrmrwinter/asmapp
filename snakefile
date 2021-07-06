@@ -8,14 +8,14 @@ rule all:
     input:
         # plot = config["assembly"] + "/outputs/plots/plot.png",
         flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
+# NUCMER
         nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.png",
         nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.png",
-        nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.int_ref.png",
-
+        nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.png",
         ex_tsv = config["assembly"] + "/reports/minimap2/mapped_nonself_hits.sam",
         # out_dir = config["assembly"] + "/reports/dotplots/dotplot.png",
         tsv = config["assembly"] + "/reports/blast/blast.out",
-        # quast = config["assembly"] + "/reports/quast/report.txt",
+        quast = config["assembly"] + "/reports/quast/report.txt",
 
 
 rule redundans:
@@ -95,71 +95,90 @@ rule sorting:
 rule nucmer_reduced_vs_initial:
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
-        initial = "data/assemblies/" + config["assembly"] + ".fasta"
+        initial = "data/assemblies/" + config["assembly"] + ".fasta",
+        nuc_fai = config["assembly"] + "/reports/nucmer/scaffolds.reduced.fasta.fai"
     output:
         config["assembly"] + "/reports/nucmer/nucmer.initial.png",
+        config["assembly"] + "/reports/nucmer/nucmer.initial.delta"
     params:
-        config["assembly"] + "/reports/nucmer/nucmer.initial",
+        "nucmer.initial",
         config["assembly"] + "/reports/nucmer/",
     shell:
         """
         mkdir -p tmp/
-        nucmer -p tmp/nucmer.contigs {input[0]} {input[1]}
-        cp tmp/nucmer.contigs.delta {params[1]}
-        mummerplot -l -f --png --large {params[1]}nucmer.contigs.delta -p {params[0]}
+        nucmer -p tmp/{params[0]} {input[0]} {input[1]}
+        cp tmp/{params[0]}.delta {params[1]}
+        mummerplot -l -f --png --large {params[1]}{params[0]}.delta -p {params[1]}{params[0]}
         """
 
 rule nucmer_reduced_vs_reference:
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
-        reference = config["reference"] + ".fasta.gz"
+        reference = config["reference"] + ".fasta.gz",
+        nuc_fai = config["assembly"] + "/reports/nucmer/scaffolds.reduced.fasta.fai"
     output:
         config["assembly"] + "/reports/nucmer/nucmer.reference.png",
+        config["assembly"] + "/reports/nucmer/nucmer.reference.delta"
     params:
-        config["assembly"] + "/reports/nucmer/nucmer.reference",
+        "nucmer.reference",
         config["assembly"] + "/reports/nucmer/",
         config["reference"] + ".fasta"
     shell:
         """
         mkdir -p tmp/
         gunzip -c {input[reference]} > {params[2]}
-        nucmer -p tmp/nucmer.contigs {input[0]} {params[2]}
-        cp tmp/nucmer.contigs.delta {params[1]}
-        mummerplot -l -f --png --large {params[1]}nucmer.contigs.delta -p {params[0]}
+        nucmer -p tmp/{params[0]} {input[0]} {params[2]}
+        cp tmp/{params[0]}.delta {params[1]}
+        mummerplot -l -f --png --large {params[1]}{params[0]}.delta -p {params[1]}{params[0]}
         """
 
 rule nucmer_initial_vs_reference:
     input:
-        initial = "data/assemblies/" + config["assembly"] + ".fasta"
-        reference = config["reference"] + ".fasta.gz"
+        initial = "data/assemblies/" + config["assembly"] + ".fasta",
+        reference = config["reference"] + ".fasta.gz",
+        nuc_fai = config["assembly"] + "/reports/nucmer/scaffolds.reduced.fasta.fai"
     output:
         config["assembly"] + "/reports/nucmer/nucmer.int_ref.png",
+        config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta"
     params:
-        config["assembly"] + "/reports/nucmer/nucmer.int_ref",
+        "nucmer.int_ref",
         config["assembly"] + "/reports/nucmer/",
         config["reference"] + ".fasta"
     shell:
         """
         mkdir -p tmp/
         gunzip -c {input[reference]} > {params[2]}
-        nucmer -p tmp/nucmer.contigs {input[0]} {params[2]}
-        cp tmp/nucmer.contigs.delta {params[1]}
-        mummerplot -l -f --png --large {params[1]}nucmer.contigs.delta -p {params[0]}
+        nucmer -p tmp/{params[0]} {input[0]} {params[2]}
+        cp tmp/{params[0]}.delta {params[1]}
+        mummerplot -l -f --png --large {params[1]}{params[0]}.delta -p {params[1]}{params[0]}
         """
 
-rule nucmer_circles:
-    input:
-    output:
-    script:
-        "scripts/snmk_nucmer_circles.R"
+
+ # maybew better to add the circle plots as an addition to the other nucmer rules to prevent having 6 rules
+ # know for sure that the nucmer rules currently work
+ #  can tag on shell command to execute the script
+  # have nucmer delta as an output then pull that output into the rscript command to generate the second output, the circle plots
+
+ # set up the outputs to generate the delta files for the circle plots but i
+ # think i need to keep it as a script execuition in order for the snakemake inputs to have access to it
+
+
+# rule nucmer_circles:
+#     input:
+#         fai = config["assembly"] + "/reports/nucmer/scaffolds.reduced.fasta.fai"
+#     output:
+#         config["assembly"] + "/reports/nucmer/circle.int_ref.png",
+#     script:
+#         "scripts/snmk_nucmer_circles.R"
 
 rule samtools_index:
     input:
        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam"
     output:
-       bai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai"
+       fai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai",
+       nuc_fai = config["assembly"] + "/reports/nucmer/scaffolds.reduced.fasta.fai"
     shell:
-       "samtools index {input[bam]}"
+       "samtools index {input[bam]} && cp {output[0]} {output[1]}"
 
 rule samtools_faidx:
     input:
@@ -327,7 +346,22 @@ rule quast:
         out_pfx = config["assembly"] + "/reports/quast/",
         threads = config["threads"]
     shell:
-        config["quast_path"] + "/quast.py {input[0]} {input[1]} --large --glimmer -b --threads {params[1]} -L -r {input[2]} --nanopore {input[reads]} -o {params[0]}"
+        config["quast_path"] + "/quast.py --large {input[0]} {input[1]} --glimmer -b --threads {params[1]} -L -r {input[2]} --nanopore {input[reads]} -o {params[0]}"
+
+
+
+
+
+rule CEGMA:
+    container:
+        "chrishah/cegma:2.5"
+
+
+
+
+
+
+
 
 #     # Performing Merqury assembly appraisal
 # rule merqury:
