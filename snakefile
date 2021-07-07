@@ -1,21 +1,25 @@
-# KARYON LONGREAD
+# assembly appraisal (karyinon workflow)
+
 
 configfile: "config.yaml"
-#
-# ruleorder: index_mapping > samtools_index > samtools_faidx > GATK > bcftools > samtools_flagstats
+
 
 rule all:
     input:
-        # plot = config["assembly"] + "/outputs/plots/plot.png",
+# karyon
         flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
-# NUCMER
+        # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
+        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
+        # plot = config["assembly"] + "/outputs/plots/plot.png",
+# dotplots
+    # NUCMER
         nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.png",
         nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.png",
         nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.png",
-        ex_tsv = config["assembly"] + "/reports/minimap2/mapped_nonself_hits.sam",
-        # out_dir = config["assembly"] + "/reports/dotplots/dotplot.png",
+    # BLAST
         tsv = config["assembly"] + "/reports/blast/blast.out",
-        quast = config["assembly"] + "/reports/quast/report.txt",
+# assembly stats
+        # quast = config["assembly"] + "/reports/quast/report.txt",
 
 
 rule redundans:
@@ -55,13 +59,6 @@ rule dictionary_creation:
     shell:
        "picard CreateSequenceDictionary R={input[assembly]} O={output}"
 
-# rule index_mapping:
-#     input:
-#         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
-#     output:
-#         fai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa.fai"
-#     shell:
-#        "samtools faidx {input[assembly]}"        # change this to minimap
 
 rule mapping:
     input:
@@ -84,6 +81,7 @@ rule conversion:
     shell:
         "samtools view -b -S {input} > {output}"
 
+
 rule sorting:
     input:
         config["assembly"] + "/outputs/redundans/scaffolds.reduced.bam"
@@ -91,6 +89,7 @@ rule sorting:
         bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.bam"
     shell:
         "samtools sort {input} > {output}"
+
 
 rule nucmer_reduced_vs_initial:
     input:
@@ -110,6 +109,7 @@ rule nucmer_reduced_vs_initial:
         cp tmp/{params[0]}.delta {params[1]}
         mummerplot -l -f --png --large {params[1]}{params[0]}.delta -p {params[1]}{params[0]}
         """
+
 
 rule nucmer_reduced_vs_reference:
     input:
@@ -131,6 +131,7 @@ rule nucmer_reduced_vs_reference:
         cp tmp/{params[0]}.delta {params[1]}
         mummerplot -l -f --png --large {params[1]}{params[0]}.delta -p {params[1]}{params[0]}
         """
+
 
 rule nucmer_initial_vs_reference:
     input:
@@ -171,22 +172,6 @@ rule nucmer_initial_vs_reference:
 #     script:
 #         "scripts/snmk_nucmer_circles.R"
 
-rule samtools_index:
-    input:
-       bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam"
-    output:
-       fai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai",
-       nuc_fai = config["assembly"] + "/reports/nucmer/scaffolds.reduced.fasta.fai"
-    shell:
-       "samtools index {input[bam]} && cp {output[0]} {output[1]}"
-
-rule samtools_faidx:
-    input:
-        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
-    output:
-        fai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta.fai"
-    shell:
-        "samtools faidx {input[assembly]}"
 
 rule fix_bam:
     input:
@@ -204,6 +189,26 @@ rule fix_bam:
         RGPU=unit1 \
         RGSM=Random"
 
+
+rule samtools_index:
+    input:
+       bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam"
+    output:
+       fai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai",
+       nuc_fai = config["assembly"] + "/reports/nucmer/scaffolds.reduced.fasta.fai"
+    shell:
+       "samtools index {input[bam]} && cp {output[0]} {output[1]}"
+
+
+rule samtools_faidx:
+    input:
+        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
+    output:
+        fai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta.fai"
+    shell:
+        "samtools faidx {input[assembly]}"
+
+
 rule GATK:
     container:
         "docker://broadinstitute/gatk:4.0.2.0"
@@ -220,27 +225,33 @@ rule GATK:
     shell:
         "gatk --java-options -Xmx{params} HaplotypeCaller -R {input[assembly]} -I {input[bam]} -O {output}"
 
+
 rule bcftools:
     conda:
         "envs/v_calling.yaml"
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         faidx = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta.fai",
-        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam",
-        bai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai",
+        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.bam",
+        bai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.bam.bai",
     output:
         mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup"
     shell:
+        "bcftools mpileup -Ou -f {input[0]} {input[2]} | \
+        bcftools call -Ou -mv | \
+        bcftools filter -s LowQual -e '%QUAL<10 | DP>100' > {output}"
         # "bcftools mpileup -Ov -f {input[assembly]} {input[bam]} -o {output}"
-        "samtools mpileup -f {input[assembly]} {input[bam]} | bcftools view -Ov - > {output}"
+        # "samtools mpileup -f {input[assembly]} {input[bam]} | bcftools view -Ob > {output}"
+#
 
 rule samtools_flagstats:
     input:
-        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.bam"
+        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam"
     output:
         flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat"
     shell:
         "samtools flagstats {input[bam]} > {output}"
+
 
 rule karyon_plots:
     input:
@@ -258,24 +269,6 @@ rule karyon_plots:
         "python3 scripts/karyon_plots.py --fasta {input[assembly]} --output_directory {params[out_pfx]} --output_name {params[out_name]} --vcf {input[vcf]} --pileup {input[mpileup]} --bam {input[bam]} --library --configuration --wsize --max_scaf2plot --scafminsize --scafmaxsize --job_id"        # Identifier of the intermediate files generated by the different programs. If false, the program will assign a name consisting of a string of 6 random alphanumeric characters.')"
 
 
-rule mapping_back:
-    input:
-        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
-    output:
-        tsv = config["assembly"] + "/reports/minimap2/mapped_nonself_hits.sam"
-    params:
-        threads = config["threads"]
-    shell:
-        "minimap2 -ax asm5 -D {input[0]} {input[0]} > {output}"
-
-# rule removing_nonself:
-#     input:
-#         tsv = config["assembly"] + "/reports/mapped_hits.sam"
-#     output:
-#         tsv = config["assembly"] + "/reports/mapped_nonself_hits.sam"
-#     shell:
-#         "samtools view -F0x900 {input} > {output}"
-
 rule make_blast_database:  # Rule to make database of cds fasta
     input:
         config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta" # input to the rule
@@ -291,6 +284,7 @@ rule make_blast_database:  # Rule to make database of cds fasta
         -out {params} \
         -dbtype nucl"  # the database type
 
+
 rule blast_nonself:
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
@@ -305,8 +299,13 @@ rule blast_nonself:
         "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out"
 
 
-
-
+rule reads_to_fasta:
+    input:
+        reads = "data/reads/" + config["reads"] + ".fastq.gz",
+    output:
+        reads = "data/reads/" + config["reads"] + ".fasta",
+    shell:
+        "zcat -c {input} | seqkit fq2fa | cat > {output}"
 
 
 # rule download_busco_for_quast:
@@ -318,25 +317,12 @@ rule blast_nonself:
 #         "quast-download-busco"
 
 
-
-
-
-
-rule reads_to_fasta:
-    input:
-        reads = "data/reads/" + config["reads"] + ".fastq.gz",
-    output:
-        reads = "data/reads/" + config["reads"] + ".fasta",
-    shell:
-        "zcat -c {input} | seqkit fq2fa | cat > {output}"
-
-
   # Performing QUAST assembly appraisal
 rule quast:
     message:
         "[INFO] Performing QUAST appraisal on assemblies..."
     input:
-        redundans = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
+        initial = "data/assemblies/" + config["assembly"] + ".fasta",
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa",
         reads = "data/reads/" + config["reads"] + ".fasta",
         reference = "/media/mike/WD_4TB/javanica_assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz"
@@ -349,18 +335,32 @@ rule quast:
         config["quast_path"] + "/quast.py --large {input[0]} {input[1]} --glimmer -b --threads {params[1]} -L -r {input[2]} --nanopore {input[reads]} -o {params[0]}"
 
 
-
-
-
-rule CEGMA:
-    container:
-        "chrishah/cegma:2.5"
-
-
-
-
-
-
+# rule blobs_collapsed:
+#     input:
+#         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa",
+#     output:
+#     shell:
+#         """
+#         """
+#
+#
+# rule CEGMA_collapsed:
+#     container:
+#         "chrishah/cegma:2.5"
+#     input:
+#         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa",
+#     output:
+#     shell:
+#
+#
+# rule mito_identification:
+#     input:
+#         initial = "data/assemblies/" + config["assembly"] + ".fasta",
+#
+#
+# rule coverage_plots:
+#     input:
+#         initial = "data/assemblies/" + config["assembly"] + ".fasta",
 
 
 #     # Performing Merqury assembly appraisal
@@ -370,30 +370,72 @@ rule CEGMA:
 #     conda:
 #         "../envs/merqury.yaml"
 #     input:
-#         assembly = "data/assemblies/{assembler}/{sample}/scaffolds.fasta"
-#
+#         initial = "data/assemblies/" + config["assembly"] + ".fasta",
 #     output:
 #     params:
 #     shell:
 
 
+# rule dotplots:
+#     input:
+#         tsv = config["assembly"] + "/reports/mapped_nonself_hits.sam",
+#         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
+#     output:
+#         config["assembly"] + "/reports/dotplots/dotplot.png"
+#     params:
+#         out_dir = config["assembly"] + "/reports/dotplots/"
+#     run:
+#         from Bio import SeqIO
+#         import pandas as pd
+#         import os
+#         import sys
+#         from readpaf import parse_paf
+#         import dotplot
+#
+#         shell("mkdir -p tmp/")
+#
+#         tmp_tbl = input[0].replace(".paf",".cleaned.sam")
+#         print(tmp_tbl)
+#         shell("sed '/^@/ d' < " + input[0] + " > " + tmp_tbl)
+#
+#         df = pd.read_csv(tmp_tbl, sep = '\t')
+#         seqs = input[1]
+# #
+#         for index, value in df.iterrows():
+#             query = value[0]
+#             hit = value[2]
+#             print(query + " pairs with " + hit)
+#             for record in SeqIO.parse(seqs,'fasta'):
+#                 q_seq=[]
+#                 h_seq=[]
+#                 if record.id == query:
+#                     q_seq = ">" + record.id + "\n" + record.seq + "\n"
+#                     with open('tmp/' + query + '.fasta', 'a+', newline='\n') as g:
+#                         SeqIO.write(record, g, 'fasta-2line')
+#                     g.close()
+#                     print(q_seq)
+#                 if record.id == hit:
+#                     h_seq = ">" + record.id + "\n" + record.seq + "\n"
+#                     with open('tmp/' + hit + '.fasta', 'a+', newline='\n') as r:
+#                         SeqIO.write(record, r, 'fasta-2line')
+#                     r.close()
+#                     print(h_seq)
+#             shell("dotplot --drawer matplotlib --fasta tmp/" + str(query) + ".fasta tmp/" + str(hit) + ".fasta > " + params[0] + str(query) + ".dotplot.png")
 
 
 
-
-
-    # run:
-    #     from Bio import SeqIO
-    #     import os
-    #
-    #     if sys.version_info[0] < 3:
-    #         from StringIO import StringIO
-    #     else:
-    #         from io import StringIO
-    #
-    #     for seq_record in SeqIO.parse(input[0], "fasta"):
-    #         contig = '>' + seq_record.description + '\n' + str(seq_record.seq)
-    # -negative_seqidlist exclude_me
+# run:
+#     from Bio import SeqIO
+#     import os
+#
+#     if sys.version_info[0] < 3:
+#         from StringIO import StringIO
+#     else:
+#         from io import StringIO
+#
+#     for seq_record in SeqIO.parse(input[0], "fasta"):
+#         contig = '>' + seq_record.description + '\n' + str(seq_record.seq)
+# -negative_seqidlist exclude_me
 # "blastn -query {input[0]} -db {params[1]} -outfmt '6 qseqid sseqid pident' -out {params[0]}/blast.out"
 #                 # q =
 #                 # h = df.[1]
@@ -415,48 +457,21 @@ rule CEGMA:
 
 #
 #
-rule dotplots:
-    input:
-        tsv = config["assembly"] + "/reports/mapped_nonself_hits.sam",
-        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
-    output:
-        config["assembly"] + "/reports/dotplots/dotplot.png"
-    params:
-        out_dir = config["assembly"] + "/reports/dotplots/"
-    run:
-        from Bio import SeqIO
-        import pandas as pd
-        import os
-        import sys
-        from readpaf import parse_paf
-        import dotplot
 
-        shell("mkdir -p tmp/")
-
-        tmp_tbl = input[0].replace(".paf",".cleaned.sam")
-        print(tmp_tbl)
-        shell("sed '/^@/ d' < " + input[0] + " > " + tmp_tbl)
-
-        df = pd.read_csv(tmp_tbl, sep = '\t')
-        seqs = input[1]
+# rule mapping_back:
+#     input:
+#         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
+#     output:
+#         tsv = config["assembly"] + "/reports/minimap2/mapped_nonself_hits.sam"
+#     params:
+#         threads = config["threads"]
+#     shell:
+#         "minimap2 -ax asm5 -D {input[0]} {input[0]} > {output}"
 #
-        for index, value in df.iterrows():
-            query = value[0]
-            hit = value[2]
-            print(query + " pairs with " + hit)
-            for record in SeqIO.parse(seqs,'fasta'):
-                q_seq=[]
-                h_seq=[]
-                if record.id == query:
-                    q_seq = ">" + record.id + "\n" + record.seq + "\n"
-                    with open('tmp/' + query + '.fasta', 'a+', newline='\n') as g:
-                        SeqIO.write(record, g, 'fasta-2line')
-                    g.close()
-                    print(q_seq)
-                if record.id == hit:
-                    h_seq = ">" + record.id + "\n" + record.seq + "\n"
-                    with open('tmp/' + hit + '.fasta', 'a+', newline='\n') as r:
-                        SeqIO.write(record, r, 'fasta-2line')
-                    r.close()
-                    print(h_seq)
-            shell("dotplot --drawer matplotlib --fasta tmp/" + str(query) + ".fasta tmp/" + str(hit) + ".fasta > " + params[0] + str(query) + ".dotplot.png")
+# # rule removing_nonself:
+# #     input:
+# #         tsv = config["assembly"] + "/reports/mapped_hits.sam"
+# #     output:
+# #         tsv = config["assembly"] + "/reports/mapped_nonself_hits.sam"
+# #     shell:
+# #         "samtools view -F0x900 {input} > {output}"
