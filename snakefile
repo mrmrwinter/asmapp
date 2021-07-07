@@ -239,7 +239,7 @@ rule bcftools:
     shell:
         "bcftools mpileup -Ou -f {input[0]} {input[2]} | \
         bcftools call -Ou -mv | \
-        bcftools filter -s LowQual -e '%QUAL<10 | DP>100' > {output}"
+        bcftools filter -s LowQual -e '%QUAL<10 || DP>100' > {output}"
         # "bcftools mpileup -Ov -f {input[assembly]} {input[bam]} -o {output}"
         # "samtools mpileup -f {input[assembly]} {input[bam]} | bcftools view -Ob > {output}"
 #
