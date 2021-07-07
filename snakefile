@@ -237,12 +237,11 @@ rule bcftools:
     output:
         mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup"
     shell:
-        "bcftools mpileup -Ou -f {input[0]} {input[2]} | \
-        bcftools call -Ou -mv | \
-        bcftools filter -s LowQual -e '%QUAL<10 || DP>100' > {output}"
+        # "bcftools mpileup -Ou -f {input[0]} {input[2]} | \
+        # bcftools call -Ou -mv | \
+        # bcftools filter -s LowQual -e '%QUAL<10 || DP>100' > {output}"
         # "bcftools mpileup -Ov -f {input[assembly]} {input[bam]} -o {output}"
-        # "samtools mpileup -f {input[assembly]} {input[bam]} | bcftools view -Ob > {output}"
-#
+        "samtools mpileup -B -f {input[assembly]} -v {input[bam]} -o {output}"
 
 rule samtools_flagstats:
     input:
