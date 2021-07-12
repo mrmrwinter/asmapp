@@ -9,7 +9,7 @@ rule all:
 # karyon
         flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
         # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
-        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
+        # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
         # plot = config["assembly"] + "/outputs/plots/plot.png",
 # dotplots
     # NUCMER
@@ -68,7 +68,7 @@ rule mapping:
         sam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sam"
     params:
         threads = config["threads"],
-        seq_tech = "map-ont"
+        seq_tech = "map-" + config["seq_tech"]
     shell:
         "minimap2 -t {params[threads]} -ax {params[seq_tech]} {input[assembly]} {input[reads]} > {output}"
 
@@ -362,17 +362,17 @@ rule quast:
 #         initial = "data/assemblies/" + config["assembly"] + ".fasta",
 
 
-#     # Performing Merqury assembly appraisal
-# rule merqury:
-#     message:
-#         "[INFO] Performing Merqury assembly appraisal..."
-#     conda:
-#         "../envs/merqury.yaml"
-#     input:
-#         initial = "data/assemblies/" + config["assembly"] + ".fasta",
-#     output:
-#     params:
-#     shell:
+    # Performing Merqury assembly appraisal
+rule merqury:
+    message:
+        "[INFO] Performing Merqury assembly appraisal..."
+    conda:
+        "../envs/merqury.yaml"
+    input:
+        initial = "data/assemblies/" + config["assembly"] + ".fasta",
+    output:
+    params:
+    shell:
 
 
 # rule dotplots:
