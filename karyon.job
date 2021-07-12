@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH -J karyon          # Job name, you can change it to whatever you want
+#SBATCH -n 28               # Number of cores 
+#SBATCH -o %N.%j.out        # Standard output will be written here
+#SBATCH -e %N.%j.err        # Standard error will be written here
+#SBATCH -p compute          # Slurm partition, where you want the job to be queued 
+#SBATCH --time 100:30:00         # run for 10 hours 30 minutes
+ 
+module purge
+# module add mpich/3.2/gcc-5.2.0
+module add test-modules singularity/3.5.3/gcc-8.2.0
+module add java/jdk1.8.0_102
+
+module load python/anaconda/4.6/miniconda/3.7
+
+source activate /home/531734/.conda/envs/appraisal
+
+cd /home/531734/karyon_longread
+
+# mpiexec -n 56 
+
+snakemake --cores 28 --printshellcmds --use-singularity --use-conda -k -s snakefile 
