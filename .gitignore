@@ -7,7 +7,7 @@ outputs
 *.sam
 .snakemake/
 *.gz
-
+*.mpileup
 tmp/*
 .Rproj.user
 *.paf

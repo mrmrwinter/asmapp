@@ -1,9 +1,9 @@
-assembly: "concat_mrl20k_q15l15k_pepper"  # name of starting assembly, located in data/aassemblies/
-reads: "reads_15_15000"   # name of reads, located in data/reads/
-redundans_path: "/home/mike/software/redundans"  # path to directory containing redundans script
+assembly: "VW4_CANU_HiFi"  # name of starting assembly, located in data/aassemblies/
+reads: "VW4_CANU_HiFi.trimmedReads"   # name of reads, located in data/reads/
+redundans_path: "/home/531734/packages/redundans"  # path to directory containing redundans script
 picard-tools: "/home/"  # path to picarad-tools
-memory: "52"  # the aavailaable memory for the analysis in gigabytes
-threads: "12"
-quast_path: "/home/mike/software/quast"
-seq_tech: "nanopore"
-reference: "/media/mike/WD_4TB/javanica_assemblies/Blanc_Mathieu_2017_mJavanica"
+memory: "120"  # the aavailaable memory for the analysis in gigabytes
+threads: "28"
+quast_path: "/home/531734/packages/quast"
+seq_tech: "hifi"
+reference: "data/assemblies/Blanc_Mathieu_2017_mJavanica"

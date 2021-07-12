@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH -J jobname          # Job name, you can change it to whatever you want
+#SBATCH -n 28               # Number of cores 
+#SBATCH -N 4                # Number of nodes 
+#SBATCH -o %N.%j.out        # Standard output will be written here
+#SBATCH -e %N.%j.err        # Standard error will be written here
+#SBATCH -p compute          # Slurm partition, where you want the job to be queued 
+#SBATCH --t=10:30:00         # run for 10 hours 30 minutes
+ 
+module purge
+module add openmpi/1.10.5/gcc-6.3.0 
+ 
+mpirun command

@@ -8,9 +8,9 @@ rule all:
     input:
 # karyon
         flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
-        # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
+        vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
         mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
-        # plot = config["assembly"] + "/outputs/plots/plot.png",
+        plot = config["assembly"] + "/outputs/plots/plot.png",
 # dotplots
     # NUCMER
         nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.png",
@@ -19,7 +19,7 @@ rule all:
     # BLAST
         tsv = config["assembly"] + "/reports/blast/blast.out",
 # assembly stats
-        # quast = config["assembly"] + "/reports/quast/report.txt",
+#        quast = config["assembly"] + "/reports/quast/report.txt",
 
 
 rule redundans:
@@ -68,7 +68,7 @@ rule mapping:
         sam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sam"
     params:
         threads = config["threads"],
-        seq_tech = "map-ont"
+        seq_tech = "map-" + config["seq_tech"]
     shell:
         "minimap2 -t {params[threads]} -ax {params[seq_tech]} {input[assembly]} {input[reads]} > {output}"
 
@@ -192,6 +192,15 @@ rule fix_bam:
 
 rule samtools_index:
     input:
+       bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.bam"
+    output:
+       bai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.bam.bai",
+    shell:
+       "samtools index {input[bam]} > {output[0]}"
+
+
+rule samtools_tagged_index:
+    input:
        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam"
     output:
        fai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai",
@@ -227,8 +236,8 @@ rule GATK:
 
 
 rule bcftools:
-    conda:
-        "envs/v_calling.yaml"
+#    conda:
+#        "envs/v_calling.yaml"
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         faidx = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta.fai",
@@ -324,7 +333,7 @@ rule quast:
         initial = "data/assemblies/" + config["assembly"] + ".fasta",
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa",
         reads = "data/reads/" + config["reads"] + ".fasta",
-        reference = "/media/mike/WD_4TB/javanica_assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz"
+        reference = config["reference"] + ".fasta.gz"
     output:
         config["assembly"] + "/reports/quast/report.txt",
     params:

@@ -1,0 +1,514 @@
+Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Traceback (most recent call last):
+  File "/home/531734/.conda/envs/appraisal/lib/python3.6/site-packages/snakemake/__init__.py", line 780, in snakemake
+    keepmetadata=keep_metadata,
+  File "/home/531734/.conda/envs/appraisal/lib/python3.6/site-packages/snakemake/workflow.py", line 727, in execute
+    or delete_temp_output,
+  File "/home/531734/.conda/envs/appraisal/lib/python3.6/site-packages/snakemake/persistence.py", line 38, in __init__
+    os.mkdir(self._lockdir)
+FileExistsError: [Errno 17] File exists: '/home/531734/karyon_longread/.snakemake/locks'
+Traceback (most recent call last):
+  File "/home/531734/.conda/envs/appraisal/lib/python3.6/site-packages/snakemake/__init__.py", line 780, in snakemake
+    keepmetadata=keep_metadata,
+  File "/home/531734/.conda/envs/appraisal/lib/python3.6/site-packages/snakemake/workflow.py", line 727, in execute
+    or delete_temp_output,
+  File "/home/531734/.conda/envs/appraisal/lib/python3.6/site-packages/snakemake/persistence.py", line 38, in __init__
+    os.mkdir(self._lockdir)
+FileExistsError: [Errno 17] File exists: '/home/531734/karyon_longread/.snakemake/locks'
+Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Using shell: /usr/bin/bash
+WARNING:snakemake.logging:Using shell: /usr/bin/bash
+Provided cores: 56
+WARNING:snakemake.logging:Provided cores: 56
+Rules claiming more threads will be scaled down.
+WARNING:snakemake.logging:Rules claiming more threads will be scaled down.
+Job stats:
+job         count    min threads    max threads
+--------  -------  -------------  -------------
+all             1              1              1
+bcftools        1              1              1
+total           2              1              1
+
+WARNING:snakemake.logging:Job stats:
+job         count    min threads    max threads
+--------  -------  -------------  -------------
+all             1              1              1
+bcftools        1              1              1
+total           2              1              1
+
+Select jobs to execute...
+WARNING:snakemake.logging:Select jobs to execute...
+
+INFO:snakemake.logging:
+[Fri Jul  9 10:35:55 2021]
+INFO:snakemake.logging:[Fri Jul  9 10:35:55 2021]
+rule bcftools:
+    input: VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.fasta, VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.fasta.fai, VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.sorted.bam, VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.sorted.bam.bai
+    output: VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.mpileup
+    jobid: 8
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule bcftools:
+    input: VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.fasta, VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.fasta.fai, VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.sorted.bam, VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.sorted.bam.bai
+    output: VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.mpileup
+    jobid: 8
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+samtools mpileup -B -f VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.fasta -v VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.sorted.bam -o VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.mpileup
+WARNING:snakemake.logging:samtools mpileup -B -f VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.fasta -v VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.sorted.bam -o VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.mpileup
+[warning] samtools mpileup option `v` is functional, but deprecated. Please switch to using bcftools mpileup in future.
+[mpileup] 1 samples in 1 input files
+[Mon Jul 12 07:46:08 2021]
+INFO:snakemake.logging:[Mon Jul 12 07:46:08 2021]
+Finished job 8.
+INFO:snakemake.logging:Finished job 8.
+1 of 2 steps (50%) done
+INFO:snakemake.logging:1 of 2 steps (50%) done
+Select jobs to execute...
+WARNING:snakemake.logging:Select jobs to execute...
+
+INFO:snakemake.logging:
+[Mon Jul 12 07:46:09 2021]
+INFO:snakemake.logging:[Mon Jul 12 07:46:09 2021]
+localrule all:
+    input: VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.flagstat, VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.mpileup, VW4_CANU_HiFi/reports/nucmer/nucmer.initial.png, VW4_CANU_HiFi/reports/nucmer/nucmer.reference.png, VW4_CANU_HiFi/reports/nucmer/nucmer.int_ref.png, VW4_CANU_HiFi/reports/blast/blast.out
+    jobid: 0
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:localrule all:
+    input: VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.flagstat, VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.mpileup, VW4_CANU_HiFi/reports/nucmer/nucmer.initial.png, VW4_CANU_HiFi/reports/nucmer/nucmer.reference.png, VW4_CANU_HiFi/reports/nucmer/nucmer.int_ref.png, VW4_CANU_HiFi/reports/blast/blast.out
+    jobid: 0
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+[Mon Jul 12 07:46:10 2021]
+INFO:snakemake.logging:[Mon Jul 12 07:46:10 2021]
+Finished job 0.
+INFO:snakemake.logging:Finished job 0.
+2 of 2 steps (100%) done
+INFO:snakemake.logging:2 of 2 steps (100%) done
+Complete log: /home/531734/karyon_longread/.snakemake/log/2021-07-09T103550.367715.snakemake.log
+WARNING:snakemake.logging:Complete log: /home/531734/karyon_longread/.snakemake/log/2021-07-09T103550.367715.snakemake.log
