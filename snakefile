@@ -290,12 +290,12 @@ rule samtools_flagstats:
 
 rule karyon_plots:
     input:
-        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
-        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
-        flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
-        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam",
-        vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
-        reads = "data/reads/" + config["reads"] + ".fastq.gz"
+        assembly = config["full_path"] + config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
+        mpileup = config["full_path"] + config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
+        flagstats = config["full_path"] + config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
+        bam = config["full_path"] + config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam",
+        vcf = config["full_path"] + config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
+        reads = config["full_path"] + "data/reads/" + config["reads"] + ".fastq.gz"
     output:
         plot = config["assembly"] + "/outputs/plots/plot.png"
     params:
