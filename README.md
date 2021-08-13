@@ -1,6 +1,6 @@
 # Karyinon: Longread Karyon
 
-Karyon is a package that assesses the ploidy of a library, readas or contigs.
+Karyon is a package that assesses the ploidy of a library, reads or contigs.
 
 Github repo: 
 
@@ -13,3 +13,6 @@ Paper:
 ---
 
 I aim to adapt the karyon workflow to use long reads and detect ploidy artifacts in our assemblies.
+
+This workflow will include assembly appraisal with QUAST and Merqury, mitochondrial and contaminant 
+read identification with Blobtools, and detect homeologous contigs using Nucmer and LastZ.

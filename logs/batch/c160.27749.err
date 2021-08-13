@@ -1,0 +1,68 @@
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Using shell: /usr/bin/bash
+WARNING:snakemake.logging:Using shell: /usr/bin/bash
+Provided cores: 28
+WARNING:snakemake.logging:Provided cores: 28
+Rules claiming more threads will be scaled down.
+WARNING:snakemake.logging:Rules claiming more threads will be scaled down.
+Job stats:
+job             count    min threads    max threads
+------------  -------  -------------  -------------
+all                 1              1              1
+karyon_plots        1              1              1
+total               2              1              1
+
+WARNING:snakemake.logging:Job stats:
+job             count    min threads    max threads
+------------  -------  -------------  -------------
+all                 1              1              1
+karyon_plots        1              1              1
+total               2              1              1
+
+Select jobs to execute...
+WARNING:snakemake.logging:Select jobs to execute...
+
+INFO:snakemake.logging:
+[Tue Jul 27 10:49:57 2021]
+INFO:snakemake.logging:[Tue Jul 27 10:49:57 2021]
+rule karyon_plots:
+    input: VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.fasta, VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.mpileup, VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.flagstat, VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.sorted.tagged.bam, VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.vcf
+    output: VW4_CANU_HiFi/outputs/plots/plot.png
+    jobid: 14
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule karyon_plots:
+    input: VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.fasta, VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.mpileup, VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.flagstat, VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.sorted.tagged.bam, VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.vcf
+    output: VW4_CANU_HiFi/outputs/plots/plot.png
+    jobid: 14
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+python3 scripts/karyon_plots.py --fasta VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.fasta --output_directory VW4_CANU_HiFi/outputs/plots --output_name VW4_CANU_HiFi --vcf VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.vcf --pileup VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.mpileup --bam VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.sorted.tagged.bam --library --configuration --wsize --max_scaf2plot --scafminsize --scafmaxsize --job_id
+WARNING:snakemake.logging:python3 scripts/karyon_plots.py --fasta VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.fasta --output_directory VW4_CANU_HiFi/outputs/plots --output_name VW4_CANU_HiFi --vcf VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.vcf --pileup VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.mpileup --bam VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.sorted.tagged.bam --library --configuration --wsize --max_scaf2plot --scafminsize --scafmaxsize --job_id
+Traceback (most recent call last):
+  File "scripts/karyon_plots.py", line 6, in <module>
+    import psutil
+ModuleNotFoundError: No module named 'psutil'
+[Tue Jul 27 10:49:57 2021]
+INFO:snakemake.logging:[Tue Jul 27 10:49:57 2021]
+Error in rule karyon_plots:
+ERROR:snakemake.logging:Error in rule karyon_plots:
+    jobid: 14
+ERROR:snakemake.logging:    jobid: 14
+    output: VW4_CANU_HiFi/outputs/plots/plot.png
+ERROR:snakemake.logging:    output: VW4_CANU_HiFi/outputs/plots/plot.png
+    shell:
+        python3 scripts/karyon_plots.py --fasta VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.fasta --output_directory VW4_CANU_HiFi/outputs/plots --output_name VW4_CANU_HiFi --vcf VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.vcf --pileup VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.mpileup --bam VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.sorted.tagged.bam --library --configuration --wsize --max_scaf2plot --scafminsize --scafmaxsize --job_id
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+ERROR:snakemake.logging:    shell:
+        python3 scripts/karyon_plots.py --fasta VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.fasta --output_directory VW4_CANU_HiFi/outputs/plots --output_name VW4_CANU_HiFi --vcf VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.vcf --pileup VW4_CANU_HiFi/outputs/variant_calling/scaffolds.reduced.mpileup --bam VW4_CANU_HiFi/outputs/redundans/scaffolds.reduced.sorted.tagged.bam --library --configuration --wsize --max_scaf2plot --scafminsize --scafmaxsize --job_id
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+ERROR:snakemake.logging:
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+Exiting because a job execution failed. Look above for error message
+ERROR:snakemake.logging:Exiting because a job execution failed. Look above for error message
+Complete log: /home/531734/karyon_longread/.snakemake/log/2021-07-27T104937.596487.snakemake.log
+WARNING:snakemake.logging:Complete log: /home/531734/karyon_longread/.snakemake/log/2021-07-27T104937.596487.snakemake.log
