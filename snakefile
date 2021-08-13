@@ -301,6 +301,7 @@ rule karyon_plots:
     output:
         plot = config["assembly"] + "/outputs/plots/plot.png"
     params:
+        home = config["full_path"],
         out_pfx = config["assembly"] + "/outputs/plots",
         out_name = config["assembly"]
     shell:
