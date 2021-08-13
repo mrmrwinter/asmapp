@@ -1,4 +1,4 @@
-full_path: "home/531734/karyon_longread/"
+full_path: "/home/531734/karyon_longread/"
 assembly: "VW4_CANU_HiFi"  # name of starting assembly, located in data/aassemblies/
 reads: "VW4_CANU_HiFi.trimmedReads"   # name of reads, located in data/reads/
 redundans_path: "/home/531734/packages/redundans"  # path to directory containing redundans script
