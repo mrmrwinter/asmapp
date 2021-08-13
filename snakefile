@@ -308,7 +308,7 @@ rule karyon_plots:
 
 
 
-
+##############################################################################
 
 # PAIRS TABLE with BLAST
 
@@ -331,8 +331,7 @@ rule make_blast_database:  # Rule to make database of cds fasta
 rule blast_nonself:
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
-        db = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nin",
-
+        db = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nin"
     output:
         tsv = config["assembly"] + "/reports/blast/blast.out"
     params:
@@ -343,6 +342,22 @@ rule blast_nonself:
 
 
 ##############################################################################
+
+# PAIRS TABLE WITH LASTZ
+
+rule lastz:
+    input:
+        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
+    output:
+        tsv = config["assembly"] + "/reports/lastz/
+    params:
+        out_pfx = config["assembly"] + "/reports/lastz"
+    shell:
+
+
+
+
+###############################################################################
 
 # QUAST
 
