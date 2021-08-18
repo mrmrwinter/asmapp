@@ -313,9 +313,40 @@ rule karyon_plots:
 
 # PAIRS TABLE with BLAST
 
-rule make_blast_database:  # Rule to make database of cds fasta
+rule make_collapsed_blast_database:  # Rule to make database of cds fasta
     input:
         config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta" # input to the rule
+    output:
+        nhr = "data/database/" + config["assembly"] + "/collapsed_" + config["assembly"] + ".nhr",   # all outputs expected from the rule
+        nin = "data/database/" + config["assembly"] + "/collapsed_" + config["assembly"] + ".nin",
+        nsq = "data/database/" + config["assembly"] + "/collapsed_" + config["assembly"] + ".nsq"
+    params:
+        "data/database/" + config["assembly"] + "/collapsed_" + config["assembly"]   # prefix for the outputs, required by the command
+    shell:  # shell command for the rule
+        "makeblastdb \
+        -in {input} \
+        -out {params} \
+        -dbtype nucl"  # the database type
+
+
+rule collapsed_blast_nonself:
+    input:
+        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
+        db = "data/database/" + config["assembly"] + "/collapsed_" + config["assembly"] + ".nin"
+    output:
+        tsv = config["assembly"] + "/reports/blast/collapsed_blast.out"
+    params:
+        out_pfx = config["assembly"] + "/reports/blast",
+        db_pfx = "data/database/" + config["assembly"] + "/collapsed_" + config["assembly"]
+    shell:
+        "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/collapsed_blast.out"
+
+
+# PAIRS TABLE with BLAST
+
+rule make_blast_database:  # Rule to make database of cds fasta
+    input:
+        config["assembly"] + "" # input to the rule
     output:
         nhr = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nhr",   # all outputs expected from the rule
         nin = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nin",
@@ -331,7 +362,7 @@ rule make_blast_database:  # Rule to make database of cds fasta
 
 rule blast_nonself:
     input:
-        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
+        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
         db = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nin"
     output:
         tsv = config["assembly"] + "/reports/blast/blast.out"
@@ -342,27 +373,13 @@ rule blast_nonself:
         "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out"
 
 
-##############################################################################
-
-# PAIRS TABLE WITH LASTZ
-
-rule lastz:
-    input:
-        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
-    output:
-        tsv = config["assembly"] + "/reports/lastz/
-    params:
-        out_pfx = config["assembly"] + "/reports/lastz"
-    shell:
-
-
 
 
 ###############################################################################
 
 # QUAST
 
-rule reads_to_fasta:
+rule reads_to_fasta:/
     input:
         reads = "data/reads/" + config["reads"] + ".fastq.gz",
     output:
@@ -396,6 +413,23 @@ rule quast:
         threads = config["threads"]
     shell:
         config["quast_path"] + "/quast.py --large {input[0]} {input[1]} --glimmer -b --threads {params[1]} -L -r {input[2]} --nanopore {input[reads]} -o {params[0]}"
+
+
+##############################################################################
+
+# PAIRS TABLE WITH LASTZ
+
+rule lastz:
+    input:
+        query = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
+    output:
+        tsv = config["assembly"] + "/reports/lastz/
+    params:
+        out_pfx = config["assembly"] + "/reports/lastz"
+    shell:
+        "lastz {input[target]} {input[query]} --output {output}"
+
+
 
 
 ##############################################################################
