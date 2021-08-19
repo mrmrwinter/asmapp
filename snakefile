@@ -19,7 +19,8 @@ rule all:
         nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.png",
         nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.png",
     # BLAST
-        tsv = config["assembly"] + "/reports/blast/blast.out",
+        blast_pairs_tsv = config["assembly"] + "/reports/blast/blast.out",
+        collapsed_blast_pairs_tsv = config["assembly"] + "/reports/blast/collapsed_blast.out",
 # assembly stats
 #        quast = config["assembly"] + "/reports/quast/report.txt",
 
@@ -255,7 +256,7 @@ rule GATK:
         bai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai",
         dict = config["assembly"] + "/outputs/redundans/scaffolds.reduced.dict"
     output:
-        vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf"
+        vcf = config["full_path"] + config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf"
     params:
         memory = config["memory"] + "G",
     shell:
@@ -271,7 +272,7 @@ rule bcftools:
         bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.bam",
         bai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.bam.bai",
     output:
-        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup"
+        mpileup = config["full_path"] + config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup"
     shell:
         # "bcftools mpileup -Ou -f {input[0]} {input[2]} | \
         # bcftools call -Ou -mv | \
@@ -283,7 +284,7 @@ rule samtools_flagstats:
     input:
         bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam"
     output:
-        flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat"
+        flagstats = config["full_path"] + config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat"
     shell:
         "samtools flagstats {input[bam]} > {output}"
 
@@ -379,7 +380,7 @@ rule blast_nonself:
 
 # QUAST
 
-rule reads_to_fasta:/
+rule reads_to_fasta:
     input:
         reads = "data/reads/" + config["reads"] + ".fastq.gz",
     output:
@@ -419,15 +420,15 @@ rule quast:
 
 # PAIRS TABLE WITH LASTZ
 
-rule lastz:
-    input:
-        query = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
-    output:
-        tsv = config["assembly"] + "/reports/lastz/
-    params:
-        out_pfx = config["assembly"] + "/reports/lastz"
-    shell:
-        "lastz {input[target]} {input[query]} --output {output}"
+# rule lastz:
+#     input:
+#         query = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
+#     output:
+#         tsv = config["assembly"] + "/reports/lastz/"
+#     params:
+#         out_pfx = config["assembly"] + "/reports/lastz"
+#     shell:
+#         "lastz {input[target]} {input[query]} --output {output}"
 
 
 
