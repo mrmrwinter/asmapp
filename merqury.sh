@@ -1,1 +1,0 @@
-/home/531734/.conda/envs/merqury/share/merqury/merqury.sh

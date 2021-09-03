@@ -4,25 +4,22 @@
 configfile: "config.yaml"
 
 
-
-
 ###############################################################################
 
 rule all:
     input:
 # karyon
-        # flagstats = config["full_path"] + config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
-        # # vcf = config["full_path"] + config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
-        # mpileup = config["full_path"] + config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
-        # # plot = config["assembly"] + "/outputs/plots/plot.png",
+        flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
+        vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
+        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
+        plot = config["assembly"] + "/outputs/plots/plot.png",
 # dotplots
     # NUCMER
-        # nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.png",
-        # nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.png",
-        # nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.png",
+        nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.png",
+        nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.png",
+        nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.png",
     # BLAST
-        blast_pairs_tsv = config["assembly"] + "/reports/blast/blast.out",
-        collapsed_blast_pairs_tsv = config["assembly"] + "/reports/blast/collapsed_blast.out",
+        tsv = config["assembly"] + "/reports/blast/blast.out",
 # assembly stats
 #        quast = config["assembly"] + "/reports/quast/report.txt",
 
@@ -235,7 +232,7 @@ rule fix_bam:
     input:
         bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.bam",
     output:
-        bam = config["full_path"] + config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam",
+        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam",
     params:
         seq_tech = config["seq_tech"]
     shell:
@@ -258,7 +255,7 @@ rule GATK:
         bai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai",
         dict = config["assembly"] + "/outputs/redundans/scaffolds.reduced.dict"
     output:
-        vcf = config["full_path"] + config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf"
+        vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf"
     params:
         memory = config["memory"] + "G",
     shell:
@@ -274,20 +271,19 @@ rule bcftools:
         bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.bam",
         bai = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.bam.bai",
     output:
-        mpileup = config["full_path"] + config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup"
+        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup"
     shell:
         # "bcftools mpileup -Ou -f {input[0]} {input[2]} | \
         # bcftools call -Ou -mv | \
         # bcftools filter -s LowQual -e '%QUAL<10 || DP>100' > {output}"
         # "bcftools mpileup -Ov -f {input[assembly]} {input[bam]} -o {output}"
-        "bcftools mpileup --fasta-ref {input[assembly]} {input[bam]} > {output}"
-        # "samtools mpileup -B -f {input[assembly]} -v {input[bam]} -o {output}"
+        "samtools mpileup -B -f {input[assembly]} -v {input[bam]} -o {output}"
 
 rule samtools_flagstats:
     input:
-        bam = config["full_path"] + config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam"
+        bam = config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam"
     output:
-        flagstats = config["full_path"] + config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat"
+        flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat"
     shell:
         "samtools flagstats {input[bam]} > {output}"
 
@@ -296,7 +292,7 @@ rule karyon_plots:
     conda:
         "envs/karyonplot.yaml"
     input:
-        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
+        assembly = config["full_path"] + config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         mpileup = config["full_path"] + config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
         flagstats = config["full_path"] + config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
         bam = config["full_path"] + config["assembly"] + "/outputs/redundans/scaffolds.reduced.sorted.tagged.bam",
@@ -309,7 +305,7 @@ rule karyon_plots:
         out_pfx = config["assembly"] + "/outputs/plots",
         out_name = config["assembly"]
     shell:
-        "python3 scripts/karyon_plots.py -fp {params[0]} --fasta {config[full_path]}{input[assembly]} --output_directory {params[out_pfx]} --output_name {params[out_name]} --vcf {input[vcf]} --pileup {input[mpileup]} --bam {input[bam]} --library {input[reads]}" # --configuration -wsize --max_scaf2plot --scafminsize --scafmaxsize --job_id"        # Identifier of the intermediate files generated by the different programs. If false, the program will assign a name consisting of a string of 6 random alphanumeric characters.')"
+        "python3 scripts/karyon_plots.py -fp {params[0]} --fasta {input[assembly]} --output_directory {params[out_pfx]} --output_name {params[out_name]} --vcf {input[vcf]} --pileup {input[mpileup]} --bam {input[bam]} --library {input[reads]}" # --configuration -wsize --max_scaf2plot --scafminsize --scafmaxsize --job_id"        # Identifier of the intermediate files generated by the different programs. If false, the program will assign a name consisting of a string of 6 random alphanumeric characters.')"
 
 
 
@@ -317,40 +313,9 @@ rule karyon_plots:
 
 # PAIRS TABLE with BLAST
 
-rule make_collapsed_blast_database:  # Rule to make database of cds fasta
-    input:
-        config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta" # input to the rule
-    output:
-        nhr = "data/database/" + config["assembly"] + "/collapsed_" + config["assembly"] + ".nhr",   # all outputs expected from the rule
-        nin = "data/database/" + config["assembly"] + "/collapsed_" + config["assembly"] + ".nin",
-        nsq = "data/database/" + config["assembly"] + "/collapsed_" + config["assembly"] + ".nsq"
-    params:
-        "data/database/" + config["assembly"] + "/collapsed_" + config["assembly"]   # prefix for the outputs, required by the command
-    shell:  # shell command for the rule
-        "makeblastdb \
-        -in {input} \
-        -out {params} \
-        -dbtype nucl"  # the database type
-
-
-rule collapsed_blast_nonself:
-    input:
-        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
-        db = "data/database/" + config["assembly"] + "/collapsed_" + config["assembly"] + ".nin"
-    output:
-        tsv = config["assembly"] + "/reports/blast/collapsed_blast.out"
-    params:
-        out_pfx = config["assembly"] + "/reports/blast",
-        db_pfx = "data/database/" + config["assembly"] + "/collapsed_" + config["assembly"]
-    shell:
-        "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/collapsed_blast.out"
-
-
-# PAIRS TABLE with BLAST
-
 rule make_blast_database:  # Rule to make database of cds fasta
     input:
-        "data/assemblies/" + config["assembly"] + ".fasta" # input to the rule
+        config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta" # input to the rule
     output:
         nhr = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nhr",   # all outputs expected from the rule
         nin = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nin",
@@ -366,16 +331,29 @@ rule make_blast_database:  # Rule to make database of cds fasta
 
 rule blast_nonself:
     input:
-        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
+        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         db = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nin"
     output:
         tsv = config["assembly"] + "/reports/blast/blast.out"
     params:
         out_pfx = config["assembly"] + "/reports/blast",
-        db_pfx = "data/database/" + config["assembly"] + "/" + config["assembly"],
-        threads = config["threads"]
+        db_pfx = "data/database/" + config["assembly"] + "/" + config["assembly"]
     shell:
         "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out"
+
+
+##############################################################################
+
+# PAIRS TABLE WITH LASTZ
+
+rule lastz:
+    input:
+        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
+    output:
+        tsv = config["assembly"] + "/reports/lastz/
+    params:
+        out_pfx = config["assembly"] + "/reports/lastz"
+    shell:
 
 
 
@@ -418,23 +396,6 @@ rule quast:
         threads = config["threads"]
     shell:
         config["quast_path"] + "/quast.py --large {input[0]} {input[1]} --glimmer -b --threads {params[1]} -L -r {input[2]} --nanopore {input[reads]} -o {params[0]}"
-
-
-##############################################################################
-
-# PAIRS TABLE WITH LASTZ
-
-# rule lastz:
-#     input:
-#         query = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
-#     output:
-#         tsv = config["assembly"] + "/reports/lastz/"
-#     params:
-#         out_pfx = config["assembly"] + "/reports/lastz"
-#     shell:
-#         "lastz {input[target]} {input[query]} --output {output}"
-
-
 
 
 ##############################################################################
