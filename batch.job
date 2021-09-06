@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH -J 2_purged_karyon          # Job name, you can change it to whatever you want
 #SBATCH -n 28               # Number of cores 
-#SBATCH -o logs/batch/%N.%j.out        # Standard output will be written here
-#SBATCH -e logs/batch/%N.%j.err        # Standard error will be written here
+#SBATCH -o %N.%j.out        # Standard output will be written here
+#SBATCH -e %N.%j.err        # Standard error will be written here
 #SBATCH -p compute          # Slurm partition, where you want the job to be queued 
 #SBATCH --time 100:30:00    
  

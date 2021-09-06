@@ -12,15 +12,15 @@ rule all:
 # karyon
         # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
         # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
-        # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
-        # plot = config["assembly"] + "/outputs/plots/plot.png",
+        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
+        plot = config["assembly"] + "/outputs/plots/plot.png",
 # dotplots
     # NUCMER
         # nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.png",
         # nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.png",
         # nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.png",
     # BLAST
-        # tsv = config["assembly"] + "/reports/blast/blast.out",
+        tsv = config["assembly"] + "/reports/blast/blast.out",
 # assembly stats
         quast = config["assembly"] + "/reports/quast/report.txt",
 
