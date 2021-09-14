@@ -12,13 +12,13 @@ rule all:
 # karyon
         # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
         # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
-        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
+#        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
         plot = config["assembly"] + "/outputs/plots/plot.png",
 # dotplots
     # NUCMER
-        # nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.png",
-        # nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.png",
-        # nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.png",
+        nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
+        nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.delta",
+        nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta",
     # BLAST
         tsv = config["assembly"] + "/reports/blast/blast.out",
 # assembly stats

@@ -72,7 +72,7 @@ dependencies:
   - gitpython=3.1.18=pyhd8ed1ab_0
   - glib=2.68.1=h9c3ff4c_0
   - glib-tools=2.68.1=h9c3ff4c_0
-  - gnuplot=5.0.4=ncurses5.9_1
+  - gnuplot=5.4.1
   - google-api-core=1.26.3=pyhd8ed1ab_0
   - google-api-python-client=2.11.0=pyhd8ed1ab_0
   - google-auth=1.25.0=pyh44b312d_0

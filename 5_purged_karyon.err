@@ -1,0 +1,2307 @@
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+WARNING:snakemake.logging:Building DAG of jobs...
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+ERROR:snakemake.logging:Error: Directory cannot be locked. Please make sure that no other Snakemake process is trying to create the same files in the following directory:
+/home/531734/mike/karyon_longread
+If you are sure that no other instances of snakemake are running on this directory, the remaining lock was likely caused by a kill signal or a power loss. It can be removed with the --unlock argument.
+Using shell: /usr/bin/bash
+WARNING:snakemake.logging:Using shell: /usr/bin/bash
+Provided cores: 112
+WARNING:snakemake.logging:Provided cores: 112
+Rules claiming more threads will be scaled down.
+WARNING:snakemake.logging:Rules claiming more threads will be scaled down.
+Using shell: /usr/bin/bash
+WARNING:snakemake.logging:Using shell: /usr/bin/bash
+Provided cores: 112
+WARNING:snakemake.logging:Provided cores: 112
+Rules claiming more threads will be scaled down.
+WARNING:snakemake.logging:Rules claiming more threads will be scaled down.
+Using shell: /usr/bin/bash
+WARNING:snakemake.logging:Using shell: /usr/bin/bash
+Provided cores: 112
+WARNING:snakemake.logging:Provided cores: 112
+Rules claiming more threads will be scaled down.
+WARNING:snakemake.logging:Rules claiming more threads will be scaled down.
+Using shell: /usr/bin/bash
+WARNING:snakemake.logging:Using shell: /usr/bin/bash
+Provided cores: 112
+WARNING:snakemake.logging:Provided cores: 112
+Rules claiming more threads will be scaled down.
+WARNING:snakemake.logging:Rules claiming more threads will be scaled down.
+Job stats:
+job                            count    min threads    max threads
+---------------------------  -------  -------------  -------------
+GATK                               1              1              1
+all                                1              1              1
+bcftools                           1              1              1
+karyon_plots                       1              1              1
+nucmer_initial_vs_reference        1              1              1
+nucmer_reduced_vs_initial          1              1              1
+nucmer_reduced_vs_reference        1              1              1
+samtools_flagstats                 1              1              1
+total                              8              1              1
+
+WARNING:snakemake.logging:Job stats:
+job                            count    min threads    max threads
+---------------------------  -------  -------------  -------------
+GATK                               1              1              1
+all                                1              1              1
+bcftools                           1              1              1
+karyon_plots                       1              1              1
+nucmer_initial_vs_reference        1              1              1
+nucmer_reduced_vs_initial          1              1              1
+nucmer_reduced_vs_reference        1              1              1
+samtools_flagstats                 1              1              1
+total                              8              1              1
+
+Job stats:
+job                            count    min threads    max threads
+---------------------------  -------  -------------  -------------
+GATK                               1              1              1
+all                                1              1              1
+bcftools                           1              1              1
+karyon_plots                       1              1              1
+nucmer_initial_vs_reference        1              1              1
+nucmer_reduced_vs_initial          1              1              1
+nucmer_reduced_vs_reference        1              1              1
+samtools_flagstats                 1              1              1
+total                              8              1              1
+
+WARNING:snakemake.logging:Job stats:
+job                            count    min threads    max threads
+---------------------------  -------  -------------  -------------
+GATK                               1              1              1
+all                                1              1              1
+bcftools                           1              1              1
+karyon_plots                       1              1              1
+nucmer_initial_vs_reference        1              1              1
+nucmer_reduced_vs_initial          1              1              1
+nucmer_reduced_vs_reference        1              1              1
+samtools_flagstats                 1              1              1
+total                              8              1              1
+
+Job stats:
+job                            count    min threads    max threads
+---------------------------  -------  -------------  -------------
+GATK                               1              1              1
+all                                1              1              1
+bcftools                           1              1              1
+karyon_plots                       1              1              1
+nucmer_initial_vs_reference        1              1              1
+nucmer_reduced_vs_initial          1              1              1
+nucmer_reduced_vs_reference        1              1              1
+samtools_flagstats                 1              1              1
+total                              8              1              1
+
+WARNING:snakemake.logging:Job stats:
+job                            count    min threads    max threads
+---------------------------  -------  -------------  -------------
+GATK                               1              1              1
+all                                1              1              1
+bcftools                           1              1              1
+karyon_plots                       1              1              1
+nucmer_initial_vs_reference        1              1              1
+nucmer_reduced_vs_initial          1              1              1
+nucmer_reduced_vs_reference        1              1              1
+samtools_flagstats                 1              1              1
+total                              8              1              1
+
+Job stats:
+job                            count    min threads    max threads
+---------------------------  -------  -------------  -------------
+GATK                               1              1              1
+all                                1              1              1
+bcftools                           1              1              1
+karyon_plots                       1              1              1
+nucmer_initial_vs_reference        1              1              1
+nucmer_reduced_vs_initial          1              1              1
+nucmer_reduced_vs_reference        1              1              1
+samtools_flagstats                 1              1              1
+total                              8              1              1
+
+WARNING:snakemake.logging:Job stats:
+job                            count    min threads    max threads
+---------------------------  -------  -------------  -------------
+GATK                               1              1              1
+all                                1              1              1
+bcftools                           1              1              1
+karyon_plots                       1              1              1
+nucmer_initial_vs_reference        1              1              1
+nucmer_reduced_vs_initial          1              1              1
+nucmer_reduced_vs_reference        1              1              1
+samtools_flagstats                 1              1              1
+total                              8              1              1
+
+Select jobs to execute...
+WARNING:snakemake.logging:Select jobs to execute...
+Select jobs to execute...
+WARNING:snakemake.logging:Select jobs to execute...
+Select jobs to execute...
+WARNING:snakemake.logging:Select jobs to execute...
+Select jobs to execute...
+WARNING:snakemake.logging:Select jobs to execute...
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:29 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:29 2021]
+rule nucmer_reduced_vs_initial:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/purged.fasta, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.initial.png, purged/reports/nucmer/nucmer.initial.delta
+    jobid: 15
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule nucmer_reduced_vs_initial:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/purged.fasta, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.initial.png, purged/reports/nucmer/nucmer.initial.delta
+    jobid: 15
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+
+        mkdir -p tmp/
+        nucmer -p tmp/nucmer.initial purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/purged.fasta
+        cp tmp/nucmer.initial.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.initial.delta -p purged/reports/nucmer/nucmer.initial
+        
+WARNING:snakemake.logging:
+        mkdir -p tmp/
+        nucmer -p tmp/nucmer.initial purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/purged.fasta
+        cp tmp/nucmer.initial.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.initial.delta -p purged/reports/nucmer/nucmer.initial
+        
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:29 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:29 2021]
+rule nucmer_reduced_vs_initial:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/purged.fasta, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.initial.png, purged/reports/nucmer/nucmer.initial.delta
+    jobid: 15
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule nucmer_reduced_vs_initial:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/purged.fasta, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.initial.png, purged/reports/nucmer/nucmer.initial.delta
+    jobid: 15
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+
+        mkdir -p tmp/
+        nucmer -p tmp/nucmer.initial purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/purged.fasta
+        cp tmp/nucmer.initial.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.initial.delta -p purged/reports/nucmer/nucmer.initial
+        
+WARNING:snakemake.logging:
+        mkdir -p tmp/
+        nucmer -p tmp/nucmer.initial purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/purged.fasta
+        cp tmp/nucmer.initial.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.initial.delta -p purged/reports/nucmer/nucmer.initial
+        
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:29 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:29 2021]
+rule nucmer_reduced_vs_initial:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/purged.fasta, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.initial.png, purged/reports/nucmer/nucmer.initial.delta
+    jobid: 15
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule nucmer_reduced_vs_initial:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/purged.fasta, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.initial.png, purged/reports/nucmer/nucmer.initial.delta
+    jobid: 15
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+
+        mkdir -p tmp/
+        nucmer -p tmp/nucmer.initial purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/purged.fasta
+        cp tmp/nucmer.initial.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.initial.delta -p purged/reports/nucmer/nucmer.initial
+        
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:29 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:29 2021]
+rule nucmer_reduced_vs_initial:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/purged.fasta, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.initial.png, purged/reports/nucmer/nucmer.initial.delta
+    jobid: 15
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule nucmer_reduced_vs_initial:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/purged.fasta, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.initial.png, purged/reports/nucmer/nucmer.initial.delta
+    jobid: 15
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+
+        mkdir -p tmp/
+        nucmer -p tmp/nucmer.initial purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/purged.fasta
+        cp tmp/nucmer.initial.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.initial.delta -p purged/reports/nucmer/nucmer.initial
+        
+WARNING:snakemake.logging:
+        mkdir -p tmp/
+        nucmer -p tmp/nucmer.initial purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/purged.fasta
+        cp tmp/nucmer.initial.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.initial.delta -p purged/reports/nucmer/nucmer.initial
+        
+WARNING:snakemake.logging:
+        mkdir -p tmp/
+        nucmer -p tmp/nucmer.initial purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/purged.fasta
+        cp tmp/nucmer.initial.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.initial.delta -p purged/reports/nucmer/nucmer.initial
+        
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule nucmer_initial_vs_reference:
+    input: data/assemblies/purged.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.int_ref.png, purged/reports/nucmer/nucmer.int_ref.delta
+    jobid: 17
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule nucmer_initial_vs_reference:
+    input: data/assemblies/purged.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.int_ref.png, purged/reports/nucmer/nucmer.int_ref.delta
+    jobid: 17
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.int_ref data/assemblies/purged.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.int_ref.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.int_ref.delta -p purged/reports/nucmer/nucmer.int_ref
+        
+WARNING:snakemake.logging:
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.int_ref data/assemblies/purged.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.int_ref.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.int_ref.delta -p purged/reports/nucmer/nucmer.int_ref
+        
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule nucmer_initial_vs_reference:
+    input: data/assemblies/purged.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.int_ref.png, purged/reports/nucmer/nucmer.int_ref.delta
+    jobid: 17
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule nucmer_initial_vs_reference:
+    input: data/assemblies/purged.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.int_ref.png, purged/reports/nucmer/nucmer.int_ref.delta
+    jobid: 17
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule nucmer_initial_vs_reference:
+    input: data/assemblies/purged.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.int_ref.png, purged/reports/nucmer/nucmer.int_ref.delta
+    jobid: 17
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule nucmer_initial_vs_reference:
+    input: data/assemblies/purged.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.int_ref.png, purged/reports/nucmer/nucmer.int_ref.delta
+    jobid: 17
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule nucmer_initial_vs_reference:
+    input: data/assemblies/purged.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.int_ref.png, purged/reports/nucmer/nucmer.int_ref.delta
+    jobid: 17
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule nucmer_initial_vs_reference:
+    input: data/assemblies/purged.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.int_ref.png, purged/reports/nucmer/nucmer.int_ref.delta
+    jobid: 17
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.int_ref data/assemblies/purged.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.int_ref.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.int_ref.delta -p purged/reports/nucmer/nucmer.int_ref
+        
+WARNING:snakemake.logging:
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.int_ref data/assemblies/purged.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.int_ref.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.int_ref.delta -p purged/reports/nucmer/nucmer.int_ref
+        
+
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.int_ref data/assemblies/purged.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.int_ref.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.int_ref.delta -p purged/reports/nucmer/nucmer.int_ref
+        
+WARNING:snakemake.logging:
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.int_ref data/assemblies/purged.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.int_ref.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.int_ref.delta -p purged/reports/nucmer/nucmer.int_ref
+        
+
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.int_ref data/assemblies/purged.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.int_ref.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.int_ref.delta -p purged/reports/nucmer/nucmer.int_ref
+        
+WARNING:snakemake.logging:
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.int_ref data/assemblies/purged.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.int_ref.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.int_ref.delta -p purged/reports/nucmer/nucmer.int_ref
+        
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule bcftools:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.bam, purged/outputs/redundans/scaffolds.reduced.sorted.bam.bai
+    output: purged/outputs/variant_calling/scaffolds.reduced.mpileup
+    jobid: 4
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule bcftools:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.bam, purged/outputs/redundans/scaffolds.reduced.sorted.bam.bai
+    output: purged/outputs/variant_calling/scaffolds.reduced.mpileup
+    jobid: 4
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule bcftools:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.bam, purged/outputs/redundans/scaffolds.reduced.sorted.bam.bai
+    output: purged/outputs/variant_calling/scaffolds.reduced.mpileup
+    jobid: 4
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule bcftools:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.bam, purged/outputs/redundans/scaffolds.reduced.sorted.bam.bai
+    output: purged/outputs/variant_calling/scaffolds.reduced.mpileup
+    jobid: 4
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule bcftools:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.bam, purged/outputs/redundans/scaffolds.reduced.sorted.bam.bai
+    output: purged/outputs/variant_calling/scaffolds.reduced.mpileup
+    jobid: 4
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule bcftools:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.bam, purged/outputs/redundans/scaffolds.reduced.sorted.bam.bai
+    output: purged/outputs/variant_calling/scaffolds.reduced.mpileup
+    jobid: 4
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+samtools mpileup -B -f purged/outputs/redundans/scaffolds.reduced.fasta -v purged/outputs/redundans/scaffolds.reduced.sorted.bam -o purged/outputs/variant_calling/scaffolds.reduced.mpileup
+WARNING:snakemake.logging:samtools mpileup -B -f purged/outputs/redundans/scaffolds.reduced.fasta -v purged/outputs/redundans/scaffolds.reduced.sorted.bam -o purged/outputs/variant_calling/scaffolds.reduced.mpileup
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule bcftools:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.bam, purged/outputs/redundans/scaffolds.reduced.sorted.bam.bai
+    output: purged/outputs/variant_calling/scaffolds.reduced.mpileup
+    jobid: 4
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule bcftools:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.bam, purged/outputs/redundans/scaffolds.reduced.sorted.bam.bai
+    output: purged/outputs/variant_calling/scaffolds.reduced.mpileup
+    jobid: 4
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+samtools mpileup -B -f purged/outputs/redundans/scaffolds.reduced.fasta -v purged/outputs/redundans/scaffolds.reduced.sorted.bam -o purged/outputs/variant_calling/scaffolds.reduced.mpileup
+WARNING:snakemake.logging:samtools mpileup -B -f purged/outputs/redundans/scaffolds.reduced.fasta -v purged/outputs/redundans/scaffolds.reduced.sorted.bam -o purged/outputs/variant_calling/scaffolds.reduced.mpileup
+samtools mpileup -B -f purged/outputs/redundans/scaffolds.reduced.fasta -v purged/outputs/redundans/scaffolds.reduced.sorted.bam -o purged/outputs/variant_calling/scaffolds.reduced.mpileup
+WARNING:snakemake.logging:samtools mpileup -B -f purged/outputs/redundans/scaffolds.reduced.fasta -v purged/outputs/redundans/scaffolds.reduced.sorted.bam -o purged/outputs/variant_calling/scaffolds.reduced.mpileup
+samtools mpileup -B -f purged/outputs/redundans/scaffolds.reduced.fasta -v purged/outputs/redundans/scaffolds.reduced.sorted.bam -o purged/outputs/variant_calling/scaffolds.reduced.mpileup
+WARNING:snakemake.logging:samtools mpileup -B -f purged/outputs/redundans/scaffolds.reduced.fasta -v purged/outputs/redundans/scaffolds.reduced.sorted.bam -o purged/outputs/variant_calling/scaffolds.reduced.mpileup
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule samtools_flagstats:
+    input: purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam
+    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+    jobid: 10
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule samtools_flagstats:
+    input: purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam
+    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+    jobid: 10
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+WARNING:snakemake.logging:samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule samtools_flagstats:
+    input: purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam
+    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+    jobid: 10
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule samtools_flagstats:
+    input: purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam
+    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+    jobid: 10
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+WARNING:snakemake.logging:samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule samtools_flagstats:
+    input: purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam
+    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+    jobid: 10
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule samtools_flagstats:
+    input: purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam
+    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+    jobid: 10
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+WARNING:snakemake.logging:samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule samtools_flagstats:
+    input: purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam
+    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+    jobid: 10
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule samtools_flagstats:
+    input: purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam
+    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+    jobid: 10
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+WARNING:snakemake.logging:samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule GATK:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai, purged/outputs/redundans/scaffolds.reduced.dict
+    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+    jobid: 12
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule GATK:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai, purged/outputs/redundans/scaffolds.reduced.dict
+    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+    jobid: 12
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule GATK:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai, purged/outputs/redundans/scaffolds.reduced.dict
+    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+    jobid: 12
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule GATK:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai, purged/outputs/redundans/scaffolds.reduced.dict
+    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+    jobid: 12
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule GATK:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai, purged/outputs/redundans/scaffolds.reduced.dict
+    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+    jobid: 12
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule GATK:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai, purged/outputs/redundans/scaffolds.reduced.dict
+    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+    jobid: 12
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+WARNING:snakemake.logging:gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+WARNING:snakemake.logging:gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+WARNING:snakemake.logging:gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule GATK:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai, purged/outputs/redundans/scaffolds.reduced.dict
+    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+    jobid: 12
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule GATK:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, purged/outputs/redundans/scaffolds.reduced.fasta.fai, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam, purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam.bai, purged/outputs/redundans/scaffolds.reduced.dict
+    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+    jobid: 12
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+WARNING:snakemake.logging:gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+Activating singularity image /home/531734/mike/karyon_longread/.snakemake/singularity/dd55efc4ade9d0e8c2b4e3cbcfc95f38.simg
+WARNING:snakemake.logging:Activating singularity image /home/531734/mike/karyon_longread/.snakemake/singularity/dd55efc4ade9d0e8c2b4e3cbcfc95f38.simg
+Activating singularity image /home/531734/mike/karyon_longread/.snakemake/singularity/dd55efc4ade9d0e8c2b4e3cbcfc95f38.simg
+WARNING:snakemake.logging:Activating singularity image /home/531734/mike/karyon_longread/.snakemake/singularity/dd55efc4ade9d0e8c2b4e3cbcfc95f38.simg
+Activating singularity image /home/531734/mike/karyon_longread/.snakemake/singularity/dd55efc4ade9d0e8c2b4e3cbcfc95f38.simg
+
+WARNING:snakemake.logging:Activating singularity image /home/531734/mike/karyon_longread/.snakemake/singularity/dd55efc4ade9d0e8c2b4e3cbcfc95f38.simg
+Activating singularity image /home/531734/mike/karyon_longread/.snakemake/singularity/dd55efc4ade9d0e8c2b4e3cbcfc95f38.simg
+WARNING:snakemake.logging:Activating singularity image /home/531734/mike/karyon_longread/.snakemake/singularity/dd55efc4ade9d0e8c2b4e3cbcfc95f38.simg
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule nucmer_reduced_vs_reference:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.reference.png, purged/reports/nucmer/nucmer.reference.delta
+    jobid: 16
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule nucmer_reduced_vs_reference:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.reference.png, purged/reports/nucmer/nucmer.reference.delta
+    jobid: 16
+    resources: tmpdir=/tmp
+
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule nucmer_reduced_vs_reference:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.reference.png, purged/reports/nucmer/nucmer.reference.delta
+    jobid: 16
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule nucmer_reduced_vs_reference:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.reference.png, purged/reports/nucmer/nucmer.reference.delta
+    jobid: 16
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule nucmer_reduced_vs_reference:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.reference.png, purged/reports/nucmer/nucmer.reference.delta
+    jobid: 16
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule nucmer_reduced_vs_reference:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.reference.png, purged/reports/nucmer/nucmer.reference.delta
+    jobid: 16
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.reference purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.reference.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.reference.delta -p purged/reports/nucmer/nucmer.reference
+        
+INFO:snakemake.logging:
+
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.reference purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.reference.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.reference.delta -p purged/reports/nucmer/nucmer.reference
+        
+WARNING:snakemake.logging:
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.reference purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.reference.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.reference.delta -p purged/reports/nucmer/nucmer.reference
+        
+
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.reference purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.reference.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.reference.delta -p purged/reports/nucmer/nucmer.reference
+        
+WARNING:snakemake.logging:
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.reference purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.reference.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.reference.delta -p purged/reports/nucmer/nucmer.reference
+        
+WARNING:snakemake.logging:
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.reference purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.reference.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.reference.delta -p purged/reports/nucmer/nucmer.reference
+        
+
+INFO:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+rule nucmer_reduced_vs_reference:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.reference.png, purged/reports/nucmer/nucmer.reference.delta
+    jobid: 16
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule nucmer_reduced_vs_reference:
+    input: purged/outputs/redundans/scaffolds.reduced.fasta, data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz, purged/reports/nucmer/scaffolds.reduced.fasta.fai
+    output: purged/reports/nucmer/nucmer.reference.png, purged/reports/nucmer/nucmer.reference.delta
+    jobid: 16
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.reference purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.reference.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.reference.delta -p purged/reports/nucmer/nucmer.reference
+        
+WARNING:snakemake.logging:
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.reference purged/outputs/redundans/scaffolds.reduced.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.reference.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.reference.delta -p purged/reports/nucmer/nucmer.reference
+        
+1: PREPARING DATA
+1: PREPARING DATA
+1: PREPARING DATA
+1: PREPARING DATA
+[91mERROR  : Failed to create mount namespace: Operation not permitted
+[0m[91mERROR  : Failed to create mount namespace: Operation not permitted
+[0m[91mERROR  : Failed to create mount namespace: Operation not permitted
+[0m[91mERROR  : Failed to create mount namespace: Operation not permitted
+[0m[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+Error in rule GATK:
+ERROR:snakemake.logging:Error in rule GATK:
+    jobid: 12
+ERROR:snakemake.logging:    jobid: 12
+    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+Error in rule GATK:
+ERROR:snakemake.logging:Error in rule GATK:
+    jobid: 12
+ERROR:snakemake.logging:    jobid: 12
+    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+ERROR:snakemake.logging:    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+    shell:
+        gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+ERROR:snakemake.logging:    shell:
+        gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+ERROR:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+Error in rule GATK:
+ERROR:snakemake.logging:Error in rule GATK:
+    jobid: 12
+ERROR:snakemake.logging:    jobid: 12
+    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+ERROR:snakemake.logging:    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+    shell:
+        gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+ERROR:snakemake.logging:    shell:
+        gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+ERROR:snakemake.logging:
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+Error in rule GATK:
+ERROR:snakemake.logging:Error in rule GATK:
+    jobid: 12
+ERROR:snakemake.logging:    jobid: 12
+    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+ERROR:snakemake.logging:    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+    shell:
+        gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+ERROR:snakemake.logging:    shell:
+        gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+ERROR:snakemake.logging:
+Job failed, going on with independent jobs.
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+ERROR:snakemake.logging:    output: purged/outputs/variant_calling/scaffolds.reduced.vcf
+    shell:
+        gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+ERROR:snakemake.logging:    shell:
+        gatk --java-options -Xmx120G HaplotypeCaller -R purged/outputs/redundans/scaffolds.reduced.fasta -I purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O purged/outputs/variant_calling/scaffolds.reduced.vcf
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+ERROR:snakemake.logging:
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+[main] unrecognized command 'flagstats'
+[main] unrecognized command 'flagstats'
+[main] unrecognized command 'flagstats'
+[main] unrecognized command 'flagstats'
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+Error in rule samtools_flagstats:
+ERROR:snakemake.logging:Error in rule samtools_flagstats:
+    jobid: 10
+ERROR:snakemake.logging:    jobid: 10
+    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+ERROR:snakemake.logging:    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+    shell:
+        samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+ERROR:snakemake.logging:    shell:
+        samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+Error in rule samtools_flagstats:
+ERROR:snakemake.logging:Error in rule samtools_flagstats:
+    jobid: 10
+ERROR:snakemake.logging:    jobid: 10
+    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+ERROR:snakemake.logging:    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+    shell:
+        samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+ERROR:snakemake.logging:    shell:
+        samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+Error in rule samtools_flagstats:
+ERROR:snakemake.logging:Error in rule samtools_flagstats:
+    jobid: 10
+ERROR:snakemake.logging:    jobid: 10
+    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+ERROR:snakemake.logging:    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+    shell:
+        samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+[Tue Sep 14 14:57:30 2021]
+INFO:snakemake.logging:[Tue Sep 14 14:57:30 2021]
+Error in rule samtools_flagstats:
+ERROR:snakemake.logging:Error in rule samtools_flagstats:
+    jobid: 10
+ERROR:snakemake.logging:    jobid: 10
+    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+ERROR:snakemake.logging:    output: purged/outputs/variant_calling/scaffolds.reduced.flagstat
+    shell:
+        samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+ERROR:snakemake.logging:    shell:
+        samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+ERROR:snakemake.logging:
+Removing output files of failed job samtools_flagstats since they might be corrupted:
+purged/outputs/variant_calling/scaffolds.reduced.flagstat
+WARNING:snakemake.logging:Removing output files of failed job samtools_flagstats since they might be corrupted:
+purged/outputs/variant_calling/scaffolds.reduced.flagstat
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+ERROR:snakemake.logging:
+Removing output files of failed job samtools_flagstats since they might be corrupted:
+purged/outputs/variant_calling/scaffolds.reduced.flagstat
+WARNING:snakemake.logging:Removing output files of failed job samtools_flagstats since they might be corrupted:
+purged/outputs/variant_calling/scaffolds.reduced.flagstat
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+ERROR:snakemake.logging:
+Removing output files of failed job samtools_flagstats since they might be corrupted:
+purged/outputs/variant_calling/scaffolds.reduced.flagstat
+WARNING:snakemake.logging:Removing output files of failed job samtools_flagstats since they might be corrupted:
+purged/outputs/variant_calling/scaffolds.reduced.flagstat
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+ERROR:snakemake.logging:    shell:
+        samtools flagstats purged/outputs/redundans/scaffolds.reduced.sorted.tagged.bam > purged/outputs/variant_calling/scaffolds.reduced.flagstat
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+ERROR:snakemake.logging:
+Removing output files of failed job samtools_flagstats since they might be corrupted:
+purged/outputs/variant_calling/scaffolds.reduced.flagstat
+WARNING:snakemake.logging:Removing output files of failed job samtools_flagstats since they might be corrupted:
+purged/outputs/variant_calling/scaffolds.reduced.flagstat
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+[warning] samtools mpileup option `v` is functional, but deprecated. Please switch to using bcftools mpileup in future.
+[warning] samtools mpileup option `v` is functional, but deprecated. Please switch to using bcftools mpileup in future.
+[warning] samtools mpileup option `v` is functional, but deprecated. Please switch to using bcftools mpileup in future.
+[warning] samtools mpileup option `v` is functional, but deprecated. Please switch to using bcftools mpileup in future.
+[mpileup] 1 samples in 1 input files
+[mpileup] 1 samples in 1 input files
+[mpileup] 1 samples in 1 input files
+[mpileup] 1 samples in 1 input files
+2,3: RUNNING mummer AND CREATING CLUSTERS
+2,3: RUNNING mummer AND CREATING CLUSTERS
+2,3: RUNNING mummer AND CREATING CLUSTERS
+2,3: RUNNING mummer AND CREATING CLUSTERS
+# reading input file "tmp/nucmer.initial.ntref" # reading input file "tmp/nucmer.initial.ntref" # reading input file "tmp/nucmer.initial.ntref" # reading input file "tmp/nucmer.initial.ntref" of length 82736068
+# construct suffix tree for sequence of length 82736068
+# (maximum reference length is 2305843009213693948)
+# (maximum query length is 18446744073709551615)
+# process 827360 characters per dot
+of length 82736068
+# construct suffix tree for sequence of length 82736068
+# (maximum reference length is 2305843009213693948)
+# (maximum query length is 18446744073709551615)
+# process 827360 characters per dot
+of length 82736068
+# construct suffix tree for sequence of length 82736068
+# (maximum reference length is 2305843009213693948)
+# (maximum query length is 18446744073709551615)
+# process 827360 characters per dot
+of length 82736068
+# construct suffix tree for sequence of length 82736068
+# (maximum reference length is 2305843009213693948)
+# (maximum query length is 18446744073709551615)
+# process 827360 characters per dot
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+#.#.1: PREPARING DATA
+#.#...perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+.1: PREPARING DATA
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+..1: PREPARING DATA
+1: PREPARING DATA
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+1: PREPARING DATA
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+.1: PREPARING DATA
+1: PREPARING DATA
+1: PREPARING DATA
+.....................2,3: RUNNING mummer AND CREATING CLUSTERS
+# reading input file "tmp/nucmer.reference.ntref" .2,3: RUNNING mummer AND CREATING CLUSTERS
+2,3: RUNNING mummer AND CREATING CLUSTERS
+# reading input file "tmp/nucmer.reference.ntref" # reading input file "tmp/nucmer.reference.ntref" 2,3: RUNNING mummer AND CREATING CLUSTERS
+# reading input file "tmp/nucmer.reference.ntref" ....2,3: RUNNING mummer AND CREATING CLUSTERS
+# reading input file "tmp/nucmer.int_ref.ntref" of length 82736068
+# construct suffix tree for sequence of length 82736068
+# (maximum reference length is 2305843009213693948)
+# (maximum query length is 18446744073709551615)
+# process 827360 characters per dot
+...2,3: RUNNING mummer AND CREATING CLUSTERS
+# reading input file "tmp/nucmer.int_ref.ntref" #.2,3: RUNNING mummer AND CREATING CLUSTERS
+# reading input file "tmp/nucmer.int_ref.ntref" 2,3: RUNNING mummer AND CREATING CLUSTERS
+# reading input file "tmp/nucmer.int_ref.ntref" .of length 82736068
+# construct suffix tree for sequence of length 82736068
+# (maximum reference length is 2305843009213693948)
+# (maximum query length is 18446744073709551615)
+# process 827360 characters per dot
+of length 82736068
+# construct suffix tree for sequence of length 82736068
+# (maximum reference length is 2305843009213693948)
+# (maximum query length is 18446744073709551615)
+# process 827360 characters per dot
+of length 82736068
+# construct suffix tree for sequence of length 82736068
+# (maximum reference length is 2305843009213693948)
+# (maximum query length is 18446744073709551615)
+# process 827360 characters per dot
+#..#.#.....of length 111646122
+# construct suffix tree for sequence of length 111646122
+# (maximum reference length is 2305843009213693948)
+# (maximum query length is 18446744073709551615)
+# process 1116461 characters per dot
+....#......of length 111646122
+# construct suffix tree for sequence of length 111646122
+# (maximum reference length is 2305843009213693948)
+# (maximum query length is 18446744073709551615)
+# process 1116461 characters per dot
+of length 111646122
+# construct suffix tree for sequence of length 111646122
+# (maximum reference length is 2305843009213693948)
+# (maximum query length is 18446744073709551615)
+# process 1116461 characters per dot
+of length 111646122
+# construct suffix tree for sequence of length 111646122
+# (maximum reference length is 2305843009213693948)
+# (maximum query length is 18446744073709551615)
+# process 1116461 characters per dot
+........#.#.#.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+# CONSTRUCTIONTIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.initial.ntref 32.78
+# reading input file "/home/531734/mike/karyon_longread/data/assemblies/purged.fasta" ...................of length 111646121
+# matching query-file "/home/531734/mike/karyon_longread/data/assemblies/purged.fasta"
+# against subject-file "tmp/nucmer.initial.ntref"
+................................................
+# CONSTRUCTIONTIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.initial.ntref 35.04
+# reading input file "/home/531734/mike/karyon_longread/data/assemblies/purged.fasta" .
+# CONSTRUCTIONTIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.initial.ntref 35.01
+# reading input file "/home/531734/mike/karyon_longread/data/assemblies/purged.fasta" ...............of length 111646121
+# matching query-file "/home/531734/mike/karyon_longread/data/assemblies/purged.fasta"
+# against subject-file "tmp/nucmer.initial.ntref"
+of length 111646121
+# matching query-file "/home/531734/mike/karyon_longread/data/assemblies/purged.fasta"
+# against subject-file "tmp/nucmer.initial.ntref"
+...........
+# CONSTRUCTIONTIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.reference.ntref 33.31
+# reading input file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta" ..
+# CONSTRUCTIONTIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.reference.ntref 33.50
+# reading input file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta" .......
+# CONSTRUCTIONTIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.reference.ntref 33.78
+# reading input file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta" ................of length 235829747
+# matching query-file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta"
+# against subject-file "tmp/nucmer.reference.ntref"
+..of length 235829747
+# matching query-file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta"
+# against subject-file "tmp/nucmer.reference.ntref"
+...
+# CONSTRUCTIONTIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.initial.ntref 37.87
+# reading input file "/home/531734/mike/karyon_longread/data/assemblies/purged.fasta" of length 235829747
+# matching query-file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta"
+# against subject-file "tmp/nucmer.reference.ntref"
+......
+# CONSTRUCTIONTIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.reference.ntref 35.62
+# reading input file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta" of length 111646121
+# matching query-file "/home/531734/mike/karyon_longread/data/assemblies/purged.fasta"
+# against subject-file "tmp/nucmer.initial.ntref"
+.............of length 235829747
+# matching query-file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta"
+# against subject-file "tmp/nucmer.reference.ntref"
+...................................
+# CONSTRUCTIONTIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.int_ref.ntref 40.92
+# reading input file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta" ...........of length 235829747
+# matching query-file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta"
+# against subject-file "tmp/nucmer.int_ref.ntref"
+..................................
+# CONSTRUCTIONTIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.int_ref.ntref 47.27
+# reading input file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta" ...
+# CONSTRUCTIONTIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.int_ref.ntref 48.02
+# reading input file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta" ..
+# CONSTRUCTIONTIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.int_ref.ntref 48.54
+# reading input file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta" of length 235829747
+# matching query-file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta"
+# against subject-file "tmp/nucmer.int_ref.ntref"
+of length 235829747
+# matching query-file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta"
+# against subject-file "tmp/nucmer.int_ref.ntref"
+of length 235829747
+# matching query-file "/home/531734/mike/karyon_longread/data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta"
+# against subject-file "tmp/nucmer.int_ref.ntref"
+# COMPLETETIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.initial.ntref 116.05
+# SPACE /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.initial.ntref 186.70
+4: FINISHING DATA
+# COMPLETETIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.initial.ntref 116.13
+# SPACE /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.initial.ntref 186.70
+4: FINISHING DATA
+# COMPLETETIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.initial.ntref 119.82
+# SPACE /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.initial.ntref 186.70
+4: FINISHING DATA
+# COMPLETETIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.initial.ntref 124.36
+# SPACE /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.initial.ntref 186.70
+4: FINISHING DATA
+# COMPLETETIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.reference.ntref 232.82
+# SPACE /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.reference.ntref 309.90
+4: FINISHING DATA
+# COMPLETETIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.reference.ntref 233.27
+# SPACE /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.reference.ntref 309.90
+4: FINISHING DATA
+# COMPLETETIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.reference.ntref 234.35
+# SPACE /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.reference.ntref 309.90
+4: FINISHING DATA
+# COMPLETETIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.int_ref.ntref 237.05
+# SPACE /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.int_ref.ntref 337.93
+4: FINISHING DATA
+# COMPLETETIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.reference.ntref 247.28
+# SPACE /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.reference.ntref 309.90
+4: FINISHING DATA
+# COMPLETETIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.int_ref.ntref 251.21
+# SPACE /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.int_ref.ntref 337.93
+4: FINISHING DATA
+# COMPLETETIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.int_ref.ntref 256.07
+# SPACE /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.int_ref.ntref 337.93
+4: FINISHING DATA
+# COMPLETETIME /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.int_ref.ntref 257.29
+# SPACE /home/531734/.conda/envs/appraisal/opt/mummer-3.23/mummer tmp/nucmer.int_ref.ntref 337.93
+4: FINISHING DATA
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Using outdated gnuplot, use v4.0 for best results
+WARNING: Turning of --size option for compatibility
+Writing filtered delta file purged/reports/nucmer/nucmer.initial.filter
+Reading delta file purged/reports/nucmer/nucmer.initial.filter
+Writing plot files purged/reports/nucmer/nucmer.initial.fplot, purged/reports/nucmer/nucmer.initial.rplot
+Writing gnuplot script purged/reports/nucmer/nucmer.initial.gp
+Rendering plot purged/reports/nucmer/nucmer.initial.png
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Unable to run 'gnuplot purged/reports/nucmer/nucmer.initial.gp', Inappropriate ioctl for device
+Waiting at most 5 seconds for missing files.
+WARNING:snakemake.logging:Waiting at most 5 seconds for missing files.
+MissingOutputException in line 134 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.initial.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 15 completed successfully, but some output files are missing. 15
+ERROR:snakemake.logging:MissingOutputException in line 134 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.initial.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 15 completed successfully, but some output files are missing. 15
+Removing output files of failed job nucmer_reduced_vs_initial since they might be corrupted:
+purged/reports/nucmer/nucmer.initial.delta
+WARNING:snakemake.logging:Removing output files of failed job nucmer_reduced_vs_initial since they might be corrupted:
+purged/reports/nucmer/nucmer.initial.delta
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+WARNING: there was a problem deleting the temporary output files
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Using outdated gnuplot, use v4.0 for best results
+WARNING: Turning of --size option for compatibility
+Writing filtered delta file purged/reports/nucmer/nucmer.initial.filter
+Reading delta file purged/reports/nucmer/nucmer.initial.filter
+Writing plot files purged/reports/nucmer/nucmer.initial.fplot, purged/reports/nucmer/nucmer.initial.rplot
+Writing gnuplot script purged/reports/nucmer/nucmer.initial.gp
+Rendering plot purged/reports/nucmer/nucmer.initial.png
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Unable to run 'gnuplot purged/reports/nucmer/nucmer.initial.gp', Inappropriate ioctl for device
+Waiting at most 5 seconds for missing files.
+WARNING:snakemake.logging:Waiting at most 5 seconds for missing files.
+WARNING: there was a problem deleting the temporary output files
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Using outdated gnuplot, use v4.0 for best results
+WARNING: Turning of --size option for compatibility
+Writing filtered delta file purged/reports/nucmer/nucmer.initial.filter
+Reading delta file purged/reports/nucmer/nucmer.initial.filter
+Writing plot files purged/reports/nucmer/nucmer.initial.fplot, purged/reports/nucmer/nucmer.initial.rplot
+Writing gnuplot script purged/reports/nucmer/nucmer.initial.gp
+Rendering plot purged/reports/nucmer/nucmer.initial.png
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Unable to run 'gnuplot purged/reports/nucmer/nucmer.initial.gp', Inappropriate ioctl for device
+Waiting at most 5 seconds for missing files.
+WARNING:snakemake.logging:Waiting at most 5 seconds for missing files.
+MissingOutputException in line 134 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.initial.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 15 completed successfully, but some output files are missing. 15
+ERROR:snakemake.logging:MissingOutputException in line 134 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.initial.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 15 completed successfully, but some output files are missing. 15
+Removing output files of failed job nucmer_reduced_vs_initial since they might be corrupted:
+purged/reports/nucmer/nucmer.initial.delta
+WARNING:snakemake.logging:Removing output files of failed job nucmer_reduced_vs_initial since they might be corrupted:
+purged/reports/nucmer/nucmer.initial.delta
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+WARNING: there was a problem deleting the temporary output files
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Using outdated gnuplot, use v4.0 for best results
+WARNING: Turning of --size option for compatibility
+Writing filtered delta file purged/reports/nucmer/nucmer.initial.filter
+MissingOutputException in line 134 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.initial.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 15 completed successfully, but some output files are missing. 15
+ERROR:snakemake.logging:MissingOutputException in line 134 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.initial.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 15 completed successfully, but some output files are missing. 15
+Removing output files of failed job nucmer_reduced_vs_initial since they might be corrupted:
+purged/reports/nucmer/nucmer.initial.delta
+WARNING:snakemake.logging:Removing output files of failed job nucmer_reduced_vs_initial since they might be corrupted:
+purged/reports/nucmer/nucmer.initial.delta
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+Reading delta file purged/reports/nucmer/nucmer.initial.filter
+Writing plot files purged/reports/nucmer/nucmer.initial.fplot, purged/reports/nucmer/nucmer.initial.rplot
+Writing gnuplot script purged/reports/nucmer/nucmer.initial.gp
+Rendering plot purged/reports/nucmer/nucmer.initial.png
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Unable to run 'gnuplot purged/reports/nucmer/nucmer.initial.gp', Inappropriate ioctl for device
+Waiting at most 5 seconds for missing files.
+WARNING:snakemake.logging:Waiting at most 5 seconds for missing files.
+MissingOutputException in line 134 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.initial.png
+purged/reports/nucmer/nucmer.initial.delta
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 15 completed successfully, but some output files are missing. 15
+ERROR:snakemake.logging:MissingOutputException in line 134 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.initial.png
+purged/reports/nucmer/nucmer.initial.delta
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 15 completed successfully, but some output files are missing. 15
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Using outdated gnuplot, use v4.0 for best results
+WARNING: Turning of --size option for compatibility
+Writing filtered delta file purged/reports/nucmer/nucmer.reference.filter
+Reading delta file purged/reports/nucmer/nucmer.reference.filter
+Writing plot files purged/reports/nucmer/nucmer.reference.fplot, purged/reports/nucmer/nucmer.reference.rplot
+Writing gnuplot script purged/reports/nucmer/nucmer.reference.gp
+Rendering plot purged/reports/nucmer/nucmer.reference.png
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Unable to run 'gnuplot purged/reports/nucmer/nucmer.reference.gp', Inappropriate ioctl for device
+Waiting at most 5 seconds for missing files.
+WARNING:snakemake.logging:Waiting at most 5 seconds for missing files.
+MissingOutputException in line 154 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.reference.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 16 completed successfully, but some output files are missing. 16
+ERROR:snakemake.logging:MissingOutputException in line 154 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.reference.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 16 completed successfully, but some output files are missing. 16
+Removing output files of failed job nucmer_reduced_vs_reference since they might be corrupted:
+purged/reports/nucmer/nucmer.reference.delta
+WARNING:snakemake.logging:Removing output files of failed job nucmer_reduced_vs_reference since they might be corrupted:
+purged/reports/nucmer/nucmer.reference.delta
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+WARNING: there was a problem deleting the temporary output files
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Using outdated gnuplot, use v4.0 for best results
+WARNING: Turning of --size option for compatibility
+Writing filtered delta file purged/reports/nucmer/nucmer.reference.filter
+WARNING: there was a problem deleting the temporary output files
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Using outdated gnuplot, use v4.0 for best results
+WARNING: Turning of --size option for compatibility
+Reading delta file purged/reports/nucmer/nucmer.reference.filter
+WARNING: there was a problem deleting the temporary output files
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Using outdated gnuplot, use v4.0 for best results
+WARNING: Turning of --size option for compatibility
+Writing filtered delta file purged/reports/nucmer/nucmer.reference.filter
+ERROR: Could not parse delta file, purged/reports/nucmer/nucmer.reference.filter
+error no: 402
+WARNING: Trouble closing show-coords pipe, 
+Writing plot files purged/reports/nucmer/nucmer.reference.fplot, purged/reports/nucmer/nucmer.reference.rplot
+Writing gnuplot script purged/reports/nucmer/nucmer.reference.gp
+Rendering plot purged/reports/nucmer/nucmer.reference.png
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Unable to run 'gnuplot purged/reports/nucmer/nucmer.reference.gp', Cannot allocate memory
+Waiting at most 5 seconds for missing files.
+WARNING:snakemake.logging:Waiting at most 5 seconds for missing files.
+Writing filtered delta file purged/reports/nucmer/nucmer.reference.filter
+MissingOutputException in line 154 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.reference.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 16 completed successfully, but some output files are missing. 16
+ERROR:snakemake.logging:MissingOutputException in line 154 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.reference.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 16 completed successfully, but some output files are missing. 16
+Removing output files of failed job nucmer_reduced_vs_reference since they might be corrupted:
+purged/reports/nucmer/nucmer.reference.delta
+WARNING:snakemake.logging:Removing output files of failed job nucmer_reduced_vs_reference since they might be corrupted:
+purged/reports/nucmer/nucmer.reference.delta
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+Reading delta file purged/reports/nucmer/nucmer.reference.filter
+Writing plot files purged/reports/nucmer/nucmer.reference.fplot, purged/reports/nucmer/nucmer.reference.rplot
+Writing gnuplot script purged/reports/nucmer/nucmer.reference.gp
+Rendering plot purged/reports/nucmer/nucmer.reference.png
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Unable to run 'gnuplot purged/reports/nucmer/nucmer.reference.gp', Inappropriate ioctl for device
+Waiting at most 5 seconds for missing files.
+WARNING:snakemake.logging:Waiting at most 5 seconds for missing files.
+Reading delta file purged/reports/nucmer/nucmer.reference.filter
+Writing plot files purged/reports/nucmer/nucmer.reference.fplot, purged/reports/nucmer/nucmer.reference.rplot
+Writing gnuplot script purged/reports/nucmer/nucmer.reference.gp
+Rendering plot purged/reports/nucmer/nucmer.reference.png
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Unable to run 'gnuplot purged/reports/nucmer/nucmer.reference.gp', Inappropriate ioctl for device
+Waiting at most 5 seconds for missing files.
+WARNING:snakemake.logging:Waiting at most 5 seconds for missing files.
+MissingOutputException in line 154 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.reference.png
+purged/reports/nucmer/nucmer.reference.delta
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 16 completed successfully, but some output files are missing. 16
+ERROR:snakemake.logging:MissingOutputException in line 154 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.reference.png
+purged/reports/nucmer/nucmer.reference.delta
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 16 completed successfully, but some output files are missing. 16
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+MissingOutputException in line 154 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.reference.png
+purged/reports/nucmer/nucmer.reference.delta
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 16 completed successfully, but some output files are missing. 16
+ERROR:snakemake.logging:MissingOutputException in line 154 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.reference.png
+purged/reports/nucmer/nucmer.reference.delta
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 16 completed successfully, but some output files are missing. 16
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.

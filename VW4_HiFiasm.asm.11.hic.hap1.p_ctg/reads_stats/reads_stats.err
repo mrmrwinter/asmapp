@@ -1,0 +1,175 @@
+[bwa_index] Pack FASTA... [bwa_index] Pack FASTA... [bwa_index] Pack FASTA... [bwa_index] Pack FASTA... 1.00 sec
+[bwa_index] Construct BWT for the packed sequence...
+[BWTIncCreate] textLength=276697424, availableWord=31469128
+1.20 sec
+[bwa_index] Construct BWT for the packed sequence...
+[BWTIncCreate] textLength=325944662, availableWord=34934384
+1.31 sec
+1.21 sec
+[bwa_index] Construct BWT for the packed sequence...
+[bwa_index] Construct BWT for the packed sequence...
+[BWTIncCreate] textLength=358750040, availableWord=37242548
+[BWTIncCreate] textLength=332531774, availableWord=35398052
+[BWTIncConstructFromPacked] 10 iterations done. 51909840 characters processed.
+[BWTIncConstructFromPacked] 10 iterations done. 57626118 characters processed.
+[BWTIncConstructFromPacked] 10 iterations done. 58390990 characters processed.
+[BWTIncConstructFromPacked] 10 iterations done. 61433640 characters processed.
+[BWTIncConstructFromPacked] 20 iterations done. 95899408 characters processed.
+[BWTIncConstructFromPacked] 20 iterations done. 106460214 characters processed.
+[BWTIncConstructFromPacked] 20 iterations done. 107873326 characters processed.
+[BWTIncConstructFromPacked] 20 iterations done. 113494664 characters processed.
+[BWTIncConstructFromPacked] 30 iterations done. 134993424 characters processed.
+[BWTIncConstructFromPacked] 30 iterations done. 149860086 characters processed.
+[BWTIncConstructFromPacked] 30 iterations done. 151849358 characters processed.
+[BWTIncConstructFromPacked] 30 iterations done. 159762632 characters processed.
+[BWTIncConstructFromPacked] 40 iterations done. 169736240 characters processed.
+[BWTIncConstructFromPacked] 40 iterations done. 188429990 characters processed.
+[BWTIncConstructFromPacked] 40 iterations done. 190931310 characters processed.
+[BWTIncConstructFromPacked] 50 iterations done. 200611728 characters processed.
+[BWTIncConstructFromPacked] 40 iterations done. 200881672 characters processed.
+[BWTIncConstructFromPacked] 50 iterations done. 222706982 characters processed.
+[BWTIncConstructFromPacked] 60 iterations done. 228049920 characters processed.
+[BWTIncConstructFromPacked] 50 iterations done. 225663438 characters processed.
+[BWTIncConstructFromPacked] 50 iterations done. 237424360 characters processed.
+[BWTIncConstructFromPacked] 70 iterations done. 252433008 characters processed.
+[BWTIncConstructFromPacked] 60 iterations done. 253168422 characters processed.
+[BWTIncConstructFromPacked] 60 iterations done. 256529422 characters processed.
+[BWTIncConstructFromPacked] 60 iterations done. 269899544 characters processed.
+[BWTIncConstructFromPacked] 80 iterations done. 274100720 characters processed.
+[bwa_index] 83.58 seconds elapse.
+[bwa_index] Update BWT... 0.64 sec
+[bwa_index] Pack forward-only FASTA... 0.62 sec
+[bwa_index] Construct SA from BWT and Occ... [BWTIncConstructFromPacked] 70 iterations done. 280238598 characters processed.
+[BWTIncConstructFromPacked] 70 iterations done. 283959166 characters processed.
+[BWTIncConstructFromPacked] 70 iterations done. 298759560 characters processed.
+[BWTIncConstructFromPacked] 80 iterations done. 304294598 characters processed.
+[BWTIncConstructFromPacked] 80 iterations done. 308334750 characters processed.
+[BWTIncConstructFromPacked] 80 iterations done. 324406376 characters processed.
+[BWTIncConstructFromPacked] 90 iterations done. 325671606 characters processed.
+[bwa_index] 99.75 seconds elapse.
+[bwa_index] Update BWT... [BWTIncConstructFromPacked] 90 iterations done. 329995774 characters processed.
+0.77 sec
+[bwa_index] Pack forward-only FASTA... [bwa_index] 100.98 seconds elapse.
+[bwa_index] Update BWT... 0.77 sec
+[bwa_index] Pack forward-only FASTA... 0.74 sec
+[bwa_index] Construct SA from BWT and Occ... 0.74 sec
+[bwa_index] Construct SA from BWT and Occ... [BWTIncConstructFromPacked] 90 iterations done. 347197320 characters processed.
+[bwa_index] 110.64 seconds elapse.
+[bwa_index] Update BWT... 0.82 sec
+[bwa_index] Pack forward-only FASTA... 0.81 sec
+[bwa_index] Construct SA from BWT and Occ... 29.34 sec
+[bwt_gen] Finished constructing BWT in 82 iterations.
+[main] Version: 0.7.15-r1140
+[main] CMD: /home/531734/packages/quast/quast_libs/bwa/bwa index -p /home/531734/mike/karyon_longread/VW4_HiFiasm.asm.11.hic.hap1.p_ctg/quast_corrected_input/assemblies_VW4_HiFiasm_asm_15_hic_hap1_p_ctg.fa /home/531734/mike/karyon_longread/VW4_HiFiasm.asm.11.hic.hap1.p_ctg/quast_corrected_input/assemblies_VW4_HiFiasm_asm_15_hic_hap1_p_ctg.fa
+[main] Real time: 116.390 sec; CPU: 115.196 sec
+[M::mm_idx_gen::3.437*1.48] collected minimizers
+[M::mm_idx_gen::3.957*1.92] sorted minimizers
+[M::main::3.958*1.92] loaded/built the index for 315 target sequence(s)
+[M::mm_mapopt_update::4.165*1.87] mid_occ = 374
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 315
+[M::mm_idx_stat::4.298*1.85] distinct minimizers: 9739827 (58.95% are singletons); average occurrences: 2.673; average spacing: 5.313
+35.90 sec
+[bwt_gen] Finished constructing BWT in 91 iterations.
+[main] Version: 0.7.15-r1140
+[main] CMD: /home/531734/packages/quast/quast_libs/bwa/bwa index -p /home/531734/mike/karyon_longread/VW4_HiFiasm.asm.11.hic.hap1.p_ctg/quast_corrected_input/assemblies_VW4_HiFiasm_asm_11_hic_hap2_p_ctg.fa /home/531734/mike/karyon_longread/VW4_HiFiasm.asm.11.hic.hap1.p_ctg/quast_corrected_input/assemblies_VW4_HiFiasm_asm_11_hic_hap2_p_ctg.fa
+[main] Real time: 140.849 sec; CPU: 138.366 sec
+35.74 sec
+[bwt_gen] Finished constructing BWT in 92 iterations.
+[main] Version: 0.7.15-r1140
+[main] CMD: /home/531734/packages/quast/quast_libs/bwa/bwa index -p /home/531734/mike/karyon_longread/VW4_HiFiasm.asm.11.hic.hap1.p_ctg/quast_corrected_input/assemblies_VW4_HiFiasm_asm_11_hic_hap1_p_ctg.fa /home/531734/mike/karyon_longread/VW4_HiFiasm.asm.11.hic.hap1.p_ctg/quast_corrected_input/assemblies_VW4_HiFiasm_asm_11_hic_hap1_p_ctg.fa
+[main] Real time: 141.403 sec; CPU: 139.454 sec
+[M::mm_idx_gen::4.095*1.51] collected minimizers
+[M::mm_idx_gen::4.127*1.48] collected minimizers
+[M::mm_idx_gen::4.690*1.94] sorted minimizers
+[M::main::4.690*1.94] loaded/built the index for 295 target sequence(s)
+[M::mm_mapopt_update::4.904*1.90] mid_occ = 384
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 295
+[M::mm_idx_stat::5.038*1.87] distinct minimizers: 10899804 (57.03% are singletons); average occurrences: 2.815; average spacing: 5.311
+[M::mm_idx_gen::4.735*1.92] sorted minimizers
+[M::main::4.735*1.92] loaded/built the index for 421 target sequence(s)
+[M::mm_mapopt_update::4.942*1.88] mid_occ = 412
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 421
+[M::mm_idx_stat::5.075*1.86] distinct minimizers: 10686115 (55.79% are singletons); average occurrences: 2.929; average spacing: 5.312
+41.16 sec
+[bwt_gen] Finished constructing BWT in 96 iterations.
+[main] Version: 0.7.15-r1140
+[main] CMD: /home/531734/packages/quast/quast_libs/bwa/bwa index -p /home/531734/mike/karyon_longread/VW4_HiFiasm.asm.11.hic.hap1.p_ctg/quast_corrected_input/assemblies_VW4_HiFiasm_asm_15_hic_hap2_p_ctg.fa /home/531734/mike/karyon_longread/VW4_HiFiasm.asm.11.hic.hap1.p_ctg/quast_corrected_input/assemblies_VW4_HiFiasm_asm_15_hic_hap2_p_ctg.fa
+[main] Real time: 155.604 sec; CPU: 154.744 sec
+[M::mm_idx_gen::4.285*1.54] collected minimizers
+[M::mm_idx_gen::4.933*1.98] sorted minimizers
+[M::main::4.933*1.98] loaded/built the index for 227 target sequence(s)
+[M::mm_mapopt_update::5.123*1.95] mid_occ = 414
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 227
+[M::mm_idx_stat::5.255*1.92] distinct minimizers: 11489105 (54.79% are singletons); average occurrences: 2.941; average spacing: 5.309
+[M::worker_pipeline::402.187*4.94] mapped 36151 sequences
+[M::worker_pipeline::397.874*4.88] mapped 36151 sequences
+[M::worker_pipeline::396.788*4.88] mapped 36151 sequences
+[M::worker_pipeline::446.365*4.93] mapped 36151 sequences
+[M::worker_pipeline::780.089*4.97] mapped 35954 sequences
+[M::worker_pipeline::765.524*4.94] mapped 35954 sequences
+[M::worker_pipeline::788.299*4.93] mapped 35954 sequences
+[M::worker_pipeline::878.237*4.96] mapped 35954 sequences
+[M::worker_pipeline::1172.829*4.97] mapped 35959 sequences
+[M::worker_pipeline::1139.126*4.96] mapped 35959 sequences
+[M::worker_pipeline::1164.879*4.96] mapped 35959 sequences
+[M::worker_pipeline::1315.842*4.97] mapped 35959 sequences
+[M::worker_pipeline::1517.203*4.96] mapped 35746 sequences
+[M::worker_pipeline::1564.297*4.98] mapped 35746 sequences
+[M::worker_pipeline::1562.000*4.97] mapped 35746 sequences
+[M::worker_pipeline::1757.132*4.97] mapped 35746 sequences
+[M::worker_pipeline::1902.916*4.97] mapped 35850 sequences
+[M::worker_pipeline::1946.438*4.98] mapped 35850 sequences
+[M::worker_pipeline::1947.662*4.97] mapped 35850 sequences
+[M::worker_pipeline::2190.701*4.98] mapped 35850 sequences
+[M::worker_pipeline::2278.641*4.97] mapped 35998 sequences
+[M::worker_pipeline::2329.825*4.98] mapped 35998 sequences
+[M::worker_pipeline::2335.972*4.97] mapped 35998 sequences
+[M::worker_pipeline::2621.166*4.98] mapped 35998 sequences
+[M::worker_pipeline::2660.953*4.98] mapped 35856 sequences
+[M::worker_pipeline::2715.298*4.99] mapped 35856 sequences
+[M::worker_pipeline::2724.433*4.98] mapped 35856 sequences
+[M::worker_pipeline::3057.742*4.98] mapped 35856 sequences
+[M::worker_pipeline::3043.517*4.98] mapped 35914 sequences
+[M::worker_pipeline::3098.589*4.99] mapped 35914 sequences
+[M::worker_pipeline::3105.355*4.98] mapped 35914 sequences
+[M::worker_pipeline::3438.260*4.98] mapped 35988 sequences
+[M::worker_pipeline::3491.104*4.99] mapped 35988 sequences
+[M::worker_pipeline::3501.083*4.98] mapped 35988 sequences
+[M::worker_pipeline::3505.129*4.98] mapped 35914 sequences
+[M::worker_pipeline::3828.314*4.98] mapped 35938 sequences
+[M::worker_pipeline::3875.612*4.99] mapped 35938 sequences
+[M::worker_pipeline::3901.725*4.98] mapped 35938 sequences
+[M::worker_pipeline::3963.525*4.98] mapped 35988 sequences
+[M::worker_pipeline::4192.338*4.98] mapped 35973 sequences
+[M::worker_pipeline::4254.642*4.99] mapped 35973 sequences
+[M::worker_pipeline::4291.834*4.98] mapped 35973 sequences
+[M::worker_pipeline::4405.299*4.98] mapped 35938 sequences
+[M::worker_pipeline::4591.565*4.98] mapped 36081 sequences
+[M::worker_pipeline::4634.234*4.99] mapped 36081 sequences
+[M::worker_pipeline::4688.267*4.98] mapped 36081 sequences
+[M::worker_pipeline::4817.089*4.98] mapped 35973 sequences
+[M::worker_pipeline::4967.030*4.98] mapped 36299 sequences
+[M::worker_pipeline::5015.835*4.99] mapped 36299 sequences
+[M::worker_pipeline::5079.595*4.98] mapped 36299 sequences
+[M::worker_pipeline::5258.295*4.98] mapped 36081 sequences
+[M::worker_pipeline::5386.771*4.99] mapped 36354 sequences
+[M::worker_pipeline::5352.832*4.98] mapped 36354 sequences
+[M::worker_pipeline::5481.514*4.98] mapped 36354 sequences
+[M::worker_pipeline::5689.744*4.98] mapped 36299 sequences
+[M::worker_pipeline::5715.953*4.99] mapped 31650 sequences
+[M::main] Version: 2.11-r797
+[M::main] CMD: /home/531734/packages/quast/quast_libs/minimap2/minimap2 -t 5 -ax map-ont /home/531734/mike/karyon_longread/VW4_HiFiasm.asm.11.hic.hap1.p_ctg/quast_corrected_input/assemblies_VW4_HiFiasm_asm_15_hic_hap1_p_ctg.fa /home/531734/mike/karyon_longread/data/reads/VW4_CANU_HiFi.trimmedReads.fasta
+[M::main] Real time: 5715.972 sec; CPU: 28507.176 sec
+[M::worker_pipeline::5686.838*4.98] mapped 31650 sequences
+[M::main] Version: 2.11-r797
+[M::main] CMD: /home/531734/packages/quast/quast_libs/minimap2/minimap2 -t 5 -ax map-ont /home/531734/mike/karyon_longread/VW4_HiFiasm.asm.11.hic.hap1.p_ctg/quast_corrected_input/assemblies_VW4_HiFiasm_asm_15_hic_hap2_p_ctg.fa /home/531734/mike/karyon_longread/data/reads/VW4_CANU_HiFi.trimmedReads.fasta
+[M::main] Real time: 5686.935 sec; CPU: 28323.059 sec
+[M::worker_pipeline::5820.638*4.98] mapped 31650 sequences
+[M::main] Version: 2.11-r797
+[M::main] CMD: /home/531734/packages/quast/quast_libs/minimap2/minimap2 -t 5 -ax map-ont /home/531734/mike/karyon_longread/VW4_HiFiasm.asm.11.hic.hap1.p_ctg/quast_corrected_input/assemblies_VW4_HiFiasm_asm_11_hic_hap2_p_ctg.fa /home/531734/mike/karyon_longread/data/reads/VW4_CANU_HiFi.trimmedReads.fasta
+[M::main] Real time: 5820.718 sec; CPU: 28997.443 sec
+[M::worker_pipeline::6126.854*4.98] mapped 36354 sequences
+[M::worker_pipeline::6502.702*4.98] mapped 31650 sequences
+[M::main] Version: 2.11-r797
+[M::main] CMD: /home/531734/packages/quast/quast_libs/minimap2/minimap2 -t 5 -ax map-ont /home/531734/mike/karyon_longread/VW4_HiFiasm.asm.11.hic.hap1.p_ctg/quast_corrected_input/assemblies_VW4_HiFiasm_asm_11_hic_hap1_p_ctg.fa /home/531734/mike/karyon_longread/data/reads/VW4_CANU_HiFi.trimmedReads.fasta
+[M::main] Real time: 6502.833 sec; CPU: 32391.156 sec

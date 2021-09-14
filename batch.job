@@ -1,13 +1,13 @@
 #!/bin/bash
-#SBATCH -J 2_purged_karyon          # Job name, you can change it to whatever you want
-#SBATCH -n 28               # Number of cores 
-#SBATCH -o %N.%j.out        # Standard output will be written here
-#SBATCH -e %N.%j.err        # Standard error will be written here
+#SBATCH -J 5_purged_karyon          # Job name, you can change it to whatever you want
+#SBATCH -n 112               # Number of cores 
+#SBATCH -o 5_purged_karyon.out        # Standard output will be written here
+#SBATCH -e 5_purged_karyon.err        # Standard error will be written here
 #SBATCH -p compute          # Slurm partition, where you want the job to be queued 
 #SBATCH --time 100:30:00    
  
 module purge
-# module add mpich/3.2/gcc-5.2.0
+module add mpich/3.2/gcc-5.2.0
 module add test-modules singularity/3.5.3/gcc-8.2.0
 module add java/jdk1.8.0_102
 
@@ -17,7 +17,7 @@ source activate /home/531734/.conda/envs/appraisal
 
 cd /home/531734/mike/karyon_longread
 
-# mpiexec -n 56 
+mpiexec -n 112 \
+snakemake --cores 112 --printshellcmds --use-singularity --singularity-args="-B /home/531734:/home/531734" --use-conda -k -s snakefile \
+--config assembly="purged" reads="reads_15_15000" -k --rerun-incomplete
 
-snakemake --cores 28 --printshellcmds --use-singularity --singularity-args="-B /home/531734:/home/531734" --use-conda -k -s snakefile \
---config assembly="purged" reads="reads_15_15000"
