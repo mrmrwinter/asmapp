@@ -5,6 +5,6 @@ redundans_path: "/home/531734/packages/redundans"  # path to directory containin
 picard-tools: "/home/"  # path to picarad-tools
 memory: "120"  # the aavailaable memory for the analysis in gigabytes
 threads: "28"
-quast_path: "/home/531734/packages/quast"
+quast_path: "/home/mike/software/quast"
 seq_tech: "hifi"
 reference: "data/assemblies/Blanc_Mathieu_2017_mJavanica"
