@@ -12,15 +12,21 @@ rule all:
 # karyon
         # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
         # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
+<<<<<<< HEAD
 #        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
         plot = config["assembly"] + "/outputs/plots/plot.png",
+=======
+        # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
+        # plot = config["assembly"] + "/outputs/plots/plot.png",
+>>>>>>> 4ec67f9003790c0ccaf5f09f0d3ec6287def44af
 # dotplots
     # NUCMER
         nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
         nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.delta",
         nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta",
     # BLAST
-        tsv = config["assembly"] + "/reports/blast/blast.out",
+        # tsv = config["assembly"] + "/reports/blast/blast.out",
+        initial_tsv = config["assembly"] + "/reports/blast/initial_blast.out",
 # assembly stats
         quast = config["assembly"] + "/reports/quast/report.txt",
 
@@ -343,18 +349,124 @@ rule blast_nonself:
         "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out"
 
 
+rule make_blast_database_initial:  # Rule to make database of cds fasta
+    input:
+        "data/assemblies/" + config["assembly"] + ".fasta" # input to the rule
+    output:
+        nhr = "data/database/" + config["assembly"] + "/initial_" + config["assembly"] + ".nhr",   # all outputs expected from the rule
+        nin = "data/database/" + config["assembly"] + "/initial_" + config["assembly"] + ".nin",
+        nsq = "data/database/" + config["assembly"] + "/initial_" + config["assembly"] + ".nsq"
+    params:
+        "data/database/" + config["assembly"] + "/initial_" + config["assembly"]   # prefix for the outputs, required by the command
+    shell:  # shell command for the rule
+        "makeblastdb \
+        -in {input} \
+        -out {params} \
+        -dbtype nucl"  # the database type
+
+
+rule blast_nonself_initial:
+    input:
+        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
+        db = "data/database/" + config["assembly"] + "/initial_" + config["assembly"] + ".nin"
+    output:
+        tsv = config["assembly"] + "/reports/blast/initial_blast.out"
+    params:
+        out_pfx = config["assembly"] + "/reports/blast",
+        db_pfx = "data/database/" + config["assembly"] + "/initial_" + config["assembly"]
+    shell:
+        "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/initial_blast.out"
+
+
 ##############################################################################
 
-# PAIRS TABLE WITH LASTZ
+# PAIRS ALIGNMENTS FROM NUCMER
 
-# rule lastz:
-    # input:
-    #     assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta"
-    # output:
-    #     tsv = config["assembly"] + "/reports/lastz/
-    # params:
-    #     out_pfx = config["assembly"] + "/reports/lastz"
-    # shell:
+rule pair_alignment:
+    input:
+       blast =
+    output:
+        only_pairs_table =
+    run:
+        import pandas as pd
+
+        blast_output = pd.read_csv(snakemake.input[0], sep="\t", header = None) # snakemake.input[0] is the blast table
+
+        initial_pairs = pd.DataFrame(columns = ['query', 'hit'])
+
+        for index, value in blast_output.iterrows():
+            if value[0] != value[1]:
+                initial_pairs.loc[index, ['query']] = value[0]
+                initial_pairs.loc[index, ['hit']] = value[1]
+
+        only_initial_pairs = initial_pairs.drop_duplicates()
+
+        only_initial_pairs.to_csv(snakemake.output[0], sep='\t')
+
+
+
+# IS THERE A WAY TO TAKE A SAMPLE LIST FROM THE ONLY PAIRS COLUMN HERE?
+# IF SO I WONT HAVE TO USE THE DIRECTORY OUTPUT FLAG WHICH IS A pair_alignment
+# CAN INSTEAD LOOP THROUGH THE LIST FOR EACH INDIVIDUAL ASSEMBLY AS THE LIST OF PAIRS WILL BE NOVEL AND INDIVIDUAL
+
+#
+# rule single_scaffold_extraction:
+#     input:
+#         assembly =
+#     output:
+#         directory(config["assembly"] + "tmp/")
+#     params:
+#         out_dir = config["assembly"] + "tmp/"
+#     shell:
+#         """
+#         mkdir -p {params[0]}
+#         awk '/^>/ {OUT='{params[0]}' substr($0,2) ''.fasta'}; OUT{print >OUT}' {input[assembly]}
+#         """
+#
+#
+# # nucmer analysis/alignment
+# rule :
+#     input:
+#         directory(config["assembly"] + "tmp/")
+#         only_pairs_table =
+#     output:
+#
+#     params:
+#         out_dir = config["assembly"] + "tmp/"
+#     run:
+#         import glob
+#         import os
+#
+#         # os.system("mkdir nucmer_initial_purged/")
+#
+#         pairs = pd.read_csv()
+#
+#         for index, value in only_initial_pairs.iterrows():
+#             q = "tmp_initial_purged/" + value[0] + ".fasta"
+#             h = "tmp_initial_purged/" + value[1] + ".fasta"
+#             nucmer = "nucmer -p nucmer_initial_purged/nucmer." + str(index) + " " + q + " " + h
+#             os.system(nucmer)
+#
+#
+#         for delta in glob.glob("nucmer_initial_purged/*.delta"):
+#             pair = delta.replace("nucmer_initial_purged/","").replace(".delta","")
+#             mummer = "mummerplot -l -f --png --large " + delta + " -p nucmer_initial_purged/" + pair
+#             os.system(mummer)
+
+
+
+#######################################################################################
+
+# dnadiff
+
+os.system("mkdir dnadiff_initial_purged/")
+
+for index, value in only_initial_pairs.iterrows():
+    dnadiff = "dnadiff -p dnadiff_initial_purged/nucmer." + str(index) + " -d nucmer_initial_purged/nucmer." + str(index) + ".delta"
+    os.system(dnadiff)
+
+
+
 
 
 
