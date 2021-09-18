@@ -12,13 +12,18 @@ rule all:
 # karyon
         # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
         # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
+<<<<<<< HEAD
+#        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
+        plot = config["assembly"] + "/outputs/plots/plot.png",
+=======
         # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
         # plot = config["assembly"] + "/outputs/plots/plot.png",
+>>>>>>> 4ec67f9003790c0ccaf5f09f0d3ec6287def44af
 # dotplots
     # NUCMER
-        # nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.png",
-        # nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.png",
-        # nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.png",
+        nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
+        nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.delta",
+        nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta",
     # BLAST
         tsv = config["assembly"] + "/reports/blast/blast.out",
         initial_tsv = config["assembly"] + "/reports/blast/initial_blast.out",
