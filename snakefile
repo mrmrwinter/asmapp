@@ -20,10 +20,10 @@ rule all:
         # nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.png",
         # nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.png",
     # BLAST
-        # tsv = config["assembly"] + "/reports/blast/blast.out",
+        tsv = config["assembly"] + "/reports/blast/blast.out",
         initial_tsv = config["assembly"] + "/reports/blast/initial_blast.out",
 # assembly stats
-        quast = config["assembly"] + "/reports/quast/report.txt",
+        # quast = config["assembly"] + "/reports/quast/report.txt",
 
 
 
@@ -339,9 +339,10 @@ rule blast_nonself:
         tsv = config["assembly"] + "/reports/blast/blast.out"
     params:
         out_pfx = config["assembly"] + "/reports/blast",
-        db_pfx = "data/database/" + config["assembly"] + "/" + config["assembly"]
+        db_pfx = "data/database/" + config["assembly"] + "/" + config["assembly"],
+        threads = config["threads"]
     shell:
-        "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out"
+        "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out -num_threads {params[threads]}"
 
 
 rule make_blast_database_initial:  # Rule to make database of cds fasta
@@ -368,36 +369,37 @@ rule blast_nonself_initial:
         tsv = config["assembly"] + "/reports/blast/initial_blast.out"
     params:
         out_pfx = config["assembly"] + "/reports/blast",
-        db_pfx = "data/database/" + config["assembly"] + "/initial_" + config["assembly"]
+        db_pfx = "data/database/" + config["assembly"] + "/initial_" + config["assembly"],
+        threads = config["threads"]
     shell:
-        "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/initial_blast.out"
+        "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/initial_blast.out -num_threads {params[threads]}"
 
 
 ##############################################################################
 
 # PAIRS ALIGNMENTS FROM NUCMER
 
-rule pair_alignment:
-    input:
-       blast =
-    output:
-        only_pairs_table =
-    run:
-        import pandas as pd
-
-        blast_output = pd.read_csv(snakemake.input[0], sep="\t", header = None) # snakemake.input[0] is the blast table
-
-        initial_pairs = pd.DataFrame(columns = ['query', 'hit'])
-
-        for index, value in blast_output.iterrows():
-            if value[0] != value[1]:
-                initial_pairs.loc[index, ['query']] = value[0]
-                initial_pairs.loc[index, ['hit']] = value[1]
-
-        only_initial_pairs = initial_pairs.drop_duplicates()
-
-        only_initial_pairs.to_csv(snakemake.output[0], sep='\t')
-
+# rule pair_alignment:
+#     input:
+#        blast =
+#     output:
+#         only_pairs_table =
+#     run:
+#         import pandas as pd
+#
+#         blast_output = pd.read_csv(snakemake.input[0], sep="\t", header = None) # snakemake.input[0] is the blast table
+#
+#         initial_pairs = pd.DataFrame(columns = ['query', 'hit'])
+#
+#         for index, value in blast_output.iterrows():
+#             if value[0] != value[1]:
+#                 initial_pairs.loc[index, ['query']] = value[0]
+#                 initial_pairs.loc[index, ['hit']] = value[1]
+#
+#         only_initial_pairs = initial_pairs.drop_duplicates()
+#
+#         only_initial_pairs.to_csv(snakemake.output[0], sep='\t')
+#
 
 
 # IS THERE A WAY TO TAKE A SAMPLE LIST FROM THE ONLY PAIRS COLUMN HERE?
@@ -454,13 +456,13 @@ rule pair_alignment:
 
 # dnadiff
 
-os.system("mkdir dnadiff_initial_purged/")
-
-for index, value in only_initial_pairs.iterrows():
-    dnadiff = "dnadiff -p dnadiff_initial_purged/nucmer." + str(index) + " -d nucmer_initial_purged/nucmer." + str(index) + ".delta"
-    os.system(dnadiff)
-
-
+# os.system("mkdir dnadiff_initial_purged/")
+#
+# for index, value in only_initial_pairs.iterrows():
+#     dnadiff = "dnadiff -p dnadiff_initial_purged/nucmer." + str(index) + " -d nucmer_initial_purged/nucmer." + str(index) + ".delta"
+#     os.system(dnadiff)
+#
+#
 
 
 
