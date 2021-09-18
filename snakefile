@@ -12,13 +12,8 @@ rule all:
 # karyon
         # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
         # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
-<<<<<<< HEAD
-#        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
-        plot = config["assembly"] + "/outputs/plots/plot.png",
-=======
         # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
         # plot = config["assembly"] + "/outputs/plots/plot.png",
->>>>>>> 4ec67f9003790c0ccaf5f09f0d3ec6287def44af
 # dotplots
     # NUCMER
         nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
