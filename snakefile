@@ -13,6 +13,7 @@ rule all:
         # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
         # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
         # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
+        plot = config["assembly"] + "/outputs/plots/plot.png",
         # plot = config["assembly"] + "/outputs/plots/plot.png",
 # dotplots
     # NUCMER
@@ -25,9 +26,6 @@ rule all:
 # assembly stats
         # quast = config["assembly"] + "/reports/quast/report.txt",
 
-
-
-###############################################################################
 
 # ASSEMBLY COLLAPSING
 
@@ -291,8 +289,8 @@ rule samtools_flagstats:
 
 
 rule karyon_plots:
-    container:
-        "docker://gabaldonlab/karyon"
+#    container:
+ #       "docker://gabaldonlab/karyon"
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
@@ -463,9 +461,6 @@ rule blast_nonself_initial:
 #     os.system(dnadiff)
 #
 #
-
-
-
 
 
 ###############################################################################
