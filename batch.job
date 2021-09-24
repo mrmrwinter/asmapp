@@ -4,7 +4,7 @@
 #SBATCH -o 5_purged_karyon.out        # Standard output will be written here
 #SBATCH -e 5_purged_karyon.err        # Standard error will be written here
 #SBATCH -p compute          # Slurm partition, where you want the job to be queued 
-#SBATCH --time 100:30:00    
+#SBATCH --time 150:00:00    
  
 module purge
 module add mpich/3.2/gcc-5.2.0

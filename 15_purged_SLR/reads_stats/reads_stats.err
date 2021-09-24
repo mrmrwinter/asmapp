@@ -1,0 +1,99 @@
+[bwa_index] Pack FASTA... 0.97 sec
+[bwa_index] Construct BWT for the packed sequence...
+[BWTIncCreate] textLength=265945210, availableWord=30712596
+[BWTIncConstructFromPacked] 10 iterations done. 50661866 characters processed.
+[BWTIncConstructFromPacked] 20 iterations done. 93593754 characters processed.
+[BWTIncConstructFromPacked] 30 iterations done. 131747722 characters processed.
+[BWTIncConstructFromPacked] 40 iterations done. 165655034 characters processed.
+[BWTIncConstructFromPacked] 50 iterations done. 195787914 characters processed.
+[BWTIncConstructFromPacked] 60 iterations done. 222566042 characters processed.
+[BWTIncConstructFromPacked] 70 iterations done. 246362474 characters processed.
+[BWTIncConstructFromPacked] 80 iterations done. 265945210 characters processed.
+[bwa_index] 68.84 seconds elapse.
+[bwa_index] Update BWT... 0.62 sec
+[bwa_index] Pack forward-only FASTA... 0.59 sec
+[bwa_index] Construct SA from BWT and Occ... 26.05 sec
+[bwt_gen] Finished constructing BWT in 80 iterations.
+[main] Version: 0.7.15-r1140
+[main] CMD: /home/531734/packages/quast/quast_libs/bwa/bwa index -p /home/531734/mike/karyon_longread/15_purged_SLR/quast_corrected_input/assemblies.fasta /home/531734/mike/karyon_longread/15_purged_SLR/quast_corrected_input/assemblies.fasta
+[main] Real time: 98.225 sec; CPU: 97.080 sec
+[M::mm_idx_gen::2.848*1.40] collected minimizers
+[M::mm_idx_gen::3.117*1.92] sorted minimizers
+[M::main::3.117*1.92] loaded/built the index for 37 target sequence(s)
+[M::mm_mapopt_update::3.281*1.87] mid_occ = 231
+[M::mm_idx_stat] kmer size: 19; skip: 10; is_hpc: 1; #seq: 37
+[M::mm_idx_stat::3.399*1.84] distinct minimizers: 7652501 (70.24% are singletons); average occurrences: 1.970; average spacing: 8.821
+[M::worker_pipeline::92.052*12.50] mapped 36151 sequences
+[M::worker_pipeline::168.052*13.21] mapped 35954 sequences
+[M::worker_pipeline::245.336*13.45] mapped 35959 sequences
+[M::worker_pipeline::323.916*13.59] mapped 35746 sequences
+[M::worker_pipeline::401.504*13.68] mapped 35850 sequences
+[M::worker_pipeline::480.518*13.73] mapped 35998 sequences
+[M::worker_pipeline::559.794*13.73] mapped 35856 sequences
+[M::worker_pipeline::638.379*13.76] mapped 35914 sequences
+[M::worker_pipeline::718.269*13.79] mapped 35988 sequences
+[M::worker_pipeline::842.954*13.80] mapped 35938 sequences
+[M::worker_pipeline::877.631*13.81] mapped 35973 sequences
+[M::worker_pipeline::951.328*13.82] mapped 36081 sequences
+[M::worker_pipeline::1028.372*13.83] mapped 36299 sequences
+[M::worker_pipeline::1108.861*13.84] mapped 36354 sequences
+[M::worker_pipeline::1188.265*13.85] mapped 35387 sequences
+[M::worker_pipeline::1269.993*13.87] mapped 28315 sequences
+[M::worker_pipeline::1353.988*13.87] mapped 28347 sequences
+[M::worker_pipeline::1435.828*13.88] mapped 28307 sequences
+[M::worker_pipeline::1519.311*13.88] mapped 28359 sequences
+[M::worker_pipeline::1601.408*13.89] mapped 28348 sequences
+[M::worker_pipeline::1681.156*13.89] mapped 28359 sequences
+[M::worker_pipeline::1765.767*13.90] mapped 28315 sequences
+[M::worker_pipeline::1847.932*13.90] mapped 28370 sequences
+[M::worker_pipeline::1932.195*13.90] mapped 28332 sequences
+[M::worker_pipeline::2013.967*13.91] mapped 28318 sequences
+[M::worker_pipeline::2095.910*13.91] mapped 28359 sequences
+[M::worker_pipeline::2178.481*13.91] mapped 28293 sequences
+[M::worker_pipeline::2259.699*13.92] mapped 28383 sequences
+[M::worker_pipeline::2340.026*13.92] mapped 28365 sequences
+[M::worker_pipeline::2421.642*13.93] mapped 28365 sequences
+[M::worker_pipeline::2504.036*13.93] mapped 28667 sequences
+[M::worker_pipeline::2580.547*13.93] mapped 31718 sequences
+[M::worker_pipeline::2657.563*13.93] mapped 31704 sequences
+[M::worker_pipeline::2733.582*13.94] mapped 31790 sequences
+[M::worker_pipeline::2809.225*13.94] mapped 31706 sequences
+[M::worker_pipeline::2885.277*13.94] mapped 31794 sequences
+[M::worker_pipeline::2962.439*13.94] mapped 31770 sequences
+[M::worker_pipeline::3037.773*13.94] mapped 31711 sequences
+[M::worker_pipeline::3113.318*13.95] mapped 31737 sequences
+[M::worker_pipeline::3189.200*13.95] mapped 31844 sequences
+[M::worker_pipeline::3266.142*13.95] mapped 31754 sequences
+[M::worker_pipeline::3344.756*13.95] mapped 31771 sequences
+[M::worker_pipeline::3421.583*13.95] mapped 31754 sequences
+[M::worker_pipeline::3499.750*13.95] mapped 31739 sequences
+[M::worker_pipeline::3574.309*13.96] mapped 31770 sequences
+[M::worker_pipeline::3653.653*13.96] mapped 31726 sequences
+[M::worker_pipeline::3729.000*13.96] mapped 31717 sequences
+[M::worker_pipeline::3804.748*13.96] mapped 31680 sequences
+[M::worker_pipeline::3881.408*13.96] mapped 31791 sequences
+[M::worker_pipeline::3957.083*13.96] mapped 31761 sequences
+[M::worker_pipeline::4033.278*13.96] mapped 31733 sequences
+[M::worker_pipeline::4109.471*13.96] mapped 31742 sequences
+[M::worker_pipeline::4186.656*13.96] mapped 31745 sequences
+[M::worker_pipeline::4262.974*13.96] mapped 31818 sequences
+[M::worker_pipeline::4341.304*13.96] mapped 31799 sequences
+[M::worker_pipeline::4417.228*13.96] mapped 31658 sequences
+[M::worker_pipeline::4492.484*13.96] mapped 31751 sequences
+[M::worker_pipeline::4567.689*13.96] mapped 31776 sequences
+[M::worker_pipeline::4643.081*13.97] mapped 31696 sequences
+[M::worker_pipeline::4718.439*13.97] mapped 31646 sequences
+[M::worker_pipeline::4795.529*13.96] mapped 31717 sequences
+[M::worker_pipeline::4870.070*13.97] mapped 31765 sequences
+[M::worker_pipeline::4945.033*13.97] mapped 31674 sequences
+[M::worker_pipeline::5022.420*13.96] mapped 31815 sequences
+[M::worker_pipeline::5097.839*13.97] mapped 31782 sequences
+[M::worker_pipeline::5173.726*13.97] mapped 31621 sequences
+[M::worker_pipeline::5251.176*13.97] mapped 31787 sequences
+[M::worker_pipeline::5324.985*13.97] mapped 31785 sequences
+[M::worker_pipeline::5401.568*13.97] mapped 31802 sequences
+[M::worker_pipeline::5476.498*13.97] mapped 31796 sequences
+[M::worker_pipeline::5533.714*13.97] mapped 24527 sequences
+[M::main] Version: 2.11-r797
+[M::main] CMD: /home/531734/packages/quast/quast_libs/minimap2/minimap2 -t 14 -ax map-pb /home/531734/mike/karyon_longread/15_purged_SLR/quast_corrected_input/assemblies.fasta /home/531734/mike/karyon_longread/data/reads/all_hifi.fastq.gz
+[M::main] Real time: 5533.739 sec; CPU: 77293.739 sec

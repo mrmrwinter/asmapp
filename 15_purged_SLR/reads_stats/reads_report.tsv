@@ -1,0 +1,16 @@
+Assembly	assemblies
+# total reads	7396826
+# left	0
+# right	0
+# mapped	7391906
+Mapped (%)	99.93
+# properly paired	0
+Properly paired (%)	0.0
+# singletons	0
+Singletons (%)	0.0
+# misjoint mates	0
+Misjoint mates (%)	0.0
+Avg. coverage depth	327
+Coverage >= 1x (%)	99.94
+Coverage >= 5x (%)	99.93
+Coverage >= 10x (%)	99.92

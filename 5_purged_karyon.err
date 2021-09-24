@@ -2305,3 +2305,168 @@ This might be due to filesystem latency. If that is the case, consider to increa
 Job id: 16 completed successfully, but some output files are missing. 16
 Job failed, going on with independent jobs.
 WARNING:snakemake.logging:Job failed, going on with independent jobs.
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Using outdated gnuplot, use v4.0 for best results
+WARNING: Turning of --size option for compatibility
+Writing filtered delta file purged/reports/nucmer/nucmer.int_ref.filter
+Reading delta file purged/reports/nucmer/nucmer.int_ref.filter
+Writing plot files purged/reports/nucmer/nucmer.int_ref.fplot, purged/reports/nucmer/nucmer.int_ref.rplot
+Writing gnuplot script purged/reports/nucmer/nucmer.int_ref.gp
+Rendering plot purged/reports/nucmer/nucmer.int_ref.png
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Unable to run 'gnuplot purged/reports/nucmer/nucmer.int_ref.gp', Cannot allocate memory
+Waiting at most 5 seconds for missing files.
+WARNING:snakemake.logging:Waiting at most 5 seconds for missing files.
+MissingOutputException in line 176 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.int_ref.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 17 completed successfully, but some output files are missing. 17
+ERROR:snakemake.logging:MissingOutputException in line 176 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.int_ref.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 17 completed successfully, but some output files are missing. 17
+Removing output files of failed job nucmer_initial_vs_reference since they might be corrupted:
+purged/reports/nucmer/nucmer.int_ref.delta
+WARNING:snakemake.logging:Removing output files of failed job nucmer_initial_vs_reference since they might be corrupted:
+purged/reports/nucmer/nucmer.int_ref.delta
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+WARNING: there was a problem deleting the temporary output files
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Using outdated gnuplot, use v4.0 for best results
+WARNING: Turning of --size option for compatibility
+WARNING: there was a problem deleting the temporary output files
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Using outdated gnuplot, use v4.0 for best results
+WARNING: Turning of --size option for compatibility
+Writing filtered delta file purged/reports/nucmer/nucmer.int_ref.filter
+Writing filtered delta file purged/reports/nucmer/nucmer.int_ref.filter
+Reading delta file purged/reports/nucmer/nucmer.int_ref.filter
+Writing plot files purged/reports/nucmer/nucmer.int_ref.fplot, purged/reports/nucmer/nucmer.int_ref.rplot
+Writing gnuplot script purged/reports/nucmer/nucmer.int_ref.gp
+Rendering plot purged/reports/nucmer/nucmer.int_ref.png
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Unable to run 'gnuplot purged/reports/nucmer/nucmer.int_ref.gp', Inappropriate ioctl for device
+Waiting at most 5 seconds for missing files.
+WARNING:snakemake.logging:Waiting at most 5 seconds for missing files.
+Reading delta file purged/reports/nucmer/nucmer.int_ref.filter
+Writing plot files purged/reports/nucmer/nucmer.int_ref.fplot, purged/reports/nucmer/nucmer.int_ref.rplot
+Writing gnuplot script purged/reports/nucmer/nucmer.int_ref.gp
+Rendering plot purged/reports/nucmer/nucmer.int_ref.png
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Unable to run 'gnuplot purged/reports/nucmer/nucmer.int_ref.gp', Cannot allocate memory
+Waiting at most 5 seconds for missing files.
+WARNING:snakemake.logging:Waiting at most 5 seconds for missing files.
+MissingOutputException in line 176 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.int_ref.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 17 completed successfully, but some output files are missing. 17
+ERROR:snakemake.logging:MissingOutputException in line 176 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.int_ref.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 17 completed successfully, but some output files are missing. 17
+Removing output files of failed job nucmer_initial_vs_reference since they might be corrupted:
+purged/reports/nucmer/nucmer.int_ref.delta
+WARNING:snakemake.logging:Removing output files of failed job nucmer_initial_vs_reference since they might be corrupted:
+purged/reports/nucmer/nucmer.int_ref.delta
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+WARNING: there was a problem deleting the temporary output files
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_GB.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+gnuplot: error while loading shared libraries: libwebp.so.6: cannot open shared object file: No such file or directory
+WARNING: Using outdated gnuplot, use v4.0 for best results
+WARNING: Turning of --size option for compatibility
+MissingOutputException in line 176 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.int_ref.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 17 completed successfully, but some output files are missing. 17
+ERROR:snakemake.logging:MissingOutputException in line 176 of /home/531734/mike/karyon_longread/snakefile:
+Job Missing files after 5 seconds:
+purged/reports/nucmer/nucmer.int_ref.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 17 completed successfully, but some output files are missing. 17
+Removing output files of failed job nucmer_initial_vs_reference since they might be corrupted:
+purged/reports/nucmer/nucmer.int_ref.delta
+WARNING:snakemake.logging:Removing output files of failed job nucmer_initial_vs_reference since they might be corrupted:
+purged/reports/nucmer/nucmer.int_ref.delta
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+Writing filtered delta file purged/reports/nucmer/nucmer.int_ref.filter
+ERROR: Could not parse delta file, purged/reports/nucmer/nucmer.int_ref.delta
+error no: 400
+ERROR: Could not run delta-filter, 
+[Tue Sep 14 15:24:25 2021]
+INFO:snakemake.logging:[Tue Sep 14 15:24:25 2021]
+Error in rule nucmer_initial_vs_reference:
+ERROR:snakemake.logging:Error in rule nucmer_initial_vs_reference:
+    jobid: 17
+ERROR:snakemake.logging:    jobid: 17
+    output: purged/reports/nucmer/nucmer.int_ref.png, purged/reports/nucmer/nucmer.int_ref.delta
+ERROR:snakemake.logging:    output: purged/reports/nucmer/nucmer.int_ref.png, purged/reports/nucmer/nucmer.int_ref.delta
+    shell:
+        
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.int_ref data/assemblies/purged.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.int_ref.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.int_ref.delta -p purged/reports/nucmer/nucmer.int_ref
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+ERROR:snakemake.logging:    shell:
+        
+        mkdir -p tmp/
+        gunzip -c data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta.gz > data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        nucmer -p tmp/nucmer.int_ref data/assemblies/purged.fasta data/assemblies/Blanc_Mathieu_2017_mJavanica.fasta
+        cp tmp/nucmer.int_ref.delta purged/reports/nucmer/
+        mummerplot -l -f --png --large purged/reports/nucmer/nucmer.int_ref.delta -p purged/reports/nucmer/nucmer.int_ref
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+ERROR:snakemake.logging:
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+slurmstepd: *** JOB 3375007 ON c041 CANCELLED AT 2021-09-18T18:27:47 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+Will exit after finishing currently running jobs.
+Will exit after finishing currently running jobs.
+Will exit after finishing currently running jobs.
+Will exit after finishing currently running jobs.
+srun: got SIGCONT
+[mpiexec@c041.vc-main] HYDU_sock_write (utils/sock/sock.c:286): write error (Interrupted system call)
+[mpiexec@c041.vc-main] HYDU_sock_forward_stdio (utils/sock/sock.c:412): write error
+[mpiexec@c041.vc-main] HYDT_bscu_stdio_cb (tools/bootstrap/utils/bscu_cb.c:20): stdio forwarding error
+[mpiexec@c041.vc-main] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[mpiexec@c041.vc-main] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:198): error waiting for event
+[mpiexec@c041.vc-main] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion

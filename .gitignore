@@ -21,4 +21,11 @@ jupyter/*
 *.rplot
 *.gp
 *.vcf
+*.stat
+*.header
+*.html
+*.temp
+VW4_HiFiasm_15_purge/*
+*.header
 *.bin
+

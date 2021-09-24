@@ -1,0 +1,39 @@
+****************** Start a BUSCO 3.0.2 analysis, current time: 09/22/2021 18:24:33 ******************
+Configuration loaded from /home/531734/mike/karyon_longread/15_purged_SLR/busco_stats/config.ini
+Init tools...
+Check dependencies...
+Check input file...
+To reproduce this run: python /home/531734/packages/quast/quast.py -i /home/531734/mike/karyon_longread/15_purged_SLR/quast_corrected_input/assemblies.fasta -o assemblies -l /home/531734/packages/quast/quast_libs/busco/eukaryota/ -m genome -c 28 -t /home/531734/mike/karyon_longread/15_purged_SLR/busco_stats/tmp/ -sp fly --augustus_parameters ''''
+Mode is: genome
+The lineage dataset is: eukaryota_odb9 (eukaryota)
+Delete the current result folder and start a new run
+Temp directory is /home/531734/mike/karyon_longread/15_purged_SLR/busco_stats/tmp/
+****** Phase 1 of 2, initial predictions ******
+****** Step 1/3, current time: 09/22/2021 18:24:35 ******
+Create blast database...
+[makeblastdb]	Building a new DB, current time: 09/22/2021 18:24:35
+[makeblastdb]	New DB name:   /home/531734/mike/karyon_longread/15_purged_SLR/busco_stats/tmp/assemblies_1863409861
+[makeblastdb]	New DB title:  /home/531734/mike/karyon_longread/15_purged_SLR/quast_corrected_input/assemblies.fasta
+[makeblastdb]	Sequence type: Nucleotide
+[makeblastdb]	Keep MBits: T
+[makeblastdb]	Maximum file size: 1000000000B
+[makeblastdb]	Adding sequences from FASTA; added 37 sequences in 1.63922 seconds.
+[makeblastdb]	1 of 1 task(s) completed at 09/22/2021 18:24:37
+Running tblastn, writing output to /home/531734/mike/karyon_longread/15_purged_SLR/busco_stats/run_assemblies/blast_output/tblastn_assemblies.tsv...
+[tblastn]	1 of 1 task(s) completed at 09/22/2021 18:26:22
+****** Step 2/3, current time: 09/22/2021 18:26:22 ******
+Maximum number of candidate contig per BUSCO limited to: 3
+Getting coordinates for candidate regions...
+Pre-Augustus scaffold extraction...
+Running Augustus prediction using fly as species:
+Additional parameters for Augustus are '': 
+[augustus]	Please find all logs related to Augustus errors here: /home/531734/mike/karyon_longread/15_purged_SLR/busco_stats/run_assemblies/augustus_output/augustus.log
+[augustus]	338 of 338 task(s) completed at 09/22/2021 18:26:25
+Extracting predicted proteins...
+****** Step 3/3, current time: 09/22/2021 18:26:27 ******
+Running HMMER to confirm orthology of predicted proteins:
+Unhandled exception occurred: ['Traceback (most recent call last):\n', '  File "/home/531734/packages/quast/quast_libs/busco/busco.py", line 184, in main\n    analysis.run_analysis()\n', '  File "/home/531734/packages/quast/quast_libs/busco/GenomeAnalysis.py", line 96, in run_analysis\n    self._run_hmmer()\n', '  File "/home/531734/packages/quast/quast_libs/busco/GenomeAnalysis.py", line 977, in _run_hmmer\n    self.mainout)\n', "OSError: [Errno 2] No such file or directory: '/home/531734/mike/karyon_longread/15_purged_SLR/busco_stats/run_assemblies/augustus_output/extracted_proteins'\n"]
+
+BUSCO analysis failed !
+Check the logs, read the user guide, if you still need technical support, then please contact mailto:support@orthodb.org
+

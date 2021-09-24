@@ -1,0 +1,120 @@
+Building DAG of jobs...
+WARNING:snakemake.logging:Building DAG of jobs...
+Using shell: /usr/bin/bash
+WARNING:snakemake.logging:Using shell: /usr/bin/bash
+Provided cores: 28
+WARNING:snakemake.logging:Provided cores: 28
+Rules claiming more threads will be scaled down.
+WARNING:snakemake.logging:Rules claiming more threads will be scaled down.
+Job stats:
+job                            count    min threads    max threads
+---------------------------  -------  -------------  -------------
+all                                1              1              1
+blast_nonself                      1              1              1
+blast_nonself_initial              1              1              1
+conversion                         1              1              1
+fix_bam                            1              1              1
+make_blast_database                1              1              1
+mapping                            1              1              1
+nucmer_initial_vs_reference        1              1              1
+nucmer_reduced_vs_initial          1              1              1
+nucmer_reduced_vs_reference        1              1              1
+redundans                          1              1              1
+redundans_tagging                  1              1              1
+samtools_tagged_index              1              1              1
+sorting                            1              1              1
+total                             14              1              1
+
+WARNING:snakemake.logging:Job stats:
+job                            count    min threads    max threads
+---------------------------  -------  -------------  -------------
+all                                1              1              1
+blast_nonself                      1              1              1
+blast_nonself_initial              1              1              1
+conversion                         1              1              1
+fix_bam                            1              1              1
+make_blast_database                1              1              1
+mapping                            1              1              1
+nucmer_initial_vs_reference        1              1              1
+nucmer_reduced_vs_initial          1              1              1
+nucmer_reduced_vs_reference        1              1              1
+redundans                          1              1              1
+redundans_tagging                  1              1              1
+samtools_tagged_index              1              1              1
+sorting                            1              1              1
+total                             14              1              1
+
+Select jobs to execute...
+WARNING:snakemake.logging:Select jobs to execute...
+
+INFO:snakemake.logging:
+[Sun Sep 19 20:32:35 2021]
+INFO:snakemake.logging:[Sun Sep 19 20:32:35 2021]
+rule blast_nonself_initial:
+    input: data/assemblies/VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg.fasta, data/database/VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/initial_VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg.nin
+    output: VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/reports/blast/initial_blast.out
+    jobid: 13
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule blast_nonself_initial:
+    input: data/assemblies/VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg.fasta, data/database/VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/initial_VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg.nin
+    output: VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/reports/blast/initial_blast.out
+    jobid: 13
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+blastn -query data/assemblies/VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg.fasta -db data/database/VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/initial_VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg -outfmt 6 -max_target_seqs 2 -out VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/reports/blast/initial_blast.out -num_threads 28
+WARNING:snakemake.logging:blastn -query data/assemblies/VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg.fasta -db data/database/VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/initial_VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg -outfmt 6 -max_target_seqs 2 -out VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/reports/blast/initial_blast.out -num_threads 28
+
+INFO:snakemake.logging:
+[Sun Sep 19 20:32:35 2021]
+INFO:snakemake.logging:[Sun Sep 19 20:32:35 2021]
+rule redundans:
+    input: data/assemblies/VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg.fasta, data/reads/all_hifi.fastq.gz
+    output: VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/outputs/redundans/scaffolds.reduced.fa
+    jobid: 3
+    resources: tmpdir=/tmp
+INFO:snakemake.logging:rule redundans:
+    input: data/assemblies/VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg.fasta, data/reads/all_hifi.fastq.gz
+    output: VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/outputs/redundans/scaffolds.reduced.fa
+    jobid: 3
+    resources: tmpdir=/tmp
+
+INFO:snakemake.logging:
+rm -rf VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/outputs/redundans/ && /home/531734/packages/redundans/redundans.py --fasta data/assemblies/VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg.fasta --outdir VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/outputs/redundans/ --threads 12 --longreads data/reads/all_hifi.fastq.gz --verbose
+WARNING:snakemake.logging:rm -rf VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/outputs/redundans/ && /home/531734/packages/redundans/redundans.py --fasta data/assemblies/VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg.fasta --outdir VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/outputs/redundans/ --threads 12 --longreads data/reads/all_hifi.fastq.gz --verbose
+Activating conda environment: /home/531734/mike/karyon_longread/.snakemake/conda/d4ff4902e8c4c432626f12dedf69958e
+WARNING:snakemake.logging:Activating conda environment: /home/531734/mike/karyon_longread/.snakemake/conda/d4ff4902e8c4c432626f12dedf69958e
+Traceback (most recent call last):
+  File "/home/531734/packages/redundans/redundans.py", line 34, in <module>
+    assert sys.version_info >= (2, 7) and sys.version_info < (3,), "Only Python 2.7 is supported!"
+AssertionError: Only Python 2.7 is supported!
+[Sun Sep 19 20:32:36 2021]
+INFO:snakemake.logging:[Sun Sep 19 20:32:36 2021]
+Error in rule redundans:
+ERROR:snakemake.logging:Error in rule redundans:
+    jobid: 3
+ERROR:snakemake.logging:    jobid: 3
+    output: VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/outputs/redundans/scaffolds.reduced.fa
+ERROR:snakemake.logging:    output: VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/outputs/redundans/scaffolds.reduced.fa
+    conda-env: /home/531734/mike/karyon_longread/.snakemake/conda/d4ff4902e8c4c432626f12dedf69958e
+ERROR:snakemake.logging:    conda-env: /home/531734/mike/karyon_longread/.snakemake/conda/d4ff4902e8c4c432626f12dedf69958e
+    shell:
+        rm -rf VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/outputs/redundans/ && /home/531734/packages/redundans/redundans.py --fasta data/assemblies/VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg.fasta --outdir VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/outputs/redundans/ --threads 12 --longreads data/reads/all_hifi.fastq.gz --verbose
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+ERROR:snakemake.logging:    shell:
+        rm -rf VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/outputs/redundans/ && /home/531734/packages/redundans/redundans.py --fasta data/assemblies/VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg.fasta --outdir VW4_HiFiasm.asm.11.hic.hap1and2.p_ctg/outputs/redundans/ --threads 12 --longreads data/reads/all_hifi.fastq.gz --verbose
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+ERROR:snakemake.logging:
+Job failed, going on with independent jobs.
+WARNING:snakemake.logging:Job failed, going on with independent jobs.
+[Mon Sep 20 02:17:55 2021]
+INFO:snakemake.logging:[Mon Sep 20 02:17:55 2021]
+Finished job 13.
+INFO:snakemake.logging:Finished job 13.
+1 of 14 steps (7%) done
+INFO:snakemake.logging:1 of 14 steps (7%) done
+Exiting because a job execution failed. Look above for error message
+ERROR:snakemake.logging:Exiting because a job execution failed. Look above for error message
+Complete log: /home/531734/mike/karyon_longread/.snakemake/log/2021-09-19T203233.583158.snakemake.log
+WARNING:snakemake.logging:Complete log: /home/531734/mike/karyon_longread/.snakemake/log/2021-09-19T203233.583158.snakemake.log
