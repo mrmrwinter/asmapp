@@ -1,0 +1,16 @@
+Assembly	assemblies_23_Purge_Scaffold_purged	assemblies_VW4_HiFiasm.asm.15.p_ctg
+# total reads	4553296	5352270
+# left	0	0
+# right	0	0
+# mapped	4550725	5350046
+Mapped (%)	99.94	99.96
+# properly paired	0	0
+Properly paired (%)	0.0	0.0
+# singletons	0	0
+Singletons (%)	0.0	0.0
+# misjoint mates	0	0
+Misjoint mates (%)	0.0	0.0
+Avg. coverage depth	190	236
+Coverage >= 1x (%)	99.98	99.98
+Coverage >= 5x (%)	99.96	99.96
+Coverage >= 10x (%)	99.94	99.94

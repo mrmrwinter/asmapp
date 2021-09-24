@@ -291,8 +291,8 @@ rule samtools_flagstats:
 
 
 rule karyon_plots:
-    conda:
-        "envs/karyonplot.yaml"
+    container:
+        "docker://gabaldonlab/karyon"
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
