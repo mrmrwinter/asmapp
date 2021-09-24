@@ -21,3 +21,4 @@ jupyter/*
 *.rplot
 *.gp
 *.vcf
+*.bin
