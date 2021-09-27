@@ -10,10 +10,9 @@ configfile: "config.yaml"
 rule all:
     input:
 # karyon
-        # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
+        flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
         # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
         # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
-        plot = config["assembly"] + "/outputs/plots/plot.png",
         # plot = config["assembly"] + "/outputs/plots/plot.png",
 # dotplots
     # NUCMER
@@ -24,8 +23,11 @@ rule all:
         tsv = config["assembly"] + "/reports/blast/blast.out",
         initial_tsv = config["assembly"] + "/reports/blast/initial_blast.out",
 # assembly stats
-        # quast = config["assembly"] + "/reports/quast/report.txt",
+        quast = config["assembly"] + "/reports/quast/report.txt",
 
+
+
+###############################################################################
 
 # ASSEMBLY COLLAPSING
 
@@ -129,6 +131,25 @@ rule samtools_tagged_index:
 ###############################################################################
 
 # NUCMER ASSEMBLY DOTPLOTS
+
+rule nucmer_initial_vs_initial:
+    input:
+        initial = "data/assemblies/" + config["assembly"] + ".fasta"
+    output:
+        config["assembly"] + "/reports/nucmer/nucmer.initial_initial.png",
+        config["assembly"] + "/reports/nucmer/nucmer.initialinitial_.delta"
+    params:
+        "nucmer.initial",
+        config["assembly"] + "/reports/nucmer/",
+    shell:
+        """
+        mkdir -p tmp/
+        nucmer -p tmp/{params[0]} {input[0]} {input[1]}
+        cp tmp/{params[0]}.delta {params[1]}
+        mummerplot -l -f --png --large {params[1]}{params[0]}.delta -p {params[1]}{params[0]}
+        """
+
+
 
 rule nucmer_reduced_vs_initial:
     input:
@@ -289,8 +310,8 @@ rule samtools_flagstats:
 
 
 rule karyon_plots:
-#    container:
- #       "docker://gabaldonlab/karyon"
+    container:
+        "docker://gabaldonlab/karyon"
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
@@ -461,6 +482,9 @@ rule blast_nonself_initial:
 #     os.system(dnadiff)
 #
 #
+
+
+
 
 
 ###############################################################################
