@@ -16,9 +16,9 @@ rule all:
         # plot = config["assembly"] + "/outputs/plots/plot.png",
 # dotplots
     # NUCMER
-        nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
-        nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.delta",
-        nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta",
+        # nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
+        # nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.delta",
+        # nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta",
     # BLAST
         tsv = config["assembly"] + "/reports/blast/blast.out",
         initial_tsv = config["assembly"] + "/reports/blast/initial_blast.out",
