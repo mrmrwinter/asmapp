@@ -11,8 +11,8 @@ rule all:
     input:
 # karyon
         flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
-        # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
-        # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
+        vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
+        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
         # plot = config["assembly"] + "/outputs/plots/plot.png",
 # dotplots
     # NUCMER
@@ -306,7 +306,7 @@ rule samtools_flagstats:
     output:
         flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat"
     shell:
-        "samtools flagstats {input[bam]} > {output}"
+        "samtools flagstat {input[bam]} > {output}"
 
 
 rule karyon_plots:
