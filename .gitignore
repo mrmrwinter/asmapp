@@ -28,4 +28,4 @@ jupyter/*
 VW4_HiFiasm_15_purge/*
 *.header
 *.bin
-
+*tmp*
