@@ -4,13 +4,15 @@
 
 configfile: "config.yaml"
 
+include: "rules/pair_alignment.smk"
+
 
 ###############################################################################
 
 rule all:
     input:
 # karyon
-        flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
+        # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
         # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
         # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
         # plot = config["assembly"] + "/outputs/plots/plot.png",
@@ -21,9 +23,11 @@ rule all:
         # nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta",
     # BLAST
         tsv = config["assembly"] + "/reports/blast/blast.out",
-        initial_tsv = config["assembly"] + "/reports/blast/initial_blast.out",
+        only_pairs = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv",
+        tmp = config["assembly"] + "/tmp/",
+        # initial_tsv = config["assembly"] + "/reports/blast/initial_blast.out",
 # assembly stats
-        quast = config["assembly"] + "/reports/quast/report.txt",
+        # quast = config["assembly"] + "/reports/quast/report.txt",
 
 
 
