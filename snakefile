@@ -11,23 +11,44 @@ include: "rules/pair_alignment.smk"
 
 rule all:
     input:
-# karyon
+# KARYON
         flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
         vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
         mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
         # plot = config["assembly"] + "/outputs/plots/plot.png",
-# dotplots
-    # NUCMER
+# TMP
+        # tmp = config["assembly"] + "/tmp/",
+# MITO
+
+# BLOBPLOTS
+
+# PAIRS ALIGNMENT.SMK
+    # WHOLE GENOME
         # nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
         # nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.delta",
         # nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta",
-    # BLAST
+        # dna_diff =
+    # PAIRS
+        # dna_diff =
+
+# BLAST TABLES
         tsv = config["assembly"] + "/reports/blast/blast.out",
         only_pairs = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv",
-        tmp = config["assembly"] + "/tmp/",
-        # initial_tsv = config["assembly"] + "/reports/blast/initial_blast.out",
-# assembly stats
-        # quast = config["assembly"] + "/reports/quast/report.txt",
+        initial_tsv = config["assembly"] + "/reports/blast/initial_blast.out",
+        initial_only_pairs = config["assembly"] + "/reports/blast/initial_blast.onlyPairs.tsv",
+
+# QUAST
+        # busco_lib =
+        quast_report = config["assembly"] + "/reports/quast/report.txt",
+
+# MERQURY
+        # merqury_mrls =
+        # merqury_out =
+# CEGMA
+
+# COVERAGE
+        # mosdepth_out =
+        # coverage_plots =
 
 
 
@@ -54,7 +75,7 @@ rule redundans:
 
 ###############################################################################
 
-# READ MAPPING AND MANAGEMENT
+# RENAME COLLAPSED CONTIGS
 
 rule redundans_tagging:
     input:
@@ -71,6 +92,9 @@ rule redundans_tagging:
                 SeqIO.write(r, outputs, "fasta")
 
 
+##############################################################################
+
+# MAPPING AND TRANSFORMATIONS FOR REDUNDANS COLLAPSED ASSEMBLY
 
 rule mapping:
     input:
@@ -130,6 +154,50 @@ rule samtools_tagged_index:
     shell:
        "samtools index {input[bam]} && cp {output[0]} {output[1]}"
 
+
+###############################################################################
+
+# MAPPING AND TRANSFORMATIONS FOR REDUNDANS COLLAPSED ASSEMBLY
+
+# rule initial_mapping:
+#     input:
+#         assembly = ,
+#         reads = "data/reads/" + config["reads"] + ".fastq.gz"
+#     output:
+#         sam = config["assembly"] + "/outputs/"
+#     params:
+#         threads = config["threads"],
+#         seq_tech = "map-" + config["seq_tech"]
+#     shell:
+#         "minimap2 -t {params[threads]} -ax {params[seq_tech]} {input[assembly]} {input[reads]} > {output}"
+#
+#
+# rule initial_conversion:
+#     input:
+#         sam = config["assembly"] + "/outputs/"
+#     output:
+#         bam = config["assembly"] + "/outputs/"
+#     shell:
+#         "samtools view -b -S {input} > {output}"
+#
+#
+# rule initial_sorting:
+#     input:
+#         config["assembly"] + "/outputs/"
+#     output:
+#         bam = config["assembly"] + "/outputs/"
+#     shell:
+#         "samtools sort {input} > {output}"
+#
+#
+# rule initial_samtools_index:
+#     input:
+#        bam = config["assembly"] + "/outputs/"
+#     output:
+#        bai = config["assembly"] + "/outputs/",
+#     shell:
+#        "samtools index {input[bam]} > {output[0]}"
+#
 
 
 ###############################################################################
@@ -342,27 +410,27 @@ rule make_blast_database:  # Rule to make database of cds fasta
     input:
         config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta" # input to the rule
     output:
-        nhr = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nhr",   # all outputs expected from the rule
-        nin = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nin",
-        nsq = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nsq"
+        nhr = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nhr",   # all outputs expected from the rule
+        nin = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nin",
+        nsq = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nsq"
     params:
-        "data/database/" + config["assembly"] + "/" + config["assembly"]   # prefix for the outputs, required by the command
+        "data/databases/" + config["assembly"] + "/" + config["assembly"]   # prefix for the outputs, required by the command
     shell:  # shell command for the rule
         "makeblastdb \
         -in {input} \
         -out {params} \
-        -dbtype nucl"  # the database type
+        -dbtype nucl"  # the databases type
 
 
 rule blast_nonself:
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
-        db = "data/database/" + config["assembly"] + "/" + config["assembly"] + ".nin"
+        db = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nin"
     output:
         tsv = config["assembly"] + "/reports/blast/blast.out"
     params:
         out_pfx = config["assembly"] + "/reports/blast",
-        db_pfx = "data/database/" + config["assembly"] + "/" + config["assembly"],
+        db_pfx = "data/databases/" + config["assembly"] + "/" + config["assembly"],
         threads = config["threads"]
     shell:
         "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out -num_threads {params[threads]}"
@@ -372,11 +440,11 @@ rule make_blast_database_initial:  # Rule to make database of cds fasta
     input:
         "data/assemblies/" + config["assembly"] + ".fasta" # input to the rule
     output:
-        nhr = "data/database/" + config["assembly"] + "/initial_" + config["assembly"] + ".nhr",   # all outputs expected from the rule
-        nin = "data/database/" + config["assembly"] + "/initial_" + config["assembly"] + ".nin",
-        nsq = "data/database/" + config["assembly"] + "/initial_" + config["assembly"] + ".nsq"
+        nhr = "data/databases/" + config["assembly"] + "/initial_" + config["assembly"] + ".nhr",   # all outputs expected from the rule
+        nin = "data/databases/" + config["assembly"] + "/initial_" + config["assembly"] + ".nin",
+        nsq = "data/databases/" + config["assembly"] + "/initial_" + config["assembly"] + ".nsq"
     params:
-        "data/database/" + config["assembly"] + "/initial_" + config["assembly"]   # prefix for the outputs, required by the command
+        "data/databases/" + config["assembly"] + "/initial_" + config["assembly"]   # prefix for the outputs, required by the command
     shell:  # shell command for the rule
         "makeblastdb \
         -in {input} \
@@ -387,12 +455,12 @@ rule make_blast_database_initial:  # Rule to make database of cds fasta
 rule blast_nonself_initial:
     input:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
-        db = "data/database/" + config["assembly"] + "/initial_" + config["assembly"] + ".nin"
+        db = "data/databases/" + config["assembly"] + "/initial_" + config["assembly"] + ".nin"
     output:
         tsv = config["assembly"] + "/reports/blast/initial_blast.out"
     params:
         out_pfx = config["assembly"] + "/reports/blast",
-        db_pfx = "data/database/" + config["assembly"] + "/initial_" + config["assembly"],
+        db_pfx = "data/databases/" + config["assembly"] + "/initial_" + config["assembly"],
         threads = config["threads"]
     shell:
         "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/initial_blast.out -num_threads {params[threads]}"
@@ -401,18 +469,6 @@ rule blast_nonself_initial:
 ##############################################################################
 
 
-
-#######################################################################################
-
-# dnadiff
-
-# os.system("mkdir dnadiff_initial_purged/")
-#
-# for index, value in only_initial_pairs.iterrows():
-#     dnadiff = "dnadiff -p dnadiff_initial_purged/nucmer." + str(index) + " -d nucmer_initial_purged/nucmer." + str(index) + ".delta"
-#     os.system(dnadiff)
-#
-#
 
 
 
@@ -458,76 +514,9 @@ rule quast:
         config["quast_path"] + "/quast.py --large {input[0]} {input[1]} --glimmer -b --threads {params[1]} -L --nanopore {input[reads]} -o {params[0]}"
 
 
-##############################################################################
-
-# BLOBPLOTS
-
-# rule blobs:
-#     input:
-#         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa",
-#     output:
-#     shell:
-#         """
-#         """
-#
-#
 
 
 
-##############################################################################
-
-# CEGMA
-
-# rule CEGMA_collapsed:
-#     container:
-#         "chrishah/cegma:2.5"
-#     input:
-#         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa",
-#     output:
-#     shell:
-#
-#
-
-
-
-##############################################################################
-
-# MITOCHONDRIAL DETECTION
-
-# rule mito_identification:
-#     input:
-#         initial = "data/assemblies/" + config["assembly"] + ".fasta",
-#
-#
-
-
-
-##############################################################################
-
-# COVERAGE PLOTS
-
-# rule coverage_plots:
-#     input:
-#         initial = "data/assemblies/" + config["assembly"] + ".fasta",
-
-
-
-
-##############################################################################
-
-# MERQURY
-
-    # Performing Merqury assembly appraisal
-# rule merqury:
-#    message:
-#        "[INFO] Performing Merqury assembly appraisal..."
-#    conda:
-#        "../envs/merqury.yaml"
-#    input:
-#        initial = "data/assemblies/" + config["assembly"] + ".fasta",
-#    output:
-#    params:
-#    shell:
 
 
 
