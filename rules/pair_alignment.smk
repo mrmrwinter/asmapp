@@ -10,7 +10,7 @@ rule only_pairs:
 
        blast_output = pd.read_csv(input[0], sep="\t", header = None) # snakemake.input[0] is the blast table
 
-       initial_pairs = pd.DataFrame(columns = ['query', 'hit'])
+       pairs = pd.DataFrame(columns = ['query', 'hit'])
 
        for index, value in blast_output.iterrows():
            if value[0] != value[1]:

@@ -12,16 +12,16 @@ include: "rules/pair_alignment.smk"
 rule all:
     input:
 # KARYON
-        flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
-        vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
-        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
+        # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
+        # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
+        # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
         # plot = config["assembly"] + "/outputs/plots/plot.png",
 # TMP
         # tmp = config["assembly"] + "/tmp/",
 # MITO
-
+        # mito_tagged = "data/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
+        # no_mito = "data/assemblies/" + config["assembly"] + ".no_mito.fasta",
 # BLOBPLOTS
-
 # PAIRS ALIGNMENT.SMK
     # WHOLE GENOME
         # nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
@@ -30,7 +30,6 @@ rule all:
         # dna_diff =
     # PAIRS
         # dna_diff =
-
 # BLAST TABLES
         tsv = config["assembly"] + "/reports/blast/blast.out",
         only_pairs = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv",
@@ -45,9 +44,9 @@ rule all:
         # merqury_mrls =
         # merqury_out =
 # CEGMA
-
+        # completeness_report = config["assembly"] + "outputs/cegma/" + config["assembly"] + ".completeness_report"
 # COVERAGE
-        # mosdepth_out =
+        # mosdepth_out = config["assembly"] + "reports/coverage/mosdepth/" + config["assembly"] + "mosdepth.summary.txt"
         # coverage_plots =
 
 
@@ -340,7 +339,7 @@ rule fix_bam:
 
 rule GATK:
     container:
-        "docker://broadinstitute/gatk:4.0.2.0"
+        "docker://broadinstitute/gatk"
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         faidx = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta.fai",
