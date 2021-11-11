@@ -3,14 +3,18 @@
 
 # CEGMA
 
-rule CEGMA_collapsed:
+rule CEGMA:
     container:
-        "chrishah/cegma:2.5"
+        "docker://chrishah/cegma"
     input:
-        initial = "data/assemblies/" + config["assembly"] + ".fasta",
+        assembly = config["assembly"] + "/outputs/cegma/tagged_initial_assembly.fasta",
     output:
-        config["assembly"] + "outputs/cegma/" + config["assembly"] + ".completeness_report"
+        config["assembly"] + "/outputs/cegma/" + config["assembly"] + ".completeness_report"
     params:
-        config["assembly"] + "outputs/cegma/" + config["assembly"]
+        config["assembly"] + "/outputs/cegma/" + config["assembly"],
+        threads = config["threads"]
     shell:
-        "cegma --genome {input[0]} -o {params[0]}"
+        """
+        export CEGMATMP='{params[0]}'
+        cegma --threads {params[threads]} --genome {input[0]} -o {params[0]}
+        """

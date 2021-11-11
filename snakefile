@@ -5,17 +5,22 @@
 configfile: "config.yaml"
 
 include: "rules/pair_alignment.smk"
-
+include: "rules/coverage.smk"
+# include: "rules/blobplots.smk"
+# include: "rules/merqury"
+# include: "rules/characterisation"
+include: "rules/cegma.smk"
+# include: "rules/mito.smk"
 
 ###############################################################################
 
 rule all:
     input:
 # KARYON
-        flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
-        vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
-        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
-        plot = config["assembly"] + "/outputs/plots/plot.png",
+        # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
+        # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
+        # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
+        # plot = config["assembly"] + "/outputs/plots/plot.png",
 # TMP
         # tmp = config["assembly"] + "/tmp/",
 # MITO
@@ -39,15 +44,36 @@ rule all:
 # # QUAST
 #         # busco_lib =
 #         quast_report = config["assembly"] + "/reports/quast/report.txt",
-
 # MERQURY
         # merqury_mrls =
         # merqury_out =
 # CEGMA
-        # completeness_report = config["assembly"] + "outputs/cegma/" + config["assembly"] + ".completeness_report"
+        completeness_report = config["assembly"] + "/outputs/cegma/" + config["assembly"] + ".completeness_report",
 # COVERAGE
-        # mosdepth_out = config["assembly"] + "reports/coverage/mosdepth/" + config["assembly"] + "mosdepth.summary.txt"
-        # coverage_plots =
+        mosdepth_haplome = config["assembly"] + "/reports/coverage/mosdepth/collapsed_" + config["assembly"] + ".mosdepth.summary.txt",
+        plots = config["assembly"] + "/reports/coverage/mosdepth/collapsed_" + config["assembly"] + ".dist.html"
+
+
+
+
+
+
+
+# RENAME INITIAL CONTIGS
+rule initial_tagging:
+    input:
+        "data/assemblies/" + config["assembly"] + ".fasta",
+    output:
+        assembly = config["assembly"] + "/outputs/cegma/tagged_initial_assembly.fasta"
+    run:
+        from Bio import SeqIO
+
+        to_add = "scaffold_"
+        with open(output[0], "w") as outputs:
+            for r in SeqIO.parse(input[0], "fasta"):
+                r.id = (to_add + r.description).replace(" ", "_")
+                r.description = r.id
+                SeqIO.write(r, outputs, "fasta")
 
 
 
