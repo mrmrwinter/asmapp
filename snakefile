@@ -12,10 +12,10 @@ include: "rules/pair_alignment.smk"
 rule all:
     input:
 # KARYON
-        # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
-        # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
-        # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
-        # plot = config["assembly"] + "/outputs/plots/plot.png",
+        flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
+        vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
+        mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
+        plot = config["assembly"] + "/outputs/plots/plot.png",
 # TMP
         # tmp = config["assembly"] + "/tmp/",
 # MITO
@@ -24,21 +24,21 @@ rule all:
 # BLOBPLOTS
 # PAIRS ALIGNMENT.SMK
     # WHOLE GENOME
-        # nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
-        # nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.delta",
-        # nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta",
-        # dna_diff =
-    # PAIRS
-        # dna_diff =
-# BLAST TABLES
-        tsv = config["assembly"] + "/reports/blast/blast.out",
-        only_pairs = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv",
-        initial_tsv = config["assembly"] + "/reports/blast/initial_blast.out",
-        initial_only_pairs = config["assembly"] + "/reports/blast/initial_blast.onlyPairs.tsv",
-
-# QUAST
-        # busco_lib =
-        quast_report = config["assembly"] + "/reports/quast/report.txt",
+#         nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
+#         nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.delta",
+#         nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta",
+#         # dna_diff =
+#     # PAIRS
+#         # dna_diff =
+# # BLAST TABLES
+#         tsv = config["assembly"] + "/reports/blast/blast.out",
+#         only_pairs = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv",
+#         initial_tsv = config["assembly"] + "/reports/blast/initial_blast.out",
+#         initial_only_pairs = config["assembly"] + "/reports/blast/initial_blast.onlyPairs.tsv",
+#
+# # QUAST
+#         # busco_lib =
+#         quast_report = config["assembly"] + "/reports/quast/report.txt",
 
 # MERQURY
         # merqury_mrls =
