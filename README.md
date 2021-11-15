@@ -1,19 +1,7 @@
-# Karyinon: Longread Karyon
+# Karyinon (working title)
 
-Karyon is a package that assesses the ploidy of a library, reads or contigs.
+This workflow began as a longread version of the Karyon pipeline (below), and has now evolved into a full assembly analysis suite, designed particularly for analysis of complex polyploid genomes.
 
-Github repo: 
-
-[Gabaldonlab/karyon](https://github.com/Gabaldonlab/karyon)
-
-Paper: 
-
-[Karyon: a computational framework for the diagnosis of hybrids, aneuploids, and other non-standard architectures in genome assemblies](https://www.biorxiv.org/content/10.1101/2021.05.23.445324v1?rss=1)
-
----
-Update: 2021
-
-This workflow has now developed in a way that employing karyon with longreads is no longer the central focus.
 
 This workflow includes full assembly appraisal with the following methods:
 -Read mapping with minimap2 and Vulcan
@@ -31,5 +19,16 @@ This workflow includes full assembly appraisal with the following methods:
 ---
 In the future it will also include:
 
-Merqury
+-Merqury
 
+---
+
+Karyon is a package that assesses the ploidy of a library, reads or contigs.
+
+Github repo: 
+
+[Gabaldonlab/karyon](https://github.com/Gabaldonlab/karyon)
+
+Paper: 
+
+[Karyon: a computational framework for the diagnosis of hybrids, aneuploids, and other non-standard architectures in genome assemblies](https://www.biorxiv.org/content/10.1101/2021.05.23.445324v1?rss=1)
