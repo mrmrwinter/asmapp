@@ -33,7 +33,7 @@ def main():
                 if not found and y > 0.5:
                     v50 = x
                     found = True
-                    print("{}\t{}\t{}\t{:.3f}".format(sample, chrom, x, y))
+                    # print("{}\t{}\t{}\t{:.3f}".format(sample, chrom, x, y))
 
                 xs.append(float(x))
                 ys.append(y)
@@ -113,3 +113,5 @@ def get_args():
 
 if __name__ == '__main__':
     main()
+
+print("Mosdepth plotting is complete.")

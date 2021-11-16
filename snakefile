@@ -6,7 +6,7 @@ configfile: "config.yaml"
 
 include: "rules/pair_alignment.smk"
 include: "rules/coverage.smk"
-# include: "rules/blobplots.smk"
+include: "rules/blobplots.smk"
 # include: "rules/merqury"
 # include: "rules/characterisation"
 include: "rules/cegma.smk"
@@ -27,6 +27,8 @@ rule all:
         # mito_tagged = "data/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
         # no_mito = "data/assemblies/" + config["assembly"] + ".no_mito.fasta",
 # BLOBPLOTS
+        config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
+        config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png",
 # PAIRS ALIGNMENT.SMK
     # WHOLE GENOME
 #         nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
@@ -51,7 +53,9 @@ rule all:
         completeness_report = config["assembly"] + "/outputs/cegma/" + config["assembly"] + ".completeness_report",
 # COVERAGE
         mosdepth_haplome = config["assembly"] + "/reports/coverage/mosdepth/collapsed_" + config["assembly"] + ".mosdepth.summary.txt",
-        plots = config["assembly"] + "/reports/coverage/mosdepth/collapsed_" + config["assembly"] + ".dist.html"
+        plots_haplome = config["assembly"] + "/reports/coverage/mosdepth/collapsed_" + config["assembly"] + ".dist.html",
+        plots_initial = config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".dist.html"
+
 
 
 
@@ -182,47 +186,47 @@ rule samtools_tagged_index:
 
 ###############################################################################
 
-# MAPPING AND TRANSFORMATIONS FOR REDUNDANS COLLAPSED ASSEMBLY
+# MAPPING AND TRANSFORMATIONS FOR initial ASSEMBLY
 
-# rule initial_mapping:
-#     input:
-#         assembly = ,
-#         reads = "data/reads/" + config["reads"] + ".fastq.gz"
-#     output:
-#         sam = config["assembly"] + "/outputs/"
-#     params:
-#         threads = config["threads"],
-#         seq_tech = "map-" + config["seq_tech"]
-#     shell:
-#         "minimap2 -t {params[threads]} -ax {params[seq_tech]} {input[assembly]} {input[reads]} > {output}"
-#
-#
-# rule initial_conversion:
-#     input:
-#         sam = config["assembly"] + "/outputs/"
-#     output:
-#         bam = config["assembly"] + "/outputs/"
-#     shell:
-#         "samtools view -b -S {input} > {output}"
-#
-#
-# rule initial_sorting:
-#     input:
-#         config["assembly"] + "/outputs/"
-#     output:
-#         bam = config["assembly"] + "/outputs/"
-#     shell:
-#         "samtools sort {input} > {output}"
-#
-#
-# rule initial_samtools_index:
-#     input:
-#        bam = config["assembly"] + "/outputs/"
-#     output:
-#        bai = config["assembly"] + "/outputs/",
-#     shell:
-#        "samtools index {input[bam]} > {output[0]}"
-#
+rule initial_mapping:
+    input:
+        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
+        reads = "data/reads/" + config["reads"] + ".fastq.gz"
+    output:
+        sam = config["assembly"] + "/outputs/initial/initial_asm.sam"
+    params:
+        threads = config["threads"],
+        seq_tech = "map-" + config["seq_tech"]
+    shell:
+        "minimap2 -t {params[threads]} -ax {params[seq_tech]} {input[assembly]} {input[reads]} > {output}"
+
+
+rule initial_conversion:
+    input:
+        sam = config["assembly"] + "/outputs/initial/initial_asm.sam"
+    output:
+        bam = config["assembly"] + "/outputs/initial/initial_asm.bam"
+    shell:
+        "samtools view -b -S {input} > {output}"
+
+
+rule initial_sorting:
+    input:
+        config["assembly"] + "/outputs/initial/initial_asm.bam"
+    output:
+        bam = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam"
+    shell:
+        "samtools sort {input} > {output}"
+
+
+rule initial_samtools_index:
+    input:
+       bam = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam"
+    output:
+       bai = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam.bai",
+    shell:
+       "samtools index {input[bam]} > {output[0]}"
+
 
 
 ###############################################################################
