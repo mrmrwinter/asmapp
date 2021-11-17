@@ -16,45 +16,43 @@ include: "rules/cegma.smk"
 
 rule all:
     input:
-# KARYON
-        # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
-        # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
-        # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
-        # plot = config["assembly"] + "/outputs/plots/plot.png",
-# TMP
-        # tmp = config["assembly"] + "/tmp/",
-# MITO
-        # mito_tagged = "data/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
-        # no_mito = "data/assemblies/" + config["assembly"] + ".no_mito.fasta",
 # BLOBPLOTS
         config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
         config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png",
-# PAIRS ALIGNMENT.SMK
     # WHOLE GENOME
-#         nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
-#         nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.delta",
-#         nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta",
+        # nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
+        # nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.delta",
+        # nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta",
 #         # dna_diff =
-#     # PAIRS
+# PAIRS ALIGNMENT
+        # dotplots =
 #         # dna_diff =
 # # BLAST TABLES
 #         tsv = config["assembly"] + "/reports/blast/blast.out",
-#         only_pairs = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv",
+        only_pairs = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv",
 #         initial_tsv = config["assembly"] + "/reports/blast/initial_blast.out",
-#         initial_only_pairs = config["assembly"] + "/reports/blast/initial_blast.onlyPairs.tsv",
+        initial_only_pairs = config["assembly"] + "/reports/blast/initial_blast.onlyPairs.tsv",
 #
 # # QUAST
 #         # busco_lib =
-#         quast_report = config["assembly"] + "/reports/quast/report.txt",
+        quast_report = config["assembly"] + "/reports/quast/report.txt",
 # MERQURY
         # merqury_mrls =
         # merqury_out =
 # CEGMA
         completeness_report = config["assembly"] + "/outputs/cegma/" + config["assembly"] + ".completeness_report",
 # COVERAGE
-        mosdepth_haplome = config["assembly"] + "/reports/coverage/mosdepth/collapsed_" + config["assembly"] + ".mosdepth.summary.txt",
+        # mosdepth_haplome = config["assembly"] + "/reports/coverage/mosdepth/collapsed_" + config["assembly"] + ".mosdepth.summary.txt",
         plots_haplome = config["assembly"] + "/reports/coverage/mosdepth/collapsed_" + config["assembly"] + ".dist.html",
-        plots_initial = config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".dist.html"
+        plots_initial = config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".dist.html",
+# KARYON
+        # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
+        # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
+        # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
+        plot = config["assembly"] + "/outputs/plots/plot.png",
+# MITO
+        # mito_tagged = "data/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
+        # no_mito = "data/assemblies/" + config["assembly"] + ".no_mito.fasta",
 
 
 
@@ -66,7 +64,7 @@ rule all:
 # RENAME INITIAL CONTIGS
 rule initial_tagging:
     input:
-        "data/assemblies/" + config["assembly"] + ".fasta",
+        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
     output:
         assembly = config["assembly"] + "/outputs/cegma/tagged_initial_assembly.fasta"
     run:
