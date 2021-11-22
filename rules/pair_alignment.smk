@@ -10,7 +10,7 @@ rule only_pairs:
 
        blast_output = pd.read_csv(input[0], sep="\t", header = None) # snakemake.input[0] is the blast table
 
-       initial_pairs = pd.DataFrame(columns = ['query', 'hit'])
+       pairs = pd.DataFrame(columns = ['query', 'hit'])
 
        for index, value in blast_output.iterrows():
            if value[0] != value[1]:
@@ -49,7 +49,7 @@ rule single_scaffold_extraction:
 # # nucmer analysis/alignment
 rule nucmer_alignment:
     input:
-        directory(config["assembly"] + "tmp/"),
+        # directory(config["assembly"] + "tmp/"),
         only_pairs_table = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv"
     output:
         out_dir = directory(config["assembly"] + "reports/nucmer/")
@@ -110,7 +110,7 @@ rule only_pairs_initial:
 # CAN INSTEAD LOOP THROUGH THE LIST FOR EACH INDIVIDUAL ASSEMBLY AS THE LIST OF PAIRS WILL BE NOVEL AND INDIVIDUAL
 
 #
-rule single_scaffold_extraction:
+rule initial_single_scaffold_extraction:
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
     output:
@@ -128,10 +128,10 @@ rule single_scaffold_extraction:
 #
 #
 # # nucmer analysis/alignment
-rule nucmer_alignment:
+rule initial_nucmer_alignment:
     input:
-        directory(config["assembly"] + "tmp/"),
-        only_pairs_table = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv"
+        # directory(config["assembly"] + "tmp_initial/"),
+        only_pairs_table = config["assembly"] + "/reports/blast/initial_blast.onlyPairs.tsv"
     output:
         out_dir = config["assembly"] + "reports/nucmer/"
     params:
@@ -156,3 +156,17 @@ rule nucmer_alignment:
             pair = delta.replace("nucmer_initial/","").replace(".delta","")
             mummer = "mummerplot -l -f --png --large " + delta + " -p " + params[0] + "nucmer_initial/" + pair
             os.system(mummer)
+
+
+
+#######################################################################################
+
+# dnadiff
+
+# os.system("mkdir dnadiff_initial_purged/")
+#
+# for index, value in only_initial_pairs.iterrows():
+#     dnadiff = "dnadiff -p dnadiff_initial_purged/nucmer." + str(index) + " -d nucmer_initial_purged/nucmer." + str(index) + ".delta"
+#     os.system(dnadiff)
+#
+#
