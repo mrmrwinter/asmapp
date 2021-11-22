@@ -16,23 +16,25 @@ include: "rules/cegma.smk"
 
 rule all:
     input:
+# INPUT CHECK
+        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
+        reads = "data/reads/" + config["reads"] + ".fastq.gz",
 # BLOBPLOTS
-        config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
-        config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png",
-    # WHOLE GENOME
-        # nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
-        # nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.delta",
-        # nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta",
-#         # dna_diff =
-# PAIRS ALIGNMENT
-        # dotplots =
-#         # dna_diff =
+        blob_table = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
+        blob_plot = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png",
+# WHOLE GENOME ALIGNMENTS
+        nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
+        nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.delta",
+        nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta",
+        # dna_diff =
 # # BLAST TABLES
 #         tsv = config["assembly"] + "/reports/blast/blast.out",
         only_pairs = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv",
 #         initial_tsv = config["assembly"] + "/reports/blast/initial_blast.out",
         initial_only_pairs = config["assembly"] + "/reports/blast/initial_blast.onlyPairs.tsv",
-#
+# PAIRS ALIGNMENT
+        # dotplots =
+#         # dna_diff =
 # # QUAST
 #         # busco_lib =
         quast_report = config["assembly"] + "/reports/quast/report.txt",
@@ -56,8 +58,16 @@ rule all:
 
 
 
+# INPUT CHECKS
+
+rule input_assembly:
+    output:
+        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
 
 
+rule input_reads:
+    output:
+        reads = "data/reads/" + config["reads"] + ".fastq.gz",
 
 
 
@@ -409,8 +419,8 @@ rule samtools_flagstats:
 
 
 rule karyon_plots:
-    container:
-        "docker://gabaldonlab/karyon"
+    # container:
+    #     "docker://gabaldonlab/karyon"
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
