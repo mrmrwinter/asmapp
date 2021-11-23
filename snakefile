@@ -53,7 +53,7 @@ rule all:
         # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
         # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
         # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
-        plot = config["assembly"] + "/outputs/plots/plot.png",
+        # plot = config["assembly"] + "/outputs/plots/plot.png",
 # MITO
         # mito_tagged = "data/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
         # no_mito = "data/assemblies/" + config["assembly"] + ".no_mito.fasta",
