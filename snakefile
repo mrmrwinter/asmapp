@@ -1,6 +1,6 @@
 # assembly appraisal (karyinon workflow)
 
-
+report: "workflow.rst"
 
 configfile: "config.yaml"
 
@@ -23,9 +23,11 @@ rule all:
         blob_table = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
         blob_plot = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png",
 # WHOLE GENOME ALIGNMENTS
-        nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
-        nucmer_ref = config["assembly"] + "/reports/nucmer/nucmer.reference.delta",
-        nucmer_ref_int = config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta",
+        # nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
+        initial = config["assembly"] + "/reports/nucmer/nucmer.initial.png",
+        initial_v_collapsed = config["assembly"] + "/reports/nucmer/nucmer.initial_v_collapsed.png",
+        collapsed_v_ref = config["assembly"] + "/reports/nucmer/nucmer.collapsed_v_ref.delta",
+        initial_v_ref = config["assembly"] + "/reports/nucmer/nucmer.initial_v_ref.delta",
         # dna_diff =
 # # BLAST TABLES
 #         tsv = config["assembly"] + "/reports/blast/blast.out",
@@ -245,15 +247,15 @@ rule nucmer_initial_vs_initial:
     input:
         initial = "data/assemblies/" + config["assembly"] + ".fasta"
     output:
-        config["assembly"] + "/reports/nucmer/nucmer.initial_initial.png",
-        config["assembly"] + "/reports/nucmer/nucmer.initialinitial_.delta"
+        report(config["assembly"] + "/reports/nucmer/nucmer.initial.png", caption = "reports/nucmer_initial.rst", category = "Dotplots"),
+        config["assembly"] + "/reports/nucmer/nucmer.initial.delta"
     params:
         "nucmer.initial",
         config["assembly"] + "/reports/nucmer/",
     shell:
         """
         mkdir -p tmp/
-        nucmer -p tmp/{params[0]} {input[0]} {input[1]}
+        nucmer -p tmp/{params[0]} {input[0]} {input[0]}
         cp tmp/{params[0]}.delta {params[1]}
         mummerplot -l -f --png --large {params[1]}{params[0]}.delta -p {params[1]}{params[0]}
         """
@@ -266,10 +268,10 @@ rule nucmer_reduced_vs_initial:
         initial = "data/assemblies/" + config["assembly"] + ".fasta",
         nuc_fai = config["assembly"] + "/reports/nucmer/scaffolds.reduced.fasta.fai"
     output:
-        config["assembly"] + "/reports/nucmer/nucmer.initial.png",
-        config["assembly"] + "/reports/nucmer/nucmer.initial.delta"
+        config["assembly"] + "/reports/nucmer/nucmer.initial_v_collapsed.png",
+        config["assembly"] + "/reports/nucmer/nucmer.initial_v_collapsed.delta"
     params:
-        "nucmer.initial",
+        "nucmer.initial_v_collapsed",
         config["assembly"] + "/reports/nucmer/",
     shell:
         """
@@ -286,10 +288,10 @@ rule nucmer_reduced_vs_reference:
         reference = config["reference"] + ".fasta.gz",
         nuc_fai = config["assembly"] + "/reports/nucmer/scaffolds.reduced.fasta.fai"
     output:
-        config["assembly"] + "/reports/nucmer/nucmer.reference.png",
-        config["assembly"] + "/reports/nucmer/nucmer.reference.delta"
+        config["assembly"] + "/reports/nucmer/nucmer.collapsed_v_ref.png",
+        config["assembly"] + "/reports/nucmer/nucmer.collapsed_v_ref.delta"
     params:
-        "nucmer.reference",
+        "nucmer.collapsed_v_ref",
         config["assembly"] + "/reports/nucmer/",
         config["reference"] + ".fasta"
     shell:
@@ -308,10 +310,10 @@ rule nucmer_initial_vs_reference:
         reference = config["reference"] + ".fasta.gz",
         nuc_fai = config["assembly"] + "/reports/nucmer/scaffolds.reduced.fasta.fai"
     output:
-        config["assembly"] + "/reports/nucmer/nucmer.int_ref.png",
-        config["assembly"] + "/reports/nucmer/nucmer.int_ref.delta"
+        config["assembly"] + "/reports/nucmer/nucmer.initial_v_ref.png",
+        config["assembly"] + "/reports/nucmer/nucmer.initial_v_ref.delta"
     params:
-        "nucmer.int_ref",
+        "nucmer.intitial_v_ref",
         config["assembly"] + "/reports/nucmer/",
         config["reference"] + ".fasta"
     shell:
