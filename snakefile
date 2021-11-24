@@ -376,8 +376,8 @@ rule fix_bam:
 
 
 rule GATK:
-    container:
-        "docker://broadinstitute/gatk"
+#    container:
+#        "docker://broadinstitute/gatk"
     input:
         assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
         faidx = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta.fai",
@@ -389,7 +389,7 @@ rule GATK:
     params:
         memory = config["memory"] + "G",
     shell:
-        "gatk --java-options -Xmx{params} HaplotypeCaller -R {input[assembly]} -I {input[bam]} -O {output}"
+        config["gatk_path"] + "/gatk HaplotypeCaller -R {input[assembly]} -I {input[bam]} -O {output}"
 
 
 rule bcftools:

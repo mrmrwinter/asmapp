@@ -1,8 +1,8 @@
 #!/bin/bash
-#SBATCH -J 8_15_purgedSLR_karyon          # Job name, you can change it to whatever you want
+#SBATCH -J gatk          # Job name, you can change it to whatever you want
 #SBATCH -n 28               # Number of cores 
-#SBATCH -o 8_15_purgedSLR_karyon.out        # Standard output will be written here
-#SBATCH -e 8_15_purgedSLR_karyon.err        # Standard error will be written here
+#SBATCH -o logs/gatk.out        # Standard output will be written here
+#SBATCH -e logs/gatk.err        # Standard error will be written here
 #SBATCH -p compute          # Slurm partition, where you want the job to be queued 
 #SBATCH --time 100:00:00    
  
@@ -18,4 +18,4 @@ source activate /home/531734/.conda/envs/appraisal
 cd /home/531734/mike/karyon_longread
 
 # mpiexec -n 112 \
-snakemake --cores 28 --printshellcmds --use-singularity --singularity-args="-B /home/531734:/home/531734" --use-conda -k -s snakefile --config assembly="VW4_HiFiasm.15.p_ctg.purge.SLR" reads="all_hifi" threads="28" -k
+snakemake --cores 28 --printshellcmds --use-singularity --singularity-args="-B /home/531734:/home/531734" --use-conda -k -s snakefile --config assembly="VW4_HiFiasm.15.p_ctg.purge.SLR" reads="all_hifi" threads="28" -k --rerun-incomplete
