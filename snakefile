@@ -313,7 +313,7 @@ rule nucmer_initial_vs_reference:
         config["assembly"] + "/reports/nucmer/nucmer.initial_v_ref.png",
         config["assembly"] + "/reports/nucmer/nucmer.initial_v_ref.delta"
     params:
-        "nucmer.intitial_v_ref",
+        "nucmer.initial_v_ref",
         config["assembly"] + "/reports/nucmer/",
         config["reference"] + ".fasta"
     shell:
@@ -357,7 +357,7 @@ rule dictionary_creation:
     output:
         dictionary = config["assembly"] + "/outputs/redundans/scaffolds.reduced.dict"
     shell:
-       "picard CreateSequenceDictionary R={input[assembly]} O={output}"
+       "picard CreateSequenceDictionary -R {input[assembly]} -O {output}"
 
 
 rule fix_bam:
