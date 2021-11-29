@@ -1,8 +1,8 @@
 name: appraisal
 channels:
-  - defaults
   - conda-forge
   - bioconda
+  - defaults
 dependencies:
   - _libgcc_mutex=0.1=conda_forge
   - _openmp_mutex=4.5=1_gnu
@@ -29,7 +29,7 @@ dependencies:
   - brotlipy=0.7.0=py39h3811e60_1003
   - bzip2=1.0.8=h7f98852_4
   - c-ares=1.17.1=h7f98852_1
-  - ca-certificates=2021.5.30=ha878542_0
+  - ca-certificates=2021.10.8=ha878542_0
   - cachetools=4.2.2=pyhd8ed1ab_0
   - cairo=1.16.0=h6cf1ce9_1008
   - certifi=2021.10.8=py39hf3d152e_1
@@ -249,7 +249,7 @@ dependencies:
   - perl-xml-sax-expat=0.51=pl526_3
   - perl-xml-simple=2.25=pl526_1
   - perl-xsloader=0.24=pl526_0
-  - picard=2.25.6=hdfd78af_0
+  - picard=2.26.5=hdfd78af_0
   - pillow=8.4.0=py39h5aabda8_0
   - pip=21.1.1=pyhd8ed1ab_0
   - pixman=0.40.0=h36c2ea0_0
@@ -270,6 +270,11 @@ dependencies:
   - pynacl=1.4.0=py39h3811e60_3
   - pyopenssl=21.0.0=pyhd3eb1b0_1
   - pyparsing=2.4.7=pyh9f0ad1d_0
+  - pyqt=5.12.3=py39hf3d152e_8
+  - pyqt-impl=5.12.3=py39hde8b62d_8
+  - pyqt5-sip=4.19.18=py39he80948d_8
+  - pyqtchart=5.12=py39h0fcd23e_8
+  - pyqtwebengine=5.12.1=py39h0fcd23e_8
   - pyrsistent=0.18.0=py39heee7806_0
   - pysftp=0.2.9=py_1
   - pysocks=1.7.1=py39hf3d152e_4
@@ -338,4 +343,4 @@ dependencies:
   - zipp=3.4.1=pyhd8ed1ab_0
   - zlib=1.2.11=h36c2ea0_1013
   - zstd=1.4.9=ha95c52a_0
-prefix: /home/mike/miniconda3/envs/appraisal
+prefix: /home/531734/.conda/envs/appraisal
