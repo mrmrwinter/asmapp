@@ -30,3 +30,4 @@ VW4_HiFiasm_15_purge/*
 *.bin
 *tmp*
 exps/
+*.pyc

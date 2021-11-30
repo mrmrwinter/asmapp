@@ -1,0 +1,13 @@
+full_path: "/media/mike/WD_4TB/karyon_longread/"
+assembly: "VW4_HiFiasm.15.p_ctg.purge.SLR"  # name of starting assembly, located in data/aassemblies/
+reads: "all_hifi"   # name of reads, located in data/reads/
+redundans_path: "/home/mike/software/redundans"  # path to directory containing redundans script
+gatk_path: "~/software/gatk-4.2.3.0"
+picard-tools: ~/software/picard/"  # path to picard-tools
+memory: "100"  # the available memory for the analysis in gigabytes
+threads: "20"
+quast_path: "~/software/quast"
+ncbi_nt_path: "~/databases/ncbi_db"
+seq_tech: "hifi"
+reference: "data/assemblies/Blanc_Mathieu_2017_mJavanica"
+karyon_path: "~/software/karyon/bin"
