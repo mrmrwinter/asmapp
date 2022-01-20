@@ -369,12 +369,12 @@ rule fix_bam:
         seq_tech = config["seq_tech"]
     shell:
         "picard AddOrReplaceReadGroups \
-        I={input} \
-        O={output} \
-        RGLB=lib1 \
-        RGPL={params[seq_tech]} \
-        RGPU=unit1 \
-        RGSM=Random"
+        -I {input} \
+        -O {output} \
+        -RGLB lib1 \
+        -RGPL {params[seq_tech]} \
+        -RGPU unit1 \
+        -RGSM Random"
 
 
 rule GATK:

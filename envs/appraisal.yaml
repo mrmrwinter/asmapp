@@ -21,7 +21,7 @@ dependencies:
   - backports.functools_lru_cache=1.6.4=pyhd8ed1ab_0
   - bcrypt=3.2.0=py39h3811e60_2
   - biopython=1.79=py39h3811e60_1
-  - blast=2.5.0=hc0b0e79_3
+  - blast=2.12.0=pl5262h3289130_0
   - boost=1.76.0=py39h5472131_1
   - boost-cpp=1.76.0=hc6e9bd1_0
   - boto3=1.17.70=pyhd8ed1ab_0
@@ -37,7 +37,7 @@ dependencies:
   - chardet=4.0.0=py39h06a4308_1003
   - chrpath=0.16=h7f98852_1002
   - coincbc=2.10.5=hcee13e7_1
-  - conda=4.10.3=py39hf3d152e_3
+  - conda=4.10.3=py39h06a4308_0
   - conda-package-handling=1.7.3=py39h3811e60_1
   - configargparse=1.4=pyhd8ed1ab_0
   - connection_pool=0.0.3=pyhd3deb0d_0
@@ -343,4 +343,4 @@ dependencies:
   - zipp=3.4.1=pyhd8ed1ab_0
   - zlib=1.2.11=h36c2ea0_1013
   - zstd=1.4.9=ha95c52a_0
-prefix: /home/531734/.conda/envs/appraisal
+prefix: /home/mike/miniconda3/envs/appraisal/envs/appraisal
