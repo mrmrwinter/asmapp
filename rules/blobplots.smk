@@ -40,7 +40,8 @@ rule blob_create:
     input:
         initial = "data/assemblies/" + config["assembly"] + ".fasta",
         reads = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam",
-        hits = config["assembly"] + "/reports/blast/contaminant_taxonomy.blast.out"
+        hits = config["assembly"] + "/reports/blast/contaminant_taxonomy.blast.out",
+        index = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam"
     output:
         config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
     params:
