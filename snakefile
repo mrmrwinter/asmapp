@@ -8,7 +8,7 @@ include: "rules/pair_alignment.smk"
 include: "rules/coverage.smk"
 include: "rules/blobplots.smk"
 # include: "rules/merqury"
-# include: "rules/characterisation"
+include: "rules/characterisation.smk"
 include: "rules/cegma.smk"
 # include: "rules/mito.smk"
 
@@ -19,6 +19,8 @@ rule all:
 # INPUT CHECK
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
         reads = "data/reads/" + config["reads"] + ".fastq.gz",
+# GENOME PROFILING
+#        smudgeplot = config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png",
 # BLOBPLOTS
         blob_table = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
         blob_plot = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png",
@@ -51,9 +53,9 @@ rule all:
         plots_initial = config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".dist.html",
 # KARYON
         # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
-        # vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
+        vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
         # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
-#        plot = config["assembly"] + "/outputs/plots/plot.png",
+        plot = config["assembly"] + "/outputs/plots/plot.png",
 # MITO
         # mito_tagged = "data/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
         # no_mito = "data/assemblies/" + config["assembly"] + ".no_mito.fasta",
