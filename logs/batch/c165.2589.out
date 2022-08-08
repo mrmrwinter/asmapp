@@ -1,0 +1,20 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007efc5492faa0, pid=18989, tid=0x00007efc554b7700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_112-b16) (build 1.8.0_112-b16)
+# Java VM: OpenJDK 64-Bit Server VM (25.112-b16 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libc.so.6+0x8faa0]  __memset_sse2+0xa0
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# An error report file with more information is saved as:
+# /home/531734/mike/karyon_longread/hs_err_pid18989.log
+#
+# If you would like to submit a bug report, please visit:
+#   http://www.azulsystems.com/support/
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#

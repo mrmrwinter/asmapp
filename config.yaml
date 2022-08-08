@@ -1,11 +1,11 @@
 full_path: "/home/531734/mike/karyon_longread/"
-assembly: "VW4_HiFiasm.15.p_ctg.purge.SLR"  # name of starting assembly, located in data/aassemblies/
+assembly: "VW4_HiFiasm.asm.15.hic.p_ctg"  # name of starting assembly, located in data/aassemblies/
 reads: "all_hifi"   # name of reads, located in data/reads/
 redundans_path: "/home/531734/packages/redundans"  # path to directory containing redundans script
 gatk_path: "~/packages/gatk-4.2.3.0"
 picard-tools: "/home/531734/packages/picard/"  # path to picard-tools
 memory: "100"  # the available memory for the analysis in gigabytes
-threads: "20"
+threads: "28"
 quast_path: "/home/531734/packages/quast"
 ncbi_nt_path: "/home/531734/databases/blastdb_nt"
 seq_tech: "hifi"

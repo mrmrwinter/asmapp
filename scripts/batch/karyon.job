@@ -15,8 +15,8 @@ module load python/anaconda/4.6/miniconda/3.7
 
 source activate /home/531734/.conda/envs/appraisal
 
-cd /home/531734/karyon_longread
+cd /home/531734/mike/karyon_longread
 
 # mpiexec -n 56 
 
-snakemake --cores 28 --printshellcmds --use-singularity --singularity-args="-B /home/531734:/home/531734" --use-conda -k -s snakefile 
+snakemake --cores 28 --printshellcmds --use-singularity --singularity-args="-B /home/531734:/home/531734" --use-conda -k -s snakefile --rerun-incomplete

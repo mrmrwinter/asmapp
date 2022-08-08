@@ -25,12 +25,9 @@ rule mito_tagging:
     output:
         mito_tagged = "data/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
         no_mito = "data/assemblies/" + config["assembly"] + ".no_mito.fasta",
-    params:
-        mito =
     run:
         import pandas as import pd
         from Bio import SeqIO
-
 
         # read in the header of the mito scaffold
         blast_output = pd.read_csv(input[1], sep="\t", header = None)
@@ -38,7 +35,6 @@ rule mito_tagging:
         for index, value in blast_output.iterrows():
             if index == 0:
                 mito_tig = value[1]
-
 
         # code to tag the mito contig header
         to_add = "mitochondrial_"

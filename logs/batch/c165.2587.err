@@ -1,0 +1,4 @@
+/var/spool/slurmd/job02587/slurm_script: line 18: cd: /home/531734/karyon_longread: No such file or directory
+Building DAG of jobs...
+Nothing to be done.
+Complete log: /home/531734/mike/karyon_longread/.snakemake/log/2022-02-14T130220.234391.snakemake.log

@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH -J gatk          # Job name, you can change it to whatever you want
+#SBATCH -n 28               # Number of cores 
+#SBATCH -o logs/gatk.out        # Standard output will be written here
+#SBATCH -e logs/gatk.err        # Standard error will be written here
+#SBATCH -p compute          # Slurm partition, where you want the job to be queued 
+#SBATCH --time 100:00:00    
+ 
+module purge
+module add mpich/3.2/gcc-5.2.0
+module add test-modules singularity/3.5.3/gcc-8.2.0
+module add java/jdk1.8.0_102
+
+module load python/anaconda/4.6/miniconda/3.7
+
+source activate /home/531734/.conda/envs/appraisal
+
+cd /home/531734/mike/karyon_longread
+
+# mpiexec -n -112 
+
+
+~/packages/gatk-4.2.3.0/gatk HaplotypeCaller -R hiCversion2.linear/outputs/redundans/scaffolds.reduced.fasta -I hiCversion2.linear/outputs/redundans/scaffolds.reduced.sorted.tagged.bam -O hiCversion2.linear/outputs/variant_calling/scaffolds.reduced.vcf
