@@ -7,7 +7,7 @@ rule CEGMA:
     container:
         "docker://chrishah/cegma"
     input:
-        assembly = config["assembly"] + "/outputs/cegma/tagged_initial_assembly.fasta",
+        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
     output:
         config["assembly"] + "/outputs/cegma/" + config["assembly"] + ".completeness_report"
     params:

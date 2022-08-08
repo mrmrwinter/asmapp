@@ -31,7 +31,7 @@ rule only_pairs:
 #
 rule single_scaffold_extraction:
     input:
-        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
+        assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa",
     output:
         directory(config["assembly"] + "/tmp")
     params:
