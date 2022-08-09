@@ -555,7 +555,7 @@ rule quast:
         out_pfx = config["assembly"] + "/reports/quast/",
         threads = config["threads"]
     shell:
-        config["quast_path"] + "/quast.py --large {input[0]} --glimmer -b --threads {params[1]} -L --nanopore {input[reads]} -o {params[0]}"
+        config["quast_path"] + "/quast.py --large {input[0]} --glimmer -b --threads {params[1]} -L --pacbio {input[reads]} -o {params[0]}"
 
 
 
