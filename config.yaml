@@ -1,5 +1,5 @@
 full_path: "/home/531734/mike/karyon_longread/"
-assembly: "VW4_HiFiasm.asm.15.hic.p_ctg"  # name of starting assembly, located in data/aassemblies/
+assembly: "M_javanica_062022.final.samba.scaffolds.sorted.renamed"  # name of starting assembly, located in data/aassemblies/
 reads: "all_hifi"   # name of reads, located in data/reads/
 redundans_path: "/home/531734/packages/redundans"  # path to directory containing redundans script
 gatk_path: "~/packages/gatk-4.2.3.0"
