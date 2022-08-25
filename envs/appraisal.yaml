@@ -1,4 +1,4 @@
-name: appraisal
+name: assembly_appraisal
 channels:
   - conda-forge
   - bioconda
@@ -92,7 +92,6 @@ dependencies:
   - harfbuzz=2.8.1=h83ec7ef_0
   - htslib=1.14=h9093b5e_0
   - httplib2=0.19.1=pyhd8ed1ab_0
-  - icu=68.1=h58526e2_0
   - idna=2.10=pyh9f0ad1d_0
   - idna_ssl=1.1.0=py39hde42818_1001
   - imagemagick=7.0.11_12=pl5320hb118871_1
@@ -102,7 +101,7 @@ dependencies:
   - ipython_genutils=0.2.0=pyhd3eb1b0_1
   - java-jdk=8.0.112=1
   - jbig=2.1=h7f98852_2003
-  - jinja2=2.11.3=pyh44b312d_0
+  - jinja2
   - jmespath=0.10.0=pyh9f0ad1d_0
   - jpeg=9d=h36c2ea0_0
   - jsonschema=3.2.0=pyhd8ed1ab_3
@@ -286,7 +285,6 @@ dependencies:
   - pytz=2021.1=pyhd8ed1ab_0
   - pyyaml=6.0=py39h3811e60_3
   - qt=5.12.9=hda022c4_4
-  - r-base=3.2.2=0
   - ratelimiter=1.2.0=py_1002
   - readline=8.1=h27cfd23_0
   - reproc=14.2.1=h36c2ea0_0
@@ -343,4 +341,3 @@ dependencies:
   - zipp=3.4.1=pyhd8ed1ab_0
   - zlib=1.2.11=h36c2ea0_1013
   - zstd=1.4.9=ha95c52a_0
-prefix: /home/mike/miniconda3/envs/appraisal/envs/appraisal
