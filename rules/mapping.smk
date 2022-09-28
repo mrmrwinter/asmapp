@@ -1,8 +1,6 @@
-###############################################################################
+# MAPPING AND TRANSFORMATIONS 
 
-# MAPPING AND TRANSFORMATIONS FOR initial ASSEMBLY
-
-rule initial_mapping:
+rule mapping:
     input:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
         reads = "data/reads/" + config["reads"] + ".fastq.gz"
@@ -15,7 +13,7 @@ rule initial_mapping:
         "minimap2 -t {params[threads]} -ax {params[seq_tech]} {input[assembly]} {input[reads]} > {output}"
 
 
-rule initial_conversion:
+rule conversion:
     input:
         sam = config["assembly"] + "/outputs/initial/initial_asm.sam"
     output:
@@ -24,7 +22,7 @@ rule initial_conversion:
         "samtools view -b -S {input} > {output}"
 
 
-rule initial_sorting:
+rule sorting:
     input:
         config["assembly"] + "/outputs/initial/initial_asm.bam"
     output:
@@ -33,14 +31,12 @@ rule initial_sorting:
         "samtools sort {input} > {output}"
 
 
-rule initial_samtools_index:
+rule samtools_index:
     input:
        bam = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam"
     output:
        bai = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam.bai",
     shell:
        "samtools index {input[bam]} > {output[0]}"
-
-
 
 ###############################################################################
