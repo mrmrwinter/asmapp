@@ -23,9 +23,9 @@ rule blast_nonself_initial:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
         db = "data/databases/" + config["assembly"] + "/initial_" + config["assembly"] + ".nin"
     output:
-        tsv = config["assembly"] + "/reports/blast/initial_blast.out"
+        tsv = config["assembly"] + "/outputs/blast/initial_blast.out"
     params:
-        out_pfx = config["assembly"] + "/reports/blast",
+        out_pfx = config["assembly"] + "/outputs/blast",
         db_pfx = "data/databases/" + config["assembly"] + "/initial_" + config["assembly"],
         threads = config["threads"]
     shell:

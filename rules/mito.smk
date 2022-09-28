@@ -23,8 +23,8 @@ rule mito_tagging:
         initial = "data/assemblies/" + config["assembly"] + ".fasta",
         config["assembly"] + "reports/blast/mito_blast.out"
     output:
-        mito_tagged = "data/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
-        no_mito = "data/assemblies/" + config["assembly"] + ".no_mito.fasta",
+        # mito_tagged = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
+        # mito_tagged = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".no_mito.fasta",
     run:
         import pandas as import pd
         from Bio import SeqIO

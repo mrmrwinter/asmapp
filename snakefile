@@ -1,4 +1,4 @@
-# assembly appraisal (karyinon workflow)
+# assembly appraisal 
 
 report: "workflow.rst"
 
@@ -7,14 +7,16 @@ configfile: "config.yaml"
 include: "rules/pair_alignment.smk"
 include: "rules/coverage.smk"
 include: "rules/blobplots.smk"
-# include: "rules/merqury"
+# include: "rules/merqury.smk"
 include: "rules/characterisation.smk"
 include: "rules/cegma.smk"
 # include: "rules/mito.smk"
 include: "rules/checks_and_transformations.smk"
-# include: "rules/mapping.smk"
-# include: "rules/nucmer.smk"
+include: "rules/mapping.smk"
+include: "rules/nucmer.smk"
 # include: "rules/karyon.smk"
+include: "rules/quast.smk"
+
 
 ###############################################################################
 
@@ -25,24 +27,22 @@ rule all:
         reads = "data/reads/" + config["reads"] + ".fastq.gz",
 # TAGGING
         # intial_tagged = config["assembly"] + "/outputs/cegma/tagged_initial_assembly.fasta",
-        # collapsed_tagged = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fasta",
 # GENOME PROFILING
-#        smudgeplot = config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png",
+        # genomescope # TODO
+        # smudgeplot = config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png",
 # BLOBPLOTS
         blob_table = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
         blob_plot = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png",
 # # WHOLE GENOME ALIGNMENTS
-        nucmer = config["assembly"] + "/reports/nucmer/nucmer.initial.delta",
-        initial = config["assembly"] + "/reports/nucmer/nucmer.initial.png",
-        # initial_v_collapsed = config["assembly"] + "/reports/nucmer/nucmer.initial_v_collapsed.png",
-        # collapsed_v_ref = config["assembly"] + "/reports/nucmer/nucmer.collapsed_v_ref.delta",
-        initial_v_ref = config["assembly"] + "/reports/nucmer/nucmer.initial_v_ref.delta",
+        nucmer = config["assembly"] + "/outputs/nucmer/nucmer.initial.delta",
+        initial = config["assembly"] + "/outputs/nucmer/nucmer.initial.png",
+        initial_v_ref = config["assembly"] + "/outputs/nucmer/nucmer.initial_v_ref.delta",
 #         # dna_diff =
 # # # BLAST TABLES
-# #         tsv = config["assembly"] + "/reports/blast/blast.out",
-#         only_pairs = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv",
-# #         initial_tsv = config["assembly"] + "/reports/blast/initial_blast.out",
-#         initial_only_pairs = config["assembly"] + "/reports/blast/initial_blast.onlyPairs.tsv",
+# #         tsv = config["assembly"] + "/outputs/blast/blast.out",
+#         only_pairs = config["assembly"] + "/outputs/blast/blast.onlyPairs.tsv",
+# #         initial_tsv = config["assembly"] + "/outputs/blast/initial_blast.out",
+#         initial_only_pairs = config["assembly"] + "/outputs/blast/initial_blast.onlyPairs.tsv",
 # # PAIRS ALIGNMENT
 #         # dotplots =
 # #         # dna_diff =
@@ -53,26 +53,20 @@ rule all:
 #         # merqury_mrls =
 #         # merqury_out =
 # # CEGMA
-        completeness_report = config["assembly"] + "/outputs/cegma/" + config["assembly"] + ".completeness_report",
+        completeness_report = config["assembly"] + "/reports/cegma/" + config["assembly"] + ".completeness_report",
 # # COVERAGE
         # mosdepth_haplome = config["assembly"] + "/reports/coverage/mosdepth/collapsed_" + config["assembly"] + ".mosdepth.summary.txt",
         # plots_haplome = config["assembly"] + "/reports/coverage/mosdepth/collapsed_" + config["assembly"] + ".dist.html",
         plots_initial = config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".dist.html",
-# # KARYON
-#         # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
-#         vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
-#         # mpileup = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.mpileup",
-#         plot = config["assembly"] + "/outputs/plots/plot.png",
 # # MITO
-        # mito_tagged = "data/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
-        # no_mito = "data/assemblies/" + config["assembly"] + ".no_mito.fasta",
+        # mito_tagged = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
+        # no_mito = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".no_mito.fasta",
 
 
 
 
 
-
-
+# TODO sort out this fluff
 
 ###############################################################################
 # FLUFF

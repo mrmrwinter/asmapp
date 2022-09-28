@@ -4,11 +4,11 @@ rule nucmer_self:
     input:
         initial = "data/assemblies/" + config["assembly"] + ".fasta"
     output:
-        report(config["assembly"] + "/reports/nucmer/nucmer.initial.png", caption = "reports/nucmer_initial.rst", category = "Dotplots"),
-        config["assembly"] + "/reports/nucmer/nucmer.initial.delta"
+        report(config["assembly"] + "/outputs/nucmer/nucmer.initial.png", caption = "outputs/nucmer_initial.rst", category = "Dotplots"),
+        config["assembly"] + "/outputs/nucmer/nucmer.initial.delta"
     params:
         "nucmer.initial",
-        config["assembly"] + "/reports/nucmer/",
+        config["assembly"] + "/outputs/nucmer/",
     shell:
         """
         mkdir -p tmp/
@@ -24,13 +24,13 @@ rule nucmer_initial_vs_reference:
     input:
         initial = "data/assemblies/" + config["assembly"] + ".fasta",
         reference = config["reference"] + ".fasta.gz",
-        # nuc_fai = config["assembly"] + "/reports/nucmer/scaffolds.reduced.fasta.fai"
+        # nuc_fai = config["assembly"] + "/outputs/nucmer/scaffolds.reduced.fasta.fai"
     output:
-        config["assembly"] + "/reports/nucmer/nucmer.initial_v_ref.png",
-        config["assembly"] + "/reports/nucmer/nucmer.initial_v_ref.delta"
+        config["assembly"] + "/outputs/nucmer/nucmer.initial_v_ref.png",
+        config["assembly"] + "/outputs/nucmer/nucmer.initial_v_ref.delta"
     params:
         "nucmer.initial_v_ref",
-        config["assembly"] + "/reports/nucmer/",
+        config["assembly"] + "/outputs/nucmer/",
         config["reference"] + ".fasta"
     shell:
         """
@@ -46,9 +46,9 @@ rule nucmer_initial_vs_reference:
 
 # rule nucmer_circles:
 #     input:
-#         fai = config["assembly"] + "/reports/nucmer/scaffolds.reduced.fasta.fai"
+#         fai = config["assembly"] + "/outputs/nucmer/scaffolds.reduced.fasta.fai"
 #     output:
-#         config["assembly"] + "/reports/nucmer/circle.int_ref.png",
+#         config["assembly"] + "/outputs/nucmer/circle.int_ref.png",
 #     script:
 #         "../scripts/snmk_nucmer_circles.R"
 
