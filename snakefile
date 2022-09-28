@@ -10,12 +10,14 @@ include: "rules/blobplots.smk"
 # include: "rules/merqury.smk"
 include: "rules/characterisation.smk"
 include: "rules/cegma.smk"
-# include: "rules/mito.smk"
+include: "rules/mito.smk"
 include: "rules/checks_and_transformations.smk"
 include: "rules/mapping.smk"
 include: "rules/nucmer.smk"
 # include: "rules/karyon.smk"
 include: "rules/quast.smk"
+include: "rules/pair_analysis.smk"
+
 
 
 ###############################################################################
@@ -29,37 +31,35 @@ rule all:
         # intial_tagged = config["assembly"] + "/outputs/cegma/tagged_initial_assembly.fasta",
 # GENOME PROFILING
         # genomescope # TODO
-        # smudgeplot = config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png",
+        smudgeplot = config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png",
 # BLOBPLOTS
         blob_table = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
         blob_plot = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png",
-# # WHOLE GENOME ALIGNMENTS
-        nucmer = config["assembly"] + "/outputs/nucmer/nucmer.initial.delta",
-        initial = config["assembly"] + "/outputs/nucmer/nucmer.initial.png",
-        initial_v_ref = config["assembly"] + "/outputs/nucmer/nucmer.initial_v_ref.delta",
+# NUCMER
+        self_v_self = config["assembly"] + "/outputs/nucmer/nucmer.self_v_self.png",
+        self_v_ref = config["assembly"] + "/outputs/nucmer/nucmer.self_v_ref.png",
 #         # dna_diff =
 # # # BLAST TABLES
 # #         tsv = config["assembly"] + "/outputs/blast/blast.out",
-#         only_pairs = config["assembly"] + "/outputs/blast/blast.onlyPairs.tsv",
-# #         initial_tsv = config["assembly"] + "/outputs/blast/initial_blast.out",
-#         initial_only_pairs = config["assembly"] + "/outputs/blast/initial_blast.onlyPairs.tsv",
+# #         pairs_tsv = config["assembly"] + "/outputs/blast/blast.out",
+        blast_pairs = config["assembly"] + "/outputs/blast/blast.onlyPairs.tsv",
 # # PAIRS ALIGNMENT
 #         # dotplots =
 # #         # dna_diff =
 # # # QUAST
 # #         # busco_lib =
         quast_report = config["assembly"] + "/reports/quast/report.txt",
-# # MERQURY
+        # TODO replace QUAST with my own installs and scripts
+# # MERQURY # TODO add merqury
 #         # merqury_mrls =
 #         # merqury_out =
 # # CEGMA
         completeness_report = config["assembly"] + "/reports/cegma/" + config["assembly"] + ".completeness_report",
+# TODO add BUSCO v5
 # # COVERAGE
-        # mosdepth_haplome = config["assembly"] + "/reports/coverage/mosdepth/collapsed_" + config["assembly"] + ".mosdepth.summary.txt",
-        # plots_haplome = config["assembly"] + "/reports/coverage/mosdepth/collapsed_" + config["assembly"] + ".dist.html",
         plots_initial = config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".dist.html",
 # # MITO
-        # mito_tagged = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
+        mito_tagged = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
         # no_mito = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".no_mito.fasta",
 
 

@@ -1,27 +1,5 @@
 # PAIRS ALIGNMENTS FROM NUCMER
 
-rule only_pairs:
-    input:
-       blast = config["assembly"] + "/reports/blast/blast.out",
-    output:
-       only_pairs_table = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv"
-    run:
-       import pandas as pd
-
-       blast_output = pd.read_csv(input[0], sep="\t", header = None) # snakemake.input[0] is the blast table
-
-       pairs = pd.DataFrame(columns = ['query', 'hit'])
-
-       for index, value in blast_output.iterrows():
-           if value[0] != value[1]:
-               pairs.loc[index, ['query']] = value[0]
-               pairs.loc[index, ['hit']] = value[1]
-
-       only_pairs = pairs.drop_duplicates()
-
-       only_pairs.to_csv(output[0], sep='\t')
-
-# PRETTY SURE THIS LOOP IS INEFFICIENT AS ...
 
 
 # IS THERE A WAY TO TAKE A SAMPLE LIST FROM THE ONLY PAIRS COLUMN HERE?
