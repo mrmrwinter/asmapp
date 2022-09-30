@@ -1,34 +1,26 @@
-# Karyinon (working title)
+# ASMAPP
 
-This workflow began as a longread version of the Karyon pipeline (below), and has now evolved into a full assembly analysis suite, designed particularly for analysis of complex polyploid genomes.
+This workflow is for appraising genome assemblies. 
 
 
 This workflow includes full assembly appraisal with the following methods:
--Read mapping with minimap2 and Vulcan
--QUAST assembly appraisal statistics
--mitochondrial contig flagging/removal
--contaminant identification with Blobtools
--homeologous contig detection using Blast, Nucmer, and Mummer
--Statistics on homeolog differences with DnaDiff
--Homeologous and haplotig purging with redundans
--Variant calling with GATK
--Flagstat generation with Samtools
--Ploidy estimations with Karyon workflow
--Coverage analytics and plots with Mosdepth
+-Read mapping 
+-Assembly appraisal statistics
+-Mitochondrial contig flagging/removal
+-Contaminant identification 
+-Homeologous contig detection 
+-Statistics on homeolog differences
+-Variant calling 
+-Mapping stat generation 
+-Ploidy estimations 
+-Coverage analytics 
 
----
-In the future it will also include:
+More detailed instructions about how to run the workflow will be included in a docs file at a later date.
 
--Merqury
-
----
-
-Karyon is a package that assesses the ploidy of a library, reads or contigs.
-
-Github repo: 
-
-[Gabaldonlab/karyon](https://github.com/Gabaldonlab/karyon)
-
-Paper: 
-
-[Karyon: a computational framework for the diagnosis of hybrids, aneuploids, and other non-standard architectures in genome assemblies](https://www.biorxiv.org/content/10.1101/2021.05.23.445324v1?rss=1)
+Installation and running instructions, for now:
+1, Install conda
+2, Clone this repository and navigate to its top level directory
+3, Run `conda env create -f envs/appraisal.yaml`
+4, Activate the environment - `conda activate appraisal`
+5, Configure the `config.yaml`
+6, Run the workflow with the follownig command; `snakemake -cX -use-singularity`, whre X is the same number as the amount of threads specified in the `config.yaml`
