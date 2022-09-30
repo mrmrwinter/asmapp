@@ -1,5 +1,5 @@
-full_path: "/media/mike/WD_4TB/karyon_longread/"
-assembly: "FINALFINAL"  # name of starting assembly, located in data/aassemblies/
+full_path: "/media/mike/WD_4TB/asmapp/"
+assembly: "FINALFINAL"  # name of starting assembly, located in data/assemblies/
 reads: "all_hifi"   # name of reads, located in data/reads/
 redundans_path: "/home/mike/software/redundans"  # path to directory containing redundans script
 gatk_path: "~/software/gatk-4.2.6.1"
