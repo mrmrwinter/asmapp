@@ -11,6 +11,7 @@ include: "rules/blobplots.smk"
 include: "rules/characterisation.smk"
 include: "rules/cegma.smk"
 # include: "rules/mito.smk"
+include: "rules/variant_calling.smk"
 
 ###############################################################################
 
