@@ -53,7 +53,12 @@ rule blobtools_view:
     input:
         config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
     output:
-        config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt"
+        # config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt"
+        report(
+            config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
+            caption="../reports/blobplots.rst",
+            category="Contamination reports"
+        )
     params:
         config["assembly"] + "/reports/blobtools/"
     shell:
@@ -68,7 +73,11 @@ rule blobtools_plot:
     input:
         config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
     output:
-        config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png"
+        # config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png"
+        report(
+            config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png", 
+            caption="../reports/blobtools.rst", 
+            category="Contamination reports")
     params:
         out = config["assembly"] + "/reports/blobtools/"
     shell:

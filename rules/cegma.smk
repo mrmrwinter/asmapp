@@ -9,7 +9,12 @@ rule CEGMA:
     input:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
     output:
-        config["assembly"] + "/reports/cegma/" + config["assembly"] + ".completeness_report"
+        # config["assembly"] + "/reports/cegma/" + config["assembly"] + ".completeness_report"
+        report(
+            config["assembly"] + "/reports/cegma/" + config["assembly"] + ".completeness_report",
+            caption="../reports/CEGMA.rst",
+            category="Completeness"
+        )
     params:
         config["assembly"] + "/reports/cegma/" + config["assembly"],
         threads = config["threads"]
