@@ -7,10 +7,10 @@ rule mito_identification:
         db = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nin",
         mito_ref = "data/assemblies/mitoref.fasta"
     output:
-        config["assembly"] + "reports/blast/mito_blast.out"
+        config["assembly"] + "/reports/blast/mito_blast.out"
     params:
         db = "data/databases/" + config["assembly"] + "/" + config["assembly"],
-        out_pfx = config["assembly"] + "reports/blast/",
+        out_pfx = config["assembly"] + "/reports/blast/",
         threads = config["threads"]
     shell:
         "blastn -query {input[0]} -db {params[db]} -outfmt 6 -max_target_seqs 1 -out {params[out_pfx]} =o {output} -num_threads {params[threads]}"
@@ -19,7 +19,7 @@ rule mito_identification:
 rule mito_tagging:
     input:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
-        mito_blast = config["assembly"] + "reports/blast/mito_blast.out"
+        mito_blast = config["assembly"] + "/reports/blast/mito_blast.out"
     output:
         mito_tagged = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
         no_mito = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".no_mito.fasta",
