@@ -40,3 +40,5 @@ rule samtools_index:
        "samtools index {input[bam]} > {output[0]}"
 
 ###############################################################################
+
+# TODO add mapping stats rule here

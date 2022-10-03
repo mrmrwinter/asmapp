@@ -4,7 +4,6 @@ report: "reports/workflow.rst"
 
 configfile: "config.yaml"
 
-include: "rules/pair_alignment.smk"
 include: "rules/coverage.smk"
 include: "rules/blobplots.smk"
 # include: "rules/merqury.smk"
@@ -36,7 +35,7 @@ rule all:
 #         # dna_diff =
 # PAIRS ANALYSIS
         blast_pairs = config["assembly"] + "/outputs/blast/blast.onlyPairs.tsv",
-#         # dotplots =
+        dotplots = directory(config["assembly"] + "reports/nucmer/pairs"),
 #         # dna_diff =
 # QUAST
         quast_report = config["assembly"] + "/reports/quast/report.html",

@@ -81,11 +81,16 @@ rule genomescope:
     input:
         config["assembly"] + "/reports/kmc/kmer_k21.histo"
     output:
-        config["assembly"] + "/reports/genomescope/plot.log.png"
+        report(
+            config["assembly"] + "/reports/genomescope/plot.png",
+            caption="../docs/captions/genomescope.rst",
+            category="Genome profiling"
+        )
     params:
         outdir=config["assembly"] + "/reports/genomescope/"
     shell:
         "Rscript scripts/genomescope.R {input} 21 150 {params.outdir} 1000 1"
+
 
 #smudgeplot for predicting ploidy
 rule smudgeplot:
@@ -94,7 +99,11 @@ rule smudgeplot:
     input:
         config["assembly"] + "/reports/kmc/kmer_k21.hist"
     output:
-        config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png"
+        report(
+            config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png",
+            caption="../docs/captions/smudgeplot.rst",
+            category="Genome profiling"
+        )
     params:
         counts = config["assembly"] + "/reports/kmc/kmer_counts",
         dump = config["assembly"] + "/reports/smudge/kmer_k21.dump",
