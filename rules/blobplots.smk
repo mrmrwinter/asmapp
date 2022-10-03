@@ -4,16 +4,6 @@
 # BLOBPLOTS
 
 
-# setup
-# requires that the ncbi database is installed and configured in the config files
-# needs taxdumpdownloading and unpacking in the same folder as the nt database
-
-
-
-# for scaffolds of this length it might actually be better to fragment them to contigs of around 1Mb, just so that the taxonomy can have a better chance
-
-
-
 rule tax_blast:
     input:
         "data/assemblies/" + config["assembly"] + ".fasta",
