@@ -11,5 +11,8 @@
 #    input:
 #        initial = "data/assemblies/" + config["assembly"] + ".fasta",
 #    output:
+# report(
+
+# )
 #    params:
 #    shell:

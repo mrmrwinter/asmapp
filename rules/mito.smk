@@ -49,4 +49,5 @@ rule mito_tagging:
                 if seq.id not in str(mito_tig):
                 # write to new file
                     SeqIO.write(seq, no_mito, "fasta")
-        
+
+# TODO add some brief mitochondrial annotation or analysis

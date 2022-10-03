@@ -21,6 +21,10 @@ rule mosdepth_plots:
     input:
         config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".mosdepth.global.dist.txt"
     output:
-        config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".dist.html"
+        report(
+            config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".dist.html",
+            caption="../docs/captions/mosdepth.rst",
+            category="Coverage analysis"
+        )
     shell:
         "python3 scripts/plot_dist.py -o {output} {input}"

@@ -23,9 +23,9 @@ rule blast_nonself:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
         db = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nin"
     output:
-        tsv = config["assembly"] + "/outputs/blast/blast.out"
+        tsv = config["assembly"] + "/reports/blast/blast.out"
     params:
-        out_pfx = config["assembly"] + "/outputs/blast",
+        out_pfx = config["assembly"] + "/reports/blast",
         db_pfx = "data/databases/" + config["assembly"] + "/" + config["assembly"],
         threads = config["threads"]
     shell:
@@ -35,9 +35,9 @@ rule blast_nonself:
 
 rule only_pairs:
     input:
-       blast = config["assembly"] + "/outputs/blast/blast.out",
+       blast = config["assembly"] + "/reports/blast/blast.out",
     output:
-       only_pairs_table = config["assembly"] + "/outputs/blast/blast.onlyPairs.tsv"
+       only_pairs_table = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv"
     run:
        import pandas as pd
 
@@ -61,3 +61,50 @@ rule only_pairs:
 # CAN INSTEAD LOOP THROUGH THE LIST FOR EACH INDIVIDUAL ASSEMBLY AS THE LIST OF PAIRS WILL BE NOVEL AND INDIVIDUAL
 
 ##############################################################################
+
+
+# # nucmer analysis/alignment
+rule nucmer_alignment:
+    input:
+        # directory(config["assembly"] + "tmp_initial/"),
+        only_pairs_table = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv"
+    output:
+        report(
+            directory(config["assembly"] + "reports/nucmer/pairs"),
+            caption="../docs/captions/pair_dotplots.rst",
+            category="Pair analysis"
+        )
+    params:
+        tigs = config["assembly"] + "tmp/",
+        out_dir = config["assembly"] + "reports/nucmer/pairs/"
+    run:
+        import glob
+        import os
+
+        only_pairs = pd.read_csv(snakemake.input[1])
+
+        for index, value in only_pairs.iterrows():
+            q = params[0] + value[0] + ".fasta"
+            h = params[0] + value[1] + ".fasta"
+            nucmer = "nucmer -p " + params[1] + "nucmer/nucmer." + str(q.replace('.fasta','') + h.replace('.fasta','')) + " " + q + " " + h
+            os.system(nucmer)
+
+
+        for delta in glob.glob("nucmer/*.delta"):
+            pair = delta.replace("nucmer/","").replace(".delta","")
+            mummer = "mummerplot -l -f --png --large " + delta + " -p " + params[0] + "nucmer/" + pair
+            os.system(mummer)
+
+
+
+#######################################################################################
+
+# dnadiff
+
+# os.system("mkdir dnadiff_initial_purged/")
+#
+# for index, value in only_initial_pairs.iterrows():
+#     dnadiff = "dnadiff -p dnadiff_initial_purged/nucmer." + str(index) + " -d nucmer_initial_purged/nucmer." + str(index) + ".delta"
+#     os.system(dnadiff)
+#
+#
