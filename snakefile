@@ -54,7 +54,7 @@ rule all:
 # # COVERAGE
         # mosdepth_haplome = config["assembly"] + "/reports/coverage/mosdepth/collapsed_" + config["assembly"] + ".mosdepth.summary.txt",
         # plots_haplome = config["assembly"] + "/reports/coverage/mosdepth/collapsed_" + config["assembly"] + ".dist.html",
-        plots_initial = config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".dist.html",
+        # plots_initial = config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".dist.html",
 # # KARYON
 #         # flagstats = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.flagstat",
 #         vcf = config["assembly"] + "/outputs/variant_calling/scaffolds.reduced.vcf",
@@ -63,6 +63,9 @@ rule all:
 # # MITO
         # mito_tagged = "data/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
         # no_mito = "data/assemblies/" + config["assembly"] + ".no_mito.fasta",
+# # VARIANT CALLING
+        sniffles = config["assembly"] + "outputs/variant_calling/" + config["assembly"] + ".vcf",
+
 
 
 

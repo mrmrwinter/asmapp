@@ -6,11 +6,11 @@ rule sniffles:
         initial="data/assemblies/" + config["assembly"] + ".fasta",
         bam=config["assembly"] + "/outputs/initial/initial_asm.sorted.bam",
     output:
-        config["assembly"] + "outputs/variant_calling/" + config["assembly"],
+        config["assembly"] + "outputs/variant_calling/" + config["assembly"] + ".vcf",
     params:
         threads=config["threads"],
     shell:
-        "sniffles -i {~input[1]}  --vcf {output} --reference {input[0]}"
+        "sniffles -i {input[1]}  --vcf {output} --reference {input[0]}"
 
 
 # TODO add in some vcf parsing like vcftools or similar. something that can generate stats fairly easily and quickly.
