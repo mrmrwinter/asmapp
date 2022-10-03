@@ -4,7 +4,11 @@ rule nucmer_self:
     input:
         initial = "data/assemblies/" + config["assembly"] + ".fasta"
     output:
-        report(config["assembly"] + "/outputs/nucmer/nucmer.self_v_self.png", caption = "outputs/nucmer_initial.rst", category = "Dotplots"),
+        report(
+            config["assembly"] + "/outputs/nucmer/nucmer.self_v_self.png",
+            caption = "reports/nucmer.rst", 
+            category = "Dotplots"
+            ),
         config["assembly"] + "/outputs/nucmer/nucmer.self_v_self.delta"
     params:
         "nucmer.initial",
@@ -26,7 +30,11 @@ rule nucmer_initial_vs_reference:
         reference = config["reference"] + ".fasta.gz",
         # nuc_fai = config["assembly"] + "/outputs/nucmer/scaffolds.reduced.fasta.fai"
     output:
-        config["assembly"] + "/outputs/nucmer/nucmer.self_v_ref.png",
+        report(
+            config["assembly"] + "/outputs/nucmer/nucmer.self_v_ref.png", 
+            caption = "reports/nucmer.rst", 
+            category = "Dotplots"
+            ),
         config["assembly"] + "/outputs/nucmer/nucmer.self_v_ref.delta"
     params:
         "nucmer.initial_v_ref",
