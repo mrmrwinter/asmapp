@@ -13,7 +13,7 @@ rule mito_identification:
         out_pfx = config["assembly"] + "/reports/blast/",
         threads = config["threads"]
     shell:
-        "blastn -query {input[0]} -db {params[db]} -outfmt 6 -max_target_seqs 1 -out {params[out_pfx]} =o {output} -num_threads {params[threads]}"
+        "blastn -query {input[0]} -db {params[db]} -outfmt 6 -max_target_seqs 1 -out {params[out_pfx]} -o {output} -num_threads {params[threads]}"
 
 
 rule mito_tagging:
