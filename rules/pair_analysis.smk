@@ -1,5 +1,3 @@
-##############################################################################
-
 # PAIRS TABLE with BLAST
 
 rule make_blast_database:  # Rule to make database of cds fasta

@@ -1,5 +1,3 @@
-##############################################################################
-
 # MITOCHONDRIAL DETECTION
 
 rule mito_identification:

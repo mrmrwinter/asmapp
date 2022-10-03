@@ -1,14 +1,4 @@
-#####GENOME CHARACTERISATION #####
-
-configfile: "config.yaml"
-
-# rule all:
-#     input:
-#         expand("data/catted/{sample}.{insert}.{FR}P.catted.fq.gz", sample=config["sample"], insert=config["insert"], FR=config["FR"]),
-#         expand("/reports/kmc/kmer_k21.hist"),
-#         expand("/reports/genomescope/plot.png"),
-#         expand(config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png")
-
+## GENOME CHARACTERISATION
 
 ### KMC
 # counts kmers and coverage
