@@ -1,24 +1,23 @@
-# assembly appraisal 
+# ASMAPP - assembly appraisal workflow
 
 report: "reports/workflow.rst"
 
 configfile: "config.yaml"
 
-include: "rules/coverage.smk"
-include: "rules/blobplots.smk"
-# include: "rules/merqury.smk"
-include: "rules/characterisation.smk"
-include: "rules/cegma.smk"
-include: "rules/mito.smk"
-include: "rules/checks_and_transformations.smk"
-include: "rules/mapping.smk"
-include: "rules/nucmer.smk"
-# include: "rules/karyon.smk"
-include: "rules/quast.smk"
-include: "rules/pair_analysis.smk"
-
-
-include: "rules/variant_calling.smk"
+include: [
+        "rules/coverage.smk", 
+        "rules/blobplots.smk",
+        # "rules/merqury.smk",
+        "rules/characterisation.smk",
+        "rules/cegma.smk",
+        "rules/mito.smk",
+        "rules/checks_and_transformations.smk",
+        "rules/mapping.smk",
+        "rules/nucmer.smk",
+        "rules/quast.smk",
+        "rules/pair_analysis.smk",
+        "rules/variant_calling.smk"
+]
 
 ###############################################################################
 
@@ -57,5 +56,3 @@ rule all:
 #         # TODO replace QUAST with my own installs and scripts
 # TODO add merqury
 # genomescope # TODO
-
-
