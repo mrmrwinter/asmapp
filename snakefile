@@ -65,9 +65,5 @@ rule all:
 #         # merqury_mrls =
 #         # merqury_out =
 
-# # TODO add BUSCO v5
-#         # TODO replace QUAST with my own installs and scripts
-# TODO add merqury
-# genomescope # TODO
 
 
