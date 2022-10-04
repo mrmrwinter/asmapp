@@ -56,3 +56,7 @@ rule all:
 # genomescope # TODO
 
 
+all_scaffs = []
+with open(snakemake.input[assembly], "r") as f:
+        for record in SeqIO.parse(f, "fasta"):
+                all_scaffs.append(record.description)
