@@ -56,7 +56,12 @@ rule all:
 # genomescope # TODO
 
 
-all_scaffs = []
-with open(snakemake.input[assembly], "r") as f:
-        for record in SeqIO.parse(f, "fasta"):
-                all_scaffs.append(record.description)
+# TODO fix this rule below me to get the depth plots working
+# rule get_scaffs:
+#     output:
+#         all_scaffs
+#     run:
+#         all_scaffs = []
+#         with open(snakemake.input[assembly], "r") as f:
+#                 for record in SeqIO.parse(f, "fasta"):
+#                         all_scaffs.append(record.description)
