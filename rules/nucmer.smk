@@ -11,7 +11,7 @@ rule nucmer_self:
             ),
         config["assembly"] + "/outputs/nucmer/nucmer.self_v_self.delta"
     params:
-        "nucmer.initial",
+        "nucmer.self_v_self",
         config["assembly"] + "/outputs/nucmer/",
     shell:
         """
@@ -37,7 +37,7 @@ rule nucmer_initial_vs_reference:
             ),
         config["assembly"] + "/outputs/nucmer/nucmer.self_v_ref.delta"
     params:
-        "nucmer.initial_v_ref",
+        "nucmer.self_v_ref",
         config["assembly"] + "/outputs/nucmer/",
         config["reference"] + ".fasta"
     shell:

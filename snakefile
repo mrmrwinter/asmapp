@@ -1,23 +1,36 @@
-# ASMAPP - assembly appraisal workflow
+# assembly appraisal 
 
 report: "reports/workflow.rst"
 
 configfile: "config.yaml"
 
-include: [
-        "rules/coverage.smk", 
-        "rules/blobplots.smk",
-        # "rules/merqury.smk",
-        "rules/characterisation.smk",
-        "rules/cegma.smk",
-        "rules/mito.smk",
-        "rules/checks_and_transformations.smk",
-        "rules/mapping.smk",
-        "rules/nucmer.smk",
-        "rules/quast.smk",
-        "rules/pair_analysis.smk",
-        "rules/variant_calling.smk"
-]
+include: "rules/coverage.smk"
+include: "rules/blobplots.smk"
+# include: "rules/merqury.smk"
+include: "rules/characterisation.smk"
+include: "rules/cegma.smk"
+include: "rules/mito.smk"
+include: "rules/checks_and_transformations.smk"
+include: "rules/mapping.smk"
+include: "rules/nucmer.smk"
+include: "rules/quast.smk"
+include: "rules/pair_analysis.smk"
+include: "rules/variant_calling.smk"
+
+# include: [
+#         "rules/coverage.smk", 
+#         "rules/blobplots.smk",
+#         # "rules/merqury.smk",
+#         "rules/characterisation.smk",
+#         "rules/cegma.smk",
+#         "rules/mito.smk",
+#         "rules/checks_and_transformations.smk",
+#         "rules/mapping.smk",
+#         "rules/nucmer.smk",
+#         "rules/quast.smk",
+#         "rules/pair_analysis.smk",
+#         "rules/variant_calling.smk"
+# ]
 
 ###############################################################################
 
@@ -33,7 +46,7 @@ rule all:
         self_v_ref = config["assembly"] + "/outputs/nucmer/nucmer.self_v_ref.png",
 #         # dna_diff =
 # PAIRS ANALYSIS
-        blast_pairs = config["assembly"] + "/outputs/blast/blast.onlyPairs.tsv",
+        blast_pairs = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv",
         dotplots = directory(config["assembly"] + "reports/nucmer/pairs"),
 #         # dna_diff =
 # QUAST
@@ -56,3 +69,5 @@ rule all:
 #         # TODO replace QUAST with my own installs and scripts
 # TODO add merqury
 # genomescope # TODO
+
+
