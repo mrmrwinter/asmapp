@@ -31,6 +31,8 @@ More detailed instructions about how to run the workflow will be included in a d
   
 5, Configure the `config.yaml`
   
-6, Run the workflow with the follownig command; `snakemake -cX -use-singularity`, whre X is the same number as the amount of threads specified in the `config.yaml`
+6, Run the workflow with the follownig command; `snakemake -cX -use-singularity`, whre X is the same number of cores desired
+
+Full dependency installation instructions can be found at `docs/install_notes.md`
   
 
