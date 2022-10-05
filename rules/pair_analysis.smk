@@ -35,7 +35,7 @@ rule only_pairs:
     input:
        blast = config["assembly"] + "/reports/blast/blast.out",
     output:
-       only_pairs_table = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv"
+       only_pairs_table = config["assembly"] + "/reports/pairs_analysis/blast/blast.onlyPairs.tsv"
     run:
        import pandas as pd
 
@@ -60,15 +60,53 @@ rule only_pairs:
 
 ##############################################################################
 
+# PAIRS WITH MASH
+
+rule mash_sketch:
+    input:
+        scaffolds = config["assembly"] + "/outputs/scaffolds/{all_scaffs}.fasta",
+    output:
+        config["assembly"] + "reports/pair-analysis/mash/" + config["assembly"] + ".sketch",
+    params:
+        scaffolds = config["assembly"] + "/outputs/scaffolds/",
+    shell:
+        "mash sketch {params[scaffolds]}/*.fasta -o {output}"
+
+
+rule mash_dist:
+    input:
+        config["assembly"] + "reports/pair-analysis/mash/" + config["assembly"] + ".sketch",
+    output:
+        config["assembly"] + "reports/pair-analysis/mash/" + config["assembly"] + ".dist",
+    params:
+        scaffolds = config["assembly"] + "/outputs/scaffolds/",
+    shell:
+        "mash sketch {params}/*.fasta -o {output}"
+
+rule get_mash_distances:
+    input:
+    output:
+    shell:
+    
+
+
+
+
+
+
+
+
+
+##################################
 
 # # nucmer analysis/alignment
 rule nucmer_alignment:
     input:
         # directory(config["assembly"] + "tmp_initial/"),
-        only_pairs_table = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv"
+        only_pairs_table = config["assembly"] + "/reports/pairs_analysis/blast/blast.onlyPairs.tsv"
     output:
         report(
-            directory(config["assembly"] + "reports/nucmer/pairs"),
+            directory(config["assembly"] + "reports/pair-analysis/nucmer/pairs"),
             caption="../docs/captions/pair_dotplots.rst",
             category="Pair analysis"
         )

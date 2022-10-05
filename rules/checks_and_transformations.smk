@@ -10,6 +10,21 @@ rule input_reads:
         reads = "data/reads/" + config["reads"] + ".fastq.gz",
 
 
+rule splinter_assembly:
+    input:
+        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
+        scaffolds = all_scaffs
+    output:
+        config["assembly"] + "/outputs/scaffolds/{all_scaffs}.fasta",
+    params:
+        config["assembly"] + "/outputs/scaffolds/"
+    shell:
+        """
+        cat {input} | awk '{{if (substr($0, 1, 1)=='>') {{filename=(substr($0,2) '.fasta'}} print $0 >> {params}/filename
+        close({params}/filename)}}'
+        """"
+
+
 # # RENAME INITIAL CONTIGS
 # rule initial_tagging:
 #     input:
@@ -24,3 +39,4 @@ rule input_reads:
 #                 r.id = (to_add + r.description).replace(" ", "_")
 #                 r.description = r.id
 #                 SeqIO.write(r, outputs, "fasta")
+# TODO
