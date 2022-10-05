@@ -38,7 +38,3 @@ rule samtools_index:
        bai = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam.bai",
     shell:
        "samtools index {input[bam]} > {output[0]}"
-
-###############################################################################
-
-# TODO add mapping stats rule here
