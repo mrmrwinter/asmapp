@@ -6,6 +6,7 @@ nav:
     - 'User Guide':
         - 'Installation': 'user-guide/installation.md'
         - 'Quick start': 'user-guide/quick-start.md'
+        - 'Configuration': 'user-guide/configuration.md'
         - 'Use cases': 'user-guide/use-cases.md'
     - About:
         - 'License': 'license.md'

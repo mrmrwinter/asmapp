@@ -1,4 +1,4 @@
-## GENOME CHARACTERISATION
+# GENOME CHARACTERISATION
 
 ### KMC
 # counts kmers and coverage
