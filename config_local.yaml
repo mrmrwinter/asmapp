@@ -1,9 +1,0 @@
-full_path: "/media/mike/WD_4TB/asmapp/"  # full path to where you cloned asmapp
-assembly: "FINALFINAL"  # name of starting assembly, located in data/assemblies/. remove the suffix. needs to be a .fasta
-reads: "all_hifi"   # name of reads, located in data/reads/. remove the sufffix. needs to be .fastq.gz format
-memory: "12"  # the available memory for the analysis in gigabytes
-threads: "8"  # available threads
-quast_path: "~/software/quast"  # path to where you cloned quast
-ncbi_nt_path: "/media/mike/SB_2TB/databases/ncbi_db/nt"  # path to where you have a blast nt database installed
-seq_tech: "hifi"  # type of sequencing technology
-reference: "data/assemblies/Blanc_Mathieu_2017_mJavanica"  # path to the reference genome file. remove the suffix.
