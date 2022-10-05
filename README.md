@@ -25,14 +25,14 @@ More detailed instructions about how to run the workflow will be included in a d
   
 2, Clone this repository and navigate to its top level directory
   
-3, Run `conda env create -f envs/appraisal.yaml`
+3, Run `conda env create -f envs/asmapp.yaml`
   
-4, Activate the environment - `conda activate appraisal`
+4, Activate the environment - `conda activate asmapp`
   
 5, Configure the `config.yaml`
   
-6, Run the workflow with the follownig command; `snakemake -cX -use-singularity`, whre X is the same number of cores desired
+6, Run the workflow with the follownig command; `snakemake -cX -use-singularity`, whre X is the same number of cores desired.
 
-Full dependency installation instructions can be found at `docs/install_notes.md`
+Full dependency installation instructions can be found at `docs/user-guide/installation.md`
   
 
