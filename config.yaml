@@ -1,12 +1,10 @@
-full_path: "/home/531734/mike/karyon_longread/"
-assembly: "M_javanica_062022.final.samba.scaffolds.sorted.renamed"  # name of starting assembly, located in data/aassemblies/
-reads: "all_hifi"   # name of reads, located in data/reads/
-redundans_path: "/home/531734/packages/redundans"  # path to directory containing redundans script
-gatk_path: "~/packages/gatk-4.2.3.0"
-picard-tools: "/home/531734/packages/picard/"  # path to picard-tools
-memory: "100"  # the available memory for the analysis in gigabytes
-threads: "28"
-quast_path: "/home/531734/packages/quast"
-ncbi_nt_path: "/home/531734/databases/blastdb_nt"
-seq_tech: "hifi"
-reference: "data/assemblies/Blanc_Mathieu_2017_mJavanica"
+full_path: ""
+assembly: ""  # name of starting assembly, located in data/aassemblies/
+reads: ""   # name of reads, located in data/reads/
+redundans_path: ""  # path to directory containing redundans script
+memory: ""  # the available memory for the analysis in gigabytes
+threads: ""
+quast_path: ""
+ncbi_nt_path: ""
+seq_tech: ""
+reference: ""
