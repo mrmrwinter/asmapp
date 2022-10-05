@@ -25,12 +25,10 @@ jupyter/*
 *.header
 *.html
 *.temp
-VW4_HiFiasm_15_purge/*
 *.header
 *.bin
 *tmp*
 exps/
 *.pyc
-/media/mike/WD_4TB/karyon_longread/busco_2300217.log
 archived/
 genome.*
