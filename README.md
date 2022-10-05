@@ -17,8 +17,4 @@
 
 See the docs for more details.
 
-<br>
-
-
-  
 
