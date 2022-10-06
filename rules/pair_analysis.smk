@@ -83,15 +83,25 @@ rule mash_dist:
     shell:
         "mash sketch {params}/*.fasta -o {output}"
 
-rule get_mash_distances:
-    input:
-    output:
-    shell:
-    
+# rule get_mash_distances:
+#     input:
+#     output:
+#     run:
+#         df1 = pd.read_csv(snakemake,input[0], sep = "\t", header = None)  # read in the csv to a pandas frame
+#         df2 = df1.drop([], axis = 1)  # Drop everything that isnt uesful to us right now. Can come grab anything we need from the dictionary later
+#         df3 = df2[df2[4].str.contains("1000/1000")==False]
+#         index = df3[0].sort_values(ascending=True).index
+#         df4 = df3.loc[index]
+#         df4.drop_duplicates(inplace=True)
+#         df4.reset_index()
+#         del df4['index']
+#         df4[0].str.replace(scaffolds, "").str.replace(".fasta","")
+#         df4[1].str.replace(scaffolds, "").str.replace(".fasta","")
+#         df4.sort_values(2, inplace = True)
 
-
-
-
+#         col_heads = ["Reference-ID", "Query-ID", "Mash-distance", "P-value", "Matching-hashes"]
+#         df4.columns = col_heads  # wow these lines are getting redundant
+#         df4.to_csv(snakemake.output[0], index=None)
 
 
 
@@ -106,7 +116,7 @@ rule nucmer_alignment:
         only_pairs_table = config["assembly"] + "/reports/pairs_analysis/blast/blast.onlyPairs.tsv"
     output:
         report(
-            directory(config["assembly"] + "reports/pair-analysis/nucmer/pairs"),
+            directory(config["assembly"] + "/reports/pairs_analysis/nucmer/pairs"),
             caption="../docs/captions/pair_dotplots.rst",
             category="Pair analysis"
         )

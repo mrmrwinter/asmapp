@@ -31,8 +31,8 @@ rule all:
         self_v_ref = config["assembly"] + "/outputs/nucmer/nucmer.self_v_ref.png",
 #         # dna_diff =
 # PAIRS ANALYSIS
-        blast_pairs = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv",
-        dotplots = directory(config["assembly"] + "reports/nucmer/pairs"),
+        blast_pairs = config["assembly"] + "/reports/pairs_analysis/blast/blast.onlyPairs.tsv",
+        dotplots = directory(config["assembly"] + "/reports/pairs_analysis/nucmer/pairs"),
 #         # dna_diff =
 # QUAST
         quast_report = config["assembly"] + "/reports/quast/report.html",
