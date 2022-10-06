@@ -52,13 +52,6 @@ rule only_pairs:
 
        only_pairs.to_csv(output[0], sep='\t')
 
-# PRETTY SURE THIS LOOP IS INEFFICIENT AS ...
-
-# IS THERE A WAY TO TAKE A SAMPLE LIST FROM THE ONLY PAIRS COLUMN HERE?
-# IF SO I WONT HAVE TO USE THE DIRECTORY OUTPUT FLAG WHICH IS A pain
-# CAN INSTEAD LOOP THROUGH THE LIST FOR EACH INDIVIDUAL ASSEMBLY AS THE LIST OF PAIRS WILL BE NOVEL AND INDIVIDUAL
-
-##############################################################################
 
 # PAIRS WITH MASH
 
@@ -143,7 +136,6 @@ rule nucmer_alignment:
 
 
 
-#######################################################################################
 
 # dnadiff
 

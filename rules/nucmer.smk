@@ -49,15 +49,3 @@ rule nucmer_initial_vs_reference:
         mummerplot -l -f --png --large {params[1]}{params[0]}.delta -p {params[1]}{params[0]}
         """
 
-
- # TODO add nucmer delta transformation and synteny plotting
-
-# rule nucmer_circles:
-#     input:
-#         fai = config["assembly"] + "/outputs/nucmer/scaffolds.reduced.fasta.fai"
-#     output:
-#         config["assembly"] + "/outputs/nucmer/circle.int_ref.png",
-#     script:
-#         "../scripts/snmk_nucmer_circles.R"
-
-
