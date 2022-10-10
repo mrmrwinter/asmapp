@@ -1,4 +1,4 @@
-name: appraisal
+name: asmapp
 channels:
   - conda-forge
   - bioconda
