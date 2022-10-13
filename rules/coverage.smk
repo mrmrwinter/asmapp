@@ -1,8 +1,6 @@
 # COVERAGE RELATED THINGS
 
 rule mosdepth:
-    # conda:
-    #     "../envs/coverage.yaml"
     input:
         bam = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam",
         bai = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam.bai",
@@ -16,8 +14,6 @@ rule mosdepth:
         "mosdepth --threads {params[threads]} {params[out_pfx]} {input[0]}"
 
 rule mosdepth_plots:
-    conda:
-        "../envs/coverage.yaml"
     input:
         config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".mosdepth.global.dist.txt"
     output:
