@@ -11,7 +11,7 @@ This workflow requires miniconda. Miniconda can be downloaded [here](https://doc
 The majority of the dependencies required by this workflow are installed and managed through Miniconda. Packages and databases that require additional installation will be described below.
 
 To install and activate the ASMAPP conda environment, navigate to the ASMAPP directory and run the following command:  
-`conda create -f envs/asmapp.yaml`  
+`conda create -f envs/asmapp.yaml -n asmapp`  
 
 Following environment creation, run:  
 `conda activate asmapp`

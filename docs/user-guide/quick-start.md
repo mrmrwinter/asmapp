@@ -5,7 +5,7 @@
 > `cd asmapp`
   
 2, Create and activate the environment with conda
-> `conda env create -f envs/appraisal.yaml`  
+> `conda env create -f envs/appraisal.yaml -n asmapp`  
 > `conda activate appraisal`
 
 3, Download databases and packages. See `docs/user-guide/installation.md`
