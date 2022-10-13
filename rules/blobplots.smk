@@ -22,8 +22,8 @@ rule tax_blast:
 
 
 rule blob_create:
-    conda:
-        "../envs/blobtools.yaml"
+    # conda:
+    #     "../envs/blobtools.yaml"
     input:
         initial = "data/assemblies/" + config["assembly"] + ".fasta",
         reads = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam",
@@ -45,8 +45,8 @@ rule blob_create:
 
 
 rule blobtools_view:
-    conda:
-        "../envs/blobtools.yaml"
+    # conda:
+    #     "../envs/blobtools.yaml"
     input:
         config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
     output:
@@ -64,8 +64,8 @@ rule blobtools_view:
 
 
 rule blobtools_plot:
-    conda:
-        "../envs/blobtools.yaml"
+    # conda:
+    #     "../envs/blobtools.yaml"
     input:
         config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
     output:

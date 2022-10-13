@@ -1,8 +1,8 @@
 # COVERAGE RELATED THINGS
 
 rule mosdepth:
-    conda:
-        "../envs/coverage.yaml"
+    # conda:
+    #     "../envs/coverage.yaml"
     input:
         bam = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam",
         bai = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam.bai",
