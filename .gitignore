@@ -16,6 +16,7 @@ tmp/*
 data/*
 *blast.out
 */reports/*
+*/logs/*
 hs*
 jupyter/*
 *.rplot

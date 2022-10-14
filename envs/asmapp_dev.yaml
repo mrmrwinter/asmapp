@@ -1,4 +1,4 @@
-name: asmapp
+name: asmapp_dev
 channels:
   - conda-forge
   - bioconda

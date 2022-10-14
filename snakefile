@@ -78,7 +78,7 @@ rule log_config:
     shell:
         "cp {input} {output}"
 
-rule log_config:
+rule log_environment:
     output:
         config = config["assembly"] + "/logs/environment.log",
     shell:
