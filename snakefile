@@ -19,7 +19,22 @@ include: "rules/variant_calling.smk"
 
 ###############################################################################
 
-rule all:
+# TODO fix this rule below me to get the depth plots working
+# rule get_scaffs:
+#     output:
+#         all_scaffs
+#     run:
+#         all_scaffs = []
+#         with open(snakemake.input[assembly], "r") as f:
+#                 for record in SeqIO.parse(f, "fasta"):
+#                         all_scaffs.append(record.description)
+
+
+#########################################
+
+
+
+rule final_outputs:
     input:
 # GENOME PROFILING
         # smudgeplot = config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png",
@@ -49,15 +64,24 @@ rule all:
 # MERQURY 
 #         # merqury_mrls =
 #         # merqury_out =
+# LOGS
+        config = config["assembly"] + "/logs/config.log",
+        environment = config["assembly"] + "/logs/environment.log"
 
 
 
-# TODO fix this rule below me to get the depth plots working
-# rule get_scaffs:
-#     output:
-#         all_scaffs
-#     run:
-#         all_scaffs = []
-#         with open(snakemake.input[assembly], "r") as f:
-#                 for record in SeqIO.parse(f, "fasta"):
-#                         all_scaffs.append(record.description)
+rule log_config:
+    input:
+        "config.yaml"
+    output:
+        config = config["assembly"] + "/logs/config.log",
+    shell:
+        "cp {input} {output}"
+
+rule log_config:
+    output:
+        config = config["assembly"] + "/logs/environment.log",
+    shell:
+        "conda env export -f {output}"
+
+
