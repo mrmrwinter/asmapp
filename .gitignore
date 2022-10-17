@@ -34,3 +34,4 @@ exps/
 archived/
 genome.*
 local.*
+config_local.yaml
