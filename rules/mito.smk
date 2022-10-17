@@ -3,7 +3,7 @@
 rule mito_identification:
     input:
         db = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nin",
-        mito_ref = config["reference"] + ".fasta"
+        mito_ref = config["mitochondrial"] + ".fasta"
     output:
         config["assembly"] + "/reports/blast/mito_blast.out"
     params:
