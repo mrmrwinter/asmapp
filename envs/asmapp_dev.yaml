@@ -4,8 +4,10 @@ channels:
   - bioconda
   - defaults
 dependencies:
+  - biopython
   - blast
   - blobtools
+  - gnuplot
   - jupyter_core
   - mash
   - matplotlib
