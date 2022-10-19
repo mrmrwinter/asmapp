@@ -27,7 +27,7 @@ rule blast_nonself:
         db_pfx = "data/databases/" + config["assembly"] + "/" + config["assembly"],
         threads = config["threads"]
     shell:
-        "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out -num_threads {params[threads]}"
+        "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out -num_threads 4"
 
 
 

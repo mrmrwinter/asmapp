@@ -1,7 +1,7 @@
 full_path: "/media/mike/WD_4TB/asmapp/"
 assembly: "FINALFINAL"  # name of starting assembly, located in data/aassemblies/
 reads: "all_hifi"   # name of reads, located in data/reads/
-memory: "30"  # the available memory for the analysis in gigabytes
+# memory: "30"  # the available memory for the analysis in gigabytes
 threads: "8"
 quast_path: "~/software/quast"
 ncbi_nt_path: "/media/mike/SB_2TB/databases/ncbi_db/nt"
