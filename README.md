@@ -17,4 +17,4 @@
 
 See the docs for more details.
 
-
+![Rule graph of workflow](docs/images/rulegraph.png)

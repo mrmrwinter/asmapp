@@ -9,6 +9,9 @@ ASMAPP is a workflow designed to run many common tasks for the appraisal of geno
 
 _________________________________________________
 
+![Rule graph of workflow](images/rulegraph.png)
+
+_________________________________________________
 
 __The workflow currently includes rules for the following analyses:__  
 - Read mapping  
