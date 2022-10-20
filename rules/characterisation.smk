@@ -116,3 +116,4 @@ rule smudgeplot:
 
         smudgeplot.py plot {params.cov}
         """
+# FIXME this rule just eats memory, wont finish beacuae i causes an OOm crash on a 64Gb machine

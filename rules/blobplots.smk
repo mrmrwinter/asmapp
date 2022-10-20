@@ -52,7 +52,7 @@ rule blobtools_view:
     output:
         report(
             config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
-            caption="../reports/blobplots.rst",
+            caption="../docs/captions/blobtools.rst",
             category="Contamination reports"
         )
     params:
@@ -71,7 +71,7 @@ rule blobtools_plot:
     output:
         report(
             config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png", 
-            caption="../reports/blobtools.rst", 
+            caption="../docs/captions/blobtools.rst", 
             category="Contamination reports")
     params:
         out = config["assembly"] + "/reports/blobtools/"

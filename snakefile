@@ -1,6 +1,6 @@
 # assembly appraisal 
 
-report: "reports/workflow.rst"
+report: "docs/captions/workflow.rst"
 
 configfile: "config.yaml"
 
@@ -37,7 +37,8 @@ include: "rules/variant_calling.smk"
 rule final_outputs:
     input:
 # GENOME PROFILING
-        smudgeplot = config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png",
+        genomescope = config["assembly"] + "/reports/genomescope/plot.png",
+        # smudgeplot = config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png",
 # BLOBPLOTS
         blob_table = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
         blob_plot = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png",
