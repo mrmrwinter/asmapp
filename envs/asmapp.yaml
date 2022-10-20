@@ -9,6 +9,7 @@ dependencies:
   - blobtools
   - gnuplot
   - jupyter_core
+  - kmc
   - mash
   - matplotlib
   - matplotlib-base
