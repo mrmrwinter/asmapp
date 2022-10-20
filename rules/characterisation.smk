@@ -77,9 +77,10 @@ rule genomescope:
             category="Genome profiling"
         )
     params:
-        outdir=config["assembly"] + "/reports/genomescope/"
+        outdir=config["assembly"] + "/reports/genomescope/",
+        ploidy = config["ploidy"]
     shell:
-        "Rscript scripts/genomescope.R {input} 21 150 {params.outdir} 1000 1"
+        "genomescope.R {input} 21 15000 {params.outdir} 1000 1 -p {params[ploidy]}"
 
 
 #smudgeplot for predicting ploidy
