@@ -37,37 +37,37 @@ include: "rules/variant_calling.smk"
 rule final_outputs:
     input:
 # GENOME PROFILING
-        genomescope = config["assembly"] + "/reports/genomescope/plot.png",
-        # smudgeplot = config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png",
+        genomescope = f"{config['assembly']}/reports/genomescope/plot.png",
+        # smudgeplot = f"{config["assembly"]}/reports/smudge/smudgeplot_smudgeplot.png",
 # BLOBPLOTS
-        blob_table = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
-        blob_plot = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png",
+        blob_table = f"{config["assembly"]}/reports/blobtools/{config["assembly"]}.blobDB.table.txt",
+        blob_plot = "{f"{config["assembly"]}/reports/blobtools/{config["assembly"]}.blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png",
 # NUCMER
-        self_v_self = config["assembly"] + "/outputs/nucmer/nucmer.self_v_self.png",
-        self_v_ref = config["assembly"] + "/outputs/nucmer/nucmer.self_v_ref.png",
+        self_v_self = "{f"{config["assembly"]}/outputs/nucmer/nucmer.self_v_self.png",
+        self_v_ref = "{f"{config["assembly"]}/outputs/nucmer/nucmer.self_v_ref.png",
 #         # dna_diff =
 # PAIRS ANALYSIS
-        # blast_pairs = config["assembly"] + "/reports/pairs_analysis/blast/blast.onlyPairs.tsv",
-        # dotplots = directory(config["assembly"] + "/reports/pairs_analysis/nucmer/pairs"),
+        # blast_pairs = f"{config["assembly"]}/reports/pairs_analysis/blast/blast.onlyPairs.tsv",
+        # dotplots = directory(f"{config["assembly"]}/reports/pairs_analysis/nucmer/pairs"),
 #         # dna_diff =
 # QUAST
-        quast_report = config["assembly"] + "/reports/quast/report.html",
+        quast_report = f"{config["assembly"]}/reports/quast/report.html",
 # CEGMA
-        completeness_report = config["assembly"] + "/reports/cegma/" + config["assembly"] + ".completeness_report",
+        completeness_report = f"{config["assembly"]}/reports/cegma/{config["assembly"]}.completeness_report",
 # COVERAGE
-        plots_initial = config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".dist.html",
+        plots_initial = f"{config["assembly"]}/reports/coverage/mosdepth/initial_{config["assembly"]}.dist.html",
 # MITO
-        mito_tagged = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
-        no_mito = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".no_mito.fasta",
+        mito_tagged = f"{config["assembly"]}/outputs/assemblies/{config["assembly"]}.mito_tagged.fasta",
+        no_mito = f"{config["assembly"]}/outputs/assemblies/" + config["assembly"]}.no_mito.fasta",
 # VARIANT CALLING
-        sniffles = config["assembly"] + "/outputs/variant_calling/" + config["assembly"] + ".vcf",
+        sniffles = f"{config["assembly"]}/outputs/variant_calling/" + config["assembly"]}.vcf",
 
 # MERQURY 
 #         # merqury_mrls =
 #         # merqury_out =
 # LOGS
-        config = config["assembly"] + "/logs/config.log",
-        environment = config["assembly"] + "/logs/environment.log"
+        config = f"{config["assembly"]}/logs/config.log",
+        environment = f"{config["assembly"]}/logs/environment.log"
 
 
 
@@ -75,13 +75,13 @@ rule log_config:
     input:
         "config.yaml"
     output:
-        config = config["assembly"] + "/logs/config.log",
+        config = f"{config["assembly"]}/logs/config.log",
     shell:
         "cp {input} {output}"
 
 rule log_environment:
     output:
-        config = config["assembly"] + "/logs/environment.log",
+        config = f"{config["assembly"]}/logs/environment.log",
     shell:
         "conda env export -f {output}"
 
