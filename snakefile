@@ -6,7 +6,6 @@ configfile: "config.yaml"
 
 include: "rules/coverage.smk"
 include: "rules/blobplots.smk"
-# include: "rules/merqury.smk"
 include: "rules/characterisation.smk"
 include: "rules/completeness.smk"
 include: "rules/mito.smk"
