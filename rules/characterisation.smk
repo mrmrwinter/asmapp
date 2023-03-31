@@ -112,7 +112,7 @@ rule smudgeplot:
         -s {params.dump}
 
         smudgeplot.py hetkmers \
-        -o {params.pairs} < {params.dump} \
+        -o {params.pairs} < {params.dump} 
 
         smudgeplot.py plot {params.cov}
         """

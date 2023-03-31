@@ -1,1 +1,1 @@
-Output of BLobtools 
+Output of Blobtools 
