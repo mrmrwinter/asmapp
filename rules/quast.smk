@@ -9,15 +9,6 @@ rule reads_to_fasta:
         "zcat -c {input} | seqkit fq2fa | cat > {output}"
 
 
-# rule download_busco_for_quast:
-#     message:
-#         "[INFO] Downloading BUSCO databases for QUAST appraisal..."
-#     output:
-#         ""
-#     shell:
-#         "quast-download-busco"
-
-
   # Performing QUAST assembly appraisal
 rule quast:
     message:
