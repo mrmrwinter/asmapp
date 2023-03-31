@@ -5,12 +5,12 @@
 
 ### This workflow includes full assembly appraisal with the following methods:  
 -Read mapping   
--Assembly appraisal statistics with QUAST
+-Assembly appraisal statistics  
 -Mitochondrial contig flagging/removal  
--Contaminant identification with Blobtools  
+-Contaminant identification       
 -Variant calling   
 -Mapping stat generation   
--Ploidy estimations
+-Ploidy estimations   
 -Coverage analytics  
 -Homoeologous contig detection* 
 -Statistics on homoeolog differences*
