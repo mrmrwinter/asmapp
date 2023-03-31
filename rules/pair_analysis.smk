@@ -30,7 +30,6 @@ rule blast_nonself:
         "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out -num_threads {params[threads]}"
 
 
-
 rule only_pairs:
     input:
        blast = config["assembly"] + "/reports/blast/blast.out",
@@ -52,45 +51,6 @@ rule only_pairs:
 
        only_pairs.to_csv(output[0], sep='\t')
 
-
-# PAIRS WITH MASH
-
-rule mash_sketch:
-    input:
-        scaffolds = config["assembly"] + "/outputs/scaffolds/{all_scaffs}.fasta",
-    output:
-        config["assembly"] + "reports/pair-analysis/mash/" + config["assembly"] + ".sketch",
-    params:
-        scaffolds = config["assembly"] + "/outputs/scaffolds/",
-    shell:
-        "mash sketch {params[scaffolds]}/*.fasta -o {output}"
-
-
-rule mash_dist:
-    input:
-        config["assembly"] + "reports/pair-analysis/mash/" + config["assembly"] + ".sketch",
-    output:
-        config["assembly"] + "reports/pair-analysis/mash/" + config["assembly"] + ".dist",
-    params:
-        scaffolds = config["assembly"] + "/outputs/scaffolds/",
-    shell:
-        "mash sketch {params}/*.fasta -o {output}"
-
-rule get_mash_distances:
-    input:
-    output:
-    shell:
-    
-
-
-
-
-
-
-
-
-
-##################################
 
 # # nucmer analysis/alignment
 rule nucmer_alignment:
@@ -123,16 +83,3 @@ rule nucmer_alignment:
             pair = delta.replace("nucmer/","").replace(".delta","")
             mummer = "mummerplot -l -f --png --large " + delta + " -p " + params[0] + "nucmer/" + pair
             os.system(mummer)
-
-
-
-
-# dnadiff
-
-# os.system("mkdir dnadiff_initial_purged/")
-#
-# for index, value in only_initial_pairs.iterrows():
-#     dnadiff = "dnadiff -p dnadiff_initial_purged/nucmer." + str(index) + " -d nucmer_initial_purged/nucmer." + str(index) + ".delta"
-#     os.system(dnadiff)
-#
-#

@@ -6,7 +6,6 @@ configfile: "config.yaml"
 
 include: "rules/coverage.smk"
 include: "rules/blobplots.smk"
-# include: "rules/merqury.smk"
 include: "rules/characterisation.smk"
 include: "rules/completeness.smk"
 include: "rules/mito.smk"
@@ -24,15 +23,15 @@ rule all:
 # GENOME PROFILING
         # smudgeplot = config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png",
 # BLOBPLOTS
-        blob_table = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
+        blob_tsv = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
         blob_plot = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png",
 # NUCMER
         self_v_self = config["assembly"] + "/outputs/nucmer/nucmer.self_v_self.png",
         self_v_ref = config["assembly"] + "/outputs/nucmer/nucmer.self_v_ref.png",
 #         # dna_diff =
 # PAIRS ANALYSIS
-        blast_pairs = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv",
-        dotplots = directory(config["assembly"] + "reports/nucmer/pairs"),
+        # blast_pairs = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv",
+        # dotplots = directory(config["assembly"] + "reports/nucmer/pairs"),
 #         # dna_diff =
 # QUAST
         quast_report = config["assembly"] + "/reports/quast/report.html",
@@ -41,14 +40,11 @@ rule all:
 # COVERAGE
         plots_initial = config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".dist.html",
 # MITO
-        mito_tagged = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
+        # mito_tagged = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
         no_mito = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".no_mito.fasta",
 # VARIANT CALLING
         sniffles = config["assembly"] + "/outputs/variant_calling/" + config["assembly"] + ".vcf",
 
-# MERQURY 
-#         # merqury_mrls =
-#         # merqury_out =
 
 
 

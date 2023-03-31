@@ -1,5 +1,4 @@
-# variant calling snake
-
+# variant calling 
 
 rule sniffles:
     input:
