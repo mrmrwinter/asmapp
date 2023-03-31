@@ -7,9 +7,9 @@ configfile: "config.yaml"
 include: "rules/coverage.smk"
 include: "rules/blobplots.smk"
 include: "rules/characterisation.smk"
-include: "rules/cegma.smk"
+include: "rules/completeness.smk"
 include: "rules/mito.smk"
-include: "rules/checks_and_transformations.smk"
+# include: "rules/checks_and_transformations.smk"
 include: "rules/mapping.smk"
 include: "rules/nucmer.smk"
 include: "rules/quast.smk"
@@ -21,7 +21,7 @@ include: "rules/variant_calling.smk"
 rule all:
     input:
 # GENOME PROFILING
-        smudgeplot = config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png",
+        # smudgeplot = config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png",
 # BLOBPLOTS
         blob_tsv = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
         blob_plot = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png",

@@ -30,12 +30,11 @@ rule blast_nonself:
         "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out -num_threads {params[threads]}"
 
 
-
 rule only_pairs:
     input:
        blast = config["assembly"] + "/reports/blast/blast.out",
     output:
-       only_pairs_table = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv"
+       only_pairs_table = config["assembly"] + "/reports/pairs_analysis/blast/blast.onlyPairs.tsv"
     run:
        import pandas as pd
 
@@ -57,10 +56,10 @@ rule only_pairs:
 rule nucmer_alignment:
     input:
         # directory(config["assembly"] + "tmp_initial/"),
-        only_pairs_table = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv"
+        only_pairs_table = config["assembly"] + "/reports/pairs_analysis/blast/blast.onlyPairs.tsv"
     output:
         report(
-            directory(config["assembly"] + "reports/nucmer/pairs"),
+            directory(config["assembly"] + "reports/pair-analysis/nucmer/pairs"),
             caption="../docs/captions/pair_dotplots.rst",
             category="Pair analysis"
         )
@@ -84,7 +83,3 @@ rule nucmer_alignment:
             pair = delta.replace("nucmer/","").replace(".delta","")
             mummer = "mummerplot -l -f --png --large " + delta + " -p " + params[0] + "nucmer/" + pair
             os.system(mummer)
-
-
-
-

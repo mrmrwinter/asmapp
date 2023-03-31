@@ -1,6 +1,6 @@
 # ASMAPP
 
-## This workflow is for appraising genome assemblies. 
+## A workflow for appraising genome assemblies. 
 
 
 ### This workflow includes full assembly appraisal with the following methods:  
@@ -17,8 +17,4 @@
 
 See the docs for more details.
 
-<br>
-
-
-  
 

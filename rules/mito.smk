@@ -36,9 +36,8 @@ rule mito_tagging:
 
         with open(output[0], "w") as mito_tagged:
             for r in SeqIO.parse(input[0], "fasta"):
-                if r.id in str(mito_tig):
-                    r.id = (to_add + r.description).replace(" ", "_")
-                    r.description = r.id
+                if r.id == str(mito_tig):
+                    r.id = (to_add + r.id).replace(" ", "_")
                     SeqIO.write(r, mito_tagged, "fasta")
 
         # code to remove the mito contig from the assembly

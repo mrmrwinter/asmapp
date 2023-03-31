@@ -28,3 +28,41 @@ rule mosdepth_plots:
         )
     shell:
         "python3 scripts/plot_dist.py -o {output} {input}"
+
+
+rule get_coverage:
+    input:
+        bam = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam",
+        bai = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam.bai",
+    output:
+        config["assembly"] + "/reports/coverage/" + config["assembly"] + ".coverage"
+    shell:
+        "samtools depth {input[bam]} > {output}"
+
+
+# TODO get the following rule working
+rule scaffold_coverage:
+    input:
+        assembly = "data/assemblies/" + config["assembly"] + ".fasta"
+    output:
+        config["assembly"] + "/reports/coverage/{all_scaffs}.coverage"
+    shell:
+        "awk '$1 == {all_scaffs} '{{print $0}}' {input} > {output}"
+
+
+rule assembly_coverage_plot:
+    input:
+        config["assembly"] + "/reports/coverage/" + config["assembly"] + ".coverage"
+    output:
+        config["assembly"] + "/reports/coverage/" + config["assembly"] + ".coverage.png"
+    script:
+        "../scripts/assembly_coverage.R"
+
+
+rule scaffold_coverage_plots:
+    input:
+        config["assembly"] + "/reports/coverage/{all_scaffs}.coverage"
+    output:
+        config["assembly"] + "/reports/coverage/{all_scaffs}.coverage.png"
+    script:
+        "../scripts/scaffold_coverage.R"
