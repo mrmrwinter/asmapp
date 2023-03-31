@@ -1,10 +1,10 @@
-full_path: ""
+full_path: ""  # full path to the asmapp directory
 assembly: ""  # name of starting assembly, located in data/aassemblies/
 reads: ""   # name of reads, located in data/reads/
 redundans_path: ""  # path to directory containing redundans script
 memory: ""  # the available memory for the analysis in gigabytes
-threads: ""
-quast_path: ""
-ncbi_nt_path: ""
-seq_tech: ""
-reference: ""
+threads: ""  # number of threads
+quast_path: ""  # path to quast
+ncbi_nt_path: ""  # path to ncbi nucleotide database
+seq_tech: ""  
+reference: ""  # filename of reference genome

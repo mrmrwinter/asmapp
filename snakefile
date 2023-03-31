@@ -6,7 +6,6 @@ configfile: "config.yaml"
 
 include: "rules/coverage.smk"
 include: "rules/blobplots.smk"
-# include: "rules/merqury.smk"
 include: "rules/characterisation.smk"
 include: "rules/cegma.smk"
 include: "rules/mito.smk"
@@ -46,9 +45,6 @@ rule all:
 # VARIANT CALLING
         sniffles = config["assembly"] + "/outputs/variant_calling/" + config["assembly"] + ".vcf",
 
-# MERQURY 
-#         # merqury_mrls =
-#         # merqury_out =
 
 
 
