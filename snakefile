@@ -60,7 +60,6 @@ rule final_outputs:
         no_mito = f"{config["assembly"]}/outputs/assemblies/" + config["assembly"]}.no_mito.fasta",
 # VARIANT CALLING
         sniffles = f"{config["assembly"]}/outputs/variant_calling/" + config["assembly"]}.vcf",
-
 # MERQURY 
 #         # merqury_mrls =
 #         # merqury_out =

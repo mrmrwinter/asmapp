@@ -1,5 +1,6 @@
 # GENOME CHARACTERISATION
 
+
 ### KMC
 # counts kmers and coverage
 # rule create_kmcfilelist:
@@ -54,6 +55,7 @@ rule kmc_transform:
     shell:
         "kmc_tools transform {params.kmc} histogram {output} -cx10000"
 
+
 #this rule replaces tabs with spaces to allow running from kmc3 into genomescope
 rule kmc2genomescope_transformation:
     input:
@@ -62,6 +64,7 @@ rule kmc2genomescope_transformation:
         config["assembly"] + "/reports/kmc/kmer_k21.histo"
     shell:
         "expand -t 1 {input} > {output}"
+
 
 ### GenomeScope
 #this is to see kmer spectra, estimate genome size, etc
@@ -83,7 +86,7 @@ rule genomescope:
         "genomescope.R {input} 21 15000 {params.outdir} 1000 1 -p {params[ploidy]}"
 
 
-#smudgeplot for predicting ploidy
+#Smudgeplot for predicting ploidy
 rule smudgeplot:
     # conda:
     #     "../envs/characterisation.yaml"
@@ -117,4 +120,3 @@ rule smudgeplot:
 
         smudgeplot.py plot {params.cov}
         """
-# FIXME this rule just eats memory, wont finish beacuae i causes an OOm crash on a 64Gb machine

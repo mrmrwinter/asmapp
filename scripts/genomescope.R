@@ -1,4 +1,3 @@
-
 ## GenomeScope: Fast Genome Analysis from Unassembled Short Reads
 ##
 ## This is the automated script for computing genome characteristics
@@ -45,7 +44,6 @@ min_max <- function(table){
 	##return (c( abs(table[1]) - 2*abs(table[2]) , abs(table[1])+ 2*abs(table[2])))
 	return (c(table[1] - 2*table[2], table[1]+ 2*table[2]))
 }
-
 
 
 ## Use nls to fit 4 peak model

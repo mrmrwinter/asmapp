@@ -1,5 +1,6 @@
 # COMPLETENESS ANALYSIS
 
+
 rule CEGMA:
     container:
         "docker://chrishah/cegma"

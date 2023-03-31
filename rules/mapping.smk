@@ -1,5 +1,6 @@
 # MAPPING AND TRANSFORMATIONS 
 
+
 rule mapping:
     input:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",

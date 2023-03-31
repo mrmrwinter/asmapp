@@ -1,5 +1,6 @@
 # NUCMER ASSEMBLY DOTPLOTS
 
+
 rule nucmer_self:
     input:
         initial = "data/assemblies/" + config["assembly"] + ".fasta"
@@ -20,8 +21,6 @@ rule nucmer_self:
         cp tmp/{params[0]}.delta {params[1]}
         mummerplot -l -f --png --large {params[1]}{params[0]}.delta -p {params[1]}{params[0]}
         """
-
-
 
 
 rule nucmer_initial_vs_reference:

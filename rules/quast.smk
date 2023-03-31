@@ -1,5 +1,6 @@
 # QUAST
 
+
 rule reads_to_fasta:
     input:
         reads = "data/reads/" + config["reads"] + ".fastq.gz",
@@ -18,7 +19,7 @@ rule reads_to_fasta:
 #         "quast-download-busco"
 
 
-  # Performing QUAST assembly appraisal
+# Performing QUAST assembly appraisal
 rule quast:
     message:
         "[INFO] Performing QUAST appraisal on assemblies..."

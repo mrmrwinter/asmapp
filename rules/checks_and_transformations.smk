@@ -1,5 +1,6 @@
 # INPUT CHECKS
 
+
 rule input_assembly:
     output:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",

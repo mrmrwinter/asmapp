@@ -1,5 +1,6 @@
 # MITOCHONDRIAL DETECTION
 
+
 rule mito_identification:
     input:
         db = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nin",
