@@ -40,7 +40,6 @@ rule get_coverage:
         "samtools depth {input[bam]} > {output}"
 
 
-# TODO get the following rule working
 rule scaffold_coverage:
     input:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta"
