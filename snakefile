@@ -20,15 +20,12 @@ include: "rules/variant_calling.smk"
 
 rule all:
     input:
-# GENOME PROFILING
-        # smudgeplot = config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png",
 # BLOBPLOTS
         blob_table = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
         blob_plot = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png",
 # NUCMER
         self_v_self = config["assembly"] + "/outputs/nucmer/nucmer.self_v_self.png",
         self_v_ref = config["assembly"] + "/outputs/nucmer/nucmer.self_v_ref.png",
-#         # dna_diff =
 # PAIRS ANALYSIS
         blast_pairs = config["assembly"] + "/reports/blast/blast.onlyPairs.tsv",
         dotplots = directory(config["assembly"] + "reports/nucmer/pairs"),
