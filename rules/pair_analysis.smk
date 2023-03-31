@@ -1,5 +1,6 @@
-# PAIRS TABLE with BLAST
+# PAIRS ANALYSIS
 
+### BLAST
 rule make_blast_database:  # Rule to make database of cds fasta
     input:
         "data/assemblies/" + config["assembly"] + ".fasta" # input to the rule
@@ -30,7 +31,6 @@ rule blast_nonself:
         "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out -num_threads 4"
 
 
-
 rule only_pairs:
     input:
        blast = config["assembly"] + "/reports/blast/blast.out",
@@ -53,8 +53,7 @@ rule only_pairs:
        only_pairs.to_csv(output[0], sep='\t')
 
 
-# PAIRS WITH MASH
-
+### PAIRS WITH MASH
 rule mash_sketch:
     input:
         scaffolds = config["assembly"] + "/outputs/scaffolds/{all_scaffs}.fasta",
@@ -76,6 +75,7 @@ rule mash_dist:
     shell:
         "mash sketch {params}/*.fasta -o {output}"
 
+
 # rule get_mash_distances:
 #     input:
 #     output:
@@ -95,10 +95,6 @@ rule mash_dist:
 #         col_heads = ["Reference-ID", "Query-ID", "Mash-distance", "P-value", "Matching-hashes"]
 #         df4.columns = col_heads  # wow these lines are getting redundant
 #         df4.to_csv(snakemake.output[0], index=None)
-
-
-
-
 
 ##################################
 
