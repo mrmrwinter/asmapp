@@ -11,7 +11,7 @@ rule mapping:
         threads = config["threads"],
         seq_tech = "map-" + config["seq_tech"]
     shell:
-        "minimap2 -t {params[threads]} -ax {params[seq_tech]} {input[assembly]} {input[reads]} > {output}"
+        "minimap2 -t {params[threads]} -ax {params[seq_tech]} {input[assembly]} {input[reads]} > {output}"  # change this to NGMLR at a later date
 
 # Convert the output sam file into a bam
 rule conversion:
