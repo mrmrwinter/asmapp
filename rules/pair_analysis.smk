@@ -1,6 +1,9 @@
 # PAIRS TABLE with BLAST
+# these rules potentially broken
+# more rules to be added
 
-rule make_blast_database:  # Rule to make database of cds fasta
+# Rule to make database of assembly
+rule make_blast_database:  
     input:
         "data/assemblies/" + config["assembly"] + ".fasta" # input to the rule
     output:
@@ -16,6 +19,7 @@ rule make_blast_database:  # Rule to make database of cds fasta
         -dbtype nucl"  # the database type
 
 
+# BLAST the scaffolds back against the assembly
 rule blast_nonself:
     input:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
@@ -29,8 +33,7 @@ rule blast_nonself:
     shell:
         "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out -num_threads {params[threads]}"
 
-
-
+# Remove self-to-self hits from the output
 rule only_pairs:
     input:
        blast = config["assembly"] + "/reports/blast/blast.out",
@@ -53,8 +56,7 @@ rule only_pairs:
        only_pairs.to_csv(output[0], sep='\t')
 
 
-
-# # nucmer analysis/alignment
+# Perform nucmer alignment of potential pairs and print a dotplot for each
 rule nucmer_alignment:
     input:
         # directory(config["assembly"] + "tmp_initial/"),
@@ -86,4 +88,6 @@ rule nucmer_alignment:
             mummer = "mummerplot -l -f --png --large " + delta + " -p " + params[0] + "nucmer/" + pair
             os.system(mummer)
 
-
+# TODO
+# Add mash pair prediction
+# Add BUSCO pair prediction
