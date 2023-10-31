@@ -25,6 +25,14 @@ rule splinter_assembly:
         close({params}/filename)}}'
         """"
 
+# Unzip reads if zipped
+rule reads_to_fasta:
+    input:
+        reads = "data/reads/" + config["reads"] + ".fastq.gz",
+    output:
+        reads = "data/reads/" + config["reads"] + ".fasta",
+    shell:
+        "zcat -c {input} | seqkit fq2fa | cat > {output}"
 
 # Rename initial contigs
 # rule initial_tagging:
