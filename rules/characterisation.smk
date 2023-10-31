@@ -1,18 +1,6 @@
 # GENOME CHARACTERISATION
 # Perform genome profiling with genomescope and smudgeplot
 
-### KMC
-# counts kmers and coverage
-# rule create_kmcfilelist:
-#     conda:
-#         "../envs/characterisation.yaml"
-#     input:
-#         reads = "data/reads/" + config["reads"] + ".fastq.gz",
-#     output:
-#         config["assembly"] + "/reports/kmc/kmcfilelist"
-#     shell:
-#         "ls {input} | sed -e 's/^data\/reads\///' > {output}"
-
 # Count the kmers in the raw reads
 rule kmc_count:
     conda:

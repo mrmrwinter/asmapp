@@ -88,6 +88,3 @@ rule nucmer_alignment:
             mummer = "mummerplot -l -f --png --large " + delta + " -p " + params[0] + "nucmer/" + pair
             os.system(mummer)
 
-# TODO
-# Add mash pair prediction
-# Add BUSCO pair prediction

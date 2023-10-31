@@ -59,7 +59,7 @@ rule assembly_coverage_plot:
     script:
         "../scripts/assembly_coverage.R"
 
-# Generate pltos of coverage across the scaffolds
+# Generate plots of coverage across the scaffolds
 rule scaffold_coverage_plots:
     input:
         config["assembly"] + "/reports/coverage/{all_scaffs}.coverage"

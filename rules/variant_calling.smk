@@ -11,4 +11,3 @@ rule sniffles:
         threads=config["threads"],
     shell:
         "sniffles -i {input[1]}  --vcf {output} --reference {input[0]}"
-

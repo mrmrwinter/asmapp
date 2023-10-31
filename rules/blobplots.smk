@@ -22,8 +22,6 @@ rule tax_blast:
 
 # Create the intial blobject using the mapped reads, the contig taxonomy results, and the assembly.
 rule blob_create:
-#    conda:
-#        "../envs/blobtools.yaml"
     input:
         initial = "data/assemblies/" + config["assembly"] + ".fasta",
         reads = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam",
@@ -45,8 +43,6 @@ rule blob_create:
 
 # View the blobject as a table
 rule blobtools_view:
-#    conda:
-#        "../envs/blobtools.yaml"
     input:
         config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
     output:
@@ -64,8 +60,6 @@ rule blobtools_view:
 
 # Plot the blobplot
 rule blobtools_plot:
-#    conda:
-#        "../envs/blobtools.yaml"
     input:
         config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
     output:

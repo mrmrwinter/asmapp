@@ -1,6 +1,6 @@
 # QUAST
 
- # Performing QUAST assembly appraisal
+# Performing QUAST assembly appraisal
 rule quast:
     message:
         "[INFO] Performing QUAST appraisal on assemblies..."

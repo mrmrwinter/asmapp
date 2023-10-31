@@ -33,19 +33,3 @@ rule reads_to_fasta:
         reads = "data/reads/" + config["reads"] + ".fasta",
     shell:
         "zcat -c {input} | seqkit fq2fa | cat > {output}"
-
-# Rename initial contigs
-# rule initial_tagging:
-#     input:
-#         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
-#     output:
-#         assembly = "data/assemblies/" + config["assembly"] + ".tagged.fasta",
-#     run:
-#         from Bio import SeqIO
-#
-#         to_add = "scaffold_"
-#         with open(output[0], "w") as outputs:
-#             for r in SeqIO.parse(input[0], "fasta"):
-#                 r.id = (to_add + r.description).replace(" ", "_")
-#                 r.description = r.id
-#                 SeqIO.write(r, outputs, "fasta")
