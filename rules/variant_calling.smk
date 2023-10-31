@@ -1,6 +1,6 @@
-# variant calling snake
+# VARIANT CALLING
 
-
+# Run sniffles on the assembly to detect structural variation
 rule sniffles:
     input:
         initial="data/assemblies/" + config["assembly"] + ".fasta",

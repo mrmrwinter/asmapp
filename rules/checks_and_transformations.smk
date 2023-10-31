@@ -1,15 +1,16 @@
-# INPUT CHECKS
+# INPUT CHECKS AND INITIAL DATA TRANSFORMATIONS
 
+# Check for presence of input assembly
 rule input_assembly:
     output:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
 
-
+# Check for presenc of input reads
 rule input_reads:
     output:
         reads = "data/reads/" + config["reads"] + ".fastq.gz",
 
-
+# Generate individual files for each scaffold
 rule splinter_assembly:
     input:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
@@ -24,12 +25,21 @@ rule splinter_assembly:
         close({params}/filename)}}'
         """"
 
+# Unzip reads if zipped
+rule reads_to_fasta:
+    input:
+        reads = "data/reads/" + config["reads"] + ".fastq.gz",
+    output:
+        reads = "data/reads/" + config["reads"] + ".fasta",
+    shell:
+        "zcat -c {input} | seqkit fq2fa | cat > {output}"
 
-# # RENAME INITIAL CONTIGS
+# Rename initial contigs
 # rule initial_tagging:
 #     input:
+#         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
 #     output:
-#         assembly = "M_javanica_062022.final.renamed/outputs/cegma/tagged_initial_assembly.fasta"
+#         assembly = "data/assemblies/" + config["assembly"] + ".tagged.fasta",
 #     run:
 #         from Bio import SeqIO
 #
@@ -39,4 +49,3 @@ rule splinter_assembly:
 #                 r.id = (to_add + r.description).replace(" ", "_")
 #                 r.description = r.id
 #                 SeqIO.write(r, outputs, "fasta")
-# TODO
