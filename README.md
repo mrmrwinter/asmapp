@@ -10,7 +10,7 @@
 -Contaminant identification with Blobtools  
 -Variant calling with Sniffles   
 -Mapping stat generation  
--Ploidy estimations with Genomescope and Smusdgeplot  
+-Ploidy estimations with Genomescope and Smudgeplot  
 -Coverage analytics  
 -Homoeologous contig detection*   
 -Statistics on homoeolog differences*  
