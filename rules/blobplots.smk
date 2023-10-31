@@ -1,6 +1,6 @@
 # BLOBPLOTS
 
-
+# Blast the contigs against the NCBI nt database to assign taxonomy to them
 rule tax_blast:
     input:
         "data/assemblies/" + config["assembly"] + ".fasta",
@@ -20,10 +20,10 @@ rule tax_blast:
         -num_threads {params[threads]} \
         -out {output}"
 
-
+# Create the intial blobject using the mapped reads, the contig taxonomy results, and the assembly.
 rule blob_create:
-    conda:
-        "../envs/blobtools.yaml"
+#    conda:
+#        "../envs/blobtools.yaml"
     input:
         initial = "data/assemblies/" + config["assembly"] + ".fasta",
         reads = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam",
@@ -43,10 +43,10 @@ rule blob_create:
         --names {params[1]}/names.dmp \
         --nodes {params[1]}/nodes.dmp"
 
-
+# View the blobject as a table
 rule blobtools_view:
-    conda:
-        "../envs/blobtools.yaml"
+#    conda:
+#        "../envs/blobtools.yaml"
     input:
         config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
     output:
@@ -62,10 +62,10 @@ rule blobtools_view:
         -i {input} \
         --out {params[0]}"
 
-
+# Plot the blobplot
 rule blobtools_plot:
-    conda:
-        "../envs/blobtools.yaml"
+#    conda:
+#        "../envs/blobtools.yaml"
     input:
         config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
     output:
