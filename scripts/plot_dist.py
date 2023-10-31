@@ -6,52 +6,69 @@ from operator import itemgetter
 import collections
 from argparse import ArgumentParser
 
-
+# Define the main function
 def main():
+    # Parse command-line arguments
     args = get_args()
-    traces = collections.defaultdict(list)
-    chroms = collections.OrderedDict()
-    chroms["total"] = True
+
+    # Initialize data structures
+    traces = collections.defaultdict(list)  # Create a defaultdict to store data traces
+    chroms = collections.OrderedDict()  # Create an ordered dictionary for chromosome names
+    chroms["total"] = True  # Initialize "total" in the chromosome dictionary
 
     for f in args.input:
-        sample = f.replace(".mosdepth.global.dist.txt", "")
-        gen = (x.rstrip().split("\t") for x in open(f))
+        sample = f.replace(".mosdepth.global.dist.txt", "")  # Extract sample name from the file name
+        gen = (x.rstrip().split("\t") for x in open(f))  # Read and split data from the input file
+
         for chrom, data in it.groupby(gen, itemgetter(0)):
+            # Iterate through grouped data by chromosome
+            # Note: itemgetter(0) extracts the first element of each line as the grouping key
+            
+            # Skip specific chromosome names
             if chrom.startswith("GL"):
                 continue
-            if "Un" in chrom: continue
-            if "random" in chrom or "HLA" in chrom: continue
-            if chrom.endswith("alt"): continue
-            chroms[chrom] = True
-            xs, ys = [], []
-            v50 = 0
-            found = False
+            if "Un" in chrom:
+                continue
+            if "random" in chrom or "HLA" in chrom:
+                continue
+            if chrom.endswith("alt"):
+                continue
+            
+            chroms[chrom] = True  # Add the current chromosome to the dictionary
+            xs, ys = [], []  # Initialize lists for x and y values
+            v50 = 0  # Initialize a variable for v50
+            found = False  # Initialize a flag to track if v50 is found
+
             for _, x, y in data:
-                y = float(y)
+                y = float(y)  # Convert y to a float
                 if y < 0.01:
-                    continue
+                    continue  # Skip data points with y < 0.01
+                
+                # If v50 is not found and y > 0.5, set v50 and mark as found
                 if not found and y > 0.5:
                     v50 = x
                     found = True
-                    # print("{}\t{}\t{}\t{:.3f}".format(sample, chrom, x, y))
-
-                xs.append(float(x))
-                ys.append(y)
+                
+                xs.append(float(x))  # Append x to the xs list
+                ys.append(y)  # Append y to the ys list
 
             if len(xs) > 100:
+                # If there are more than 100 data points, filter and subsample
                 xs = [x for i, x in enumerate(xs) if ys[i] > 0.02]
                 ys = [y for y in ys if y > 0.02]
                 if len(xs) > 100:
-                    xs = xs[::2]
+                    xs = xs[::2]  # Take every second data point
                     ys = ys[::2]
 
+            # Append the trace data for the current chromosome
             traces[chrom].append({
-                'x': [round(x, 3) for x in xs],
-                'y': [round(y, 3) for y in ys],
-                'mode': 'lines',
-                'name': sample + (" (%.1f)" % float(v50))
+                'x': [round(x, 3) for x in xs],  # Round and store x values
+                'y': [round(y, 3) for y in ys],  # Round and store y values
+                'mode': 'lines',  # Set the plot mode to 'lines'
+                'name': sample + (" (%.1f)" % float(v50))  # Set the trace name
             })
 
+    # HTML template for creating plots
     tmpl = """<html>
     <head>
       <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -76,6 +93,7 @@ def main():
         },
     }
     """
+
     footer = """
     </script>
     </body>
@@ -92,14 +110,16 @@ def main():
                 chrom=c, div="h2" if c == "total" else "b") for c in chroms)
             html.write(tmpl.substitute(showlegend="true" if len(
                 sys.argv[1:]) < 20 else "false", plot_divs=divs))
+            
             for chrom in chroms:
                 html.write(string.Template(chr_tmpl).substitute(
                     chrom=chrom, data=json.dumps(traces[chrom])))
+            
             html.write(footer)
     except FileNotFoundError:
         sys.exit("ERROR: failed creating output file, does the path exist?")
 
-
+# Function to parse command-line arguments
 def get_args():
     parser = ArgumentParser(description="Creates html plots from mosdepth results.")
     parser.add_argument("-o", "--output",
@@ -109,7 +129,6 @@ def get_args():
                         nargs='+',
                         help="the dist file(s) to use for plotting")
     return parser.parse_args()
-
 
 if __name__ == '__main__':
     main()
