@@ -1,6 +1,7 @@
 # NUCMER ASSEMBLY DOTPLOTS
 
 
+# Perform a self-by-self alignment with nucmer and print a dotplot
 rule nucmer_self:
     input:
         initial = "data/assemblies/" + config["assembly"] + ".fasta"
@@ -22,7 +23,7 @@ rule nucmer_self:
         mummerplot -l -f --png --large {params[1]}{params[0]}.delta -p {params[1]}{params[0]}
         """
 
-
+# Perform a self-by-reference alignment with nucmer and print a dotplot
 rule nucmer_initial_vs_reference:
     input:
         initial = "data/assemblies/" + config["assembly"] + ".fasta",

@@ -1,6 +1,7 @@
 # COMPLETENESS ANALYSIS
 
 
+# Run CEGMA on the assembly
 rule CEGMA:
     container:
         "docker://chrishah/cegma"
@@ -22,7 +23,7 @@ rule CEGMA:
         cegma --threads {params[threads]} --genome {input[0]} -o {params[0]}
         """
 
-
+# Run BUSCO on the assembly
 # rule busco:
 #     conda:
 #         "../envs/BUSCO.yaml"

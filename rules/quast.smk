@@ -1,25 +1,6 @@
 # QUAST
 
-
-rule reads_to_fasta:
-    input:
-        reads = "data/reads/" + config["reads"] + ".fastq.gz",
-    output:
-        reads = "data/reads/" + config["reads"] + ".fasta",
-    shell:
-        "zcat -c {input} | seqkit fq2fa | cat > {output}"
-
-
-# rule download_busco_for_quast:
-#     message:
-#         "[INFO] Downloading BUSCO databases for QUAST appraisal..."
-#     output:
-#         ""
-#     shell:
-#         "quast-download-busco"
-
-
-# Performing QUAST assembly appraisal
+ # Performing QUAST assembly appraisal
 rule quast:
     message:
         "[INFO] Performing QUAST appraisal on assemblies..."

@@ -1,6 +1,6 @@
 # COVERAGE RELATED THINGS
 
-
+# Run mosdepth on the assembly 
 rule mosdepth:
     input:
         bam = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam",
@@ -14,6 +14,7 @@ rule mosdepth:
     shell:
         "mosdepth --threads {params[threads]} {params[out_pfx]} {input[0]}"
 
+# Plot the output of mosdepth
 rule mosdepth_plots:
     input:
         config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".mosdepth.global.dist.txt"
@@ -26,7 +27,7 @@ rule mosdepth_plots:
     shell:
         "python3 scripts/plot_dist.py -o {output} {input}"
 
-
+# Calculate base specific assembly coverage with samtools
 rule get_coverage:
     input:
         bam = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam",
@@ -36,7 +37,7 @@ rule get_coverage:
     shell:
         "samtools depth {input[bam]} > {output}"
 
-
+# Break the coverage file into individual scaffold files
 rule scaffold_coverage:
     input:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta"
@@ -45,7 +46,7 @@ rule scaffold_coverage:
     shell:
         "awk '$1 == {all_scaffs} '{{print $0}}' {input} > {output}"
 
-
+# Generate plots of coverage across the assembly
 rule assembly_coverage_plot:
     input:
         config["assembly"] + "/reports/coverage/" + config["assembly"] + ".coverage"
@@ -54,7 +55,7 @@ rule assembly_coverage_plot:
     script:
         "../scripts/assembly_coverage.R"
 
-
+# Generate pltos of coverage across the scaffolds
 rule scaffold_coverage_plots:
     input:
         config["assembly"] + "/reports/coverage/{all_scaffs}.coverage"
