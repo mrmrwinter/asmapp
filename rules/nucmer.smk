@@ -42,7 +42,7 @@ rule nucmer_initial_vs_reference:
     shell:
         """
         mkdir -p tmp/
-        nucmer -p tmp/{params[0]} {input[0]} {params[2]}
+        nucmer -p tmp/{params[0]} {input[0]} {input[1]}
         cp tmp/{params[0]}.delta {params[1]}
         mummerplot -l -f --png --large {params[1]}{params[0]}.delta -p {params[1]}{params[0]}
         """
