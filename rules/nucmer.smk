@@ -26,7 +26,7 @@ rule nucmer_self:
 rule nucmer_initial_vs_reference:
     input:
         initial = "data/assemblies/" + config["assembly"] + ".fasta",
-        reference = config["reference"] + ".fasta.gz",
+        reference = "data/assemblies/" + config["reference"] + ".fasta",
         # nuc_fai = config["assembly"] + "/outputs/nucmer/scaffolds.reduced.fasta.fai"
     output:
         report(
@@ -42,7 +42,6 @@ rule nucmer_initial_vs_reference:
     shell:
         """
         mkdir -p tmp/
-        gunzip -c {input[reference]} > {params[2]}
         nucmer -p tmp/{params[0]} {input[0]} {params[2]}
         cp tmp/{params[0]}.delta {params[1]}
         mummerplot -l -f --png --large {params[1]}{params[0]}.delta -p {params[1]}{params[0]}

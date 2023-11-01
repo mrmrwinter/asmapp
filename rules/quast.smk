@@ -8,7 +8,7 @@ rule quast:
         initial = "data/assemblies/" + config["assembly"] + ".fasta",
         # assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa",
         reads = "data/reads/" + config["reads"] + ".fasta",
-        reference = config["reference"] + ".fasta.gz"
+        reference = "data/assemblies/" + config["reference"] + ".fasta"
     output:
         # config["assembly"] + "/reports/quast/report.html",
         report(
@@ -19,7 +19,7 @@ rule quast:
         out_pfx = config["assembly"] + "/reports/quast/",
         threads = config["threads"]
     shell:
-        config["quast_path"] + "/quast.py --large {input[0]} --glimmer -b --threads {params[1]} -L --pacbio {input[reads]} -o {params[0]}"
+        "quast --large {input[0]} --glimmer -b --threads {params[1]} -L --pacbio {input[reads]} -o {params[0]}"
 
 
         

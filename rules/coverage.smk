@@ -2,8 +2,8 @@
 
 # Run mosdepth on the assembly 
 rule mosdepth:
-    conda:
-        "../envs/coverage.yaml"
+    # conda:
+    #     "../envs/coverage.yaml"
     input:
         bam = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam",
         bai = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam.bai",
@@ -18,8 +18,8 @@ rule mosdepth:
 
 # Plot the output of mosdepth
 rule mosdepth_plots:
-    conda:
-        "../envs/coverage.yaml"
+    # conda:
+    #     "../envs/coverage.yaml"
     input:
         config["assembly"] + "/reports/coverage/mosdepth/initial_" + config["assembly"] + ".mosdepth.global.dist.txt"
     output:

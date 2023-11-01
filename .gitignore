@@ -33,3 +33,5 @@ exps/
 archived/
 genome.*
 local.*
+nucmer.error
+config_local.yaml

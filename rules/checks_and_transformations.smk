@@ -10,20 +10,38 @@ rule input_reads:
     output:
         reads = "data/reads/" + config["reads"] + ".fastq.gz",
 
+
+#         # Define the Snakemake rule for downloading the NT database
+# rule download_nt_db:
+#     output:
+#         os.path.join(config["ncbi_nt_path"], "nt.000.gz")
+#     shell:
+#         "curl -o {output} ftp://ftp.ncbi.nlm.nih.gov/blast/db/nt.*.tar.gz"
+
+
+# # Define the Snakemake rule for building the NT database with makeblastdb
+# rule makeblastdb_nt:
+#     input:
+#         os.path.join(config["ncbi_nt_path"], "nt.000.gz")
+#     output:
+#         os.path.join(config["ncbi_nt_path"], "nt.db")
+#     shell:
+#         "gunzip -c {input} | makeblastdb -in - -dbtype nucl -out {output}"
+
 # Generate individual files for each scaffold
-rule splinter_assembly:
-    input:
-        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
-        scaffolds = all_scaffs
-    output:
-        config["assembly"] + "/outputs/scaffolds/{all_scaffs}.fasta",
-    params:
-        config["assembly"] + "/outputs/scaffolds/"
-    shell:
-        """
-        cat {input} | awk '{{if (substr($0, 1, 1)=='>') {{filename=(substr($0,2) '.fasta'}} print $0 >> {params}/filename
-        close({params}/filename)}}'
-        """"
+# rule splinter_assembly:
+#     input:
+#         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
+#         scaffolds = all_scaffs
+#     output:
+#         config["assembly"] + "/outputs/scaffolds/{all_scaffs}.fasta",
+#     params:
+#         config["assembly"] + "/outputs/scaffolds/"
+#     shell:
+#         """
+#         cat {input} | awk '{{if (substr($0, 1, 1)=='>') {{filename=(substr($0,2) '.fasta'}} print $0 >> {params}/filename
+#         close({params}/filename)}}'
+#         """
 
 # Unzip reads if zipped
 rule reads_to_fasta:

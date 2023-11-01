@@ -62,6 +62,7 @@ rule nucmer_alignment:
         # directory(config["assembly"] + "tmp_initial/"),
         only_pairs_table = config["assembly"] + "/reports/pairs_analysis/blast/blast.onlyPairs.tsv"
     output:
+        directory(config["assembly"] + "/reports/nucmer/pairs"),
         report(
             directory(config["assembly"] + "reports/pair-analysis/nucmer/pairs"),
             caption="../docs/captions/pair_dotplots.rst",

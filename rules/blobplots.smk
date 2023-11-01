@@ -4,6 +4,7 @@
 rule tax_blast:
     input:
         "data/assemblies/" + config["assembly"] + ".fasta",
+         os.path.join(config["ncbi_nt_path"], "nt.db")
     output:
         config["assembly"] + "/reports/blast/contaminant_taxonomy.blast.out"
     params:
