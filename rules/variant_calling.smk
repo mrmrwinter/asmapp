@@ -4,9 +4,9 @@
 rule sniffles:
     input:
         initial="data/assemblies/" + config["assembly"] + ".fasta",
-        bam=config["assembly"] + "/outputs/initial/initial_asm.sorted.bam",
+        bam=f"{config['assembly']}/outputs/mapping/{config['reads']}.sorted.bam",
     output:
-        config["assembly"] + "/outputs/variant_calling/" + config["assembly"] + ".vcf",
+        config["assembly"] + "/outputs/variant_calling/" + config["assembly"] + "_" + config['reads'] + ".vcf",
     params:
         threads=config["threads"],
     shell:

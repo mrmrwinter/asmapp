@@ -43,4 +43,4 @@ rule all:
         mito_tagged = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".mito_tagged.fasta",
         no_mito = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".no_mito.fasta",
 # VARIANT CALLING
-        sniffles = config["assembly"] + "/outputs/variant_calling/" + config["assembly"] + ".vcf"
+        sniffles = config["assembly"] + "/outputs/variant_calling/" + config["assembly"] + "_" + config['reads'] + ".vcf",
