@@ -11,22 +11,36 @@ rule input_reads:
         reads = "data/reads/" + config["reads"] + ".fastq.gz",
 
 
-#         # Define the Snakemake rule for downloading the NT database
-# rule download_nt_db:
-#     output:
-#         os.path.join(config["ncbi_nt_path"], "nt.000.gz")
-#     shell:
-#         "curl -o {output} ftp://ftp.ncbi.nlm.nih.gov/blast/db/nt.*.tar.gz"
 
+
+#         # Define the Snakemake rule for downloading the NT database
+rule download_nt_db:
+    output:
+        os.path.join(config["ncbi_nt_path"], "nt.tar.gz.1")
+    params:
+        config["ncbi_nt_path"]
+    shell:
+        """
+        cd {params}
+        update_blastdb.pl --passive --decompress nt
+
+        cd -
+        """
+# blast database runs to nt.115. around 350 Gb of storage required
 
 # # Define the Snakemake rule for building the NT database with makeblastdb
-# rule makeblastdb_nt:
-#     input:
-#         os.path.join(config["ncbi_nt_path"], "nt.000.gz")
-#     output:
-#         os.path.join(config["ncbi_nt_path"], "nt.db")
-#     shell:
-#         "gunzip -c {input} | makeblastdb -in - -dbtype nucl -out {output}"
+rule makeblastdb_nt:
+    input:
+        os.path.join(config["ncbi_nt_path"], "nt.tar.gz.1")
+    output:
+        os.path.join(config["ncbi_nt_path"], "nt.000.db.nin")
+    params:
+        out_pfx = os.path.join(config["ncbi_nt_path"], "nt.db")
+    shell:
+        "gunzip -c nt* | makeblastdb -in - -dbtype nucl -out {params}"
+
+
+
 
 # Generate individual files for each scaffold
 # rule splinter_assembly:

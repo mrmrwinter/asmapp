@@ -57,7 +57,7 @@ rule only_pairs:
 
 
 # Perform nucmer alignment of potential pairs and print a dotplot for each
-rule nucmer_alignment:
+rule nucmer_pair_alignment:
     input:
         # directory(config["assembly"] + "tmp_initial/"),
         only_pairs_table = config["assembly"] + "/reports/pairs_analysis/blast/blast.onlyPairs.tsv"
@@ -70,7 +70,7 @@ rule nucmer_alignment:
         )
     params:
         tigs = config["assembly"] + "tmp/",
-        out_dir = config["assembly"] + "reports/nucmer/pairs/"
+        out_dir = config["assembly"] + "/reports/nucmer/pairs/"
     run:
         import glob
         import os

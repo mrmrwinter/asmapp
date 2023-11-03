@@ -178,6 +178,7 @@ dependencies:
   - markupsafe=2.1.1=py310h5764c6d_1
   - matplotlib=3.6.0=py310hff52083_0
   - matplotlib-base=3.6.0=py310h8d5ebf3_0
+  - mosdepth
   - multidict=6.0.2=py310h5764c6d_1
   - mummer=3.23=pl5321h1b792b2_13
   - munkres=1.1.4=pyh9f0ad1d_0
