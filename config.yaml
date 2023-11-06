@@ -10,8 +10,7 @@ memory: ""  # the available memory for the analysis in gigabytes
 threads: ""  # the amount of threads available to asmapp
 
 # dependency paths
-quast_path: ""  # the path to where QUAST was installed
-ncbi_nt_path: ""  # the path to where the NCBI nt database is
+ncbi_nt_path: ""  # the path to where the NCBI nt database should be installed, or is already installed
 
 # parameters
-seq_tech: ""  # the sequencing technology used to generate the reads. eg, hifi, nanopore
+seq_tech: ""  # the sequencing technology used to generate the reads. eg, hifi, nanopore, pb, etc

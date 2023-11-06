@@ -10,20 +10,38 @@ rule input_reads:
     output:
         reads = "data/reads/" + config["reads"] + ".fastq.gz",
 
+
+
+
+#         # Define the Snakemake rule for downloading the NT database
+# rule download_nt_db:
+#     output:
+#         os.path.join(config["ncbi_nt_path"], "nt.115.nin")
+#     params:
+#         config["ncbi_nt_path"]
+#     shell:
+#         """
+#         cd {params}
+#         update_blastdb.pl --passive --decompress nt
+#         cd -
+#         """
+# blast database runs to nt.115. around 350 Gb of storage required
+
+
 # Generate individual files for each scaffold
-rule splinter_assembly:
-    input:
-        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
-        scaffolds = all_scaffs
-    output:
-        config["assembly"] + "/outputs/scaffolds/{all_scaffs}.fasta",
-    params:
-        config["assembly"] + "/outputs/scaffolds/"
-    shell:
-        """
-        cat {input} | awk '{{if (substr($0, 1, 1)=='>') {{filename=(substr($0,2) '.fasta'}} print $0 >> {params}/filename
-        close({params}/filename)}}'
-        """"
+# rule splinter_assembly:
+#     input:
+#         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
+#         scaffolds = all_scaffs
+#     output:
+#         config["assembly"] + "/outputs/scaffolds/{all_scaffs}.fasta",
+#     params:
+#         config["assembly"] + "/outputs/scaffolds/"
+#     shell:
+#         """
+#         cat {input} | awk '{{if (substr($0, 1, 1)=='>') {{filename=(substr($0,2) '.fasta'}} print $0 >> {params}/filename
+#         close({params}/filename)}}'
+#         """
 
 # Unzip reads if zipped
 rule reads_to_fasta:
@@ -33,19 +51,3 @@ rule reads_to_fasta:
         reads = "data/reads/" + config["reads"] + ".fasta",
     shell:
         "zcat -c {input} | seqkit fq2fa | cat > {output}"
-
-# Rename initial contigs
-# rule initial_tagging:
-#     input:
-#         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
-#     output:
-#         assembly = "data/assemblies/" + config["assembly"] + ".tagged.fasta",
-#     run:
-#         from Bio import SeqIO
-#
-#         to_add = "scaffold_"
-#         with open(output[0], "w") as outputs:
-#             for r in SeqIO.parse(input[0], "fasta"):
-#                 r.id = (to_add + r.description).replace(" ", "_")
-#                 r.description = r.id
-#                 SeqIO.write(r, outputs, "fasta")
