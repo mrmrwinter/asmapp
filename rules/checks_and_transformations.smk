@@ -14,17 +14,17 @@ rule input_reads:
 
 
 #         # Define the Snakemake rule for downloading the NT database
-rule download_nt_db:
-    output:
-        os.path.join(config["ncbi_nt_path"], "nt.115.nin")
-    params:
-        config["ncbi_nt_path"]
-    shell:
-        """
-        cd {params}
-        update_blastdb.pl --passive --decompress nt
-        cd -
-        """
+# rule download_nt_db:
+#     output:
+#         os.path.join(config["ncbi_nt_path"], "nt.115.nin")
+#     params:
+#         config["ncbi_nt_path"]
+#     shell:
+#         """
+#         cd {params}
+#         update_blastdb.pl --passive --decompress nt
+#         cd -
+#         """
 # blast database runs to nt.115. around 350 Gb of storage required
 
 
