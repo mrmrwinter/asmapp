@@ -4,8 +4,8 @@
 # Identify if the mitochondrial genome is present in the assembly
 rule mito_identification:
     input:
-        db = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nin",
-        mito_ref = "data/assemblies/" + config["reference"] + ".fasta"
+        nin = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nin",
+        mito_ref = config["mitochondrial"] + ".fasta"
     output:
         config["assembly"] + "/reports/blast/mito_blast.out"
     params:

@@ -8,7 +8,7 @@ rule input_assembly:
 # Check for presenc of input reads
 rule input_reads:
     output:
-        reads = "data/reads/" + config["reads"] + ".fastq.gz",
+        reads = "data/reads/" + config["reads"] + ".fastq.gz"
 
 
 
