@@ -1,9 +1,10 @@
 # BLOBPLOTS
 
-
+# Blast the contigs against the NCBI nt database to assign taxonomy to them
 rule tax_blast:
     input:
         "data/assemblies/" + config["assembly"] + ".fasta",
+        # os.path.join(config["ncbi_nt_path"], "nt.115.nin")
     output:
         config["assembly"] + "/reports/blast/contaminant_taxonomy.blast.out"
     params:
@@ -11,8 +12,8 @@ rule tax_blast:
         threads = config["threads"]
     shell:
         "blastn \
-        -db {params.blastdb}/nt \
-        -query {input} \
+        -db {params.blastdb}nt \
+        -query {input[0]} \
         -outfmt '6 qseqid staxids bitscore std sscinames sskingdoms stitle' \
         -max_target_seqs 10 \
         -max_hsps 1 \
@@ -20,15 +21,13 @@ rule tax_blast:
         -num_threads {params[threads]} \
         -out {output}"
 
-
+# Create the intial blobject using the mapped reads, the contig taxonomy results, and the assembly.
 rule blob_create:
-    # conda:
-    #     "../envs/blobtools.yaml"
     input:
         initial = "data/assemblies/" + config["assembly"] + ".fasta",
-        reads = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam",
-        hits = config["assembly"] + "/reports/blast/contaminant_taxonomy.blast.out",
-        index = config["assembly"] + "/outputs/initial/initial_asm.sorted.bam.bai"
+        reads = f"{config['assembly']}/outputs/mapping/{config['reads']}.sorted.bam",
+        hits = f"{config['assembly']}/reports/blast/contaminant_taxonomy.blast.out",
+        index = f"{config['assembly']}/outputs/mapping/{config['reads']}.sorted.bam.bai"
     output:
         config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
     params:
@@ -43,10 +42,8 @@ rule blob_create:
         --names {params[1]}/names.dmp \
         --nodes {params[1]}/nodes.dmp"
 
-
+# View the blobject as a table
 rule blobtools_view:
-    # conda:
-    #     "../envs/blobtools.yaml"
     input:
         config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
     output:
@@ -62,10 +59,8 @@ rule blobtools_view:
         -i {input} \
         --out {params[0]}"
 
-
+# Plot the blobplot
 rule blobtools_plot:
-    # conda:
-    #     "../envs/blobtools.yaml"
     input:
         config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
     output:

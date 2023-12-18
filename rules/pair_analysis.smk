@@ -1,6 +1,9 @@
 # PAIRS TABLE with BLAST
+# these rules potentially broken
+# more rules to be added
 
-rule make_blast_database:  # Rule to make database of cds fasta
+# Rule to make database of assembly
+rule make_blast_database:  
     input:
         "data/assemblies/" + config["assembly"] + ".fasta" # input to the rule
     output:
@@ -16,6 +19,7 @@ rule make_blast_database:  # Rule to make database of cds fasta
         -dbtype nucl"  # the database type
 
 
+# BLAST the scaffolds back against the assembly
 rule blast_nonself:
     input:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
@@ -27,10 +31,9 @@ rule blast_nonself:
         db_pfx = "data/databases/" + config["assembly"] + "/" + config["assembly"],
         threads = config["threads"]
     shell:
-        "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out -num_threads 4"
+        "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out -num_threads {params[threads]}"
 
-
-
+# Remove self-to-self hits from the output
 rule only_pairs:
     input:
        blast = config["assembly"] + "/reports/blast/blast.out",
@@ -53,61 +56,13 @@ rule only_pairs:
        only_pairs.to_csv(output[0], sep='\t')
 
 
-# PAIRS WITH MASH
-
-rule mash_sketch:
-    input:
-        scaffolds = config["assembly"] + "/outputs/scaffolds/{all_scaffs}.fasta",
-    output:
-        config["assembly"] + "reports/pair-analysis/mash/" + config["assembly"] + ".sketch",
-    params:
-        scaffolds = config["assembly"] + "/outputs/scaffolds/",
-    shell:
-        "mash sketch {params[scaffolds]}/*.fasta -o {output}"
-
-
-rule mash_dist:
-    input:
-        config["assembly"] + "reports/pair-analysis/mash/" + config["assembly"] + ".sketch",
-    output:
-        config["assembly"] + "reports/pair-analysis/mash/" + config["assembly"] + ".dist",
-    params:
-        scaffolds = config["assembly"] + "/outputs/scaffolds/",
-    shell:
-        "mash sketch {params}/*.fasta -o {output}"
-
-# rule get_mash_distances:
-#     input:
-#     output:
-#     run:
-#         df1 = pd.read_csv(snakemake,input[0], sep = "\t", header = None)  # read in the csv to a pandas frame
-#         df2 = df1.drop([], axis = 1)  # Drop everything that isnt uesful to us right now. Can come grab anything we need from the dictionary later
-#         df3 = df2[df2[4].str.contains("1000/1000")==False]
-#         index = df3[0].sort_values(ascending=True).index
-#         df4 = df3.loc[index]
-#         df4.drop_duplicates(inplace=True)
-#         df4.reset_index()
-#         del df4['index']
-#         df4[0].str.replace(scaffolds, "").str.replace(".fasta","")
-#         df4[1].str.replace(scaffolds, "").str.replace(".fasta","")
-#         df4.sort_values(2, inplace = True)
-
-#         col_heads = ["Reference-ID", "Query-ID", "Mash-distance", "P-value", "Matching-hashes"]
-#         df4.columns = col_heads  # wow these lines are getting redundant
-#         df4.to_csv(snakemake.output[0], index=None)
-
-
-
-
-
-##################################
-
-# # nucmer analysis/alignment
-rule nucmer_alignment:
+# Perform nucmer alignment of potential pairs and print a dotplot for each
+rule nucmer_pair_alignment:
     input:
         # directory(config["assembly"] + "tmp_initial/"),
         only_pairs_table = config["assembly"] + "/reports/pairs_analysis/blast/blast.onlyPairs.tsv"
     output:
+        directory(config["assembly"] + "/reports/nucmer/pairs"),
         report(
             directory(config["assembly"] + "/reports/pairs_analysis/nucmer/pairs"),
             caption="../docs/captions/pair_dotplots.rst",
@@ -115,7 +70,7 @@ rule nucmer_alignment:
         )
     params:
         tigs = config["assembly"] + "tmp/",
-        out_dir = config["assembly"] + "reports/nucmer/pairs/"
+        out_dir = config["assembly"] + "/reports/nucmer/pairs/"
     run:
         import glob
         import os

@@ -1,0 +1,4 @@
+# FIXME Smudgeplot: this rule just eats memory, wont finish beacuae i causes an OOm crash on a 64Gb machine
+# TODO Coverage: Get scaffold depth pltos working. Use the code from the assmebly analysis
+# TODO Pairanalysis: Get the mash stuff working
+# TODO QUAST: Get the Busco dataset download working

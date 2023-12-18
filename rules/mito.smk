@@ -1,8 +1,10 @@
 # MITOCHONDRIAL DETECTION
 
+
+# Identify if the mitochondrial genome is present in the assembly
 rule mito_identification:
     input:
-        db = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nin",
+        nin = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nin",
         mito_ref = config["mitochondrial"] + ".fasta"
     output:
         config["assembly"] + "/reports/blast/mito_blast.out"
@@ -13,7 +15,7 @@ rule mito_identification:
     shell:
         "blastn -query {input[1]} -db {params[db]} -outfmt 6 -max_target_seqs 1 -out {output} -num_threads {params[threads]}"
 
-
+# If found, tag the mitochondrial genome
 rule mito_tagging:
     input:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",

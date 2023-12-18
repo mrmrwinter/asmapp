@@ -1,18 +1,7 @@
 # GENOME CHARACTERISATION
+# Perform genome profiling with genomescope and smudgeplot
 
-### KMC
-# counts kmers and coverage
-# rule create_kmcfilelist:
-#     conda:
-#         "../envs/characterisation.yaml"
-#     input:
-#         reads = "data/reads/" + config["reads"] + ".fastq.gz",
-#     output:
-#         config["assembly"] + "/reports/kmc/kmcfilelist"
-#     shell:
-#         "ls {input} | sed -e 's/^data\/reads\///' > {output}"
-
-
+# Count the kmers in the raw reads
 rule kmc_count:
     # conda:
     #     "../envs/characterisation.yaml"
@@ -40,7 +29,7 @@ rule kmc_count:
         {params[0]} \
         {params[1]}"
 
-
+# Transform them and generate a histogram of the distribution
 rule kmc_transform:
     # conda:
     #     "../envs/characterisation.yaml"
@@ -54,7 +43,7 @@ rule kmc_transform:
     shell:
         "kmc_tools transform {params.kmc} histogram {output} -cx10000"
 
-#this rule replaces tabs with spaces to allow running from kmc3 into genomescope
+# Replaces tabs with spaces to allow running from kmc3 into genomescope
 rule kmc2genomescope_transformation:
     input:
         config["assembly"] + "/reports/kmc/kmer_k21.hist"
@@ -63,8 +52,9 @@ rule kmc2genomescope_transformation:
     shell:
         "expand -t 1 {input} > {output}"
 
+
 ### GenomeScope
-#this is to see kmer spectra, estimate genome size, etc
+# Run Genomescope to visualise kmer spectra, estimate genome size, etc
 rule genomescope:
     # conda:
     #     "../envs/characterisation.yaml"
@@ -83,7 +73,7 @@ rule genomescope:
         "genomescope.R {input} 21 15000 {params.outdir} 1000 1 -p {params[ploidy]}"
 
 
-#smudgeplot for predicting ploidy
+# Run smudgeplot to predict ploidy
 rule smudgeplot:
     # conda:
     #     "../envs/characterisation.yaml"
@@ -113,8 +103,7 @@ rule smudgeplot:
         -s {params.dump}
 
         smudgeplot.py hetkmers \
-        -o {params.pairs} < {params.dump} \
+        -o {params.pairs} < {params.dump} 
 
         smudgeplot.py plot {params.cov}
         """
-# FIXME this rule just eats memory, wont finish beacuae i causes an OOm crash on a 64Gb machine

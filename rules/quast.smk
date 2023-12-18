@@ -1,24 +1,6 @@
 # QUAST
 
-rule reads_to_fasta:
-    input:
-        reads = "data/reads/" + config["reads"] + ".fastq.gz",
-    output:
-        reads = "data/reads/" + config["reads"] + ".fasta",
-    shell:
-        "zcat -c {input} | seqkit fq2fa | cat > {output}"
-
-
-# rule download_busco_for_quast:
-#     message:
-#         "[INFO] Downloading BUSCO databases for QUAST appraisal..."
-#     output:
-#         ""
-#     shell:
-#         "quast-download-busco"
-
-
-  # Performing QUAST assembly appraisal
+# Performing QUAST assembly appraisal
 rule quast:
     message:
         "[INFO] Performing QUAST appraisal on assemblies..."
@@ -26,7 +8,7 @@ rule quast:
         initial = "data/assemblies/" + config["assembly"] + ".fasta",
         # assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa",
         reads = "data/reads/" + config["reads"] + ".fasta",
-        reference = config["reference"] + ".fasta.gz"
+        reference = "data/assemblies/" + config["reference"] + ".fasta"
     output:
         # config["assembly"] + "/reports/quast/report.html",
         report(
@@ -37,7 +19,7 @@ rule quast:
         out_pfx = config["assembly"] + "/reports/quast/",
         threads = config["threads"]
     shell:
-        config["quast_path"] + "/quast.py --large {input[0]} --glimmer -b --threads {params[1]} -L --pacbio {input[reads]} -o {params[0]}"
+        "quast --large {input[0]} --glimmer -b --threads {params[1]} -L --pacbio {input[reads]} -o {params[0]}"
 
 
         
