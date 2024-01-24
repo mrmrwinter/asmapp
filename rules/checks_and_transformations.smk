@@ -18,10 +18,10 @@ rule input_reads:
 #     output:
 #         os.path.join(config["ncbi_nt_path"], "nt.115.nin")
 #     params:
-#         config["ncbi_nt_path"]
+#         ncbi_path = config["ncbi_nt_path"]
 #     shell:
 #         """
-#         cd {params}
+#         cd {params[ncbi_path]}
 #         update_blastdb.pl --passive --decompress nt
 #         cd -
 #         """
@@ -36,11 +36,11 @@ rule input_reads:
 #     output:
 #         config["assembly"] + "/outputs/scaffolds/{all_scaffs}.fasta",
 #     params:
-#         config["assembly"] + "/outputs/scaffolds/"
+#         scaffolds = config["assembly"] + "/outputs/scaffolds/"
 #     shell:
 #         """
-#         cat {input} | awk '{{if (substr($0, 1, 1)=='>') {{filename=(substr($0,2) '.fasta'}} print $0 >> {params}/filename
-#         close({params}/filename)}}'
+#         cat {input} | awk '{{if (substr($0, 1, 1)=='>') {{filename=(substr($0,2) '.fasta'}} print $0 >> {params[scaffolds]}/filename
+#         close({params[scaffolds]}/filename)}}'
 #         """
 
 # Unzip reads if zipped
@@ -50,4 +50,4 @@ rule reads_to_fasta:
     output:
         reads = "data/reads/" + config["reads"] + ".fasta",
     shell:
-        "zcat -c {input} | seqkit fq2fa | cat > {output}"
+        "zcat -c {input[reads]} | seqkit fq2fa | cat > {output}"

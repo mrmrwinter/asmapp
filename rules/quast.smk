@@ -5,7 +5,7 @@ rule quast:
     message:
         "[INFO] Performing QUAST appraisal on assemblies..."
     input:
-        initial = "data/assemblies/" + config["assembly"] + ".fasta",
+        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
         # assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa",
         reads = "data/reads/" + config["reads"] + ".fasta",
         reference = "data/assemblies/" + config["reference"] + ".fasta"
@@ -19,7 +19,7 @@ rule quast:
         out_pfx = config["assembly"] + "/reports/quast/",
         threads = config["threads"]
     shell:
-        "quast --large {input[0]} --glimmer -b --threads {params[1]} -L --pacbio {input[reads]} -o {params[0]}"
+        "quast --large {input[assembly]} --glimmer -b --threads {params[threads]} -L --pacbio {input[reads]} -o {params[out_pfx]}"
 
 
         
