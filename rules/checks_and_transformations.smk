@@ -29,7 +29,7 @@ rule input_reads:
 #         os.path.join(config["ncbi_nt_path"], "nt.115.nin")
 #     params:
 #         ncbi_path = config["ncbi_nt_path"],
-        # log = f"{config['assembly']}/logs/{rule}.log",
+        # log = f"{config['assembly']}/logs/download_nt_db.log",
 #     shell:
 #         """
 #         cd {params[ncbi_path]}
@@ -52,7 +52,7 @@ rule input_reads:
 #         config["assembly"] + "/outputs/scaffolds/{all_scaffs}.fasta",
 #     params:
 #         scaffolds = config["assembly"] + "/outputs/scaffolds/",
-        # log = f"{config['assembly']}/logs/{rule}.log",
+        # log = f"{config['assembly']}/logs/splinter_assembly.log",
 #     shell:
 #         """
 #         cat {input} | awk '{{if (substr($0, 1, 1)=='>') {{filename=(substr($0,2) '.fasta'}} print $0 >> {params[scaffolds]}/filename
@@ -66,7 +66,7 @@ rule input_reads:
 #     output:
 #         reads = "data/reads/" + config["reads"] + ".fasta",
 #     params:
-#         log = f"{config['assembly']}/logs/{rule}.log",
+#         log = f"{config['assembly']}/logs/zip_fastq_to_fasta.log",
 #     shell:
 #         "zcat -c {input[reads]} | seqkit fq2fa | cat > {output} 2> {params[log]}"
 

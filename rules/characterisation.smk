@@ -16,7 +16,7 @@ rule kmc_count:
         kmc = config["assembly"] + "/reports/kmc/kmer_counts",
         tmp = config["assembly"] + "/reports/kmc/tmp",
         threads = config["threads"],
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/kmc_count.log",
     shell:
         "rm -rf {params[1]} && \
         mkdir -p {params[1]} && \
@@ -42,7 +42,7 @@ rule kmc_transform:
         config["assembly"] + "/reports/kmc/kmer_k21.hist"
     params:
         kmc = config["assembly"] + "/reports/kmc/kmer_counts",
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/kmc_transform.log",
     shell:
         "kmc_tools transform {params[kmc]} histogram {output} -cx10000 2> {params[log]}"
 
@@ -54,7 +54,7 @@ rule kmc2genomescope_transformation:
     output:
         config["assembly"] + "/reports/kmc/kmer_k21.histo"
     params:
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/kmc2genomescope_transformation.log",
     shell:
         "expand -t 1 {input[hist]} > {output} 2> {params[log]}"
 
@@ -77,7 +77,7 @@ rule genomescope:
     params:
         outdir=config["assembly"] + "/reports/genomescope/",
         ploidy = config["ploidy"],
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/genomescope.log",
     shell:
         "genomescope.R {input} 21 15000 {params.outdir} 1000 1 -p {params[ploidy]} 2> {params[log]}"
 
@@ -99,7 +99,7 @@ rule smudgeplot:
         dump = config["assembly"] + "/reports/smudge/kmer_k21.dump",
         pairs = config["assembly"] + "/reports/smudge/kmer_pairs",
         cov = config["assembly"] + "/reports/smudge/kmer_pairs_coverages.tsv",
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/smudgeplot.log",
     shell:
         """
         L=$(smudgeplot.py cutoff {input[hist]} L)

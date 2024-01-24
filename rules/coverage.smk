@@ -11,7 +11,7 @@ rule mosdepth:
     params:
         threads = config["threads"],
         out_pfx = f"{config['assembly']}/reports/coverage/mosdepth/{config['assembly']}",
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/mosdepth.log",
     shell:
         "mosdepth --threads {params[threads]} {params[out_pfx]} {input[bam]} 2> {params[log]}"
 
@@ -27,7 +27,7 @@ rule mosdepth_plots:
             category="Coverage analysis"
         )
     params:
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/mosdepth_plots.log",
     shell:
         "python3 scripts/plot_dist.py -o {output} {input[dist]} 2> {params[log]}"
 
@@ -40,7 +40,7 @@ rule get_coverage:
     output:
         f"{config['assembly']}/reports/coverage/{config['assembly']}.coverage"
     params:
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/get_coverage.log",
     shell:
         "samtools depth {input[bam]} > {output} 2> {params[log]}"
 
@@ -52,7 +52,7 @@ rule get_coverage:
 #     output:
 #         f"{config['assembly']}/reports/coverage/{all_scaffs}.coverage"
 #     params:
-#         log = f"{config['assembly']}/logs/{rule}.log",
+#         log = f"{config['assembly']}/logs/scaffold_coverage.log",
 #     shell:
 #         "awk '$1 == {all_scaffs} '{{print $0}}' {input} > {output} 2> {params[log]}"
 

@@ -11,7 +11,7 @@ rule mapping:
     params:
         threads = config["threads"],
         seq_tech = "map-" + config["seq_tech"],
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/mapping.log",
     shell:
         "minimap2 -t {params[threads]} -ax {params[seq_tech]} {input[assembly]} {input[reads]} > {output} 2> {params[log]}"  
 
@@ -23,7 +23,7 @@ rule conversion:
     output:
         bam = f"{config['assembly']}/outputs/mapping/{config['reads']}.bam"
     params:
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/conversion.log",
     shell:
         "samtools view -b -S {input[sam]} > {output[bam]} 2> {params[log]}"
 
@@ -35,7 +35,7 @@ rule sorting:
     output:
         sorted_bam = f"{config['assembly']}/outputs/mapping/{config['reads']}.sorted.bam"
     params:
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/sorting.log",
     shell:
         "samtools sort {input[bam]} > {output[sorted_bam]} 2> {params[log]}"
 
@@ -47,6 +47,6 @@ rule samtools_index:
     output:
        bai = f"{config['assembly']}/outputs/mapping/{config['reads']}.sorted.bam.bai",
     params:
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/samtools_index.log",
     shell:
        "samtools index {input[bam]} > {output[bai]} 2> {params[log]}"

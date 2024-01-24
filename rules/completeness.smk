@@ -17,7 +17,7 @@ rule CEGMA:
     params:
         out_pfx = config["assembly"] + "/reports/cegma/" + config["assembly"],
         threads = config["threads"],
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/CEGMA.log",
     shell:
         """
         export CEGMATMP='{params[out_pfx]}'

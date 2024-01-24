@@ -18,7 +18,7 @@ rule quast:
     params:
         out_pfx = config["assembly"] + "/reports/quast/",
         threads = config["threads"],
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/quast.log",
     shell:
         "quast --large {input[assembly]} --glimmer -b --threads {params[threads]} -L --pacbio {input[reads]} -o {params[out_pfx]} 2> {params[log]}"
 

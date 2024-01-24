@@ -10,7 +10,7 @@ rule make_blast_database:
         nsq = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nsq"
     params:
         out_pfx = "data/databases/" + config["assembly"] + "/" + config["assembly"],
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/make_blast_database.log",
     shell:  
         "makeblastdb \
         -in {input[assembly]} \
@@ -29,7 +29,7 @@ rule blast_nonself:
         out_pfx = config["assembly"] + "/reports/blast",
         db_pfx = "data/databases/" + config["assembly"] + "/" + config["assembly"],
         threads = config["threads"],
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/blast_nonself.log",
     shell:
         "blastn -query {input[assembly]} -db {params[db_pfx]} -outfmt 6 -max_target_seqs 2 -out {params[out_pfx]}/blast.out -num_threads {params[threads]}"
 
@@ -71,7 +71,7 @@ rule nucmer_pair_alignment:
     params:
         tigs = config["assembly"] + "tmp/",
         out_dir = config["assembly"] + "/reports/nucmer/pairs/",
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/nucmer_pair_alignment.log",
     run:
         import glob
         import os

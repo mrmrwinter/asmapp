@@ -12,7 +12,7 @@ rule mito_identification:
         db = "data/databases/" + config["assembly"] + "/" + config["assembly"],
         out_pfx = config["assembly"] + "/reports/blast/",
         threads = config["threads"],
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/mito_identification.log",
     shell:
         "blastn -query {input[mito_ref]} -db {params[db]} -outfmt 6 -max_target_seqs 1 -out {output} -num_threads {params[threads]} 2> {params[log]}"
 

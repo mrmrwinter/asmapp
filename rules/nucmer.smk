@@ -15,7 +15,7 @@ rule nucmer_self:
     params:
         out_pfx = "nucmer.self_v_self",
         out_path = config["assembly"] + "/outputs/nucmer/",
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/nucmer_self.log",
     shell:
         """
         mkdir -p tmp/
@@ -26,7 +26,7 @@ rule nucmer_self:
 
 
 # Perform a self-by-reference alignment with nucmer and print a dotplot
-rule nucmer_initial_vs_reference:
+rule nucmer_assembly_vs_reference:
     input:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
         reference = "data/assemblies/" + config["reference"] + ".fasta",
@@ -42,7 +42,7 @@ rule nucmer_initial_vs_reference:
         out_pfx = "nucmer.self_v_ref",
         out_path = config["assembly"] + "/outputs/nucmer/",
         reference = config["reference"] + ".fasta",
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/nucmer_assembly_vs_reference.log",
     shell:
         """
         mkdir -p tmp/

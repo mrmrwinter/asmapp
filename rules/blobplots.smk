@@ -10,7 +10,7 @@ rule tax_blast:
     params:
         blastdb=config["ncbi_nt_path"],
         threads = config["threads"],
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/tax_blast.log",
     shell:
         "blastn \
         -db {params[blastdb]} \
@@ -34,7 +34,7 @@ rule blob_create:
     params:
         out = config["assembly"] + "/reports/blobtools/" + config["assembly"],
         db = config["ncbi_nt_path"],
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/blob_create.log",
     shell:
         "blobtools create \
         -i {input.assembly} \
@@ -57,7 +57,7 @@ rule blobtools_view:
         )
     params:
         out_pfx = config["assembly"] + "/reports/blobtools/",
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/blobtools_view.log",
     shell:
         "blobtools view \
         -i {input[blob_json]} \
@@ -75,7 +75,7 @@ rule blobtools_plot:
             category="Contamination reports")
     params:
         out = config["assembly"] + "/reports/blobtools/",
-        log = f"{config['assembly']}/logs/{rule}.log",
+        log = f"{config['assembly']}/logs/blobtools_plot.log",
     shell:
         "blobtools plot \
         -i {input[blob_json]} \
