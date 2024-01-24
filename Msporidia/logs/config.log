@@ -1,0 +1,16 @@
+# file paths
+full_path: ""  # the full path to the asmapp directory
+assembly: ""  # filename of assembly, no suffix, located in data/assemblies/
+reads: ""   # name of reads file, located in data/reads/. no suffixes
+reference: ""  # filename of reference nuclear assembly, no suffix, located in data/assemblies/
+mitochondrial: ""  # filename of reference mitochondrial assembly, no suffix, located in data/assemblies/
+
+# hardware
+memory: ""  # the available memory for the analysis in gigabytes
+threads: ""  # the amount of threads available to asmapp
+
+# dependency paths
+ncbi_nt_path: ""  # the path to where the NCBI nt database should be installed, or is already installed
+
+# parameters
+seq_tech: ""  # the sequencing technology used to generate the reads. eg, hifi, nanopore, pb, etc

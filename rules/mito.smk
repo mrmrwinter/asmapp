@@ -13,7 +13,8 @@ rule mito_identification:
         out_pfx = config["assembly"] + "/reports/blast/",
         threads = config["threads"]
     shell:
-        "blastn -query {input[1]} -db {params[db]} -outfmt 6 -max_target_seqs 1 -out {output} -num_threads {params[threads]}"
+        "blastn -query {input[mito_ref]} -db {params[db]} -outfmt 6 -max_target_seqs 1 -out {output} -num_threads {params[threads]}"
+
 
 # If found, tag the mitochondrial genome
 rule mito_tagging:
@@ -28,7 +29,7 @@ rule mito_tagging:
         from Bio import SeqIO
 
         # read in the header of the mito scaffold
-        blast_output = pd.read_csv(input[1], sep="\t", header = None)
+        blast_output = pd.read_csv(input[mito_blast], sep="\t", header = None)
         for index, value in blast_output.iterrows():
             if index == 0:
                 mito_tig = value[1]
@@ -36,14 +37,14 @@ rule mito_tagging:
         # code to tag the mito contig header
         to_add = "mitochondrial_"
 
-        with open(output[0], "w") as mito_tagged:
-            for r in SeqIO.parse(input[0], "fasta"):
+        with open(output[mito_tagged], "w") as mito_tagged:
+            for r in SeqIO.parse(input[assembly], "fasta"):
                 if r.id == str(mito_tig):
                     r.id = (to_add + r.id).replace(" ", "_")
                     SeqIO.write(r, mito_tagged, "fasta")
 
         # code to remove the mito contig from the assembly
-        with open(output[1], "w") as no_mito: # etc
+        with open(output[no_mito], "w") as no_mito: # etc
             for seq in SeqIO.parse(input[0], "fasta"):
                 if seq.id not in str(mito_tig):
                 # write to new file

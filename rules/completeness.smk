@@ -15,10 +15,10 @@ rule CEGMA:
             category="Completeness"
         )
     params:
-        config["assembly"] + "/reports/cegma/" + config["assembly"],
+        out_pfx = config["assembly"] + "/reports/cegma/" + config["assembly"],
         threads = config["threads"]
     shell:
         """
-        export CEGMATMP='{params[0]}'
-        cegma --threads {params[threads]} --genome {input[0]} -o {params[0]}
+        export CEGMATMP='{params[out_pfx]}'
+        cegma --threads {params[threads]} --genome {input[assembly]} -o {params[out_pfx]}
         """

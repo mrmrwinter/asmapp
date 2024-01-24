@@ -14,6 +14,7 @@ rule mapping:
     shell:
         "minimap2 -t {params[threads]} -ax {params[seq_tech]} {input[assembly]} {input[reads]} > {output}"  
 
+
 # Convert the output sam file into a bam
 rule conversion:
     input:
@@ -21,16 +22,18 @@ rule conversion:
     output:
         bam = f"{config['assembly']}/outputs/mapping/{config['reads']}.bam"
     shell:
-        "samtools view -b -S {input} > {output}"
+        "samtools view -b -S {input[sam]} > {output[bam]}"
+
 
 # Sort the output bam file
 rule sorting:
     input:
-        f"{config['assembly']}/outputs/mapping/{config['reads']}.bam"
+        bam = f"{config['assembly']}/outputs/mapping/{config['reads']}.bam"
     output:
-        bam = f"{config['assembly']}/outputs/mapping/{config['reads']}.sorted.bam"
+        sorted_bam = f"{config['assembly']}/outputs/mapping/{config['reads']}.sorted.bam"
     shell:
-        "samtools sort {input} > {output}"
+        "samtools sort {input[bam]} > {output[sorted_bam]}"
+
 
 # Index the sorted bam file
 rule samtools_index:
@@ -39,4 +42,4 @@ rule samtools_index:
     output:
        bai = f"{config['assembly']}/outputs/mapping/{config['reads']}.sorted.bam.bai",
     shell:
-       "samtools index {input[bam]} > {output[0]}"
+       "samtools index {input[bam]} > {output[bai]}"
