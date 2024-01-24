@@ -15,12 +15,13 @@ rule nucmer_self:
     params:
         out_pfx = "nucmer.self_v_self",
         out_path = config["assembly"] + "/outputs/nucmer/",
+        log = f"{config['assembly']}/logs/{rule}.log",
     shell:
         """
         mkdir -p tmp/
         nucmer -p tmp/{params[out_pfx]} {input[assembly]} {input[assembly]}
         cp tmp/{params[out_pfx]}.delta {params[out_path]}
-        mummerplot -l -f --png --large {params[out_path]}{params[out_pfx]}.delta -p {params[out_path]}{params[out_pfx]}
+        mummerplot -l -f --png --large {params[out_path]}{params[out_pfx]}.delta -p {params[out_path]}{params[out_pfx]} 2> {params[log]}
         """
 
 
@@ -40,12 +41,13 @@ rule nucmer_initial_vs_reference:
     params:
         out_pfx = "nucmer.self_v_ref",
         out_path = config["assembly"] + "/outputs/nucmer/",
-        reference = config["reference"] + ".fasta"
+        reference = config["reference"] + ".fasta",
+        log = f"{config['assembly']}/logs/{rule}.log",
     shell:
         """
         mkdir -p tmp/
         nucmer -p tmp/{params[out_pfx]} {input[assembly]} {input[reference]}
         cp tmp/{params[out_pfx]}.delta {params[out_path]}
-        mummerplot -l -f --png --large {params[out_path]}{params[out_pfx]}.delta -p {params[out_path]}{params[out_pfx]}
+        mummerplot -l -f --png --large {params[out_path]}{params[out_pfx]}.delta -p {params[out_path]}{params[out_pfx]} 2> {params[log]}
         """
 

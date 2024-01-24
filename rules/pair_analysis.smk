@@ -9,12 +9,13 @@ rule make_blast_database:
         nin = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nin",
         nsq = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nsq"
     params:
-        out_pfx = "data/databases/" + config["assembly"] + "/" + config["assembly"]   # prefix for the outputs, required by the command
+        out_pfx = "data/databases/" + config["assembly"] + "/" + config["assembly"],
+        log = f"{config['assembly']}/logs/{rule}.log",
     shell:  
         "makeblastdb \
         -in {input[assembly]} \
         -out {params[out_pfx]} \
-        -dbtype nucl"  # the database type
+        -dbtype nucl 2> {params[log]}"  # the database type
 
 
 # BLAST the scaffolds back against the assembly
@@ -27,7 +28,8 @@ rule blast_nonself:
     params:
         out_pfx = config["assembly"] + "/reports/blast",
         db_pfx = "data/databases/" + config["assembly"] + "/" + config["assembly"],
-        threads = config["threads"]
+        threads = config["threads"],
+        log = f"{config['assembly']}/logs/{rule}.log",
     shell:
         "blastn -query {input[assembly]} -db {params[db_pfx]} -outfmt 6 -max_target_seqs 2 -out {params[out_pfx]}/blast.out -num_threads {params[threads]}"
 
@@ -68,7 +70,8 @@ rule nucmer_pair_alignment:
         )
     params:
         tigs = config["assembly"] + "tmp/",
-        out_dir = config["assembly"] + "/reports/nucmer/pairs/"
+        out_dir = config["assembly"] + "/reports/nucmer/pairs/",
+        log = f"{config['assembly']}/logs/{rule}.log",
     run:
         import glob
         import os
@@ -78,13 +81,13 @@ rule nucmer_pair_alignment:
         for index, value in only_pairs.iterrows():
             q = params[tigs] + value[0] + ".fasta"
             h = params[tigs] + value[1] + ".fasta"
-            nucmer = "nucmer -p " + params[out_dir] + "nucmer/nucmer." + str(q.replace('.fasta','') + h.replace('.fasta','')) + " " + q + " " + h
+            nucmer = f"nucmer -p {params[out_dir]}nucmer/nucmer.{str(q.replace('.fasta','')}{h.replace('.fasta',''))} {q} {h} 2> {params[log]}"
             os.system(nucmer)
 
 
         for delta in glob.glob("nucmer/*.delta"):
             pair = delta.replace("nucmer/","").replace(".delta","")
-            mummer = "mummerplot -l -f --png --large " + delta + " -p " + params[tigs] + "nucmer/" + pair
+            mummer = f"mummerplot -l -f --png --large {delta} -p {params[tigs]}nucmer/{pair} 2>> {params[log]}"
             os.system(mummer)
 
 
@@ -96,6 +99,6 @@ rule nucmer_pair_alignment:
 #
 # for index, value in only_initial_pairs.iterrows():
 #     dnadiff = "dnadiff -p dnadiff_initial_purged/nucmer." + str(index) + " -d nucmer_initial_purged/nucmer." + str(index) + ".delta"
-#     os.system(dnadiff)
+#     os.system(f"{dnadiff} 2> {params[log]})
 #
 #

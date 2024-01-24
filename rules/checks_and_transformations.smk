@@ -28,12 +28,13 @@ rule input_reads:
 #     output:
 #         os.path.join(config["ncbi_nt_path"], "nt.115.nin")
 #     params:
-#         ncbi_path = config["ncbi_nt_path"]
+#         ncbi_path = config["ncbi_nt_path"],
+        # log = f"{config['assembly']}/logs/{rule}.log",
 #     shell:
 #         """
 #         cd {params[ncbi_path]}
 #         update_blastdb.pl --passive --decompress nt
-#         cd -
+#         cd - 2> {params[log]}
 #         """
 # blast database runs to nt.115. around 350 Gb of storage required
 
@@ -50,11 +51,12 @@ rule input_reads:
 #     output:
 #         config["assembly"] + "/outputs/scaffolds/{all_scaffs}.fasta",
 #     params:
-#         scaffolds = config["assembly"] + "/outputs/scaffolds/"
+#         scaffolds = config["assembly"] + "/outputs/scaffolds/",
+        # log = f"{config['assembly']}/logs/{rule}.log",
 #     shell:
 #         """
 #         cat {input} | awk '{{if (substr($0, 1, 1)=='>') {{filename=(substr($0,2) '.fasta'}} print $0 >> {params[scaffolds]}/filename
-#         close({params[scaffolds]}/filename)}}'
+#         close({params[scaffolds]}/filename)}} 2> {params[log]}'
 #         """
 
 # # Unzip reads if zipped
@@ -63,8 +65,10 @@ rule input_reads:
 #         reads = "data/reads/" + config["reads"] + ".fastq.gz",
 #     output:
 #         reads = "data/reads/" + config["reads"] + ".fasta",
+#     params:
+#         log = f"{config['assembly']}/logs/{rule}.log",
 #     shell:
-#         "zcat -c {input[reads]} | seqkit fq2fa | cat > {output}"
+#         "zcat -c {input[reads]} | seqkit fq2fa | cat > {output} 2> {params[log]}"
 
 # # Unzip reads if zipped
 # rule zip_fasta_to_fasta:

@@ -11,9 +11,10 @@ rule mito_identification:
     params:
         db = "data/databases/" + config["assembly"] + "/" + config["assembly"],
         out_pfx = config["assembly"] + "/reports/blast/",
-        threads = config["threads"]
+        threads = config["threads"],
+        log = f"{config['assembly']}/logs/{rule}.log",
     shell:
-        "blastn -query {input[mito_ref]} -db {params[db]} -outfmt 6 -max_target_seqs 1 -out {output} -num_threads {params[threads]}"
+        "blastn -query {input[mito_ref]} -db {params[db]} -outfmt 6 -max_target_seqs 1 -out {output} -num_threads {params[threads]} 2> {params[log]}"
 
 
 # If found, tag the mitochondrial genome

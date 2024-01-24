@@ -42,7 +42,7 @@ rule blob_create:
         -t {input.hits} \
         -o {params[out]} \
         --names {params[db]}/names.dmp \
-        --nodes {params[db]}/nodes.dmp"
+        --nodes {params[db]}/nodes.dmp 2> {params[log]}"
 
 
 # View the blobject as a table
@@ -56,11 +56,12 @@ rule blobtools_view:
             category="Contamination reports"
         )
     params:
-        out_pfx = config["assembly"] + "/reports/blobtools/"
+        out_pfx = config["assembly"] + "/reports/blobtools/",
+        log = f"{config['assembly']}/logs/{rule}.log",
     shell:
         "blobtools view \
         -i {input[blob_json]} \
-        --out {params[out_pfx]}"
+        --out {params[out_pfx]} 2> {params[log]}"
 
 
 # Plot the blobplot
@@ -73,8 +74,9 @@ rule blobtools_plot:
             caption="../docs/captions/blobtools.rst", 
             category="Contamination reports")
     params:
-        out = config["assembly"] + "/reports/blobtools/"
+        out = config["assembly"] + "/reports/blobtools/",
+        log = f"{config['assembly']}/logs/{rule}.log",
     shell:
         "blobtools plot \
         -i {input[blob_json]} \
-        --out {params[out]}"
+        --out {params[out]} 2> {params[log]}"

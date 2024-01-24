@@ -16,9 +16,10 @@ rule CEGMA:
         )
     params:
         out_pfx = config["assembly"] + "/reports/cegma/" + config["assembly"],
-        threads = config["threads"]
+        threads = config["threads"],
+        log = f"{config['assembly']}/logs/{rule}.log",
     shell:
         """
         export CEGMATMP='{params[out_pfx]}'
-        cegma --threads {params[threads]} --genome {input[assembly]} -o {params[out_pfx]}
+        cegma --threads {params[threads]} --genome {input[assembly]} -o {params[out_pfx]} 2> {params[log]}
         """

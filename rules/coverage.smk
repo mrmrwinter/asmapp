@@ -10,9 +10,10 @@ rule mosdepth:
         f"{config['assembly']}/reports/coverage/mosdepth/{config['assembly']}.mosdepth.global.dist.txt"
     params:
         threads = config["threads"],
-        out_pfx = f"{config['assembly']}/reports/coverage/mosdepth/{config['assembly']}"
+        out_pfx = f"{config['assembly']}/reports/coverage/mosdepth/{config['assembly']}",
+        log = f"{config['assembly']}/logs/{rule}.log",
     shell:
-        "mosdepth --threads {params[threads]} {params[out_pfx]} {input[bam]}"
+        "mosdepth --threads {params[threads]} {params[out_pfx]} {input[bam]} 2> {params[log]}"
 
 
 # Plot the output of mosdepth
@@ -25,8 +26,10 @@ rule mosdepth_plots:
             caption="../docs/captions/mosdepth.rst",
             category="Coverage analysis"
         )
+    params:
+        log = f"{config['assembly']}/logs/{rule}.log",
     shell:
-        "python3 scripts/plot_dist.py -o {output} {input[dist]}"
+        "python3 scripts/plot_dist.py -o {output} {input[dist]} 2> {params[log]}"
 
 
 # Calculate base specific assembly coverage with samtools
@@ -36,8 +39,10 @@ rule get_coverage:
         bai = f"{config['assembly']}/outputs/mapping/{config['reads']}.sorted.bam",
     output:
         f"{config['assembly']}/reports/coverage/{config['assembly']}.coverage"
+    params:
+        log = f"{config['assembly']}/logs/{rule}.log",
     shell:
-        "samtools depth {input[bam]} > {output}"
+        "samtools depth {input[bam]} > {output} 2> {params[log]}"
 
 
 # # Break the coverage file into individual scaffold files
@@ -46,8 +51,10 @@ rule get_coverage:
 #         assembly = f"data/assemblies/{config['assembly']}.fasta"
 #     output:
 #         f"{config['assembly']}/reports/coverage/{all_scaffs}.coverage"
+#     params:
+#         log = f"{config['assembly']}/logs/{rule}.log",
 #     shell:
-#         "awk '$1 == {all_scaffs} '{{print $0}}' {input} > {output}"
+#         "awk '$1 == {all_scaffs} '{{print $0}}' {input} > {output} 2> {params[log]}"
 
 
 # Generate plots of coverage across the assembly

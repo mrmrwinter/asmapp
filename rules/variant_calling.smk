@@ -10,5 +10,6 @@ rule sniffles:
         vcf = f"{config['assembly']}/outputs/variant_calling/{config['assembly']}_{config['reads']}.vcf",
     params:
         threads = config["threads"],
+        log = f"{config['assembly']}/logs/{rule}.log",
     shell:
-        "sniffles -i {input[bam]}  --vcf {output} --reference {input[assembly]}"
+        "sniffles -i {input[bam]}  --vcf {output} --reference {input[assembly]} 2> {params[log]}"
