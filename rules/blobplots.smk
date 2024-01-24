@@ -12,7 +12,7 @@ rule tax_blast:
         threads = config["threads"]
     shell:
         "blastn \
-        -db {params[blastdb]}nt \
+        -db {params[blastdb]} \
         -query {input[assembly]} \
         -outfmt '6 qseqid staxids bitscore std sscinames sskingdoms stitle' \
         -max_target_seqs 10 \
