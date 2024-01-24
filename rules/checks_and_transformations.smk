@@ -8,7 +8,17 @@ rule input_assembly:
 # Check for presenc of input reads
 rule input_reads:
     output:
-        reads = "data/reads/" + config["reads"] + ".fastq.gz",
+        zipped_fastq_reads = "data/reads/" + config["reads"] + ".fastq.gz",
+        zipped_fasta_reads = "data/reads/" + config["reads"] + ".fasta.gz",
+        unzipped_fastq_reads = "data/reads/" + config["reads"] + ".fastq",
+        unzipped_fasta_reads = "data/reads/" + config["reads"] + ".fasta"
+    run:
+        shell("""
+        if [ ! -e {output[zipped_fastq_reads]} ] && [ ! -e {output[zipped_fasta_reads]} ] && [ ! -e {output[unzipped_fastq_reads]} ] && [ ! -e {output[unzipped_fasta_reads]} ]; then
+            echo "Error: None of the expected input read files found. Rule failed. Please ensure your reads are in the data/reads/ directory."
+            exit 1  # Exit with a non-zero status to indicate failure
+        fi
+        """)
 
 
 
@@ -43,11 +53,27 @@ rule input_reads:
 #         close({params[scaffolds]}/filename)}}'
 #         """
 
-# Unzip reads if zipped
-rule reads_to_fasta:
-    input:
-        reads = "data/reads/" + config["reads"] + ".fastq.gz",
-    output:
-        reads = "data/reads/" + config["reads"] + ".fasta",
-    shell:
-        "zcat -c {input[reads]} | seqkit fq2fa | cat > {output}"
+# # Unzip reads if zipped
+# rule zip_fastq_to_fasta:
+#     input:
+#         reads = "data/reads/" + config["reads"] + ".fastq.gz",
+#     output:
+#         reads = "data/reads/" + config["reads"] + ".fasta",
+#     shell:
+#         "zcat -c {input[reads]} | seqkit fq2fa | cat > {output}"
+
+# # Unzip reads if zipped
+# rule zip_fasta_to_fasta:
+#     input:
+#         reads = "data/reads/" + config["reads"] + ".{ext}",
+#     output:
+#         reads = "data/reads/" + config["reads"] + ".fasta",
+#     run:
+#         if "fastq.gz" in input[0].path:
+#             shell("echo 'Processing as FASTQ' > output.txt")
+#             # Add your command for processing FASTQ files here
+#         elif "fasta.gz" in input[0].path:
+#             shell("echo 'Processing as FASTA' > output.txt")
+#             # Add your command for processing FASTA files here
+#         else:
+#             raise ValueError("Unsupported reads file extension. Please use either fastq.gz or fasta.gz.")
