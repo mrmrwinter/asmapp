@@ -21,8 +21,6 @@ rule input_reads:
         """)
 
 
-
-
 #         # Define the Snakemake rule for downloading the NT database
 # rule download_nt_db:
 #     output:
@@ -37,6 +35,10 @@ rule input_reads:
 #         """
 # blast database runs to nt.115. around 350 Gb of storage required
 
+#  # Download the taxdb archive
+# perl update_blastdb.pl taxdb
+# # Install it in the BLASTDB directory
+# gunzip -cd taxdb.tar.gz | (cd $BLASTDB; tar xvf - )
 
 # Generate individual files for each scaffold
 # rule splinter_assembly:

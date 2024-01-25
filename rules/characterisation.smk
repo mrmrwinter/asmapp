@@ -3,8 +3,8 @@
 
 # Count the kmers in the raw reads
 rule kmc_count:
-    conda:
-        "../envs/characterisation.yaml"
+    # conda:
+    #     "../envs/characterisation.yaml"
     input:
         reads = "data/reads/" + config["reads"] + ".fastq.gz",
     output:
@@ -32,8 +32,8 @@ rule kmc_count:
 
 # Transform them and generate a histogram of the distribution
 rule kmc_transform:
-    conda:
-        "../envs/characterisation.yaml"
+    # conda:
+    #     "../envs/characterisation.yaml"
     input:
         suf = config["assembly"] + "/reports/kmc/kmer_counts.kmc_suf",
         pre = config["assembly"] + "/reports/kmc/kmer_counts.kmc_pre"
@@ -55,11 +55,12 @@ rule kmc2genomescope_transformation:
         "expand -t 1 {input[hist]} > {output}"
 
 
+
 ### GenomeScope
 # Run Genomescope to visualise kmer spectra, estimate genome size, etc
 rule genomescope:
-    conda:
-        "../envs/characterisation.yaml"
+    # conda:
+    #     "../envs/characterisation.yaml"
     input:
         histo = config["assembly"] + "/reports/kmc/kmer_k21.hist"
     output:
@@ -69,15 +70,16 @@ rule genomescope:
             category="Genome profiling"
         )
     params:
-        outdir = config["assembly"] + "/reports/genomescope/"
+        outdir=config["assembly"] + "/reports/genomescope/",
+        ploidy = config["ploidy"]
     shell:
-        "Rscript scripts/genomescope.R {input[hist]} 21 150 {params[outdir]} 1000 1"
+        "genomescope.R {input} 21 15000 {params.outdir} 1000 1 -p {params[ploidy]}"
 
 
 # Run smudgeplot to predict ploidy
 rule smudgeplot:
-    conda:
-        "../envs/characterisation.yaml"
+    # conda:
+    #     "../envs/characterisation.yaml"
     input:
         hist = config["assembly"] + "/reports/kmc/kmer_k21.hist"
     output:

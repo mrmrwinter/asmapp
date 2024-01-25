@@ -9,6 +9,9 @@ ASMAPP is a reproducible workflow designed to run many common tasks for the appr
 
 _________________________________________________
 
+![Rule graph of workflow](images/rulegraph.png)
+
+_________________________________________________
 
 __The workflow currently includes rules for the following analyses:__  
 - Read mapping  

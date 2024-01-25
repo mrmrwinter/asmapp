@@ -11,7 +11,7 @@
 3, Download databases and packages. See `docs/user-guide/installation.md`
 
 4, Insert inputs
-- Place the assembly fasta and the reads into the respective folders, data/assemblies, and data/reads
+- Place the assembly fasta and the reads into the respective folders, data/assemblies and data/reads
 
 5, Configure the `config.yaml`
   

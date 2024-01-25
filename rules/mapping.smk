@@ -1,5 +1,6 @@
 # MAPPING AND TRANSFORMATIONS 
 
+
 # Map the reads to the assembly
 rule mapping:
     input:
