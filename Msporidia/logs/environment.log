@@ -32,10 +32,10 @@ dependencies:
   - bwa=0.7.17=he4a0461_11
   - bzip2=1.0.8=h7f98852_4
   - c-ares=1.20.1=hd590300_1
-  - ca-certificates=2023.08.22=h06a4308_0
+  - ca-certificates=2023.11.17=hbcca054_0
   - cachetools=5.2.0=pyhd8ed1ab_0
   - cairo=1.16.0=h19f5f5c_2
-  - certifi=2023.7.22=pyhd8ed1ab_0
+  - certifi=2023.11.17=pyhd8ed1ab_0
   - cffi=1.15.1=py310h255011f_0
   - charset-normalizer=2.1.1=pyhd8ed1ab_0
   - chrpath=0.16=h7f98852_1002
@@ -123,6 +123,7 @@ dependencies:
   - k8=0.2.5=hdcf5f25_4
   - keyutils=1.6.1=h166bdaf_0
   - kiwisolver=1.4.4=py310hbf28c38_0
+  - kmc=3.2.1=hf1761c0_2
   - krb5=1.20.1=h81ceb04_0
   - lcms2=2.12=hddcbb42_0
   - ld_impl_linux-64=2.36.1=hea4e1c9_2

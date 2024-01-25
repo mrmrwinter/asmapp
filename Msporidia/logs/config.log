@@ -14,3 +14,4 @@ ncbi_nt_path: ""  # the path to where the NCBI nt database should be installed, 
 
 # parameters
 seq_tech: ""  # the sequencing technology used to generate the reads. eg, hifi, nanopore, pb, etc
+read_length: ""

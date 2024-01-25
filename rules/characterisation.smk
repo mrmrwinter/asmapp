@@ -18,7 +18,8 @@ rule kmc_count:
         threads = config["threads"],
         log = f"{config['assembly']}/logs/kmc_count.log",
     shell:
-        "rm -rf {params[1]} && \
+        "mkdir -p {config[assembly]}/logs && \
+        rm -rf {params[1]} && \
         mkdir -p {params[1]} && \
         kmc \
         -k21 \
@@ -67,7 +68,7 @@ rule genomescope:
     # conda:
     #     "../envs/characterisation.yaml"
     input:
-        histo = config["assembly"] + "/reports/kmc/kmer_k21.hist"
+        histo = config["assembly"] + "/reports/kmc/kmer_k21.histo"
     output:
         report(
             config["assembly"] + "/reports/genomescope/plot.png",
@@ -78,8 +79,9 @@ rule genomescope:
         outdir=config["assembly"] + "/reports/genomescope/",
         ploidy = config["ploidy"],
         log = f"{config['assembly']}/logs/genomescope.log",
+        read_length = config["read_length"]
     shell:
-        "genomescope.R {input} 21 15000 {params.outdir} 1000 1 -p {params[ploidy]} 2> {params[log]}"
+        "Rscript scripts/genomescope.R {input} 21 {params[read_length]} {params[outdir]} 2> {params[log]}"
 
 
 # Run smudgeplot to predict ploidy

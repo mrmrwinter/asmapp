@@ -19,9 +19,10 @@ rule mosdepth:
 # Plot the output of mosdepth
 rule mosdepth_plots:
     input:
-        dist = f"{config['assembly']}/reports/coverage/mosdepth/initial_{config['assembly']}.mosdepth.global.dist.txt"
+        dist = f"{config['assembly']}/reports/coverage/mosdepth/{config['assembly']}.mosdepth.global.dist.txt"
     output:
-        report(
+        # html = f"{config['assembly']}/reports/coverage/mosdepth/{config['assembly']}.dist.html",
+        report = report(
             f"{config['assembly']}/reports/coverage/mosdepth/{config['assembly']}.dist.html",
             caption="../docs/captions/mosdepth.rst",
             category="Coverage analysis"
@@ -44,20 +45,29 @@ rule get_coverage:
     shell:
         "samtools depth {input[bam]} > {output} 2> {params[log]}"
 
+# Generate individual files for each scaffold
+all_scaffs = []
 
-# # Break the coverage file into individual scaffold files
+with open(f"{config['assembly']}/logs/scaffold_list.txt", "r") as file:
+    # Read each line from the file
+    for line in file:
+        # Strip any leading/trailing whitespace and append the line to the list
+        all_scaffs.append(line.strip())
+
+# # # Break the coverage file into individual scaffold files
 # rule scaffold_coverage:
 #     input:
-#         assembly = f"data/assemblies/{config['assembly']}.fasta"
+#         assembly = f"data/assemblies/{config['assembly']}.fasta",
+#         scaffolds = f"{config['assembly']}/logs/scaffold_list.txt"
 #     output:
-#         f"{config['assembly']}/reports/coverage/{all_scaffs}.coverage"
+#         expand(f"{config['assembly']}/reports/coverage/{scaffold}.coverage", scaffold = all_scaffs)
 #     params:
 #         log = f"{config['assembly']}/logs/scaffold_coverage.log",
 #     shell:
-#         "awk '$1 == {all_scaffs} '{{print $0}}' {input} > {output} 2> {params[log]}"
+#         "awk '$1 == {scaffold} '{{print $0}}' {input} > {output} 2> {params[log]}"
 
 
-# Generate plots of coverage across the assembly
+# # Generate plots of coverage across the assembly
 # rule assembly_coverage_plot:
 #     input:
 #         f"{config['assembly']}/reports/coverage/{config['assembly']}.coverage"
@@ -65,7 +75,7 @@ rule get_coverage:
 #         f"{config['assembly']}/reports/coverage/{config['assembly']}.coverage.png"
 #     script:
 #         "../scripts/assembly_coverage.R"
-#         # TODO add the script 
+# #         # TODO add the script 
 
 
 # # Generate plots of coverage across the scaffolds

@@ -10,17 +10,20 @@ rule quast:
         reads = "data/reads/" + config["reads"] + ".fasta",
         reference = "data/assemblies/" + config["reference"] + ".fasta"
     output:
-        # config["assembly"] + "/reports/quast/report.html",
+        # report = config["assembly"] + "/reports/quast/report.html",
         report(
             config["assembly"] + "/reports/quast/report.html", 
             caption="../docs/captions/quast.rst", 
             category="Descriptive Stats")
     params:
-        out_pfx = config["assembly"] + "/reports/quast/",
+        out_pfx = f"{config['assembly']}/reports/quast/",
         threads = config["threads"],
         log = f"{config['assembly']}/logs/quast.log",
     shell:
-        "quast --large {input[assembly]} --glimmer -b --threads {params[threads]} -L --pacbio {input[reads]} -o {params[out_pfx]} 2> {params[log]}"
+        """
+        quast --large {input[assembly]} --glimmer -b --threads {params[threads]} -L --pacbio {input[reads]} -o {params[out_pfx]} 2> {params[log]} &&
+        cp {params[out_pfx]}quast.log {params[log]}
+        """
 
 
         
