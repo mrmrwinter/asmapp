@@ -5,11 +5,10 @@ report: "docs/captions/workflow.rst"
 configfile: "config.yaml"
 
 include: "rules/coverage.smk"
-#include: "rules/blobplots.smk"
-# include: "rules/merqury.smk"
-#include: "rules/characterisation.smk"
-#include: "rules/completeness.smk"
-#include: "rules/mito.smk"
+include: "rules/blobplots.smk"
+include: "rules/characterisation.smk"
+include: "rules/completeness.smk"
+include: "rules/mito.smk"
 # include: "rules/checks_and_transformations.smk"
 include: "rules/mapping.smk"
 #include: "rules/nucmer.smk"
@@ -37,7 +36,7 @@ include: "rules/mapping.smk"
 rule final_outputs:
     input:
 # GENOME PROFILING
-        genomescope = f"{config['assembly']}/reports/genomescope/plot.png",
+        # genomescope = f"{config['assembly']}/reports/genomescope/plot.png",
         # smudgeplot = f"{config['assembly']}/reports/smudge/smudgeplot_smudgeplot.png",
 # BLOBPLOTS
         blob_table = f"{config['assembly']}/reports/blobtools/{config['assembly']}.blobDB.table.txt",
