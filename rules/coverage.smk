@@ -45,6 +45,7 @@ rule get_coverage:
     shell:
         "samtools depth {input[bam]} > {output} 2> {params[log]}"
 
+
 # Generate individual files for each scaffold
 all_scaffs = []
 
@@ -54,17 +55,26 @@ with open(f"{config['assembly']}/logs/scaffold_list.txt", "r") as file:
         # Strip any leading/trailing whitespace and append the line to the list
         all_scaffs.append(line.strip())
 
+
+
+
 # # # Break the coverage file into individual scaffold files
-# rule scaffold_coverage:
-#     input:
-#         assembly = f"data/assemblies/{config['assembly']}.fasta",
-#         scaffolds = f"{config['assembly']}/logs/scaffold_list.txt"
-#     output:
-#         expand(f"{config['assembly']}/reports/coverage/{scaffold}.coverage", scaffold = all_scaffs)
-#     params:
-#         log = f"{config['assembly']}/logs/scaffold_coverage.log",
-#     shell:
-#         "awk '$1 == {scaffold} '{{print $0}}' {input} > {output} 2> {params[log]}"
+rule scaffold_coverage:
+    input:
+        assembly_coverage = f"{config['assembly']}/reports/coverage/{config['assembly']}.coverage",
+        scaffolds = f"{config['assembly']}/logs/scaffold_list.txt"
+    output:
+        # directory(config['assembly'] + "/reports/coverage/scaffolds")
+        expand(config['assembly'] + "/reports/coverage/scaffolds/{scaffold}.coverage", scaffold = all_scaffs)
+    params:
+        out_pfx = config['assembly'] + "/reports/coverage/scaffolds"
+    shell:
+        """
+        mkdir -p {params.out_pfx}
+
+        awk '{{print > "{params.out_pfx}/"$1".coverage"}}' {input.assembly_coverage}
+        """
+
 
 
 # # Generate plots of coverage across the assembly
@@ -77,7 +87,16 @@ with open(f"{config['assembly']}/logs/scaffold_list.txt", "r") as file:
 #         "../scripts/assembly_coverage.R"
 # #         # TODO add the script 
 
+rule scaffold_coverage_plot:
+    input:
+        expand(config['assembly'] + "/reports/coverage/scaffolds/{scaffold}.coverage", scaffold = all_scaffs)
+    output:
+        files = expand(config['assembly'] + "/reports/coverage/scaffolds/plots/{scaffold}.coverage.png", scaffold = all_scaffs),
+        path = directory(f"{config['assembly']}/reports/coverage/scaffolds/plots")
+    script:
+        "../scripts/coverage_plots.py"
 
+        
 # # Generate plots of coverage across the scaffolds
 # rule scaffold_coverage_plots:
 #     input:

@@ -17,29 +17,12 @@ include: "rules/quast.smk"
 include: "rules/variant_calling.smk"
 
 
-###############################################################################
-
-# TODO fix this rule below me to get the depth plots working
-# rule get_scaffs:
-#     output:
-#         all_scaffs
-#     run:
-#         all_scaffs = []
-#         with open(snakemake.input[assembly], "r") as f:
-#                 for record in SeqIO.parse(f, "fasta"):
-#                         all_scaffs.append(record.description)
-
-
-#########################################
-
-
-
 rule final_outputs:
     input:
     # LOGS
         config = f"{config['assembly']}/logs/config.log",
         environment = f"{config['assembly']}/logs/environment.log",
-        all_scaffs = expand(config["assembly"] + "/outputs/scaffolds/{all_scaffs}.fasta", all_scaffs = all_scaffs),
+        all_scaffs = expand(config['assembly']+"/outputs/scaffolds/{scaffold}.fasta", scaffold=all_scaffs),
 
 # GENOME PROFILING
         genomescope = f"{config['assembly']}/reports/genomescope/plot.png",
@@ -61,8 +44,9 @@ rule final_outputs:
         # completeness_report = f"{config['assembly']}/reports/cegma/{config['assembly']}.completeness_report",
 # COVERAGE
         mosdepth_plot = f"{config['assembly']}/reports/coverage/mosdepth/{config['assembly']}.dist.html",
-        # coverage = expand(f"{config['assembly']}/reports/coverage/{scaffold}.coverage", scaffold = all_scaffs),
-        # assembly_coverage_plot = f"{config['assembly']}/reports/coverage/{config['assembly']}.coverage.png",
+        coverage = expand(config['assembly']+"/reports/coverage/scaffolds/{scaffold}.coverage", scaffold=all_scaffs),
+        # coverage = directory(config['assembly'] + "/reports/coverage/scaffolds"),
+        assembly_coverage_plot = expand(config['assembly'] + "/reports/coverage/scaffolds/plots/{scaffold}.coverage.png", scaffold = all_scaffs),
 # MITO
         mito_tagged = f"{config['assembly']}/outputs/assemblies/{config['assembly']}.mito_tagged.fasta",
         no_mito = f"{config['assembly']}/outputs/assemblies/{config['assembly']}.no_mito.fasta",
