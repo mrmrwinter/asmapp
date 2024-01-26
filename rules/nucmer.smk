@@ -1,5 +1,6 @@
 # NUCMER ASSEMBLY DOTPLOTS
 
+
 # Perform a self-by-self alignment with nucmer and print a dotplot
 rule nucmer_self:
     input:
@@ -7,7 +8,7 @@ rule nucmer_self:
     output:
         report(
             config["assembly"] + "/outputs/nucmer/nucmer.self_v_self.png",
-            caption = "reports/nucmer.rst", 
+            caption = "../docs/captions/nucmer.rst", 
             category = "Dotplots"
             ),
         config["assembly"] + "/outputs/nucmer/nucmer.self_v_self.delta"
@@ -32,7 +33,7 @@ rule nucmer_initial_vs_reference:
     output:
         report(
             config["assembly"] + "/outputs/nucmer/nucmer.self_v_ref.png", 
-            caption = "reports/nucmer.rst", 
+            caption = "../docs/captions/nucmer.rst", 
             category = "Dotplots"
             ),
         config["assembly"] + "/outputs/nucmer/nucmer.self_v_ref.delta"

@@ -1,5 +1,6 @@
 # COMPLETENESS ANALYSIS
 
+
 # Run CEGMA on the assembly
 rule CEGMA:
     container:
@@ -10,7 +11,7 @@ rule CEGMA:
         # config["assembly"] + "/reports/cegma/" + config["assembly"] + ".completeness_report"
         report(
             config["assembly"] + "/reports/cegma/" + config["assembly"] + ".completeness_report",
-            caption="../reports/CEGMA.rst",
+            caption="../docs/captions/CEGMA.rst",
             category="Completeness"
         )
     params:

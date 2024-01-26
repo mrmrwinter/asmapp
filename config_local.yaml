@@ -1,0 +1,11 @@
+full_path: "/media/mike/WD_4TB/asmapp/"
+assembly: "MjavanicaVW4_2023"  # name of starting assembly, located in data/assemblies/
+reads: "all_hifi"   # name of reads, located in data/reads/
+# memory: "30"  # the available memory for the analysis in gigabytes
+threads: "10"
+quast_path: "~/software/quast"
+ncbi_nt_path: "/media/mike/SB_2TB/databases/ncbi_db/nt"
+seq_tech: "hifi"
+reference: "data/assemblies/Blanc_Mathieu_2017_mJavanica"
+mitochondrial: "data/assemblies/mitoref"
+ploidy: "4"

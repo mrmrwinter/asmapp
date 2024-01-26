@@ -13,7 +13,7 @@ rule quast:
         # config["assembly"] + "/reports/quast/report.html",
         report(
             config["assembly"] + "/reports/quast/report.html", 
-            caption="../reports/quast.rst", 
+            caption="../docs/captions/quast.rst", 
             category="Descriptive Stats")
     params:
         out_pfx = config["assembly"] + "/reports/quast/",

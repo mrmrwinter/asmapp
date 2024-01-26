@@ -62,7 +62,7 @@ rule nucmer_pair_alignment:
     output:
         directory(config["assembly"] + "/reports/nucmer/pairs"),
         report(
-            directory(config["assembly"] + "reports/pair-analysis/nucmer/pairs"),
+            directory(config["assembly"] + "/reports/pairs_analysis/nucmer/pairs"),
             caption="../docs/captions/pair_dotplots.rst",
             category="Pair analysis"
         )
@@ -87,3 +87,15 @@ rule nucmer_pair_alignment:
             mummer = "mummerplot -l -f --png --large " + delta + " -p " + params[tigs] + "nucmer/" + pair
             os.system(mummer)
 
+
+
+
+# dnadiff
+
+# os.system("mkdir dnadiff_initial_purged/")
+#
+# for index, value in only_initial_pairs.iterrows():
+#     dnadiff = "dnadiff -p dnadiff_initial_purged/nucmer." + str(index) + " -d nucmer_initial_purged/nucmer." + str(index) + ".delta"
+#     os.system(dnadiff)
+#
+#
