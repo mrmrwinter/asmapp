@@ -1,6 +1,5 @@
 # MITOCHONDRIAL DETECTION
 
-
 # Identify if the mitochondrial genome is present in the assembly
 rule mito_identification:
     input:

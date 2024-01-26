@@ -56,9 +56,7 @@ with open(f"{config['assembly']}/logs/scaffold_list.txt", "r") as file:
         all_scaffs.append(line.strip())
 
 
-
-
-# # # Break the coverage file into individual scaffold files
+# Break the coverage file into individual scaffold files
 rule scaffold_coverage:
     input:
         assembly_coverage = f"{config['assembly']}/reports/coverage/{config['assembly']}.coverage",
@@ -75,18 +73,6 @@ rule scaffold_coverage:
         awk '{{print > "{params.out_pfx}/"$1".coverage"}}' {input.assembly_coverage}
         """
 
-
-
-# # Generate plots of coverage across the assembly
-# rule assembly_coverage_plot:
-#     input:
-#         f"{config['assembly']}/reports/coverage/{config['assembly']}.coverage"
-#     output:
-#         f"{config['assembly']}/reports/coverage/{config['assembly']}.coverage.png"
-#     script:
-#         "../scripts/assembly_coverage.R"
-# #         # TODO add the script 
-
 rule scaffold_coverage_plot:
     input:
         expand(config['assembly'] + "/reports/coverage/scaffolds/{scaffold}.coverage", scaffold = all_scaffs)
@@ -96,12 +82,3 @@ rule scaffold_coverage_plot:
     script:
         "../scripts/coverage_plots.py"
 
-        
-# # Generate plots of coverage across the scaffolds
-# rule scaffold_coverage_plots:
-#     input:
-#         f"{config['assembly']}/reports/coverage/{all_scaffs}.coverage"
-#     output:
-#         f"{config['assembly']}/reports/coverage/{all_scaffs}.coverage.png"
-#     script:
-#         "../scripts/scaffold_coverage.R"
