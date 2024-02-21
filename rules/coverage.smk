@@ -18,7 +18,7 @@ rule mosdepth:
 # Plot the output of mosdepth
 rule mosdepth_plots:
     input:
-        dist = f"{config['assembly']}/reports/coverage/mosdepth/initial_{config['assembly']}.mosdepth.global.dist.txt"
+        dist = f"{config['assembly']}/reports/coverage/mosdepth/{config['assembly']}.mosdepth.global.dist.txt"
     output:
         report(
             f"{config['assembly']}/reports/coverage/mosdepth/{config['assembly']}.dist.html",

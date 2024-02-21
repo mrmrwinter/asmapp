@@ -6,19 +6,19 @@ rule input_assembly:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
 
 # Check for presenc of input reads
-rule input_reads:
-    output:
-        zipped_fastq_reads = "data/reads/" + config["reads"] + ".fastq.gz",
-        zipped_fasta_reads = "data/reads/" + config["reads"] + ".fasta.gz",
-        unzipped_fastq_reads = "data/reads/" + config["reads"] + ".fastq",
-        unzipped_fasta_reads = "data/reads/" + config["reads"] + ".fasta"
-    run:
-        shell("""
-        if [ ! -e {output[zipped_fastq_reads]} ] && [ ! -e {output[zipped_fasta_reads]} ] && [ ! -e {output[unzipped_fastq_reads]} ] && [ ! -e {output[unzipped_fasta_reads]} ]; then
-            echo "Error: None of the expected input read files found. Rule failed. Please ensure your reads are in the data/reads/ directory."
-            exit 1  # Exit with a non-zero status to indicate failure
-        fi
-        """)
+# rule input_reads:
+#     output:
+#         zipped_fastq_reads = "data/reads/" + config["reads"] + ".fastq.gz",
+#         zipped_fasta_reads = "data/reads/" + config["reads"] + ".fasta.gz",
+#         unzipped_fastq_reads = "data/reads/" + config["reads"] + ".fastq",
+#         unzipped_fasta_reads = "data/reads/" + config["reads"] + ".fasta"
+#     run:
+#         shell("""
+#         if [ ! -e {output[zipped_fastq_reads]} ] && [ ! -e {output[zipped_fasta_reads]} ] && [ ! -e {output[unzipped_fastq_reads]} ] && [ ! -e {output[unzipped_fasta_reads]} ]; then
+#             echo "Error: None of the expected input read files found. Rule failed. Please ensure your reads are in the data/reads/ directory."
+#             exit 1  # Exit with a non-zero status to indicate failure
+#         fi
+#         """)
 
 
 #         # Define the Snakemake rule for downloading the NT database
@@ -53,16 +53,16 @@ rule input_reads:
 #         """
 #         cat {input} | awk '{{if (substr($0, 1, 1)=='>') {{filename=(substr($0,2) '.fasta'}} print $0 >> {params[scaffolds]}/filename
 #         close({params[scaffolds]}/filename)}}'
-#         """
+        # """
 
-# # Unzip reads if zipped
-# rule zip_fastq_to_fasta:
-#     input:
-#         reads = "data/reads/" + config["reads"] + ".fastq.gz",
-#     output:
-#         reads = "data/reads/" + config["reads"] + ".fasta",
-#     shell:
-#         "zcat -c {input[reads]} | seqkit fq2fa | cat > {output}"
+# Unzip reads if zipped
+rule zip_fastq_to_fasta:
+    input:
+        reads = "data/reads/" + config["reads"] + ".fastq.gz",
+    output:
+        reads = "data/reads/" + config["reads"] + ".fasta",
+    shell:
+        "zcat -c {input[reads]} | seqkit fq2fa | cat > {output}"
 
 # # Unzip reads if zipped
 # rule zip_fasta_to_fasta:
