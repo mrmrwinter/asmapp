@@ -6,6 +6,28 @@ rule input_assembly:
         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
 
 
+# Unzip reads if zipped
+rule zip_fastq_to_fasta:
+    input:
+        reads = "data/reads/" + config["reads"] + ".fastq.gz",
+    output:
+        reads = "data/reads/" + config["reads"] + ".fasta",
+    params:
+        log = f"{config['assembly']}/logs/zip_fastq_to_fasta.log",
+    shell:
+        "zcat -c {input[reads]} | seqkit fq2fa | cat > {output} 2> {params[log]}"
+
+# Unzip reads if zipped
+rule fastq_to_fasta:
+    input:
+        reads = "data/reads/" + config["reads"] + ".fastq",
+    output:
+        reads = "data/reads/" + config["reads"] + ".fasta",
+    params:
+        log = f"{config['assembly']}/logs/zip_fastq_to_fasta.log",
+    shell:
+        "seqkit fq2fa {input[reads]} > {output} 2> {params[log]}"
+
 # generate scaffold list
 rule scaffold_list:
     input:
@@ -64,14 +86,5 @@ rule scaffold_list:
 #         """
 
 
-# Unzip reads if zipped
-rule zip_fastq_to_fasta:
-    input:
-        reads = "data/reads/" + config["reads"] + ".fastq.gz",
-    output:
-        reads = "data/reads/" + config["reads"] + ".fasta",
-    params:
-        log = f"{config['assembly']}/logs/zip_fastq_to_fasta.log",
-    shell:
-        "zcat -c {input[reads]} | seqkit fq2fa | cat > {output} 2> {params[log]}"
+
 

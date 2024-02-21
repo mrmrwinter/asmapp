@@ -8,7 +8,6 @@ rule tax_blast:
     output:
         config["assembly"] + "/reports/blast/contaminant_taxonomy.blast.out"
     params:
-        blastdb=config["ncbi_nt_path"],
         threads = config["threads"],
         log = f"{config['assembly']}/logs/tax_blast.log",
         ncbi_db = config['ncbi_db'],
@@ -16,7 +15,7 @@ rule tax_blast:
     shell:
         """
         export BLASTDB={params[ncbi_db]}
-        
+
         blastn \
         -db {params[ncbi_db]} \
         -query {input[assembly]} \
