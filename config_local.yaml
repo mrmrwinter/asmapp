@@ -5,6 +5,7 @@ reads: "all_hifi"   # name of reads, located in data/reads/
 threads: "10"
 quast_path: "~/software/quast"
 ncbi_nt_path: "/media/mike/SB_2TB/databases/ncbi_db/nt"
+ncbi_db: "nt"
 seq_tech: "hifi"
 reference: "Blanc_Mathieu_2017_mJavanica"
 mitochondrial: "data/assemblies/mitoref"
