@@ -17,9 +17,10 @@ rule quast:
             category="Descriptive Stats")
     params:
         out_pfx = config["assembly"] + "/reports/quast/",
-        threads = config["threads"]
+        threads = config["threads"],
+        quast_path = config['quast_path']
     shell:
-        "quast --large {input[0]} --glimmer -b --threads {params[1]} -L --pacbio {input[reads]} -o {params[0]}"
+        "{params.quast_path}/quast.py --large {input[0]} --glimmer -b --threads {params[1]} -L --pacbio {input[reads]} -o {params[0]}"
 
 
         
