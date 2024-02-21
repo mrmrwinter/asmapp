@@ -35,7 +35,7 @@ rule final_outputs:
         quast_report = f"{config['assembly']}/reports/quast/report.html",
 # CEGMA
         # completeness_report = f"{config['assembly']}/reports/cegma/{config['assembly']}.completeness_report",
-        busco = f"{config['assembly']}/reports/busco/run_{config['busco_lineage']}/short_summary.txt",
+        # busco = f"{config['assembly']}/reports/busco/run_{config['busco_lineage']}/short_summary.txt",
 # COVERAGE
         mosdepth_plot = f"{config['assembly']}/reports/coverage/mosdepth/{config['assembly']}.dist.html",
         all_coverage = f"{config['assembly']}/reports/coverage/{config['assembly']}.coverage",
