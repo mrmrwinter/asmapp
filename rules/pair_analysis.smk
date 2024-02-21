@@ -1,22 +1,21 @@
 # PAIRS TABLE with BLAST
-# these rules potentially broken
-# more rules to be added
 
 # Rule to make database of assembly
 rule make_blast_database:  
     input:
-        "data/assemblies/" + config["assembly"] + ".fasta" # input to the rule
+        assembly = "data/assemblies/" + config["assembly"] + ".fasta" # input to the rule
     output:
         nhr = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nhr",   # all outputs expected from the rule
         nin = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nin",
         nsq = "data/databases/" + config["assembly"] + "/" + config["assembly"] + ".nsq"
     params:
-        "data/databases/" + config["assembly"] + "/" + config["assembly"]   # prefix for the outputs, required by the command
-    shell:  # shell command for the rule
+        out_pfx = "data/databases/" + config["assembly"] + "/" + config["assembly"],
+        log = f"{config['assembly']}/logs/make_blast_database.log",
+    shell:  
         "makeblastdb \
-        -in {input} \
-        -out {params} \
-        -dbtype nucl"  # the database type
+        -in {input[assembly]} \
+        -out {params[out_pfx]} \
+        -dbtype nucl 2> {params[log]}"  # the database type
 
 
 # BLAST the scaffolds back against the assembly
@@ -29,9 +28,11 @@ rule blast_nonself:
     params:
         out_pfx = config["assembly"] + "/reports/blast",
         db_pfx = "data/databases/" + config["assembly"] + "/" + config["assembly"],
-        threads = config["threads"]
+        threads = config["threads"],
+        log = f"{config['assembly']}/logs/blast_nonself.log",
     shell:
-        "blastn -query {input[0]} -db {params[1]} -outfmt 6 -max_target_seqs 2 -out {params[0]}/blast.out -num_threads {params[threads]}"
+        "blastn -query {input[assembly]} -db {params[db_pfx]} -outfmt 6 -max_target_seqs 2 -out {params[out_pfx]}/blast.out -num_threads {params[threads]}"
+
 
 # Remove self-to-self hits from the output
 rule only_pairs:
@@ -42,7 +43,7 @@ rule only_pairs:
     run:
        import pandas as pd
 
-       blast_output = pd.read_csv(input[0], sep="\t", header = None) # snakemake.input[0] is the blast table
+       blast_output = pd.read_csv(input[blast], sep="\t", header = None) 
 
        pairs = pd.DataFrame(columns = ['query', 'hit'])
 
@@ -53,13 +54,12 @@ rule only_pairs:
 
        only_pairs = pairs.drop_duplicates()
 
-       only_pairs.to_csv(output[0], sep='\t')
+       only_pairs.to_csv(output[only_pairs_table], sep='\t')
 
 
 # Perform nucmer alignment of potential pairs and print a dotplot for each
 rule nucmer_pair_alignment:
     input:
-        # directory(config["assembly"] + "tmp_initial/"),
         only_pairs_table = config["assembly"] + "/reports/pairs_analysis/blast/blast.onlyPairs.tsv"
     output:
         directory(config["assembly"] + "/reports/nucmer/pairs"),
@@ -70,34 +70,23 @@ rule nucmer_pair_alignment:
         )
     params:
         tigs = config["assembly"] + "tmp/",
-        out_dir = config["assembly"] + "/reports/nucmer/pairs/"
+        out_dir = config["assembly"] + "/reports/nucmer/pairs/",
+        log = f"{config['assembly']}/logs/nucmer_pair_alignment.log",
     run:
         import glob
         import os
 
-        only_pairs = pd.read_csv(snakemake.input[1])
+        only_pairs = pd.read_csv(snakemake.input[only_pairs_table])
 
         for index, value in only_pairs.iterrows():
-            q = params[0] + value[0] + ".fasta"
-            h = params[0] + value[1] + ".fasta"
-            nucmer = "nucmer -p " + params[1] + "nucmer/nucmer." + str(q.replace('.fasta','') + h.replace('.fasta','')) + " " + q + " " + h
+            q = params[tigs] + value[0] + ".fasta"
+            h = params[tigs] + value[1] + ".fasta"
+            nucmer = f"nucmer -p {params[out_dir]}nucmer/nucmer.{str(q.replace('.fasta','')}{h.replace('.fasta',''))} {q} {h} 2> {params[log]}"
             os.system(nucmer)
 
 
         for delta in glob.glob("nucmer/*.delta"):
             pair = delta.replace("nucmer/","").replace(".delta","")
-            mummer = "mummerplot -l -f --png --large " + delta + " -p " + params[0] + "nucmer/" + pair
+            mummer = f"mummerplot -l -f --png --large {delta} -p {params[tigs]}nucmer/{pair} 2>> {params[log]}"
             os.system(mummer)
 
-
-
-
-# dnadiff
-
-# os.system("mkdir dnadiff_initial_purged/")
-#
-# for index, value in only_initial_pairs.iterrows():
-#     dnadiff = "dnadiff -p dnadiff_initial_purged/nucmer." + str(index) + " -d nucmer_initial_purged/nucmer." + str(index) + ".delta"
-#     os.system(dnadiff)
-#
-#

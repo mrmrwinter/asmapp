@@ -3,28 +3,29 @@
 # Blast the contigs against the NCBI nt database to assign taxonomy to them
 rule tax_blast:
     input:
-        "data/assemblies/" + config["assembly"] + ".fasta",
+        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
         # os.path.join(config["ncbi_nt_path"], "nt.115.nin")
     output:
         config["assembly"] + "/reports/blast/contaminant_taxonomy.blast.out"
     params:
         blastdb=config["ncbi_nt_path"],
-        threads = config["threads"]
+        threads = config["threads"],
+        log = f"{config['assembly']}/logs/tax_blast.log",
     shell:
         "blastn \
-        -db {params.blastdb}nt \
-        -query {input[0]} \
+        -db {params[blastdb]} \
+        -query {input[assembly]} \
         -outfmt '6 qseqid staxids bitscore std sscinames sskingdoms stitle' \
         -max_target_seqs 10 \
         -max_hsps 1 \
         -evalue 1e-25 \
         -num_threads {params[threads]} \
-        -out {output}"
+        -out {output} 2> {params[log]}"
 
 # Create the intial blobject using the mapped reads, the contig taxonomy results, and the assembly.
 rule blob_create:
     input:
-        initial = "data/assemblies/" + config["assembly"] + ".fasta",
+        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
         reads = f"{config['assembly']}/outputs/mapping/{config['reads']}.sorted.bam",
         hits = f"{config['assembly']}/reports/blast/contaminant_taxonomy.blast.out",
         index = f"{config['assembly']}/outputs/mapping/{config['reads']}.sorted.bam.bai"
@@ -33,19 +34,21 @@ rule blob_create:
     params:
         out = config["assembly"] + "/reports/blobtools/" + config["assembly"],
         db = config["ncbi_nt_path"],
+        log = f"{config['assembly']}/logs/blob_create.log",
     shell:
         "blobtools create \
-        -i {input.initial} \
+        -i {input.assembly} \
         -b {input.reads} \
         -t {input.hits} \
-        -o {params.out} \
-        --names {params[1]}/names.dmp \
-        --nodes {params[1]}/nodes.dmp"
+        -o {params[out]} \
+        --names {params[db]}/names.dmp \
+        --nodes {params[db]}/nodes.dmp 2> {params[log]}"
+
 
 # View the blobject as a table
 rule blobtools_view:
     input:
-        config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
+        blob_json = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
     output:
         report(
             config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.table.txt",
@@ -53,24 +56,27 @@ rule blobtools_view:
             category="Contamination reports"
         )
     params:
-        config["assembly"] + "/reports/blobtools/"
+        out_pfx = config["assembly"] + "/reports/blobtools/",
+        log = f"{config['assembly']}/logs/blobtools_view.log",
     shell:
         "blobtools view \
-        -i {input} \
-        --out {params[0]}"
+        -i {input[blob_json]} \
+        --out {params[out_pfx]} 2> {params[log]}"
+
 
 # Plot the blobplot
 rule blobtools_plot:
     input:
-        config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
+        blob_json = config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
     output:
         report(
             config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png", 
             caption="../docs/captions/blobtools.rst", 
             category="Contamination reports")
     params:
-        out = config["assembly"] + "/reports/blobtools/"
+        out = config["assembly"] + "/reports/blobtools/",
+        log = f"{config['assembly']}/logs/blobtools_plot.log",
     shell:
         "blobtools plot \
-        -i {input} \
-        --out {params[out]}"
+        -i {input[blob_json]} \
+        --out {params[out]} 2> {params[log]}"

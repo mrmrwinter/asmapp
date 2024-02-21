@@ -5,22 +5,25 @@ rule quast:
     message:
         "[INFO] Performing QUAST appraisal on assemblies..."
     input:
-        initial = "data/assemblies/" + config["assembly"] + ".fasta",
+        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
         # assembly = config["assembly"] + "/outputs/redundans/scaffolds.reduced.fa",
         reads = "data/reads/" + config["reads"] + ".fasta",
         reference = "data/assemblies/" + config["reference"] + ".fasta"
     output:
-        # config["assembly"] + "/reports/quast/report.html",
+        # report = config["assembly"] + "/reports/quast/report.html",
         report(
             config["assembly"] + "/reports/quast/report.html", 
             caption="../docs/captions/quast.rst", 
             category="Descriptive Stats")
     params:
-        out_pfx = config["assembly"] + "/reports/quast/",
+        out_pfx = f"{config['assembly']}/reports/quast/",
         threads = config["threads"],
-        quast_path = config['quast_path']
+        log = f"{config['assembly']}/logs/quast.log",
     shell:
-        "{params.quast_path}/quast.py --large {input[0]} --glimmer -b --threads {params[1]} -L --pacbio {input[reads]} -o {params[0]}"
+        """
+        quast --large {input[assembly]} --glimmer -b --threads {params[threads]} -L --pacbio {input[reads]} -o {params[out_pfx]} 2> {params[log]} &&
+        cp {params[out_pfx]}quast.log {params[log]}
+        """
 
 
         

@@ -15,19 +15,22 @@ rule kmc_count:
     params:
         kmc = config["assembly"] + "/reports/kmc/kmer_counts",
         tmp = config["assembly"] + "/reports/kmc/tmp",
-        threads = config["threads"]
+        threads = config["threads"],
+        log = f"{config['assembly']}/logs/kmc_count.log",
     shell:
-        "rm -rf {params[1]} && \
+        "mkdir -p {config[assembly]}/logs && \
+        rm -rf {params[1]} && \
         mkdir -p {params[1]} && \
         kmc \
         -k21 \
-        -t{params[2]} \
+        -t{params[threads]} \
         -m50 \
         -ci1 \
         -cs10000 \
-        {input} \
-        {params[0]} \
-        {params[1]}"
+        {input[reads]} \
+        {params[kmc]} \
+        {params[tmp]} 2> {params[log]}"
+
 
 # Transform them and generate a histogram of the distribution
 rule kmc_transform:
@@ -39,18 +42,24 @@ rule kmc_transform:
     output:
         config["assembly"] + "/reports/kmc/kmer_k21.hist"
     params:
-        kmc=config["assembly"] + "/reports/kmc/kmer_counts"
+        kmc = config["assembly"] + "/reports/kmc/kmer_counts",
+        log = f"{config['assembly']}/logs/kmc_transform.log",
     shell:
-        "kmc_tools transform {params.kmc} histogram {output} -cx10000"
+        "kmc_tools transform {params[kmc]} histogram {output} -cx10000 2> {params[log]}"
+
 
 # Replaces tabs with spaces to allow running from kmc3 into genomescope
 rule kmc2genomescope_transformation:
     input:
-        config["assembly"] + "/reports/kmc/kmer_k21.hist"
+        hist = config["assembly"] + "/reports/kmc/kmer_k21.hist"
     output:
         config["assembly"] + "/reports/kmc/kmer_k21.histo"
+    params:
+        log = f"{config['assembly']}/logs/kmc2genomescope_transformation.log",
     shell:
-        "expand -t 1 {input} > {output}"
+        "expand -t 1 {input[hist]} > {output} 2> {params[log]}"
+
+
 
 
 ### GenomeScope
@@ -59,7 +68,7 @@ rule genomescope:
     # conda:
     #     "../envs/characterisation.yaml"
     input:
-        config["assembly"] + "/reports/kmc/kmer_k21.histo"
+        histo = config["assembly"] + "/reports/kmc/kmer_k21.histo"
     output:
         report(
             config["assembly"] + "/reports/genomescope/plot.png",
@@ -68,9 +77,11 @@ rule genomescope:
         )
     params:
         outdir=config["assembly"] + "/reports/genomescope/",
-        ploidy = config["ploidy"]
+        ploidy = config["ploidy"],
+        log = f"{config['assembly']}/logs/genomescope.log",
+        read_length = config["read_length"]
     shell:
-        "genomescope.R {input} 21 15000 {params.outdir} 1000 1 -p {params[ploidy]}"
+        "Rscript scripts/genomescope.R {input} 21 {params[read_length]} {params[outdir]} 2> {params[log]}"
 
 
 # Run smudgeplot to predict ploidy
@@ -78,7 +89,7 @@ rule smudgeplot:
     # conda:
     #     "../envs/characterisation.yaml"
     input:
-        config["assembly"] + "/reports/kmc/kmer_k21.hist"
+        hist = config["assembly"] + "/reports/kmc/kmer_k21.hist"
     output:
         report(
             config["assembly"] + "/reports/smudge/smudgeplot_smudgeplot.png",
@@ -89,21 +100,22 @@ rule smudgeplot:
         counts = config["assembly"] + "/reports/kmc/kmer_counts",
         dump = config["assembly"] + "/reports/smudge/kmer_k21.dump",
         pairs = config["assembly"] + "/reports/smudge/kmer_pairs",
-        cov = config["assembly"] + "/reports/smudge/kmer_pairs_coverages.tsv"
+        cov = config["assembly"] + "/reports/smudge/kmer_pairs_coverages.tsv",
+        log = f"{config['assembly']}/logs/smudgeplot.log",
     shell:
         """
-        L=$(smudgeplot.py cutoff {input} L)
-        U=$(smudgeplot.py cutoff {input} U)
+        L=$(smudgeplot.py cutoff {input[hist]} L)
+        U=$(smudgeplot.py cutoff {input[hist]} U)
 
         echo $L $U
 
-        kmc_tools transform {params.counts} \
+        kmc_tools transform {params[counts]} \
         -ci$L \
         -cx$U dump \
-        -s {params.dump}
+        -s {params[dump]}  2> {params[log]}
 
         smudgeplot.py hetkmers \
-        -o {params.pairs} < {params.dump} 
+        -o {params[pairs]} < {params[dump]} 2>> {params[log]}
 
-        smudgeplot.py plot {params.cov}
+        smudgeplot.py plot {params[cov]} 2>> {params[log]}
         """
