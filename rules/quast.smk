@@ -19,9 +19,10 @@ rule quast:
         out_pfx = f"{config['assembly']}/reports/quast/",
         threads = config["threads"],
         log = f"{config['assembly']}/logs/quast.log",
+        quast_path = config['quast_path']
     shell:
         """
-        quast --large {input[assembly]} --glimmer -b --threads {params[threads]} -L --pacbio {input[reads]} -o {params[out_pfx]} 2> {params[log]} &&
+        {params[quast_path]}/quast.py --large {input[assembly]} --glimmer -b --threads {params[threads]} -L --pacbio {input[reads]} -o {params[out_pfx]} 2> {params[log]} &&
         cp {params[out_pfx]}quast.log {params[log]}
         """
 

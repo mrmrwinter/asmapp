@@ -9,7 +9,7 @@ rule mapping:
         sam = f"{config['assembly']}/outputs/mapping/{config['reads']}.sam"
     params:
         threads = config["threads"],
-        seq_tech = "map-" + config["seq_tech"],
+        seq_tech = config["seq_tech"],
         log = f"{config['assembly']}/logs/mapping.log",
     shell:
         "minimap2 -t {params[threads]} -ax {params[seq_tech]} {input[assembly]} {input[reads]} > {output} 2> {params[log]}"  

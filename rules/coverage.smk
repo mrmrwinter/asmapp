@@ -46,39 +46,39 @@ rule get_coverage:
         "samtools depth {input[bam]} > {output} 2> {params[log]}"
 
 
-# Generate individual files for each scaffold
-all_scaffs = []
+# # Generate individual files for each scaffold
+# all_scaffs = []
 
-with open(f"{config['assembly']}/logs/scaffold_list.txt", "r") as file:
-    # Read each line from the file
-    for line in file:
-        # Strip any leading/trailing whitespace and append the line to the list
-        all_scaffs.append(line.strip())
+# with open(f"{config['assembly']}/logs/scaffold_list.txt", "r") as file:
+#     # Read each line from the file
+#     for line in file:
+#         # Strip any leading/trailing whitespace and append the line to the list
+#         all_scaffs.append(line.strip())
 
 
-# Break the coverage file into individual scaffold files
-rule scaffold_coverage:
-    input:
-        assembly_coverage = f"{config['assembly']}/reports/coverage/{config['assembly']}.coverage",
-        scaffolds = f"{config['assembly']}/logs/scaffold_list.txt"
-    output:
-        # directory(config['assembly'] + "/reports/coverage/scaffolds")
-        expand(config['assembly'] + "/reports/coverage/scaffolds/{scaffold}.coverage", scaffold = all_scaffs)
-    params:
-        out_pfx = config['assembly'] + "/reports/coverage/scaffolds"
-    shell:
-        """
-        mkdir -p {params.out_pfx}
+# # Break the coverage file into individual scaffold files
+# rule scaffold_coverage:
+#     input:
+#         assembly_coverage = f"{config['assembly']}/reports/coverage/{config['assembly']}.coverage",
+#         scaffolds = f"{config['assembly']}/logs/scaffold_list.txt"
+#     output:
+#         # directory(config['assembly'] + "/reports/coverage/scaffolds")
+#         expand(config['assembly'] + "/reports/coverage/scaffolds/{scaffold}.coverage", scaffold = all_scaffs)
+#     params:
+#         out_pfx = config['assembly'] + "/reports/coverage/scaffolds"
+#     shell:
+#         """
+#         mkdir -p {params.out_pfx}
 
-        awk '{{print > "{params.out_pfx}/"$1".coverage"}}' {input.assembly_coverage}
-        """
+#         awk '{{print > "{params.out_pfx}/"$1".coverage"}}' {input.assembly_coverage}
+#         """
 
-rule scaffold_coverage_plot:
-    input:
-        expand(config['assembly'] + "/reports/coverage/scaffolds/{scaffold}.coverage", scaffold = all_scaffs)
-    output:
-        files = expand(config['assembly'] + "/reports/coverage/scaffolds/plots/{scaffold}.coverage.png", scaffold = all_scaffs),
-        path = directory(f"{config['assembly']}/reports/coverage/scaffolds/plots")
-    script:
-        "../scripts/coverage_plots.py"
+# rule scaffold_coverage_plot:
+#     input:
+#         expand(config['assembly'] + "/reports/coverage/scaffolds/{scaffold}.coverage", scaffold = all_scaffs)
+#     output:
+#         files = expand(config['assembly'] + "/reports/coverage/scaffolds/plots/{scaffold}.coverage.png", scaffold = all_scaffs),
+#         path = directory(f"{config['assembly']}/reports/coverage/scaffolds/plots")
+#     script:
+#         "../scripts/coverage_plots.py"
 

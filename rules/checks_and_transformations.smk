@@ -40,28 +40,28 @@ rule scaffold_list:
 
 
 
-# Generate individual files for each scaffold
-all_scaffs = []
+# # Generate individual files for each scaffold
+# all_scaffs = []
 
-with open(f"{config['assembly']}/logs/scaffold_list.txt", "r") as file:
-    # Read each line from the file
-    for line in file:
-        # Strip any leading/trailing whitespace and append the line to the list
-        all_scaffs.append(line.strip())
+# with open(f"{config['assembly']}/logs/scaffold_list.txt", "r") as file:
+#     # Read each line from the file
+#     for line in file:
+#         # Strip any leading/trailing whitespace and append the line to the list
+#         all_scaffs.append(line.strip())
 
 
-rule splinter_assembly:
-    input:
-        assembly = "data/assemblies/" + config["assembly"] + ".fasta",
-        scaffolds = f"{config['assembly']}/logs/scaffold_list.txt"
-    output:
-        expand(config["assembly"] + "/outputs/scaffolds/{all_scaffs}.fasta", all_scaffs = all_scaffs)
-    params:
-        scaffolds = config["assembly"] + "/outputs/scaffolds",
-    shell:
-        """
-        awk '/^>/ {{ if (seq) {{ print header ORS seq > "{params[scaffolds]}/" filename; close("{params[scaffolds]}/" filename) }} header = $0; filename = substr($0, 2); sub(" .*", "", filename); filename = filename ".fasta"; seq = "" }} !/^>/ {{ seq = seq $0 }} END {{ if (seq) {{ print header ORS seq > "{params[scaffolds]}/" filename; close("{params[scaffolds]}/" filename) }} }}' {input}
-        """
+# rule splinter_assembly:
+#     input:
+#         assembly = "data/assemblies/" + config["assembly"] + ".fasta",
+#         scaffolds = f"{config['assembly']}/logs/scaffold_list.txt"
+#     output:
+#         expand(config["assembly"] + "/outputs/scaffolds/{all_scaffs}.fasta", all_scaffs = all_scaffs)
+#     params:
+#         scaffolds = config["assembly"] + "/outputs/scaffolds",
+#     shell:
+#         """
+#         awk '/^>/ {{ if (seq) {{ print header ORS seq > "{params[scaffolds]}/" filename; close("{params[scaffolds]}/" filename) }} header = $0; filename = substr($0, 2); sub(" .*", "", filename); filename = filename ".fasta"; seq = "" }} !/^>/ {{ seq = seq $0 }} END {{ if (seq) {{ print header ORS seq > "{params[scaffolds]}/" filename; close("{params[scaffolds]}/" filename) }} }}' {input}
+#         """
 
 
 # Unzip reads if zipped
