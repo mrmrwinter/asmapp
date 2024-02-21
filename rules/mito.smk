@@ -26,10 +26,12 @@ rule mito_tagging:
         no_mito = config["assembly"] + "/outputs/assemblies/" + config["assembly"] + ".no_mito.fasta",
     run:
         import pandas as pd
+
         from Bio import SeqIO
 
         # read in the header of the mito scaffold
-        blast_output = pd.read_csv(input[mito_blast], sep="\t", header = None)
+        blast_output = pd.read_csv(input['mito_blast'], sep="\t", header = None)
+
         for index, value in blast_output.iterrows():
             if index == 0:
                 mito_tig = value[1]
@@ -37,15 +39,19 @@ rule mito_tagging:
         # code to tag the mito contig header
         to_add = "mitochondrial_"
 
-        with open(output[mito_tagged], "w") as mito_tagged:
-            for r in SeqIO.parse(input[assembly], "fasta"):
+        with open(output['mito_tagged'], "w") as mito_tagged:
+            print("Mito_tagging output file created.")
+            for r in SeqIO.parse(input['assembly'], "fasta"):
                 if r.id == str(mito_tig):
+                    print("Mito_tagging output file writing...")
                     r.id = (to_add + r.id).replace(" ", "_")
                     SeqIO.write(r, mito_tagged, "fasta")
 
         # code to remove the mito contig from the assembly
-        with open(output[no_mito], "w") as no_mito: # etc
-            for seq in SeqIO.parse(input[0], "fasta"):
+        with open(output['no_mito'], "w") as no_mito: # etc
+            print("Mito purged assembly file created.")
+            for seq in SeqIO.parse(input['assembly'], "fasta"):
                 if seq.id not in str(mito_tig):
+                    print("Mito purged assembly file writing...")
                 # write to new file
                     SeqIO.write(seq, no_mito, "fasta")

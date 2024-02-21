@@ -8,18 +8,24 @@ rule tax_blast:
     output:
         config["assembly"] + "/reports/blast/contaminant_taxonomy.blast.out"
     params:
-        blastdb = config["ncbi_nt_path"],
-        threads = config["threads"]
+        threads = config["threads"],
+        log = f"{config['assembly']}/logs/tax_blast.log",
+        ncbi_db = config['ncbi_db'],
+        ncbi_db_path = config['ncbi_db_path']
     shell:
-        "blastn \
-        -db {params[blastdb]} \
+        """
+        export BLASTDB={params[ncbi_db_path]}
+        
+        blastn \
+        -db {params[ncbi_db]} \
         -query {input[assembly]} \
         -outfmt '6 qseqid staxids bitscore std sscinames sskingdoms stitle' \
         -max_target_seqs 10 \
         -max_hsps 1 \
         -evalue 1e-25 \
         -num_threads {params[threads]} \
-        -out {output}"
+        -out {output}
+        """
 
 # Create the intial blobject using the mapped reads, the contig taxonomy results, and the assembly.
 rule blob_create:

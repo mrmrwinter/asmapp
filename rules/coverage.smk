@@ -40,32 +40,4 @@ rule get_coverage:
         "samtools depth {input[bam]} > {output}"
 
 
-# # Break the coverage file into individual scaffold files
-# rule scaffold_coverage:
-#     input:
-#         assembly = f"data/assemblies/{config['assembly']}.fasta"
-#     output:
-#         f"{config['assembly']}/reports/coverage/{all_scaffs}.coverage"
-#     shell:
-#         "awk '$1 == {all_scaffs} '{{print $0}}' {input} > {output}"
 
-
-# Generate plots of coverage across the assembly
-
-rule assembly_coverage_plot:
-    input:
-        coverage = f"{config['assembly']}/reports/coverage/{config['assembly']}.coverage"
-    output:
-        f"{config['assembly']}/reports/coverage/{config['assembly']}.coverage.png"
-    script:
-        "../scripts/assembly_coverage.R"
-
-
-# # Generate plots of coverage across the scaffolds
-# rule scaffold_coverage_plots:
-#     input:
-#         f"{config['assembly']}/reports/coverage/{all_scaffs}.coverage"
-#     output:
-#         f"{config['assembly']}/reports/coverage/{all_scaffs}.coverage.png"
-#     script:
-#         "../scripts/scaffold_coverage.R"
