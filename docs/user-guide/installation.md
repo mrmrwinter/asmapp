@@ -18,5 +18,5 @@ Following environment creation, run:
 
 
 ## Databases
- Some packages in the workflow require that the NCBI nt database is installed locally. This can be installed from the NCBI website [here](https://www.ncbi.nlm.nih.gov/books/NBK569850/). It is also necessary to donwload the NCBI `taxdb.tar.gz` from this [ftp](ftp://ftp.ncbi.nlm.nih.gov/blast/db/taxdb.tar.gz) and extract it in the same folder as the nt database.
+ Some packages in the workflow require that the NCBI nt database is installed locally. This can be installed from the NCBI website [here](https://www.ncbi.nlm.nih.gov/books/NBK569850/). It is also necessary to download the NCBI `taxdb.tar.gz` from this [ftp](ftp://ftp.ncbi.nlm.nih.gov/blast/db/taxdb.tar.gz) and extract it in the same folder as the nt database.
 

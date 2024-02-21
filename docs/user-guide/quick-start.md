@@ -16,7 +16,7 @@
 5, Configure the `config.yaml`
   
 6, Run the workflow, where X is the number of cores to use, then generate a report  
-> `snakemake -cX --use-singularity`  
+> `snakemake -cX --use-singularity --use-conda`  
 > `snakemake --report report.html`
 
 
