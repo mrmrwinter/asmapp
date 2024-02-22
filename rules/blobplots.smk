@@ -14,7 +14,7 @@ rule tax_blast:
         ncbi_db_path = config['ncbi_db_path']
     shell:
         """
-        export BLASTDB={params[ncbi_db]}
+        export BLASTDB={params[ncbi_db_path]}
 
         blastn \
         -db {params[ncbi_db]} \
@@ -38,7 +38,7 @@ rule blob_create:
         config["assembly"] + "/reports/blobtools/" + config["assembly"] + ".blobDB.json"
     params:
         out = config["assembly"] + "/reports/blobtools/" + config["assembly"],
-        db = config["ncbi_nt_path"],
+        db = config["ncbi_db_path"],
         log = f"{config['assembly']}/logs/blob_create.log",
     shell:
         "blobtools create \

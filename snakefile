@@ -31,7 +31,7 @@ rule final_outputs:
         blob_plot = f"{config['assembly']}/reports/blobtools/{config['assembly']}.blobDB.json.bestsum.phylum.p8.span.100.blobplot.bam0.png",
 # NUCMER
         self_v_self = f"{config['assembly']}/outputs/nucmer/nucmer.self_v_self.png",
-        # self_v_ref = f"{config['assembly']}/outputs/nucmer/nucmer.self_v_ref.png",
+        self_v_ref = f"{config['assembly']}/outputs/nucmer/nucmer.self_v_ref.png",
         # dna_diff =
 # PAIRS ANALYSIS
         # blast_pairs = f"{config['assembly']}/reports/pairs_analysis/blast/blast.onlyPairs.tsv",
@@ -40,6 +40,7 @@ rule final_outputs:
         quast_report = f"{config['assembly']}/reports/quast/report.html",
 # CEGMA
         # completeness_report = f"{config['assembly']}/reports/cegma/{config['assembly']}.completeness_report",
+        busco = f"{config['assembly']}/reports/busco/run_{config['busco_lineage']}/short_summary.txt",
 # COVERAGE
         mosdepth_plot = f"{config['assembly']}/reports/coverage/mosdepth/{config['assembly']}.dist.html",
         # coverage = expand(config['assembly']+"/reports/coverage/scaffolds/{scaffold}.coverage", scaffold=all_scaffs),

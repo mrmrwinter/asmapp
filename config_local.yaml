@@ -4,9 +4,10 @@ reads: "all_hifi"   # name of reads, located in data/reads/
 # memory: "30"  # the available memory for the analysis in gigabytes
 threads: "10"
 quast_path: "~/software/quast"
-ncbi_nt_path: "/media/mike/SB_2TB/databases/ncbi_db/nt"
+ncbi_db_path: "/media/mike/SB_2TB/databases/ncbi_db/nt"
 ncbi_db: "nt"
 seq_tech: "hifi"
-reference: "Blanc_Mathieu_2017_mJavanica"
+reference: "Altenaria_alternata"
 mitochondrial: "data/assemblies/mitoref"
 ploidy: "4"
+busco_lineage: "eukaryota_odb10"  # Specify the name of the BUSCO lineage to be used
